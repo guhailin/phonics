@@ -132,7 +132,7 @@ function showUnitPage(levelId, unitId) {
             
             wordCard.innerHTML = `
                 <div class="word-image">
-                    ${wordObj.emoji || '🖼️'}
+                    ${getWordImageHTML(wordObj)}
                 </div>
                 <div class="word-text">${highlightedWord}</div>
             `;
@@ -218,7 +218,7 @@ function showReviewWord() {
     
     // 更新图片
     const imagePlaceholder = document.querySelector('.word-image-placeholder');
-    imagePlaceholder.innerHTML = `<span class="image-icon">${wordObj.emoji || '🖼️'}</span>`;
+    imagePlaceholder.innerHTML = getWordImageHTML(wordObj);
     
     // 更新进度
     const progress = document.getElementById('review-progress');
@@ -275,6 +275,18 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+// 获取单词图片或emoji的HTML
+function getWordImageHTML(wordObj) {
+    if (wordObj.image) {
+        // 如果有图片路径，显示图片
+        return `<img src="${wordObj.image}" alt="${wordObj.word}" class="word-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="image-icon" style="display:none;">${wordObj.emoji || '🖼️'}</span>`;
+    } else {
+        // 否则显示emoji
+        return `<span class="image-icon">${wordObj.emoji || '🖼️'}</span>`;
+    }
 }
 
 // ========== 初始化应用 ==========

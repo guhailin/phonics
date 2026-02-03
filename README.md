@@ -70,14 +70,52 @@
 
 ```
 phonics/
-├── index.html          # 主HTML文件，包含4个页面结构
-├── style.css           # 卡通风格样式表（500+行）
-├── app.js              # 应用逻辑和交互控制
-├── data.js             # 完整的学习数据（240个精选单词 + 2400+探索单词）
-├── prd.md              # 产品需求文档
-├── 思维导图.md         # 知识结构导图
-└── README.md           # 项目文档（本文件）
+├── index.html              # 主HTML文件，包含4个页面结构
+├── style.css               # 卡通风格样式表（500+行）
+├── app.js                  # 应用逻辑和交互控制
+├── data.js                 # 完整的学习数据（240个精选单词 + 2400+探索单词）
+├── generate_images.py      # 图片生成工具（支持AI生成和智能emoji优化）
+├── images/                 # 单词图片目录（可选）
+├── prd.md                  # 产品需求文档
+├── 思维导图.md             # 知识结构导图
+├── IMAGE_GENERATION.md     # 图片生成详细指南
+├── IMAGES_STATUS.md        # 图片更新状态
+└── README.md               # 项目文档（本文件）
 ```
+
+## 🎨 图片和图标系统
+
+### 当前状态
+- ✅ **133个单词** 已使用智能emoji图标（从默认📝更新）
+- 🎯 **图标质量**：精心挑选，直观易懂
+- 📊 **覆盖率**：55% 的单词有专属图标
+
+### 图片显示优先级
+1. **真实图片** (如果提供) - 最清晰直观
+2. **Emoji图标** - 当前使用，色彩丰富
+3. **默认图标** 🖼️ - 最终后备
+
+### 如何添加真实图片（可选）
+
+#### 方案 1：AI生成（推荐）
+```bash
+# 设置API密钥（OpenAI DALL-E 或 Stability AI）
+export OPENAI_API_KEY="your-key"
+# 运行生成脚本
+python3 generate_images.py
+```
+
+#### 方案 2：手动添加
+1. 准备图片文件（PNG格式，正方形）
+2. 命名为`单词.png`，放入`images/`目录
+3. 图片会自动显示
+
+#### 方案 3：继续使用emoji（免费）
+- 当前emoji图标已足够清晰
+- 适合儿童学习，无需额外成本
+- 可随时升级为真实图片
+
+详见 [IMAGE_GENERATION.md](IMAGE_GENERATION.md) 和 [IMAGES_STATUS.md](IMAGES_STATUS.md)
 
 ## 🎯 技术特点
 
