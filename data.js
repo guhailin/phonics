@@ -12,6 +12,18 @@ const phonicsData = {
         id: 'unit2',
         name: 'Unit 2',
         patterns: ['-am', '-an', '-ad', '-ag', '-ap', '-at'],
+        examples: [
+          'The <span class="highlight">m<span class="pattern">an</span></span> has a <span class="highlight">c<span class="pattern">ap</span></span>.',
+          'I see a <span class="highlight">c<span class="pattern">at</span></span> on the <span class="highlight">m<span class="pattern">at</span></span>.',
+          'The <span class="highlight">f<span class="pattern">an</span></span> is in the <span class="highlight">v<span class="pattern">an</span></span>.',
+          'Mom makes <span class="highlight">j<span class="pattern">am</span></span> with <span class="highlight">h<span class="pattern">am</span></span>.',
+          'My <span class="highlight">d<span class="pattern">ad</span></span> is <span class="pattern">s<span class="pattern">ad</span></span>.',
+          'Put the <span class="highlight">t<span class="pattern">ag</span></span> in the <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'The <span class="highlight">b<span class="pattern">at</span></span> has a <span class="highlight">h<span class="pattern">at</span></span>.',
+          'I can <span class="highlight">cl<span class="pattern">ap</span></span> with the <span class="highlight">m<span class="pattern">ap</span></span>.',
+          'The <span class="highlight">r<span class="pattern">am</span></span> sits with <span class="highlight">S<span class="pattern">am</span></span>.',
+          'A <span class="highlight">f<span class="pattern">at</span></span> <span class="highlight">c<span class="pattern">at</span></span> takes a <span class="highlight">n<span class="pattern">ap</span></span>.'
+        ],
         words: [
           { word: 'fan', highlight: 'an', emoji: '🪭' },
           { word: 'pan', highlight: 'an', emoji: '🍳' },
@@ -22,7 +34,27 @@ const phonicsData = {
           { word: 'dad', highlight: 'ad', emoji: '👨‍👧' },
           { word: 'sad', highlight: 'ad', emoji: '😢' },
           { word: 'bag', highlight: 'ag', emoji: '👜' },
-          { word: 'tag', highlight: 'ag', emoji: '🏷️' }
+          { word: 'tag', highlight: 'ag', emoji: '🏷️' },
+          { word: 'ham', highlight: 'am', emoji: '🍖' },
+          { word: 'dam', highlight: 'am', emoji: '📝' },
+          { word: 'Sam', highlight: 'am', emoji: '📝' },
+          { word: 'van', highlight: 'an', emoji: '🚐' },
+          { word: 'bad', highlight: 'ad', emoji: '📝' },
+          { word: 'had', highlight: 'ad', emoji: '📝' },
+          { word: 'lad', highlight: 'ad', emoji: '📝' },
+          { word: 'gag', highlight: 'ag', emoji: '📝' },
+          { word: 'hag', highlight: 'ag', emoji: '📝' },
+          { word: 'jag', highlight: 'ag', emoji: '📝' },
+          { word: 'cap', highlight: 'ap', emoji: '🧢' },
+          { word: 'gap', highlight: 'ap', emoji: '📝' },
+          { word: 'lap', highlight: 'ap', emoji: '📝' },
+          { word: 'map', highlight: 'ap', emoji: '🗺️' },
+          { word: 'nap', highlight: 'ap', emoji: '📝' },
+          { word: 'bat', highlight: 'at', emoji: '🦇' },
+          { word: 'cat', highlight: 'at', emoji: '🐱' },
+          { word: 'fat', highlight: 'at', emoji: '🐘' },
+          { word: 'hat', highlight: 'at', emoji: '🎩' },
+          { word: 'mat', highlight: 'at', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'van', highlight: 'an' }, { word: 'tan', highlight: 'an' }, { word: 'ban', highlight: 'an' }, { word: 'ran', highlight: 'an' }, { word: 'Dan', highlight: 'an' },
@@ -48,6 +80,18 @@ const phonicsData = {
         id: 'unit3',
         name: 'Unit 3',
         patterns: ['-et', '-en', '-ed'],
+        examples: [
+          'A <span class="highlight">h<span class="pattern">en</span></span> is on the <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'I can <span class="highlight">g<span class="pattern">et</span></span> the <span class="highlight">j<span class="pattern">et</span></span>.',
+          'The <span class="highlight">p<span class="pattern">en</span></span> is for <span class="highlight">B<span class="pattern">en</span></span>.',
+          'Let me <span class="highlight">p<span class="pattern">et</span></span> the <span class="highlight">w<span class="pattern">et</span></span> dog.',
+          'Ten <span class="highlight">m<span class="pattern">en</span></span> sit in the <span class="highlight">d<span class="pattern">en</span></span>.',
+          'Mom <span class="highlight">f<span class="pattern">ed</span></span> the hen.',
+          'The <span class="highlight">n<span class="pattern">et</span></span> is <span class="highlight">w<span class="pattern">et</span></span>.',
+          'I <span class="highlight">l<span class="pattern">ed</span></span> the way.',
+          'We <span class="highlight">m<span class="pattern">et</span></span> at <span class="highlight">t<span class="pattern">en</span></span>.',
+          'She w<span class="highlight"><span class="pattern">ed</span></span> in a <span class="highlight">r<span class="pattern">ed</span></span> dress.'
+        ],
         words: [
           { word: 'bed', highlight: 'ed', emoji: '🛏️' },
           { word: 'red', highlight: 'ed', emoji: '🔴' },
@@ -58,7 +102,14 @@ const phonicsData = {
           { word: 'pen', highlight: 'en', emoji: '🖊️' },
           { word: 'ten', highlight: 'en', emoji: '🔟' },
           { word: 'jet', highlight: 'et', emoji: '✈️' },
-          { word: 'net', highlight: 'et', emoji: '🥅' }
+          { word: 'net', highlight: 'et', emoji: '🥅' },
+          { word: 'bet', highlight: 'et', emoji: '📝' },
+          { word: 'get', highlight: 'et', emoji: '📝' },
+          { word: 'let', highlight: 'et', emoji: '📝' },
+          { word: 'Ben', highlight: 'en', emoji: '📝' },
+          { word: 'den', highlight: 'en', emoji: '🏠' },
+          { word: 'fed', highlight: 'ed', emoji: '📝' },
+          { word: 'led', highlight: 'ed', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'bet', highlight: 'et' }, { word: 'get', highlight: 'et' }, { word: 'let', highlight: 'et' }, { word: 'met', highlight: 'et' }, { word: 'pet', highlight: 'et' },
@@ -67,24 +118,25 @@ const phonicsData = {
           { word: 'Ben', highlight: 'en' }, { word: 'den', highlight: 'en' }, { word: 'Ken', highlight: 'en' }, { word: 'men', highlight: 'en' }, { word: 'then', highlight: 'en' },
           { word: 'when', highlight: 'en' }, { word: 'glen', highlight: 'en' }, { word: 'wren', highlight: 'en' }, { word: 'yen', highlight: 'en' }, { word: 'Zen', highlight: 'en' },
           { word: 'fed', highlight: 'ed' }, { word: 'led', highlight: 'ed' }, { word: 'Ted', highlight: 'ed' }, { word: 'Ned', highlight: 'ed' }, { word: 'shed', highlight: 'ed' },
-          { word: 'sled', highlight: 'ed' }, { word: 'bled', highlight: 'ed' }, { word: 'fled', highlight: 'ed' }, { word: 'sped', highlight: 'ed' }, { word: 'bred', highlight: 'ed' },
-          { word: 'beg', highlight: 'eg' }, { word: 'keg', highlight: 'eg' }, { word: 'Meg', highlight: 'eg' }, { word: 'Greg', highlight: 'eg' },
-          { word: 'den', highlight: 'en' }, { word: 'fen', highlight: 'en' }, { word: 'glen', highlight: 'en' }, { word: 'stem', highlight: 'em' }, { word: 'gem', highlight: 'em' },
-          { word: 'hem', highlight: 'em' }, { word: 'them', highlight: 'em' }, { word: 'bell', highlight: 'ell' }, { word: 'cell', highlight: 'ell' }, { word: 'dell', highlight: 'ell' },
-          { word: 'fell', highlight: 'ell' }, { word: 'jell', highlight: 'ell' }, { word: 'sell', highlight: 'ell' }, { word: 'tell', highlight: 'ell' }, { word: 'well', highlight: 'ell' },
-          { word: 'yell', highlight: 'ell' }, { word: 'shell', highlight: 'ell' }, { word: 'spell', highlight: 'ell' }, { word: 'smell', highlight: 'ell' }, { word: 'swell', highlight: 'ell' },
-          { word: 'dwell', highlight: 'ell' }, { word: 'help', highlight: 'elp' }, { word: 'kelp', highlight: 'elp' }, { word: 'yelp', highlight: 'elp' }, { word: 'melt', highlight: 'elt' },
-          { word: 'belt', highlight: 'elt' }, { word: 'felt', highlight: 'elt' }, { word: 'welt', highlight: 'elt' }, { word: 'pelt', highlight: 'elt' }, { word: 'deck', highlight: 'eck' },
-          { word: 'neck', highlight: 'eck' }, { word: 'peck', highlight: 'eck' }, { word: 'check', highlight: 'eck' }, { word: 'speck', highlight: 'eck' }, { word: 'wreck', highlight: 'eck' },
-          { word: 'desk', highlight: 'esk' }, { word: 'test', highlight: 'est' }, { word: 'best', highlight: 'est' }, { word: 'fest', highlight: 'est' }, { word: 'nest', highlight: 'est' },
-          { word: 'pest', highlight: 'est' }, { word: 'rest', highlight: 'est' }, { word: 'vest', highlight: 'est' }, { word: 'west', highlight: 'est' }, { word: 'zest', highlight: 'est' },
-          { word: 'jest', highlight: 'est' }, { word: 'chest', highlight: 'est' }, { word: 'quest', highlight: 'est' }, { word: 'guest', highlight: 'est' }
+          { word: 'sled', highlight: 'ed' }, { word: 'bled', highlight: 'ed' }, { word: 'fled', highlight: 'ed' }, { word: 'sped', highlight: 'ed' }, { word: 'bred', highlight: 'ed' }
         ]
       },
       {
         id: 'unit4',
         name: 'Unit 4',
         patterns: ['-ig', '-in', '-it', '-ip'],
+        examples: [
+          'A <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">in</span></span> is in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'I can <span class="highlight">d<span class="pattern">ig</span></span> with my <span class="highlight">w<span class="pattern">ig</span></span>.',
+          'Please <span class="highlight">s<span class="pattern">it</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> chair.',
+          'The <span class="highlight">t<span class="pattern">in</span></span> has a <span class="highlight">l<span class="pattern">ip</span></span>.',
+          'I <span class="highlight">h<span class="pattern">it</span></span> the <span class="highlight">p<span class="pattern">it</span></span>.',
+          'The <span class="highlight">f<span class="pattern">in</span></span> is <span class="highlight">b<span class="pattern">ig</span></span>.',
+          'Take a <span class="highlight">s<span class="pattern">ip</span></span> and <span class="highlight">s<span class="pattern">it</span></span>.',
+          'Can you <span class="highlight">d<span class="pattern">ip</span></span> the <span class="highlight">ch<span class="pattern">ip</span></span>?',
+          'I <span class="highlight">w<span class="pattern">in</span></span> a <span class="highlight">b<span class="pattern">it</span></span>.',
+          'The <span class="highlight">p<span class="pattern">ig</span></span> can <span class="highlight">sp<span class="pattern">in</span></span>.'
+        ],
         words: [
           { word: 'big', highlight: 'ig', emoji: '🦣' },
           { word: 'dig', highlight: 'ig', emoji: '⛏️' },
@@ -95,7 +147,17 @@ const phonicsData = {
           { word: 'pin', highlight: 'in', emoji: '📍' },
           { word: 'tin', highlight: 'in', emoji: '🥫' },
           { word: 'pit', highlight: 'it', emoji: '🕳️' },
-          { word: 'sit', highlight: 'it', emoji: '💺' }
+          { word: 'sit', highlight: 'it', emoji: '💺' },
+          { word: 'gig', highlight: 'ig', emoji: '📝' },
+          { word: 'din', highlight: 'in', emoji: '📝' },
+          { word: 'bit', highlight: 'it', emoji: '📝' },
+          { word: 'fit', highlight: 'it', emoji: '📝' },
+          { word: 'hit', highlight: 'it', emoji: '👊' },
+          { word: 'dip', highlight: 'ip', emoji: '📝' },
+          { word: 'hip', highlight: 'ip', emoji: '📝' },
+          { word: 'lip', highlight: 'ip', emoji: '👄' },
+          { word: 'nip', highlight: 'ip', emoji: '📝' },
+          { word: 'rip', highlight: 'ip', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'gig', highlight: 'ig' }, { word: 'jig', highlight: 'ig' }, { word: 'pig', highlight: 'ig' }, { word: 'rig', highlight: 'ig' }, { word: 'twig', highlight: 'ig' },
@@ -111,17 +173,25 @@ const phonicsData = {
           { word: 'sip', highlight: 'ip' }, { word: 'tip', highlight: 'ip' }, { word: 'zip', highlight: 'ip' }, { word: 'chip', highlight: 'ip' }, { word: 'clip', highlight: 'ip' },
           { word: 'drip', highlight: 'ip' }, { word: 'flip', highlight: 'ip' }, { word: 'grip', highlight: 'ip' }, { word: 'ship', highlight: 'ip' }, { word: 'skip', highlight: 'ip' },
           { word: 'slip', highlight: 'ip' }, { word: 'snip', highlight: 'ip' }, { word: 'strip', highlight: 'ip' }, { word: 'trip', highlight: 'ip' }, { word: 'whip', highlight: 'ip' },
-          { word: 'gossip', highlight: 'ip' }, { word: 'turnip', highlight: 'ip' }, { word: 'tulip', highlight: 'ip' }, { word: 'catnip', highlight: 'ip' }, { word: 'unzip', highlight: 'ip' },
-          { word: 'pill', highlight: 'ill' }, { word: 'bill', highlight: 'ill' }, { word: 'dill', highlight: 'ill' }, { word: 'fill', highlight: 'ill' }, { word: 'gill', highlight: 'ill' },
-          { word: 'hill', highlight: 'ill' }, { word: 'kill', highlight: 'ill' }, { word: 'mill', highlight: 'ill' }, { word: 'till', highlight: 'ill' }, { word: 'will', highlight: 'ill' },
-          { word: 'chill', highlight: 'ill' }, { word: 'drill', highlight: 'ill' }, { word: 'frill', highlight: 'ill' }, { word: 'grill', highlight: 'ill' }, { word: 'skill', highlight: 'ill' },
-          { word: 'spill', highlight: 'ill' }, { word: 'still', highlight: 'ill' }, { word: 'thrill', highlight: 'ill' }, { word: 'trill', highlight: 'ill' }, { word: 'shrill', highlight: 'ill' }
+          { word: 'gossip', highlight: 'ip' }, { word: 'turnip', highlight: 'ip' }, { word: 'tulip', highlight: 'ip' }, { word: 'catnip', highlight: 'ip' }, { word: 'unzip', highlight: 'ip' }
         ]
       },
       {
         id: 'unit5',
         name: 'Unit 5',
         patterns: ['-ot', '-op', '-ox'],
+        examples: [
+          'The <span class="highlight">f<span class="pattern">ox</span></span> is on <span class="highlight">t<span class="pattern">op</span></span> of the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'It is <span class="highlight">h<span class="pattern">ot</span></span> in the <span class="highlight">p<span class="pattern">ot</span></span>.',
+          'I can <span class="highlight">h<span class="pattern">op</span></span> on <span class="highlight">t<span class="pattern">op</span></span>.',
+          'The <span class="highlight">m<span class="pattern">op</span></span> is in the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'I <span class="highlight">g<span class="pattern">ot</span></span> a <span class="highlight">d<span class="pattern">ot</span></span>.',
+          'Pop the <span class="highlight">p<span class="pattern">op</span></span> on <span class="highlight">t<span class="pattern">op</span></span>.',
+          'A red <span class="highlight">f<span class="pattern">ox</span></span> in a <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'Put the <span class="highlight">c<span class="pattern">ot</span></span> on <span class="highlight">t<span class="pattern">op</span></span>.',
+          'Stop at the <span class="highlight">sh<span class="pattern">op</span></span>.',
+          'The <span class="highlight">p<span class="pattern">ot</span></span> is <span class="highlight">h<span class="pattern">ot</span></span>.'
+        ],
         words: [
           { word: 'hot', highlight: 'ot', emoji: '🔥' },
           { word: 'pot', highlight: 'ot', emoji: '🍲' },
@@ -132,7 +202,12 @@ const phonicsData = {
           { word: 'pop', highlight: 'op', emoji: '🎈' },
           { word: 'top', highlight: 'op', emoji: '🔝' },
           { word: 'box', highlight: 'ox', emoji: '📦' },
-          { word: 'fox', highlight: 'ox', emoji: '🦊' }
+          { word: 'fox', highlight: 'ox', emoji: '🦊' },
+          { word: 'got', highlight: 'ot', emoji: '📝' },
+          { word: 'bop', highlight: 'op', emoji: '📝' },
+          { word: 'ox', highlight: 'ox', emoji: '📝' },
+          { word: 'pox', highlight: 'ox', emoji: '📝' },
+          { word: 'lox', highlight: 'ox', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'got', highlight: 'ot' }, { word: 'jot', highlight: 'ot' }, { word: 'lot', highlight: 'ot' }, { word: 'not', highlight: 'ot' }, { word: 'rot', highlight: 'ot' },
@@ -141,24 +216,27 @@ const phonicsData = {
           { word: 'snot', highlight: 'ot' }, { word: 'begot', highlight: 'ot' }, { word: 'forgot', highlight: 'ot' }, { word: 'robot', highlight: 'ot' }, { word: 'mascot', highlight: 'ot' },
           { word: 'bop', highlight: 'op' }, { word: 'cop', highlight: 'op' }, { word: 'lop', highlight: 'op' }, { word: 'sop', highlight: 'op' }, { word: 'chop', highlight: 'op' },
           { word: 'crop', highlight: 'op' }, { word: 'drop', highlight: 'op' }, { word: 'flop', highlight: 'op' }, { word: 'plop', highlight: 'op' }, { word: 'prop', highlight: 'op' },
-          { word: 'shop', highlight: 'op' }, { word: 'stop', highlight: 'op' }, { word: 'swap', highlight: 'op' }, { word: 'atop', highlight: 'op' }, { word: 'laptop', highlight: 'op' },
+          { word: 'shop', highlight: 'op' }, { word: 'stop', highlight: 'op' }, { word: 'atop', highlight: 'op' }, { word: 'laptop', highlight: 'op' },
           { word: 'hilltop', highlight: 'op' }, { word: 'raindrop', highlight: 'op' }, { word: 'workshop', highlight: 'op' }, { word: 'desktop', highlight: 'op' },
-          { word: 'ox', highlight: 'ox' }, { word: 'pox', highlight: 'ox' }, { word: 'lox', highlight: 'ox' }, { word: 'sox', highlight: 'ox' }, { word: 'vox', highlight: 'ox' },
-          { word: 'dob', highlight: 'ob' }, { word: 'gob', highlight: 'ob' }, { word: 'hob', highlight: 'ob' }, { word: 'job', highlight: 'ob' }, { word: 'mob', highlight: 'ob' },
-          { word: 'rob', highlight: 'ob' }, { word: 'sob', highlight: 'ob' }, { word: 'blob', highlight: 'ob' }, { word: 'knob', highlight: 'ob' }, { word: 'snob', highlight: 'ob' },
-          { word: 'throb', highlight: 'ob' }, { word: 'cob', highlight: 'ob' }, { word: 'fob', highlight: 'ob' }, { word: 'lob', highlight: 'ob' }, { word: 'slob', highlight: 'ob' },
-          { word: 'bog', highlight: 'og' }, { word: 'cog', highlight: 'og' }, { word: 'dog', highlight: 'og' }, { word: 'fog', highlight: 'og' }, { word: 'hog', highlight: 'og' },
-          { word: 'jog', highlight: 'og' }, { word: 'log', highlight: 'og' }, { word: 'clog', highlight: 'og' }, { word: 'frog', highlight: 'og' }, { word: 'smog', highlight: 'og' },
-          { word: 'blog', highlight: 'og' }, { word: 'grog', highlight: 'og' }, { word: 'slog', highlight: 'og' }, { word: 'agog', highlight: 'og' }, { word: 'eggnog', highlight: 'og' },
-          { word: 'dock', highlight: 'ock' }, { word: 'lock', highlight: 'ock' }, { word: 'mock', highlight: 'ock' }, { word: 'rock', highlight: 'ock' }, { word: 'sock', highlight: 'ock' },
-          { word: 'block', highlight: 'ock' }, { word: 'clock', highlight: 'ock' }, { word: 'flock', highlight: 'ock' }, { word: 'knock', highlight: 'ock' }, { word: 'shock', highlight: 'ock' },
-          { word: 'stock', highlight: 'ock' }, { word: 'smock', highlight: 'ock' }, { word: 'unlock', highlight: 'ock' }, { word: 'padlock', highlight: 'ock' }, { word: 'peacock', highlight: 'ock' }
+          { word: 'ox', highlight: 'ox' }, { word: 'pox', highlight: 'ox' }, { word: 'lox', highlight: 'ox' }, { word: 'sox', highlight: 'ox' }, { word: 'vox', highlight: 'ox' }
         ]
       },
       {
         id: 'unit6',
         name: 'Unit 6',
         patterns: ['-ug', '-un', '-ut', '-up'],
+        examples: [
+          'The <span class="highlight">b<span class="pattern">ug</span></span> can <span class="highlight">r<span class="pattern">un</span></span> in the <span class="highlight">s<span class="pattern">un</span></span>.',
+          'I see a <span class="highlight">b<span class="pattern">ug</span></span> in my <span class="highlight">c<span class="pattern">up</span></span>.',
+          'The <span class="highlight">p<span class="pattern">up</span></span> is in the <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'Give me a <span class="highlight">h<span class="pattern">ug</span></span> in the <span class="highlight">s<span class="pattern">un</span></span>.',
+          'I can <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">n<span class="pattern">ut</span></span>.',
+          'The <span class="highlight">m<span class="pattern">ug</span></span> fell d<span class="highlight"><span class="pattern">own</span></span>.',
+          'We <span class="highlight">r<span class="pattern">un</span></span> for <span class="highlight">f<span class="pattern">un</span></span>.',
+          'Pick <span class="highlight"><span class="pattern">up</span></span> the <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">b<span class="pattern">un</span></span> is in the <span class="highlight">j<span class="pattern">ug</span></span>.',
+          'Shut the <span class="highlight">h<span class="pattern">ut</span></span> door.'
+        ],
         words: [
           { word: 'bug', highlight: 'ug', emoji: '🐛' },
           { word: 'jug', highlight: 'ug', emoji: '🏺' },
@@ -169,67 +247,30 @@ const phonicsData = {
           { word: 'run', highlight: 'un', emoji: '🏃' },
           { word: 'sun', highlight: 'un', emoji: '☀️' },
           { word: 'nut', highlight: 'ut', emoji: '🥜' },
-          { word: 'cut', highlight: 'ut', emoji: '✂️' }
+          { word: 'cut', highlight: 'ut', emoji: '✂️' },
+          { word: 'dug', highlight: 'ug', emoji: '📝' },
+          { word: 'gun', highlight: 'un', emoji: '🔫' },
+          { word: 'but', highlight: 'ut', emoji: '📝' },
+          { word: 'gut', highlight: 'ut', emoji: '📝' },
+          { word: 'hut', highlight: 'ut', emoji: '🛖' },
+          { word: 'cup', highlight: 'up', emoji: '☕' },
+          { word: 'pup', highlight: 'up', emoji: '🐶' },
+          { word: 'sup', highlight: 'up', emoji: '📝' },
+          { word: 'yup', highlight: 'up', emoji: '📝' },
+          { word: 'setup', highlight: 'up', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'dug', highlight: 'ug' }, { word: 'hug', highlight: 'ug' }, { word: 'lug', highlight: 'ug' }, { word: 'pug', highlight: 'ug' }, { word: 'tug', highlight: 'ug' },
           { word: 'chug', highlight: 'ug' }, { word: 'drug', highlight: 'ug' }, { word: 'plug', highlight: 'ug' }, { word: 'shrug', highlight: 'ug' }, { word: 'slug', highlight: 'ug' },
           { word: 'smug', highlight: 'ug' }, { word: 'snug', highlight: 'ug' }, { word: 'thug', highlight: 'ug' }, { word: 'unplug', highlight: 'ug' }, { word: 'debug', highlight: 'ug' },
           { word: 'gun', highlight: 'un' }, { word: 'nun', highlight: 'un' }, { word: 'pun', highlight: 'un' }, { word: 'spun', highlight: 'un' }, { word: 'stun', highlight: 'un' },
-          { word: 'bunk', highlight: 'un' }, { word: 'dunk', highlight: 'un' }, { word: 'funk', highlight: 'un' }, { word: 'gunk', highlight: 'un' }, { word: 'hunk', highlight: 'un' },
-          { word: 'junk', highlight: 'un' }, { word: 'punk', highlight: 'un' }, { word: 'sunk', highlight: 'un' }, { word: 'chunk', highlight: 'un' }, { word: 'clunk', highlight: 'un' },
-          { word: 'drunk', highlight: 'un' }, { word: 'flunk', highlight: 'un' }, { word: 'skunk', highlight: 'un' }, { word: 'shrunk', highlight: 'un' }, { word: 'spunk', highlight: 'un' },
-          { word: 'trunk', highlight: 'un' }, { word: 'begun', highlight: 'un' }, { word: 'outrun', highlight: 'un' }, { word: 'rerun', highlight: 'un' }, { word: 'unsung', highlight: 'un' },
+          { word: 'begun', highlight: 'un' }, { word: 'outrun', highlight: 'un' }, { word: 'rerun', highlight: 'un' },
           { word: 'but', highlight: 'ut' }, { word: 'gut', highlight: 'ut' }, { word: 'hut', highlight: 'ut' }, { word: 'jut', highlight: 'ut' }, { word: 'rut', highlight: 'ut' },
           { word: 'shut', highlight: 'ut' }, { word: 'glut', highlight: 'ut' }, { word: 'slut', highlight: 'ut' }, { word: 'strut', highlight: 'ut' }, { word: 'smut', highlight: 'ut' },
           { word: 'input', highlight: 'ut' }, { word: 'output', highlight: 'ut' }, { word: 'shortcut', highlight: 'ut' }, { word: 'haircut', highlight: 'ut' }, { word: 'peanut', highlight: 'ut' },
           { word: 'walnut', highlight: 'ut' }, { word: 'donut', highlight: 'ut' }, { word: 'coconut', highlight: 'ut' },
           { word: 'cup', highlight: 'up' }, { word: 'pup', highlight: 'up' }, { word: 'sup', highlight: 'up' }, { word: 'yup', highlight: 'up' }, { word: 'setup', highlight: 'up' },
-          { word: 'hiccup', highlight: 'up' }, { word: 'teacup', highlight: 'up' }, { word: 'backup', highlight: 'up' }, { word: 'makeup', highlight: 'up' }, { word: 'pickup', highlight: 'up' },
-          { word: 'pump', highlight: 'ump' }, { word: 'bump', highlight: 'ump' }, { word: 'dump', highlight: 'ump' }, { word: 'hump', highlight: 'ump' }, { word: 'jump', highlight: 'ump' },
-          { word: 'lump', highlight: 'ump' }, { word: 'plump', highlight: 'ump' }, { word: 'slump', highlight: 'ump' }, { word: 'stump', highlight: 'ump' }, { word: 'thump', highlight: 'ump' },
-          { word: 'clump', highlight: 'ump' }, { word: 'grump', highlight: 'ump' }, { word: 'trump', highlight: 'ump' }, { word: 'frump', highlight: 'ump' }, { word: 'mumps', highlight: 'ump' },
-          { word: 'dull', highlight: 'ull' }, { word: 'full', highlight: 'ull' }, { word: 'gull', highlight: 'ull' }, { word: 'hull', highlight: 'ull' }, { word: 'lull', highlight: 'ull' },
-          { word: 'mull', highlight: 'ull' }, { word: 'null', highlight: 'ull' }, { word: 'pull', highlight: 'ull' }, { word: 'bull', highlight: 'ull' }, { word: 'skull', highlight: 'ull' }
-        ]
-      },
-      {
-        id: 'unit7',
-        name: 'Unit 7',
-        patterns: ['综合复习', '短音对比'],
-        words: [
-          { word: 'bat', highlight: 'at', emoji: '🦇' },
-          { word: 'cat', highlight: 'at', emoji: '🐱' },
-          { word: 'mat', highlight: 'at', emoji: '🧘' },
-          { word: 'hat', highlight: 'at', emoji: '🎩' },
-          { word: 'wet', highlight: 'et', emoji: '💧' },
-          { word: 'pet', highlight: 'et', emoji: '🐕' },
-          { word: 'lip', highlight: 'ip', emoji: '👄' },
-          { word: 'hip', highlight: 'ip', emoji: '🕺' },
-          { word: 'dog', highlight: 'og', emoji: '🐶' },
-          { word: 'log', highlight: 'og', emoji: '🪵' }
-        ],
-        exploreWords: [
-          { word: 'rag', highlight: 'ag' }, { word: 'sag', highlight: 'ag' }, { word: 'wag', highlight: 'ag' }, { word: 'nag', highlight: 'ag' }, { word: 'lag', highlight: 'ag' },
-          { word: 'dam', highlight: 'am' }, { word: 'ham', highlight: 'am' }, { word: 'tam', highlight: 'am' }, { word: 'yam', highlight: 'am' }, { word: 'wham', highlight: 'am' },
-          { word: 'bad', highlight: 'ad' }, { word: 'fad', highlight: 'ad' }, { word: 'gad', highlight: 'ad' }, { word: 'had', highlight: 'ad' }, { word: 'lad', highlight: 'ad' },
-          { word: 'gap', highlight: 'ap' }, { word: 'lap', highlight: 'ap' }, { word: 'rap', highlight: 'ap' }, { word: 'sap', highlight: 'ap' }, { word: 'tap', highlight: 'ap' },
-          { word: 'cap', highlight: 'ap' }, { word: 'nap', highlight: 'ap' }, { word: 'zap', highlight: 'ap' }, { word: 'clap', highlight: 'ap' }, { word: 'trap', highlight: 'ap' },
-          { word: 'fat', highlight: 'at' }, { word: 'pat', highlight: 'at' }, { word: 'rat', highlight: 'at' }, { word: 'sat', highlight: 'at' }, { word: 'vat', highlight: 'at' },
-          { word: 'flat', highlight: 'at' }, { word: 'chat', highlight: 'at' }, { word: 'that', highlight: 'at' }, { word: 'brat', highlight: 'at' }, { word: 'stat', highlight: 'at' },
-          { word: 'bed', highlight: 'ed' }, { word: 'fed', highlight: 'ed' }, { word: 'led', highlight: 'ed' }, { word: 'shed', highlight: 'ed' }, { word: 'sled', highlight: 'ed' },
-          { word: 'get', highlight: 'et' }, { word: 'let', highlight: 'et' }, { word: 'met', highlight: 'et' }, { word: 'set', highlight: 'et' }, { word: 'vet', highlight: 'et' },
-          { word: 'den', highlight: 'en' }, { word: 'men', highlight: 'en' }, { word: 'then', highlight: 'en' }, { word: 'when', highlight: 'en' }, { word: 'wren', highlight: 'en' },
-          { word: 'bid', highlight: 'id' }, { word: 'did', highlight: 'id' }, { word: 'hid', highlight: 'id' }, { word: 'kid', highlight: 'id' }, { word: 'lid', highlight: 'id' },
-          { word: 'rid', highlight: 'id' }, { word: 'skid', highlight: 'id' }, { word: 'slid', highlight: 'id' }, { word: 'grid', highlight: 'id' }, { word: 'squid', highlight: 'id' },
-          { word: 'pig', highlight: 'ig' }, { word: 'rig', highlight: 'ig' }, { word: 'jig', highlight: 'ig' }, { word: 'gig', highlight: 'ig' }, { word: 'twig', highlight: 'ig' },
-          { word: 'dim', highlight: 'im' }, { word: 'him', highlight: 'im' }, { word: 'rim', highlight: 'im' }, { word: 'vim', highlight: 'im' }, { word: 'brim', highlight: 'im' },
-          { word: 'trim', highlight: 'im' }, { word: 'slim', highlight: 'im' }, { word: 'swim', highlight: 'im' }, { word: 'grim', highlight: 'im' }, { word: 'whim', highlight: 'im' },
-          { word: 'din', highlight: 'in' }, { word: 'kin', highlight: 'in' }, { word: 'sin', highlight: 'in' }, { word: 'win', highlight: 'in' }, { word: 'chin', highlight: 'in' },
-          { word: 'dip', highlight: 'ip' }, { word: 'nip', highlight: 'ip' }, { word: 'rip', highlight: 'ip' }, { word: 'sip', highlight: 'ip' }, { word: 'tip', highlight: 'ip' },
-          { word: 'zip', highlight: 'ip' }, { word: 'chip', highlight: 'ip' }, { word: 'clip', highlight: 'ip' }, { word: 'drip', highlight: 'ip' }, { word: 'flip', highlight: 'ip' },
-          { word: 'bit', highlight: 'it' }, { word: 'fit', highlight: 'it' }, { word: 'hit', highlight: 'it' }, { word: 'kit', highlight: 'it' }, { word: 'lit', highlight: 'it' },
-          { word: 'wit', highlight: 'it' }, { word: 'quit', highlight: 'it' }, { word: 'spit', highlight: 'it' }, { word: 'grit', highlight: 'it' }, { word: 'knit', highlight: 'it' }
+          { word: 'hiccup', highlight: 'up' }, { word: 'teacup', highlight: 'up' }, { word: 'backup', highlight: 'up' }, { word: 'makeup', highlight: 'up' }, { word: 'pickup', highlight: 'up' }
         ]
       }
     ]
@@ -246,6 +287,18 @@ const phonicsData = {
         id: 'unit2',
         name: 'Unit 2',
         patterns: ['ai', 'ay'],
+        examples: [
+          'Let\'s <span class="highlight">pl<span class="pattern">ay</span></span> in the <span class="highlight">r<span class="pattern">ai</span>n</span> on a nice <span class="highlight">d<span class="pattern">ay</span></span>.',
+          'The <span class="highlight">tr<span class="pattern">ai</span>n</span> comes every <span class="highlight">d<span class="pattern">ay</span></span>.',
+          'I can <span class="highlight">p<span class="pattern">ai</span>nt</span> in <span class="highlight">M<span class="pattern">ay</span></span>.',
+          'The <span class="highlight">sn<span class="pattern">ai</span>l</span> has a <span class="highlight">t<span class="pattern">ai</span>l</span>.',
+          'What did you <span class="highlight">s<span class="pattern">ay</span></span> tod<span class="highlight"><span class="pattern">ay</span></span>?',
+          'The <span class="highlight">m<span class="pattern">ai</span>l</span> comes on <span class="highlight">Mond<span class="pattern">ay</span></span>.',
+          'I can <span class="highlight">w<span class="pattern">ai</span>t</span> all <span class="highlight">d<span class="pattern">ay</span></span>.',
+          'The <span class="highlight">tr<span class="pattern">ay</span></span> has <span class="highlight">gr<span class="pattern">ay</span></span> cl<span class="highlight"><span class="pattern">ay</span></span>.',
+          'Let\'s <span class="highlight">s<span class="pattern">ai</span>l</span> aw<span class="highlight"><span class="pattern">ay</span></span>!',
+          'My dog can <span class="highlight">st<span class="pattern">ay</span></span> in the <span class="highlight">r<span class="pattern">ai</span>n</span>.'
+        ],
         words: [
           { word: 'rain', highlight: 'ai', emoji: '🌧️' },
           { word: 'train', highlight: 'ai', emoji: '🚂' },
@@ -282,6 +335,18 @@ const phonicsData = {
         id: 'unit3',
         name: 'Unit 3',
         patterns: ['ee', 'ea', 'y', 'ey'],
+        examples: [
+          'The <span class="highlight">happ<span class="pattern">y</span></span> <span class="highlight">b<span class="pattern">ee</span></span> loves <span class="highlight">t<span class="pattern">ea</span></span> and <span class="highlight">hon<span class="pattern">ey</span></span>.',
+          'I can <span class="highlight">s<span class="pattern">ee</span></span> the <span class="highlight">gr<span class="pattern">ee</span>n</span> <span class="highlight">tr<span class="pattern">ee</span></span>.',
+          'The <span class="highlight">monk<span class="pattern">ey</span></span> <span class="highlight">r<span class="pattern">ea</span>ds</span> a book.',
+          'My <span class="highlight">f<span class="pattern">ee</span>t</span> are <span class="highlight">sunn<span class="pattern">y</span></span> and warm.',
+          'Let\'s <span class="highlight">m<span class="pattern">ee</span>t</span> for <span class="highlight">t<span class="pattern">ea</span></span>.',
+          'The <span class="highlight">bab<span class="pattern">y</span></span> has a <span class="highlight">k<span class="pattern">ey</span></span>.',
+          'I <span class="highlight">n<span class="pattern">ee</span>d</span> to <span class="highlight">r<span class="pattern">ea</span>d</span> this.',
+          'The <span class="highlight">sh<span class="pattern">ee</span>p</span> <span class="highlight">s<span class="pattern">ee</span>ms</span> <span class="highlight">happ<span class="pattern">y</span></span>.',
+          'I <span class="highlight">s<span class="pattern">ee</span></span> <span class="highlight">mon<span class="pattern">ey</span></span> near the <span class="highlight">s<span class="pattern">ea</span></span>.',
+          'The <span class="highlight">donk<span class="pattern">ey</span></span> <span class="highlight">sl<span class="pattern">ee</span>ps</span> in the <span class="highlight">sn<span class="pattern">ow</span></span>.'
+        ],
         words: [
           { word: 'bee', highlight: 'ee', emoji: '🐝' },
           { word: 'tree', highlight: 'ee', emoji: '🌳' },
@@ -291,8 +356,18 @@ const phonicsData = {
           { word: 'tea', highlight: 'ea', emoji: '🍵' },
           { word: 'candy', highlight: 'y', emoji: '🍬' },
           { word: 'happy', highlight: 'y', emoji: '😊' },
+          { word: 'baby', highlight: 'y', emoji: '👶' },
+          { word: 'sunny', highlight: 'y', emoji: '☀️' },
+          { word: 'funny', highlight: 'y', emoji: '😄' },
           { word: 'key', highlight: 'ey', emoji: '🔑' },
-          { word: 'monkey', highlight: 'ey', emoji: '🐵' }
+          { word: 'monkey', highlight: 'ey', emoji: '🐵' },
+          { word: 'donkey', highlight: 'ey', emoji: '🫏' },
+          { word: 'honey', highlight: 'ey', emoji: '🍯' },
+          { word: 'money', highlight: 'ey', emoji: '💰' },
+          { word: 'beef', highlight: 'ee', emoji: '📝' },
+          { word: 'beep', highlight: 'ee', emoji: '📝' },
+          { word: 'beak', highlight: 'ea', emoji: '📝' },
+          { word: 'bean', highlight: 'ea', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'beef', highlight: 'ee' }, { word: 'beep', highlight: 'ee' }, { word: 'been', highlight: 'ee' }, { word: 'beer', highlight: 'ee' }, { word: 'beet', highlight: 'ee' },
@@ -328,6 +403,18 @@ const phonicsData = {
         id: 'unit4',
         name: 'Unit 4',
         patterns: ['i_e', 'ie', 'y'],
+        examples: [
+          'I like to <span class="highlight">fl<span class="pattern">y</span></span> a <span class="highlight">k<span class="pattern">ite</span></span> and eat <span class="highlight">p<span class="pattern">ie</span></span>.',
+          'The <span class="highlight">sk<span class="pattern">y</span></span> is n<span class="highlight"><span class="pattern">ice</span></span> and blue.',
+          'I can <span class="highlight">r<span class="pattern">ide</span></span> my <span class="highlight">b<span class="pattern">ike</span></span>.',
+          'Don\'t tell a <span class="highlight">l<span class="pattern">ie</span></span> or <span class="highlight">cr<span class="pattern">y</span></span>.',
+          'The <span class="highlight">m<span class="pattern">ice</span></span> tr<span class="highlight"><span class="pattern">ied</span></span> to <span class="highlight">h<span class="pattern">ide</span></span>.',
+          'I <span class="highlight">d<span class="pattern">ive</span></span> in the water and <span class="highlight">dr<span class="pattern">y</span></span> off.',
+          'At <span class="highlight">n<span class="pattern">ine</span></span> I\'ll <span class="highlight">t<span class="pattern">ie</span></span> my shoe.',
+          'The <span class="highlight">p<span class="pattern">ie</span></span> is a nice <span class="highlight">s<span class="pattern">ize</span></span>.',
+          'I tr<span class="highlight"><span class="pattern">y</span></span> to <span class="highlight">wr<span class="pattern">ite</span></span> well.',
+          'The <span class="highlight">pr<span class="pattern">ice</span></span> is <span class="highlight">f<span class="pattern">ine</span></span>.'
+        ],
         words: [
           { word: 'kite', highlight: 'i_e', emoji: '🪁' },
           { word: 'bike', highlight: 'i_e', emoji: '🚲' },
@@ -338,7 +425,12 @@ const phonicsData = {
           { word: 'tie', highlight: 'ie', emoji: '👔' },
           { word: 'lie', highlight: 'ie', emoji: '🤥' },
           { word: 'fly', highlight: 'y', emoji: '🪰' },
-          { word: 'sky', highlight: 'y', emoji: '🌌' }
+          { word: 'sky', highlight: 'y', emoji: '🌌' },
+          { word: 'die', highlight: 'ie', emoji: '📝' },
+          { word: 'tried', highlight: 'ie', emoji: '📝' },
+          { word: 'by', highlight: 'y', emoji: '📝' },
+          { word: 'cry', highlight: 'y', emoji: '📝' },
+          { word: 'dry', highlight: 'y', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'bite', highlight: 'i_e' }, { word: 'dime', highlight: 'i_e' }, { word: 'dive', highlight: 'i_e' }, { word: 'drive', highlight: 'i_e' }, { word: 'file', highlight: 'i_e' },
@@ -364,6 +456,18 @@ const phonicsData = {
         id: 'unit5',
         name: 'Unit 5',
         patterns: ['o_e', 'oa', 'ow'],
+        examples: [
+          'Look at the <span class="highlight">sn<span class="pattern">ow</span></span> on the <span class="highlight">r<span class="pattern">ose</span></span> and <span class="highlight">b<span class="pattern">oat</span></span>.',
+          'I can <span class="highlight">r<span class="pattern">ow</span></span> the <span class="highlight">b<span class="pattern">oat</span></span> <span class="highlight">h<span class="pattern">ome</span></span>.',
+          'The <span class="highlight">g<span class="pattern">oat</span></span> has a <span class="highlight">n<span class="pattern">ose</span></span>.',
+          'I <span class="highlight">kn<span class="pattern">ow</span></span> the <span class="highlight">r<span class="pattern">oad</span></span> <span class="highlight">h<span class="pattern">ome</span></span>.',
+          'The <span class="highlight">c<span class="pattern">oat</span></span> is <span class="highlight">bel<span class="pattern">ow</span></span> the <span class="highlight">r<span class="pattern">ope</span></span>.',
+          'I <span class="highlight">h<span class="pattern">ope</span></span> to see the <span class="highlight">sn<span class="pattern">ow</span></span>.',
+          'Let\'s <span class="highlight">gr<span class="pattern">ow</span></span> a <span class="highlight">r<span class="pattern">ose</span></span>.',
+          'The <span class="highlight">t<span class="pattern">oad</span></span> jumps <span class="highlight">sl<span class="pattern">ow</span></span>.',
+          'I <span class="highlight">thr<span class="pattern">ow</span></span> the <span class="highlight">st<span class="pattern">one</span></span>.',
+          'The <span class="highlight">b<span class="pattern">owl</span></span> has <span class="highlight">s<span class="pattern">oap</span></span> in it.'
+        ],
         words: [
           { word: 'rope', highlight: 'o_e', emoji: '🪢' },
           { word: 'rose', highlight: 'o_e', emoji: '🌹' },
@@ -374,7 +478,12 @@ const phonicsData = {
           { word: 'coat', highlight: 'oa', emoji: '🧥' },
           { word: 'bowl', highlight: 'ow', emoji: '🥣' },
           { word: 'snow', highlight: 'ow', emoji: '❄️' },
-          { word: 'low', highlight: 'ow', emoji: '⬇️' }
+          { word: 'low', highlight: 'ow', emoji: '⬇️' },
+          { word: 'bone', highlight: 'o_e', emoji: '🦴' },
+          { word: 'coach', highlight: 'oa', emoji: '📝' },
+          { word: 'coal', highlight: 'oa', emoji: '📝' },
+          { word: 'blow', highlight: 'ow', emoji: '📝' },
+          { word: 'bow', highlight: 'ow', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'bone', highlight: 'o_e' }, { word: 'broke', highlight: 'o_e' }, { word: 'choke', highlight: 'o_e' }, { word: 'close', highlight: 'o_e' }, { word: 'code', highlight: 'o_e' },
@@ -402,6 +511,18 @@ const phonicsData = {
         id: 'unit6',
         name: 'Unit 6',
         patterns: ['u_e', 'ue', 'ui', 'ew'],
+        examples: [
+          'The <span class="highlight">bl<span class="pattern">ue</span></span> <span class="highlight">c<span class="pattern">ube</span></span> is <span class="highlight">n<span class="pattern">ew</span></span>.',
+          'I <span class="highlight">kn<span class="pattern">ew</span></span> the <span class="highlight">tr<span class="pattern">ue</span></span> answer.',
+          'The <span class="highlight">m<span class="pattern">ule</span></span> drinks <span class="highlight">j<span class="pattern">uice</span></span>.',
+          'Put <span class="highlight">gl<span class="pattern">ue</span></span> on the <span class="highlight">t<span class="pattern">ube</span></span>.',
+          'I <span class="highlight">ch<span class="pattern">ew</span></span> the <span class="highlight">fr<span class="pattern">uit</span></span>.',
+          'The <span class="highlight">s<span class="pattern">uit</span></span> is <span class="highlight">bl<span class="pattern">ue</span></span> and <span class="pattern">n<span class="pattern">ew</span></span>.',
+          'A f<span class="highlight"><span class="pattern">ew</span></span> <span class="highlight">cl<span class="pattern">ues</span></span> help me.',
+          'The <span class="highlight">c<span class="pattern">ute</span></span> bird fl<span class="highlight"><span class="pattern">ew</span></span> away.',
+          'I need a <span class="highlight">c<span class="pattern">ue</span></span> for the game.',
+          'The <span class="highlight">cr<span class="pattern">ew</span></span> uses <span class="highlight">gl<span class="pattern">ue</span></span>.'
+        ],
         words: [
           { word: 'cube', highlight: 'u_e', emoji: '🧊' },
           { word: 'tube', highlight: 'u_e', emoji: '🧪' },
@@ -412,7 +533,17 @@ const phonicsData = {
           { word: 'fruit', highlight: 'ui', emoji: '🍎' },
           { word: 'suit', highlight: 'ui', emoji: '🤵' },
           { word: 'few', highlight: 'ew', emoji: '🔢' },
-          { word: 'new', highlight: 'ew', emoji: '🆕' }
+          { word: 'new', highlight: 'ew', emoji: '🆕' },
+          { word: 'abuse', highlight: 'u_e', emoji: '📝' },
+          { word: 'accuse', highlight: 'u_e', emoji: '📝' },
+          { word: 'clue', highlight: 'ue', emoji: '📝' },
+          { word: 'cue', highlight: 'ue', emoji: '📝' },
+          { word: 'bruise', highlight: 'ui', emoji: '📝' },
+          { word: 'cruise', highlight: 'ui', emoji: '📝' },
+          { word: 'juice', highlight: 'ui', emoji: '📝' },
+          { word: 'blew', highlight: 'ew', emoji: '📝' },
+          { word: 'brew', highlight: 'ew', emoji: '📝' },
+          { word: 'chew', highlight: 'ew', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'abuse', highlight: 'u_e' }, { word: 'accuse', highlight: 'u_e' }, { word: 'amuse', highlight: 'u_e' }, { word: 'confuse', highlight: 'u_e' }, { word: 'cure', highlight: 'u_e' },
@@ -433,43 +564,6 @@ const phonicsData = {
           { word: 'renew', highlight: 'ew' }, { word: 'review', highlight: 'ew' }, { word: 'jewel', highlight: 'ew' }, { word: 'sewer', highlight: 'ew' }, { word: 'viewer', highlight: 'ew' },
           { word: 'sinew', highlight: 'ew' }, { word: 'skewer', highlight: 'ew' }, { word: 'ewer', highlight: 'ew' }, { word: 'newer', highlight: 'ew' }, { word: 'fewer', highlight: 'ew' }
         ]
-      },
-      {
-        id: 'unit7',
-        name: 'Unit 7',
-        patterns: ['长短音混合辨析'],
-        words: [
-          { word: 'cake', highlight: 'a_e', emoji: '🎂' },
-          { word: 'lake', highlight: 'a_e', emoji: '🏞️' },
-          { word: 'name', highlight: 'a_e', emoji: '📛' },
-          { word: 'five', highlight: 'i_e', emoji: '5️⃣' },
-          { word: 'ride', highlight: 'i_e', emoji: '🎠' },
-          { word: 'bone', highlight: 'o_e', emoji: '🦴' },
-          { word: 'note', highlight: 'o_e', emoji: '📝' },
-          { word: 'June', highlight: 'u_e', emoji: '📆' },
-          { word: 'cute', highlight: 'u_e', emoji: '🥰' },
-          { word: 'use', highlight: 'u_e', emoji: '🔧' }
-        ],
-        exploreWords: [
-          { word: 'bake', highlight: 'a_e' }, { word: 'base', highlight: 'a_e' }, { word: 'blade', highlight: 'a_e' }, { word: 'blame', highlight: 'a_e' }, { word: 'brave', highlight: 'a_e' },
-          { word: 'cage', highlight: 'a_e' }, { word: 'came', highlight: 'a_e' }, { word: 'cane', highlight: 'a_e' }, { word: 'cape', highlight: 'a_e' }, { word: 'case', highlight: 'a_e' },
-          { word: 'cave', highlight: 'a_e' }, { word: 'chase', highlight: 'a_e' }, { word: 'date', highlight: 'a_e' }, { word: 'face', highlight: 'a_e' }, { word: 'fade', highlight: 'a_e' },
-          { word: 'fake', highlight: 'a_e' }, { word: 'fame', highlight: 'a_e' }, { word: 'fate', highlight: 'a_e' }, { word: 'flame', highlight: 'a_e' }, { word: 'frame', highlight: 'a_e' },
-          { word: 'game', highlight: 'a_e' }, { word: 'gate', highlight: 'a_e' }, { word: 'gave', highlight: 'a_e' }, { word: 'gaze', highlight: 'a_e' }, { word: 'glaze', highlight: 'a_e' },
-          { word: 'grade', highlight: 'a_e' }, { word: 'grape', highlight: 'a_e' }, { word: 'grate', highlight: 'a_e' }, { word: 'grave', highlight: 'a_e' }, { word: 'graze', highlight: 'a_e' },
-          { word: 'hate', highlight: 'a_e' }, { word: 'lace', highlight: 'a_e' }, { word: 'lane', highlight: 'a_e' }, { word: 'late', highlight: 'a_e' }, { word: 'made', highlight: 'a_e' },
-          { word: 'make', highlight: 'a_e' }, { word: 'male', highlight: 'a_e' }, { word: 'mane', highlight: 'a_e' }, { word: 'mate', highlight: 'a_e' }, { word: 'maze', highlight: 'a_e' },
-          { word: 'pace', highlight: 'a_e' }, { word: 'page', highlight: 'a_e' }, { word: 'pane', highlight: 'a_e' }, { word: 'paste', highlight: 'a_e' }, { word: 'place', highlight: 'a_e' },
-          { word: 'plane', highlight: 'a_e' }, { word: 'plate', highlight: 'a_e' }, { word: 'race', highlight: 'a_e' }, { word: 'rage', highlight: 'a_e' }, { word: 'rake', highlight: 'a_e' },
-          { word: 'rate', highlight: 'a_e' }, { word: 'safe', highlight: 'a_e' }, { word: 'sage', highlight: 'a_e' }, { word: 'sake', highlight: 'a_e' }, { word: 'sale', highlight: 'a_e' },
-          { word: 'same', highlight: 'a_e' }, { word: 'sane', highlight: 'a_e' }, { word: 'save', highlight: 'a_e' }, { word: 'scale', highlight: 'a_e' }, { word: 'shade', highlight: 'a_e' },
-          { word: 'shake', highlight: 'a_e' }, { word: 'shame', highlight: 'a_e' }, { word: 'shape', highlight: 'a_e' }, { word: 'share', highlight: 'a_e' }, { word: 'shave', highlight: 'a_e' },
-          { word: 'skate', highlight: 'a_e' }, { word: 'slave', highlight: 'a_e' }, { word: 'snake', highlight: 'a_e' }, { word: 'space', highlight: 'a_e' }, { word: 'spare', highlight: 'a_e' },
-          { word: 'stage', highlight: 'a_e' }, { word: 'stake', highlight: 'a_e' }, { word: 'stale', highlight: 'a_e' }, { word: 'state', highlight: 'a_e' }, { word: 'taste', highlight: 'a_e' },
-          { word: 'trade', highlight: 'a_e' }, { word: 'vase', highlight: 'a_e' }, { word: 'wade', highlight: 'a_e' }, { word: 'wage', highlight: 'a_e' }, { word: 'wake', highlight: 'a_e' },
-          { word: 'waste', highlight: 'a_e' }, { word: 'wave', highlight: 'a_e' }, { word: 'whale', highlight: 'a_e' }, { word: 'while', highlight: 'i_e' }, { word: 'whine', highlight: 'i_e' },
-          { word: 'chime', highlight: 'i_e' }, { word: 'crime', highlight: 'i_e' }, { word: 'grime', highlight: 'i_e' }, { word: 'prime', highlight: 'i_e' }, { word: 'slime', highlight: 'i_e' }
-        ]
       }
     ]
   },
@@ -485,6 +579,18 @@ const phonicsData = {
         id: 'unit2',
         name: 'Unit 2',
         patterns: ['br', 'cr', 'fr', 'gr', 'pr', 'tr'],
+        examples: [
+          'A <span class="highlight"><span class="pattern">fr</span>og</span> sits on <span class="highlight"><span class="pattern">gr</span>een</span> <span class="highlight"><span class="pattern">gr</span>ass</span>.',
+          'My <span class="highlight"><span class="pattern">br</span>other</span> eats <span class="highlight"><span class="pattern">br</span>ead</span>.',
+          'The <span class="highlight"><span class="pattern">cr</span>ab</span> <span class="highlight"><span class="pattern">cr</span>awls</span> slowly.',
+          'I eat <span class="highlight"><span class="pattern">fr</span>esh</span> <span class="highlight"><span class="pattern">fr</span>uit</span> daily.',
+          'The <span class="highlight"><span class="pattern">gr</span>ape</span> is <span class="highlight"><span class="pattern">gr</span>eat</span>!',
+          'I <span class="highlight"><span class="pattern">pr</span>ay</span> every day.',
+          'The <span class="highlight"><span class="pattern">tr</span>ain</span> runs on the <span class="highlight"><span class="pattern">tr</span>ack</span>.',
+          'Look at the <span class="highlight"><span class="pattern">br</span>own</span> <span class="highlight"><span class="pattern">tr</span>ee</span>.',
+          'I <span class="highlight"><span class="pattern">tr</span>ust</span> my <span class="highlight"><span class="pattern">fr</span>iend</span>.',
+          'The <span class="highlight"><span class="pattern">cr</span>ow</span> is <span class="highlight"><span class="pattern">br</span>ave</span>.'
+        ],
         words: [
           { word: 'brown', highlight: 'br', emoji: '🧸' },
           { word: 'bread', highlight: 'br', emoji: '🍞' },
@@ -495,7 +601,27 @@ const phonicsData = {
           { word: 'grass', highlight: 'gr', emoji: '🌿' },
           { word: 'grape', highlight: 'gr', emoji: '🍇' },
           { word: 'tree', highlight: 'tr', emoji: '🌳' },
-          { word: 'truck', highlight: 'tr', emoji: '🚚' }
+          { word: 'truck', highlight: 'tr', emoji: '🚚' },
+          { word: 'brake', highlight: 'br', emoji: '📝' },
+          { word: 'branch', highlight: 'br', emoji: '📝' },
+          { word: 'brave', highlight: 'br', emoji: '📝' },
+          { word: 'crack', highlight: 'cr', emoji: '📝' },
+          { word: 'craft', highlight: 'cr', emoji: '📝' },
+          { word: 'crash', highlight: 'cr', emoji: '📝' },
+          { word: 'frame', highlight: 'fr', emoji: '📝' },
+          { word: 'free', highlight: 'fr', emoji: '📝' },
+          { word: 'freeze', highlight: 'fr', emoji: '📝' },
+          { word: 'grab', highlight: 'gr', emoji: '📝' },
+          { word: 'grace', highlight: 'gr', emoji: '📝' },
+          { word: 'grade', highlight: 'gr', emoji: '📝' },
+          { word: 'practice', highlight: 'pr', emoji: '📝' },
+          { word: 'praise', highlight: 'pr', emoji: '📝' },
+          { word: 'pray', highlight: 'pr', emoji: '📝' },
+          { word: 'press', highlight: 'pr', emoji: '📝' },
+          { word: 'pretty', highlight: 'pr', emoji: '📝' },
+          { word: 'track', highlight: 'tr', emoji: '📝' },
+          { word: 'trade', highlight: 'tr', emoji: '📝' },
+          { word: 'trail', highlight: 'tr', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'brake', highlight: 'br' }, { word: 'branch', highlight: 'br' }, { word: 'brave', highlight: 'br' }, { word: 'break', highlight: 'br' }, { word: 'breath', highlight: 'br' },
@@ -529,6 +655,18 @@ const phonicsData = {
         id: 'unit3',
         name: 'Unit 3',
         patterns: ['sm', 'sn', 'sp', 'st', 'sw'],
+        examples: [
+          'The <span class="highlight"><span class="pattern">sm</span>all</span> <span class="highlight"><span class="pattern">sn</span>ake</span> can <span class="highlight"><span class="pattern">sw</span>im</span> fast.',
+          'I <span class="highlight"><span class="pattern">sm</span>ile</span> at the <span class="highlight"><span class="pattern">st</span>ar</span>.',
+          'The <span class="highlight"><span class="pattern">sn</span>ail</span> is <span class="highlight"><span class="pattern">sm</span>all</span>.',
+          'I can <span class="highlight"><span class="pattern">sp</span>ell</span> my name.',
+          'Please <span class="highlight"><span class="pattern">st</span>op</span> and <span class="highlight"><span class="pattern">st</span>and</span> still.',
+          'I <span class="highlight"><span class="pattern">sw</span>ing</span> on the <span class="highlight"><span class="pattern">sw</span>ings</span>.',
+          'The <span class="highlight"><span class="pattern">sn</span>ow</span> is <span class="highlight"><span class="pattern">sm</span>ooth</span>.',
+          'I <span class="highlight"><span class="pattern">sp</span>ot</span> a <span class="highlight"><span class="pattern">st</span>ar</span>.',
+          'Let\'s <span class="highlight"><span class="pattern">sw</span>eep</span> the <span class="highlight"><span class="pattern">st</span>eps</span>.',
+          'A <span class="highlight"><span class="pattern">sm</span>art</span> <span class="highlight"><span class="pattern">sn</span>ake</span> <span class="highlight"><span class="pattern">sw</span>ims</span>.'
+        ],
         words: [
           { word: 'smile', highlight: 'sm', emoji: '😄' },
           { word: 'small', highlight: 'sm', emoji: '🐜' },
@@ -539,7 +677,22 @@ const phonicsData = {
           { word: 'stop', highlight: 'st', emoji: '🛑' },
           { word: 'star', highlight: 'st', emoji: '⭐' },
           { word: 'swim', highlight: 'sw', emoji: '🏊' },
-          { word: 'swing', highlight: 'sw', emoji: '🦺' }
+          { word: 'swing', highlight: 'sw', emoji: '🦺' },
+          { word: 'smack', highlight: 'sm', emoji: '📝' },
+          { word: 'smart', highlight: 'sm', emoji: '📝' },
+          { word: 'smash', highlight: 'sm', emoji: '📝' },
+          { word: 'snack', highlight: 'sn', emoji: '📝' },
+          { word: 'snag', highlight: 'sn', emoji: '📝' },
+          { word: 'snail', highlight: 'sn', emoji: '📝' },
+          { word: 'space', highlight: 'sp', emoji: '📝' },
+          { word: 'spade', highlight: 'sp', emoji: '📝' },
+          { word: 'spare', highlight: 'sp', emoji: '📝' },
+          { word: 'stack', highlight: 'st', emoji: '📝' },
+          { word: 'staff', highlight: 'st', emoji: '📝' },
+          { word: 'stage', highlight: 'st', emoji: '📝' },
+          { word: 'swam', highlight: 'sw', emoji: '📝' },
+          { word: 'swan', highlight: 'sw', emoji: '📝' },
+          { word: 'swap', highlight: 'sw', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'smack', highlight: 'sm' }, { word: 'smart', highlight: 'sm' }, { word: 'smash', highlight: 'sm' }, { word: 'smell', highlight: 'sm' }, { word: 'smog', highlight: 'sm' },
@@ -572,6 +725,18 @@ const phonicsData = {
         id: 'unit4',
         name: 'Unit 4',
         patterns: ['nd', 'nk', 'nt', 'ng'],
+        examples: [
+          'The <span class="highlight">ki<span class="pattern">ng</span></span> has a <span class="highlight">pi<span class="pattern">nk</span></span> <span class="highlight">ri<span class="pattern">ng</span></span>.',
+          'I fo<span class="highlight"><span class="pattern">und</span></span> a <span class="highlight">ba<span class="pattern">nd</span></span>.',
+          'Let\'s si<span class="highlight"><span class="pattern">ng</span></span> a so<span class="highlight"><span class="pattern">ng</span></span>.',
+          'I thi<span class="highlight"><span class="pattern">nk</span></span> this is fu<span class="highlight"><span class="pattern">n</span></span>.',
+          'The a<span class="highlight"><span class="pattern">nt</span></span> we<span class="highlight"><span class="pattern">nt</span></span> to the te<span class="highlight"><span class="pattern">nt</span></span>.',
+          'I ca<span class="highlight"><span class="pattern">n</span></span> dri<span class="highlight"><span class="pattern">nk</span></span> from the si<span class="highlight"><span class="pattern">nk</span></span>.',
+          'The stro<span class="highlight"><span class="pattern">ng</span></span> ma<span class="highlight"><span class="pattern">n</span></span> can sta<span class="highlight"><span class="pattern">nd</span></span>.',
+          'I sa<span class="highlight"><span class="pattern">ng</span></span> and wi<span class="highlight"><span class="pattern">nk</span></span>ed.',
+          'The lo<span class="highlight"><span class="pattern">ng</span></span> rope we<span class="highlight"><span class="pattern">nt</span></span> arou<span class="highlight"><span class="pattern">nd</span></span>.',
+          'Tha<span class="highlight"><span class="pattern">nk</span></span> you for the ha<span class="highlight"><span class="pattern">nd</span></span>.'
+        ],
         words: [
           { word: 'hand', highlight: 'nd', emoji: '✋' },
           { word: 'sand', highlight: 'nd', emoji: '🏖️' },
@@ -582,7 +747,17 @@ const phonicsData = {
           { word: 'king', highlight: 'ng', emoji: '🤴' },
           { word: 'ring', highlight: 'ng', emoji: '💍' },
           { word: 'sing', highlight: 'ng', emoji: '🎤' },
-          { word: 'long', highlight: 'ng', emoji: '📏' }
+          { word: 'long', highlight: 'ng', emoji: '📏' },
+          { word: 'and', highlight: 'nd', emoji: '📝' },
+          { word: 'band', highlight: 'nd', emoji: '📝' },
+          { word: 'bend', highlight: 'nd', emoji: '📝' },
+          { word: 'bank', highlight: 'nk', emoji: '📝' },
+          { word: 'blank', highlight: 'nk', emoji: '📝' },
+          { word: 'blink', highlight: 'nk', emoji: '📝' },
+          { word: 'bent', highlight: 'nt', emoji: '📝' },
+          { word: 'cent', highlight: 'nt', emoji: '📝' },
+          { word: 'count', highlight: 'nt', emoji: '📝' },
+          { word: 'along', highlight: 'ng', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'and', highlight: 'nd' }, { word: 'band', highlight: 'nd' }, { word: 'bend', highlight: 'nd' }, { word: 'bind', highlight: 'nd' }, { word: 'bland', highlight: 'nd' },
@@ -619,6 +794,7 @@ const phonicsData = {
         id: 'unit5',
         name: 'Unit 5',
         patterns: ['sh', 'ch', 'tch'],
+        example: 'A <span class="highlight">fi<span class="pattern">sh</span></span> in a <span class="highlight">di<span class="pattern">sh</span></span> can <span class="highlight">ca<span class="pattern">tch</span></span> the ball.',
         words: [
           { word: 'ship', highlight: 'sh', emoji: '🚢' },
           { word: 'fish', highlight: 'sh', emoji: '🐟' },
@@ -629,7 +805,12 @@ const phonicsData = {
           { word: 'chop', highlight: 'ch', emoji: '🥩' },
           { word: 'rich', highlight: 'ch', emoji: '💰' },
           { word: 'watch', highlight: 'tch', emoji: '⌚' },
-          { word: 'catch', highlight: 'tch', emoji: '🥎' }
+          { word: 'catch', highlight: 'tch', emoji: '🥎' },
+          { word: 'ash', highlight: 'sh', emoji: '📝' },
+          { word: 'beach', highlight: 'ch', emoji: '📝' },
+          { word: 'batch', highlight: 'tch', emoji: '📝' },
+          { word: 'blotch', highlight: 'tch', emoji: '📝' },
+          { word: 'clutch', highlight: 'tch', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'ash', highlight: 'sh' }, { word: 'bash', highlight: 'sh' }, { word: 'brush', highlight: 'sh' }, { word: 'cash', highlight: 'sh' }, { word: 'clash', highlight: 'sh' },
@@ -663,17 +844,18 @@ const phonicsData = {
         id: 'unit6',
         name: 'Unit 6',
         patterns: ['ph', 'wh'],
+        example: 'Take a <span class="highlight"><span class="pattern">ph</span>oto</span> of the <span class="highlight"><span class="pattern">wh</span>ite</span> <span class="highlight"><span class="pattern">wh</span>ale</span>.',
         words: [
           { word: 'phone', highlight: 'ph', emoji: '📱' },
           { word: 'photo', highlight: 'ph', emoji: '📸' },
-          { word: 'elephant', highlight: 'ph', emoji: '🐘' },
-          { word: 'dolphin', highlight: 'ph', emoji: '🐬' },
+          { word: 'graph', highlight: 'ph', emoji: '📊' },
+          { word: 'phrase', highlight: 'ph', emoji: '💬' },
           { word: 'whale', highlight: 'wh', emoji: '🐋' },
           { word: 'white', highlight: 'wh', emoji: '⚪' },
           { word: 'wheel', highlight: 'wh', emoji: '🛥️' },
           { word: 'whip', highlight: 'wh', emoji: '🪃' },
           { word: 'whisk', highlight: 'wh', emoji: '🥣' },
-          { word: 'whisper', highlight: 'wh', emoji: '🤫' }
+          { word: 'sphere', highlight: 'ph', emoji: '⚽' }
         ],
         exploreWords: [
           { word: 'alphabet', highlight: 'ph' }, { word: 'biography', highlight: 'ph' }, { word: 'cellphone', highlight: 'ph' }, { word: 'earphone', highlight: 'ph' }, { word: 'geography', highlight: 'ph' },
@@ -688,7 +870,7 @@ const phonicsData = {
           { word: 'whose', highlight: 'wh' }, { word: 'why', highlight: 'wh' }, { word: 'wharf', highlight: 'wh' }, { word: 'wheelchair', highlight: 'wh' }, { word: 'whelp', highlight: 'wh' },
           { word: 'whiff', highlight: 'wh' }, { word: 'whimper', highlight: 'wh' }, { word: 'whip', highlight: 'wh' }, { word: 'whisk', highlight: 'wh' }, { word: 'whisker', highlight: 'wh' },
           { word: 'whisper', highlight: 'wh' }, { word: 'whistle', highlight: 'wh' }, { word: 'whiten', highlight: 'wh' }, { word: 'whiz', highlight: 'wh' }, { word: 'whoosh', highlight: 'wh' },
-          { word: 'whopper', highlight: 'wh' }, { word: 'whoop', highlight: 'wh' }, { word: 'wick', highlight: 'wh' }, { word: 'whatever', highlight: 'wh' }, { word: 'whichever', highlight: 'wh' },
+          { word: 'whopper', highlight: 'wh' }, { word: 'whoop', highlight: 'wh' }, { word: 'whatever', highlight: 'wh' }, { word: 'whichever', highlight: 'wh' },
           { word: 'elsewhere', highlight: 'wh' }, { word: 'overwhelm', highlight: 'wh' }, { word: 'awhile', highlight: 'wh' }, { word: 'buckwheat', highlight: 'wh' }, { word: 'cartwheel', highlight: 'wh' },
           { word: 'somewhat', highlight: 'wh' }, { word: 'meanwhile', highlight: 'wh' }, { word: 'nowhere', highlight: 'wh' }, { word: 'anywhere', highlight: 'wh' }, { word: 'everywhere', highlight: 'wh' },
           { word: 'worthwhile', highlight: 'wh' }, { word: 'meanwhile', highlight: 'wh' }, { word: 'overwhelm', highlight: 'wh' }, { word: 'meanwhile', highlight: 'wh' }, { word: 'flywheel', highlight: 'wh' },
@@ -700,6 +882,7 @@ const phonicsData = {
         id: 'unit7',
         name: 'Unit 7',
         patterns: ['th', 'ck', 'qu'],
+        example: '<span class="highlight"><span class="pattern">Th</span>is</span> <span class="highlight"><span class="pattern">qu</span>een</span> has a <span class="highlight">bla<span class="pattern">ck</span></span> du<span class="highlight"><span class="pattern">ck</span></span>.',
         words: [
           { word: 'thin', highlight: 'th', emoji: '💃' },
           { word: 'thick', highlight: 'th', emoji: '📖' },
@@ -710,7 +893,12 @@ const phonicsData = {
           { word: 'sock', highlight: 'ck', emoji: '🧦' },
           { word: 'back', highlight: 'ck', emoji: '⬅️' },
           { word: 'queen', highlight: 'qu', emoji: '👑' },
-          { word: 'quiz', highlight: 'qu', emoji: '❓' }
+          { word: 'quiz', highlight: 'qu', emoji: '❓' },
+          { word: 'thank', highlight: 'th', emoji: '📝' },
+          { word: 'black', highlight: 'ck', emoji: '📝' },
+          { word: 'quack', highlight: 'qu', emoji: '📝' },
+          { word: 'quail', highlight: 'qu', emoji: '📝' },
+          { word: 'quake', highlight: 'qu', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'thank', highlight: 'th' }, { word: 'that', highlight: 'th' }, { word: 'the', highlight: 'th' }, { word: 'their', highlight: 'th' }, { word: 'them', highlight: 'th' },
@@ -753,6 +941,7 @@ const phonicsData = {
         id: 'unit2',
         name: 'Unit 2',
         patterns: ['ir', 'ur', 'er'],
+        example: 'The <span class="highlight">g<span class="pattern">ir</span>l</span> sees a <span class="highlight">b<span class="pattern">ir</span>d</span> and a <span class="highlight">p<span class="pattern">ur</span>ple</span> <span class="highlight">flow<span class="pattern">er</span></span>.',
         words: [
           { word: 'bird', highlight: 'ir', emoji: '🐦' },
           { word: 'girl', highlight: 'ir', emoji: '👧' },
@@ -763,7 +952,12 @@ const phonicsData = {
           { word: 'purple', highlight: 'ur', emoji: '🟪' },
           { word: 'tiger', highlight: 'er', emoji: '🐅' },
           { word: 'marker', highlight: 'er', emoji: '🖍️' },
-          { word: 'ruler', highlight: 'er', emoji: '📏' }
+          { word: 'ruler', highlight: 'er', emoji: '📏' },
+          { word: 'birch', highlight: 'ir', emoji: '📝' },
+          { word: 'blur', highlight: 'ur', emoji: '📝' },
+          { word: 'blurt', highlight: 'ur', emoji: '📝' },
+          { word: 'after', highlight: 'er', emoji: '📝' },
+          { word: 'anger', highlight: 'er', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'birch', highlight: 'ir' }, { word: 'birth', highlight: 'ir' }, { word: 'birthday', highlight: 'ir' }, { word: 'chirp', highlight: 'ir' }, { word: 'circle', highlight: 'ir' },
@@ -798,6 +992,7 @@ const phonicsData = {
         id: 'unit3',
         name: 'Unit 3',
         patterns: ['ou', 'ow'],
+        example: 'The <span class="highlight">br<span class="pattern">ow</span>n</span> <span class="highlight">m<span class="pattern">ou</span>se</span> runs ar<span class="highlight"><span class="pattern">ou</span>nd</span> the <span class="highlight">h<span class="pattern">ou</span>se</span>.',
         words: [
           { word: 'house', highlight: 'ou', emoji: '🏡' },
           { word: 'mouse', highlight: 'ou', emoji: '🐭' },
@@ -805,10 +1000,10 @@ const phonicsData = {
           { word: 'cloud', highlight: 'ou', emoji: '☁️' },
           { word: 'cow', highlight: 'ow', emoji: '🐄' },
           { word: 'owl', highlight: 'ow', emoji: '🦉' },
-          { word: 'flower', highlight: 'ow', emoji: '🌺' },
           { word: 'town', highlight: 'ow', emoji: '🏘️' },
           { word: 'clown', highlight: 'ow', emoji: '🤡' },
-          { word: 'brown', highlight: 'ow', emoji: '🟤' }
+          { word: 'brown', highlight: 'ow', emoji: '🟤' },
+          { word: 'about', highlight: 'ou', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'about', highlight: 'ou' }, { word: 'account', highlight: 'ou' }, { word: 'amount', highlight: 'ou' }, { word: 'announce', highlight: 'ou' }, { word: 'around', highlight: 'ou' },
@@ -840,6 +1035,7 @@ const phonicsData = {
         id: 'unit4',
         name: 'Unit 4',
         patterns: ['oi', 'oy'],
+        example: 'The <span class="highlight">b<span class="pattern">oy</span></span> plays with a <span class="highlight">t<span class="pattern">oy</span></span> and a c<span class="highlight"><span class="pattern">oi</span>n</span>.',
         words: [
           { word: 'oil', highlight: 'oi', emoji: '🛢️' },
           { word: 'coil', highlight: 'oi', emoji: '🌀' },
@@ -869,7 +1065,7 @@ const phonicsData = {
           { word: 'pointless', highlight: 'oi' }, { word: 'rejoicing', highlight: 'oi' }, { word: 'soiled', highlight: 'oi' }, { word: 'spoiled', highlight: 'oi' }, { word: 'tinfoil', highlight: 'oi' },
           { word: 'gargoyle', highlight: 'oy' }, { word: 'enjoyable', highlight: 'oy' }, { word: 'enjoyment', highlight: 'oy' }, { word: 'joyride', highlight: 'oy' }, { word: 'joystick', highlight: 'oy' },
           { word: 'disloyal', highlight: 'oy' }, { word: 'employer', highlight: 'oy' }, { word: 'employee', highlight: 'oy' }, { word: 'soybean', highlight: 'oy' }, { word: 'toyshop', highlight: 'oy' },
-          { word: 'corduroy', highlight: 'oy' }, { word: 'viceroy', highlight: 'oy' }, { word: 'unbutton', highlight: 'oy' }, { word: 'destroyer', highlight: 'oy' }, { word: 'unemployed', highlight: 'oy' },
+          { word: 'corduroy', highlight: 'oy' }, { word: 'viceroy', highlight: 'oy' }, { word: 'destroyer', highlight: 'oy' }, { word: 'unemployed', highlight: 'oy' },
           { word: 'overjoyed', highlight: 'oy' }, { word: 'unemployment', highlight: 'oy' }, { word: 'deployment', highlight: 'oy' }, { word: 'joyless', highlight: 'oy' }, { word: 'killjoy', highlight: 'oy' }
         ]
       },
@@ -877,6 +1073,7 @@ const phonicsData = {
         id: 'unit5',
         name: 'Unit 5',
         patterns: ['oo', 'u'],
+        example: 'The <span class="highlight">m<span class="pattern">oo</span>n</span> is <span class="highlight">bl<span class="pattern">ue</span></span> and the <span class="highlight">f<span class="pattern">oo</span>d</span> is g<span class="highlight"><span class="pattern">oo</span>d</span>.',
         words: [
           { word: 'cook', highlight: 'oo', emoji: '👨‍🍳' },
           { word: 'foot', highlight: 'oo', emoji: '🦶' },
@@ -887,14 +1084,17 @@ const phonicsData = {
           { word: 'pool', highlight: 'oo', emoji: '🏊' },
           { word: 'zoo', highlight: 'oo', emoji: '🦁' },
           { word: 'blue', highlight: 'u', emoji: '🔵' },
-          { word: 'glue', highlight: 'u', emoji: '🧴' }
+          { word: 'glue', highlight: 'u', emoji: '🧴' },
+          { word: 'clue', highlight: 'u', emoji: '📝' },
+          { word: 'cruel', highlight: 'u', emoji: '📝' },
+          { word: 'cue', highlight: 'u', emoji: '📝' }
         ],
         exploreWords: [
           { word: 'brook', highlight: 'oo' }, { word: 'crook', highlight: 'oo' }, { word: 'cookie', highlight: 'oo' }, { word: 'cooking', highlight: 'oo' }, { word: 'football', highlight: 'oo' },
           { word: 'good', highlight: 'oo' }, { word: 'goodbye', highlight: 'oo' }, { word: 'goodness', highlight: 'oo' }, { word: 'hook', highlight: 'oo' }, { word: 'hood', highlight: 'oo' },
           { word: 'hoof', highlight: 'oo' }, { word: 'look', highlight: 'oo' }, { word: 'nook', highlight: 'oo' }, { word: 'notebook', highlight: 'oo' }, { word: 'outlook', highlight: 'oo' },
           { word: 'overlook', highlight: 'oo' }, { word: 'rookie', highlight: 'oo' }, { word: 'shook', highlight: 'oo' }, { word: 'stood', highlight: 'oo' }, { word: 'textbook', highlight: 'oo' },
-          { word: 'took', highlight: 'oo' }, { word: 'understood', highlight: 'oo' }, { word: 'withstand', highlight: 'oo' }, { word: 'wool', highlight: 'oo' }, { word: 'wooden', highlight: 'oo' },
+          { word: 'took', highlight: 'oo' }, { word: 'understood', highlight: 'oo' }, { word: 'wool', highlight: 'oo' }, { word: 'wooden', highlight: 'oo' },
           { word: 'woodpecker', highlight: 'oo' }, { word: 'woof', highlight: 'oo' }, { word: 'bookcase', highlight: 'oo' }, { word: 'bookmark', highlight: 'oo' }, { word: 'bookshelf', highlight: 'oo' },
           { word: 'bookstore', highlight: 'oo' }, { word: 'childhood', highlight: 'oo' }, { word: 'footprint', highlight: 'oo' }, { word: 'footstep', highlight: 'oo' }, { word: 'neighborhood', highlight: 'oo' },
           { word: 'understood', highlight: 'oo' }, { word: 'withstood', highlight: 'oo' }, { word: 'mistook', highlight: 'oo' },
@@ -918,6 +1118,7 @@ const phonicsData = {
         id: 'unit6',
         name: 'Unit 6',
         patterns: ['au', 'aw', 'all', 'wa', 'or'],
+        example: 'In <span class="highlight"><span class="pattern">au</span>tumn</span>, I s<span class="highlight"><span class="pattern">aw</span></span> a t<span class="highlight"><span class="pattern">all</span></span> h<span class="highlight"><span class="pattern">or</span>se</span> <span class="highlight"><span class="pattern">wa</span>lk</span>.',
         words: [
           { word: 'sauce', highlight: 'au', emoji: '🥫' },
           { word: 'autumn', highlight: 'au', emoji: '🍂' },
@@ -928,7 +1129,20 @@ const phonicsData = {
           { word: 'ball', highlight: 'all', emoji: '⚽' },
           { word: 'tall', highlight: 'all', emoji: '🧑' },
           { word: 'fork', highlight: 'or', emoji: '🍴' },
-          { word: 'horse', highlight: 'or', emoji: '🐴' }
+          { word: 'horse', highlight: 'or', emoji: '🐴' },
+          { word: 'applaud', highlight: 'au', emoji: '📝' },
+          { word: 'assault', highlight: 'au', emoji: '📝' },
+          { word: 'awful', highlight: 'aw', emoji: '📝' },
+          { word: 'awe', highlight: 'aw', emoji: '📝' },
+          { word: 'all', highlight: 'all', emoji: '📝' },
+          { word: 'walk', highlight: 'wa', emoji: '📝' },
+          { word: 'walker', highlight: 'wa', emoji: '📝' },
+          { word: 'walking', highlight: 'wa', emoji: '📝' },
+          { word: 'walkway', highlight: 'wa', emoji: '📝' },
+          { word: 'waltz', highlight: 'wa', emoji: '📝' },
+          { word: 'born', highlight: 'or', emoji: '📝' },
+          { word: 'corner', highlight: 'or', emoji: '📝' },
+          { word: 'corn', highlight: 'or', emoji: '🌽' }
         ],
         exploreWords: [
           { word: 'applaud', highlight: 'au' }, { word: 'assault', highlight: 'au' }, { word: 'astronaut', highlight: 'au' }, { word: 'August', highlight: 'au' }, { word: 'author', highlight: 'au' },
@@ -945,7 +1159,7 @@ const phonicsData = {
           { word: 'law', highlight: 'aw' }, { word: 'lawn', highlight: 'aw' }, { word: 'outlaw', highlight: 'aw' }, { word: 'pawn', highlight: 'aw' }, { word: 'prawn', highlight: 'aw' },
           { word: 'raw', highlight: 'aw' }, { word: 'saw', highlight: 'aw' }, { word: 'sawdust', highlight: 'aw' }, { word: 'shawl', highlight: 'aw' }, { word: 'slaw', highlight: 'aw' },
           { word: 'spawn', highlight: 'aw' }, { word: 'squawk', highlight: 'aw' }, { word: 'thaw', highlight: 'aw' }, { word: 'withdraw', highlight: 'aw' }, { word: 'yawn', highlight: 'aw' },
-          { word: 'all', highlight: 'all' }, { word: 'also', highlight: 'all' }, { word: 'almost', highlight: 'all' }, { word: 'always', highlight: 'all' }, { word: 'altogether', highlight: 'all' },
+          { word: 'all', highlight: 'all' }, { word: 'always', highlight: 'all' },
           { word: 'call', highlight: 'all' }, { word: 'caller', highlight: 'all' }, { word: 'fall', highlight: 'all' }, { word: 'fallen', highlight: 'all' }, { word: 'hall', highlight: 'all' },
           { word: 'hallway', highlight: 'all' }, { word: 'install', highlight: 'all' }, { word: 'mall', highlight: 'all' }, { word: 'overall', highlight: 'all' }, { word: 'recall', highlight: 'all' },
           { word: 'small', highlight: 'all' }, { word: 'stall', highlight: 'all' }, { word: 'wall', highlight: 'all' }, { word: 'wallet', highlight: 'all' }, { word: 'wallpaper', highlight: 'all' },
@@ -968,18 +1182,37 @@ const phonicsData = {
       {
         id: 'unit7',
         name: 'Unit 7',
-        patterns: ['c/g 变音', 'Silent Letters'],
+        patterns: ['c', 'g', 'k', 'w', 'b'],
+        example: 'The <span class="highlight">ni<span class="pattern">ce</span></span> kni<span class="highlight"><span class="pattern">ght</span></span> can <span class="highlight"><span class="pattern">wr</span>ite</span> on a pa<span class="highlight"><span class="pattern">ge</span></span>.',
         words: [
           { word: 'city', highlight: 'c', emoji: '🏙️' },
           { word: 'rice', highlight: 'c', emoji: '🍚' },
+          { word: 'nice', highlight: 'c', emoji: '😊' },
+          { word: 'ice', highlight: 'c', emoji: '🧊' },
+          { word: 'face', highlight: 'c', emoji: '😀' },
+          { word: 'mice', highlight: 'c', emoji: '🐭' },
           { word: 'cage', highlight: 'g', emoji: '🧑‍🦲' },
           { word: 'page', highlight: 'g', emoji: '📄' },
+          { word: 'stage', highlight: 'g', emoji: '🎭' },
+          { word: 'huge', highlight: 'g', emoji: '🦣' },
+          { word: 'bridge', highlight: 'g', emoji: '🌉' },
+          { word: 'orange', highlight: 'g', emoji: '🍊' },
           { word: 'knife', highlight: 'k', emoji: '🔪' },
           { word: 'knee', highlight: 'k', emoji: '🦵' },
           { word: 'knit', highlight: 'k', emoji: '🧶' },
+          { word: 'knock', highlight: 'k', emoji: '🚪' },
+          { word: 'know', highlight: 'k', emoji: '🧠' },
+          { word: 'knight', highlight: 'k', emoji: '🤺' },
           { word: 'write', highlight: 'w', emoji: '✍️' },
           { word: 'wrist', highlight: 'w', emoji: '🤙' },
-          { word: 'wrong', highlight: 'w', emoji: '❌' }
+          { word: 'wrong', highlight: 'w', emoji: '❌' },
+          { word: 'wrap', highlight: 'w', emoji: '🎁' },
+          { word: 'wreck', highlight: 'w', emoji: '💥' },
+          { word: 'thumb', highlight: 'b', emoji: '👍' },
+          { word: 'lamb', highlight: 'b', emoji: '🐑' },
+          { word: 'climb', highlight: 'b', emoji: '🧗' },
+          { word: 'comb', highlight: 'b', emoji: '💇' },
+          { word: 'plumber', highlight: 'b', emoji: '🔧' }
         ],
         exploreWords: [
           { word: 'ace', highlight: 'ce' }, { word: 'cell', highlight: 'ce' }, { word: 'cent', highlight: 'ce' }, { word: 'center', highlight: 'ce' }, { word: 'century', highlight: 'ce' },

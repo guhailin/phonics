@@ -49,8 +49,33 @@
                 <p id="unit-patterns" class="patterns"></p>
             </div>
             
-            <div class="words-grid">
-                <!-- 单词卡片将由 JavaScript 动态生成 -->
+            <!-- Tab 导航 -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="switchTab('words')">
+                    📚 单词卡片
+                </button>
+                <button class="tab-btn" onclick="switchTab('examples')">
+                    💡 例句练习
+                </button>
+            </div>
+            
+            <!-- 单词卡片区域 -->
+            <div id="words-tab" class="tab-content active">
+                <div class="words-grid">
+                    <!-- 单词卡片将由 JavaScript 动态生成 -->
+                </div>
+            </div>
+            
+            <!-- 例句展示区 -->
+            <div id="examples-tab" class="tab-content">
+                <div class="examples-container">
+                    <!-- 例句将由 JavaScript 动态生成 -->
+                </div>
+                <div class="example-controls">
+                    <button class="control-btn" onclick="prevExample()">← 上一句</button>
+                    <span id="example-counter" class="example-counter"></span>
+                    <button class="control-btn" onclick="nextExample()">下一句 →</button>
+                </div>
             </div>
         </div>
 

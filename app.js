@@ -5,6 +5,8 @@ let reviewWords = [];
 let currentReviewIndex = 0;
 let exploreWords = [];
 let currentExploreIndex = 0;
+let currentExamples = [];
+let currentExampleIndex = 0;
 
 // ========== 页面导航 ==========
 function navigateTo(pageName) {
@@ -99,25 +101,44 @@ function showUnitPage(levelId, unitId) {
     document.getElementById('unit-title').textContent = `${level.name} - ${unit.name}`;
     document.getElementById('unit-patterns').textContent = unit.patterns.join(' · ');
     
-    // 渲染单词
+    // 初始化例句
+    currentExamples = unit.examples || (unit.example ? [unit.example] : []);
+    currentExampleIndex = 0;
+    renderExamples();
+    
+    // 默认显示单词tab
+    switchTab('words');
+    
+    // 按pattern分组并排序单词
     const wordsGrid = document.querySelector('.words-grid');
     wordsGrid.innerHTML = '';
     
-    unit.words.forEach(wordObj => {
-        const wordCard = document.createElement('div');
-        wordCard.className = 'word-card';
+    // 按照patterns顺序分组单词
+    unit.patterns.forEach(pattern => {
+        const cleanPattern = pattern.replace(/^-/, ''); // 去掉前导的'-'
         
-        // 高亮关键字母
-        const highlightedWord = highlightWord(wordObj.word, wordObj.highlight);
+        // 找到该pattern的所有单词
+        const patternWords = unit.words.filter(wordObj => 
+            wordObj.highlight === cleanPattern || wordObj.highlight === pattern
+        );
         
-        wordCard.innerHTML = `
-            <div class="word-image">
-                ${wordObj.emoji || '🖼️'}
-            </div>
-            <div class="word-text">${highlightedWord}</div>
-        `;
-        
-        wordsGrid.appendChild(wordCard);
+        // 渲染该pattern的单词
+        patternWords.forEach(wordObj => {
+            const wordCard = document.createElement('div');
+            wordCard.className = 'word-card';
+            
+            // 高亮关键字母
+            const highlightedWord = highlightWord(wordObj.word, wordObj.highlight);
+            
+            wordCard.innerHTML = `
+                <div class="word-image">
+                    ${wordObj.emoji || '🖼️'}
+                </div>
+                <div class="word-text">${highlightedWord}</div>
+            `;
+            
+            wordsGrid.appendChild(wordCard);
+        });
     });
     
     navigateTo('unit');
@@ -380,4 +401,93 @@ function backToLevel() {
     } else {
         navigateTo('home');
     }
+}
+// ========== Tab 切换功能 ==========
+function switchTab(tabName) {
+    // 更新tab按钮状态
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach((btn, index) => {
+        btn.classList.remove('active');
+        // 根据tabName设置对应按钮为active
+        if ((tabName === 'words' && index === 0) || (tabName === 'examples' && index === 1)) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // 切换内容区域
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    if (tabName === 'words') {
+        document.getElementById('words-tab').classList.add('active');
+    } else if (tabName === 'examples') {
+        document.getElementById('examples-tab').classList.add('active');
+    }
+}
+
+// ========== 例句渲染和浏览功能 ==========
+function renderExamples() {
+    const container = document.querySelector('.examples-container');
+    container.innerHTML = '';
+    
+    if (currentExamples.length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: #999;">暂无例句</p>';
+        return;
+    }
+    
+    // 创建所有例句项
+    currentExamples.forEach((example, index) => {
+        const exampleItem = document.createElement('div');
+        exampleItem.className = 'example-item';
+        if (index === currentExampleIndex) {
+            exampleItem.classList.add('active');
+        }
+        exampleItem.innerHTML = example;
+        container.appendChild(exampleItem);
+    });
+    
+    // 更新计数器
+    updateExampleCounter();
+}
+
+function updateExampleCounter() {
+    const counter = document.getElementById('example-counter');
+    if (currentExamples.length > 0) {
+        counter.textContent = `${currentExampleIndex + 1} / ${currentExamples.length}`;
+    } else {
+        counter.textContent = '0 / 0';
+    }
+}
+
+function nextExample() {
+    if (currentExamples.length === 0) return;
+    
+    currentExampleIndex = (currentExampleIndex + 1) % currentExamples.length;
+    
+    // 更新显示
+    document.querySelectorAll('.example-item').forEach((item, index) => {
+        item.classList.remove('active');
+        if (index === currentExampleIndex) {
+            item.classList.add('active');
+        }
+    });
+    
+    updateExampleCounter();
+}
+
+function prevExample() {
+    if (currentExamples.length === 0) return;
+    
+    currentExampleIndex = (currentExampleIndex - 1 + currentExamples.length) % currentExamples.length;
+    
+    // 更新显示
+    document.querySelectorAll('.example-item').forEach((item, index) => {
+        item.classList.remove('active');
+        if (index === currentExampleIndex) {
+            item.classList.add('active');
+        }
+    });
+    
+    updateExampleCounter();
 }

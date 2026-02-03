@@ -5,6 +5,108 @@
     box-sizing: border-box;
 }
 
+/* ========== Tab 导航样式 ========== */
+.tab-navigation {
+    display: flex;
+    gap: 15px;
+    margin: 0 20px 20px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-family: inherit;
+    background: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ========== Tab 内容区域 ========== */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ========== 例句容器样式 ========== */
+.examples-container {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    margin: 0 20px 20px 20px;
+    min-height: 200px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.example-item {
+    font-size: 1.5em;
+    line-height: 2;
+    color: #333;
+    text-align: center;
+    display: none;
+}
+
+.example-item.active {
+    display: block;
+    animation: slideIn 0.4s ease-out;
+}
+
+.example-item .highlight {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.example-item .pattern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-color: #667eea;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+/* ========== 例句控制按钮 ========== */
+.example-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 20px;
+}
+
+.example-counter {
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+}
+
 body {
     font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
