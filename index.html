@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Oxford Phonics World - 快乐学自然拼读</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 主应用容器 -->
+    <div id="app">
+        <!-- 首页 -->
+        <div id="home-page" class="page active">
+            <div class="header">
+                <h1 class="main-title">🎨 Oxford Phonics World</h1>
+                <p class="subtitle">快乐学自然拼读！</p>
+            </div>
+            
+            <div class="levels-container">
+                <!-- Level 卡片将由 JavaScript 动态生成 -->
+            </div>
+        </div>
+
+        <!-- Level 详情页 -->
+        <div id="level-page" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="navigateTo('home')">← 返回</button>
+                <h2 id="level-title" class="page-title"></h2>
+            </div>
+            
+            <div class="units-container">
+                <!-- Unit 卡片将由 JavaScript 动态生成 -->
+            </div>
+            
+            <button class="review-btn" onclick="startReview()">
+                🎯 开始复习
+            </button>
+            
+            <button class="explore-btn" onclick="startExplore()">
+                🔍 探索模式
+            </button>
+        </div>
+
+        <!-- Unit 详情页 -->
+        <div id="unit-page" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="navigateToLevel()">← 返回</button>
+                <h2 id="unit-title" class="page-title"></h2>
+                <p id="unit-patterns" class="patterns"></p>
+            </div>
+            
+            <div class="words-grid">
+                <!-- 单词卡片将由 JavaScript 动态生成 -->
+            </div>
+        </div>
+
+        <!-- 探索模式页 -->
+        <div id="explore-page" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="backToLevel()">← 返回</button>
+                <h2 class="page-title">🔍 探索模式</h2>
+                <p id="explore-progress" class="review-progress"></p>
+            </div>
+            
+            <div class="review-container">
+                <div class="review-card">
+                    <div class="word-display">
+                        <span id="explore-word"></span>
+                    </div>
+                </div>
+                
+                <div class="review-controls">
+                    <button class="control-btn prev-btn" onclick="previousExploreWord()">← 上一个</button>
+                    <button class="control-btn shuffle-btn" onclick="shuffleExplore()">🔀 随机</button>
+                    <button class="control-btn next-btn" onclick="nextExploreWord()">下一个 →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 复习页 -->
+        <div id="review-page" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="navigateToLevel()">← 返回</button>
+                <h2 class="page-title">🎯 复习模式</h2>
+                <p id="review-progress" class="review-progress"></p>
+            </div>
+            
+            <div class="review-container">
+                <div class="review-card">
+                    <div class="word-display">
+                        <span id="review-word"></span>
+                    </div>
+                    <div class="word-image-placeholder">
+                        <span class="image-icon">🖼️</span>
+                    </div>
+                </div>
+                
+                <div class="review-controls">
+                    <button class="control-btn prev-btn" onclick="previousWord()">← 上一个</button>
+                    <button class="control-btn shuffle-btn" onclick="shuffleReview()">🔀 随机</button>
+                    <button class="control-btn next-btn" onclick="nextWord()">下一个 →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载数据和应用脚本 -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
