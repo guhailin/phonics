@@ -6,9 +6,9 @@ fetch('examples.json')
   .then(response => response.json())
   .then(data => {
     examplesData = data;
-    console.log('例例句配置加载成功;
+    console.log('例句配置加载成功');
   })
-  .catch(error => console.error('加载例例句失败;
+  .catch(error => console.error('加载例句失败'));
 
 
 const phonicsData = {
