@@ -66,11 +66,44 @@
     color: #333;
     text-align: center;
     display: none;
+    position: relative;
 }
 
 .example-item.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     animation: slideIn 0.4s ease-out;
+}
+
+.example-speak-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+.example-speak-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+}
+
+.example-speak-btn:active {
+    transform: scale(0.95);
+}
+
+.example-text {
+    display: inline-block;
 }
 
 .example-item .highlight {
@@ -346,6 +379,10 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 280px;
 }
 
 .word-card:hover {
@@ -353,12 +390,65 @@ body {
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
+.word-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .word-text {
     font-size: 2.5em;
     font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     word-break: break-word;
+}
+
+.word-phonetic {
+    font-size: 1.1em;
+    color: #667eea;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 5px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.word-definition {
+    font-size: 0.9em;
+    color: #888;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.word-card:hover .word-phonetic,
+.word-card:hover .word-definition {
+    opacity: 1;
+    max-height: 50px;
+}
+
+.word-card:active {
+    transform: translateY(-5px) rotate(2deg) scale(0.95);
+}
+
+/* 点击朗读提示图标 */
+.speaker-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.word-card:hover .speaker-icon {
+    opacity: 0.4;
 }
 
 .word-text .highlight,
@@ -395,6 +485,7 @@ body {
 
 .word-image .image-icon {
     font-size: 1em;
+    opacity: 1;
 }
 
 /* ========== 复习按钮 ========== */
@@ -477,11 +568,38 @@ body {
     font-size: 4em;
     font-weight: bold;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.word-display:active {
+    transform: scale(0.95);
+}
+
+.word-info-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+
+.review-phonetic {
+    font-size: 1.3em;
+    color: #667eea;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 8px;
+}
+
+.review-definition {
+    font-size: 1em;
+    color: #888;
+    font-family: 'Arial', sans-serif;
 }
 
 .word-image-placeholder {
@@ -505,7 +623,7 @@ body {
 
 .image-icon {
     font-size: 6em;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 /* ========== 复习控制按钮 ========== */
@@ -590,3 +708,229 @@ body {
 .level-card:nth-child(2) { animation-delay: 0.2s; }
 .level-card:nth-child(3) { animation-delay: 0.3s; }
 .level-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ========== 首页设置按钮 ========== */
+.settings-home-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.settings-home-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* ========== 设置页面样式 ========== */
+.settings-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.settings-section {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.settings-title {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.setting-label {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+}
+
+.setting-select {
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.setting-select:hover,
+.setting-select:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.setting-input {
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.setting-input:hover,
+.setting-input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.test-btn {
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.test-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.setting-range {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #ddd;
+    appearance: none;
+    cursor: pointer;
+}
+
+.setting-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.setting-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.setting-range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    border: none;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* ========== Toggle Switch ========== */
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: all 0.3s ease;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* ========== Reset Button ========== */
+.reset-btn {
+    width: 100%;
+    padding: 15px;
+    background: #f5f5f5;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.reset-btn:hover {
+    background: #fff;
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* ========== 移动端适配 ========== */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 10px;
+    }
+
+    .settings-section {
+        padding: 20px 15px;
+    }
+}

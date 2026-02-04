@@ -1,4 +1,16 @@
 // Oxford Phonics World 数据结构
+
+// 加载例句配置
+let examplesData = null;
+fetch('examples.json')
+  .then(response => response.json())
+  .then(data => {
+    examplesData = data;
+    console.log('例例句配置加载成功;
+  })
+  .catch(error => console.error('加载例例句失败;
+
+
 const phonicsData = {
   level2: {
     id: 'level2',
@@ -231,7 +243,7 @@ const phonicsData = {
           'The <span class="highlight">p<span class="pattern">up</span></span> is in the <span class="highlight">h<span class="pattern">ut</span></span>.',
           'Give me a <span class="highlight">h<span class="pattern">ug</span></span> in the <span class="highlight">s<span class="pattern">un</span></span>.',
           'I can <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">n<span class="pattern">ut</span></span>.',
-          'The <span class="highlight">m<span class="pattern">ug</span></span> fell d<span class="highlight"><span class="pattern">own</span></span>.',
+          'The <span class="highlight">m<span class="pattern">ug</span></span> fell on the <span class="highlight">r<span class="pattern">ug</span></span>.',
           'We <span class="highlight">r<span class="pattern">un</span></span> for <span class="highlight">f<span class="pattern">un</span></span>.',
           'Pick <span class="highlight"><span class="pattern">up</span></span> the <span class="highlight">r<span class="pattern">ug</span></span>.',
           'The <span class="highlight">b<span class="pattern">un</span></span> is in the <span class="highlight">j<span class="pattern">ug</span></span>.',
@@ -404,16 +416,16 @@ const phonicsData = {
         name: 'Unit 4',
         patterns: ['i_e', 'ie', 'y'],
         examples: [
-          'I like to <span class="highlight">fl<span class="pattern">y</span></span> a <span class="highlight">k<span class="pattern">ite</span></span> and eat <span class="highlight">p<span class="pattern">ie</span></span>.',
-          'The <span class="highlight">sk<span class="pattern">y</span></span> is n<span class="highlight"><span class="pattern">ice</span></span> and blue.',
-          'I can <span class="highlight">r<span class="pattern">ide</span></span> my <span class="highlight">b<span class="pattern">ike</span></span>.',
+          'I like to <span class="highlight">fl<span class="pattern">y</span></span> a <span class="highlight">k<span class="pattern">i_e</span>t</span> and eat <span class="highlight">p<span class="pattern">ie</span></span>.',
+          'The <span class="highlight">sk<span class="pattern">y</span></span> is <span class="highlight">n<span class="highlight"><span class="pattern">i_e</span></span></span> and blue.',
+          'I can <span class="highlight">r<span class="highlight"><span class="pattern">i_e</span></span></span> my <span class="highlight">b<span class="highlight"><span class="pattern">i_e</span></span>k</span>.',
           'Don\'t tell a <span class="highlight">l<span class="pattern">ie</span></span> or <span class="highlight">cr<span class="pattern">y</span></span>.',
-          'The <span class="highlight">m<span class="pattern">ice</span></span> tr<span class="highlight"><span class="pattern">ied</span></span> to <span class="highlight">h<span class="pattern">ide</span></span>.',
+          'The <span class="highlight">m<span class="highlight"><span class="pattern">i_e</span></span></span> tr<span class="highlight"><span class="pattern">ie</span></span>d to <span class="highlight">h<span class="highlight"><span class="pattern">i_e</span></span></span>.',
           'I <span class="highlight">d<span class="pattern">ive</span></span> in the water and <span class="highlight">dr<span class="pattern">y</span></span> off.',
           'At <span class="highlight">n<span class="pattern">ine</span></span> I\'ll <span class="highlight">t<span class="pattern">ie</span></span> my shoe.',
           'The <span class="highlight">p<span class="pattern">ie</span></span> is a nice <span class="highlight">s<span class="pattern">ize</span></span>.',
           'I tr<span class="highlight"><span class="pattern">y</span></span> to <span class="highlight">wr<span class="pattern">ite</span></span> well.',
-          'The <span class="highlight">pr<span class="pattern">ice</span></span> is <span class="highlight">f<span class="pattern">ine</span></span>.'
+          'The <span class="highlight">pr<span class="highlight"><span class="pattern">i_e</span></span></span> is <span class="highlight">f<span class="highlight"><span class="pattern">i_e</span></span></span>.'
         ],
         words: [
           { word: 'kite', highlight: 'i_e', emoji: '🪁' },
@@ -459,14 +471,14 @@ const phonicsData = {
         examples: [
           'Look at the <span class="highlight">sn<span class="pattern">ow</span></span> on the <span class="highlight">r<span class="pattern">ose</span></span> and <span class="highlight">b<span class="pattern">oat</span></span>.',
           'I can <span class="highlight">r<span class="pattern">ow</span></span> the <span class="highlight">b<span class="pattern">oat</span></span> <span class="highlight">h<span class="pattern">ome</span></span>.',
-          'The <span class="highlight">g<span class="pattern">oat</span></span> has a <span class="highlight">n<span class="pattern">ose</span></span>.',
+          'The <span class="highlight">g<span class="pattern">oa</span>t</span> has a <span class="highlight">n<span class="highlight"><span class="pattern">o_e</span></span></span>.',
           'I <span class="highlight">kn<span class="pattern">ow</span></span> the <span class="highlight">r<span class="pattern">oad</span></span> <span class="highlight">h<span class="pattern">ome</span></span>.',
           'The <span class="highlight">c<span class="pattern">oat</span></span> is <span class="highlight">bel<span class="pattern">ow</span></span> the <span class="highlight">r<span class="pattern">ope</span></span>.',
           'I <span class="highlight">h<span class="pattern">ope</span></span> to see the <span class="highlight">sn<span class="pattern">ow</span></span>.',
           'Let\'s <span class="highlight">gr<span class="pattern">ow</span></span> a <span class="highlight">r<span class="pattern">ose</span></span>.',
           'The <span class="highlight">t<span class="pattern">oad</span></span> jumps <span class="highlight">sl<span class="pattern">ow</span></span>.',
           'I <span class="highlight">thr<span class="pattern">ow</span></span> the <span class="highlight">st<span class="pattern">one</span></span>.',
-          'The <span class="highlight">b<span class="pattern">owl</span></span> has <span class="highlight">s<span class="pattern">oap</span></span> in it.'
+          'The <span class="highlight">bowl</span></span> has <span class="highlight">s<span class="highlight"><span class="pattern">oa</span></span>p</span> in it.'
         ],
         words: [
           { word: 'rope', highlight: 'o_e', emoji: '🪢' },
@@ -512,16 +524,16 @@ const phonicsData = {
         name: 'Unit 6',
         patterns: ['u_e', 'ue', 'ui', 'ew'],
         examples: [
-          'The <span class="highlight">bl<span class="pattern">ue</span></span> <span class="highlight">c<span class="pattern">ube</span></span> is <span class="highlight">n<span class="pattern">ew</span></span>.',
+          'The <span class="highlight">bl<span class="highlight"><span class="pattern">u_e</span></span></span> <span class="highlight">c<span class="highlight"><span class="pattern">u_e</span></span>b</span> is <span class="highlight">n<span class="pattern">ew</span></span>.',
           'I <span class="highlight">kn<span class="pattern">ew</span></span> the <span class="highlight">tr<span class="pattern">ue</span></span> answer.',
-          'The <span class="highlight">m<span class="pattern">ule</span></span> drinks <span class="highlight">j<span class="pattern">uice</span></span>.',
+          'The <span class="highlight">m<span class="highlight"><span class="pattern">u</span></span>le</span> drinks <span class="highlight">j<span class="highlight"><span class="pattern">ui</span></span>ce</span>.',
           'Put <span class="highlight">gl<span class="pattern">ue</span></span> on the <span class="highlight">t<span class="pattern">ube</span></span>.',
           'I <span class="highlight">ch<span class="pattern">ew</span></span> the <span class="highlight">fr<span class="pattern">uit</span></span>.',
           'The <span class="highlight">s<span class="pattern">uit</span></span> is <span class="highlight">bl<span class="pattern">ue</span></span> and <span class="pattern">n<span class="pattern">ew</span></span>.',
-          'A f<span class="highlight"><span class="pattern">ew</span></span> <span class="highlight">cl<span class="pattern">ues</span></span> help me.',
-          'The <span class="highlight">c<span class="pattern">ute</span></span> bird fl<span class="highlight"><span class="pattern">ew</span></span> away.',
+          'A <span class="highlight">f<span class="pattern">ew</span></span> <span class="highlight">cl<span class="highlight"><span class="pattern">ue</span></span>s</span> help me.',
+          'The <span class="highlight">c<span class="highlight"><span class="pattern">u</span></span>t<span class="highlight"><span class="pattern">e</span></span></span> bird <span class="highlight">fl<span class="pattern">ew</span></span> away.',
           'I need a <span class="highlight">c<span class="pattern">ue</span></span> for the game.',
-          'The <span class="highlight">cr<span class="pattern">ew</span></span> uses <span class="highlight">gl<span class="pattern">ue</span></span>.'
+          'The <span class="highlight">cr<span class="pattern">ew</span></span> uses <span class="highlight">gl<span class="highlight"><span class="pattern">u</span></span>e</span>.'
         ],
         words: [
           { word: 'cube', highlight: 'u_e', emoji: '🧊' },
@@ -727,7 +739,7 @@ const phonicsData = {
         patterns: ['nd', 'nk', 'nt', 'ng'],
         examples: [
           'The <span class="highlight">ki<span class="pattern">ng</span></span> has a <span class="highlight">pi<span class="pattern">nk</span></span> <span class="highlight">ri<span class="pattern">ng</span></span>.',
-          'I fo<span class="highlight"><span class="pattern">und</span></span> a <span class="highlight">ba<span class="pattern">nd</span></span>.',
+          'I <span class="highlight">fo <span class="highlight"><span class="pattern">n</span></span>d</span> a <span class="highlight">ba<span class="highlight"><span class="pattern">n</span></span>d</span>.',
           'Let\'s si<span class="highlight"><span class="pattern">ng</span></span> a so<span class="highlight"><span class="pattern">ng</span></span>.',
           'I thi<span class="highlight"><span class="pattern">nk</span></span> this is fu<span class="highlight"><span class="pattern">n</span></span>.',
           'The a<span class="highlight"><span class="pattern">nt</span></span> we<span class="highlight"><span class="pattern">nt</span></span> to the te<span class="highlight"><span class="pattern">nt</span></span>.',

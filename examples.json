@@ -1,0 +1,271 @@
+{
+  "level2": {
+    "title": "Short Vowels",
+    "units": {
+      "unit2": {
+        "name": "Unit 2",
+        "examples": [
+          "The <span class=\"highlight\">m<span class=\"pattern\">an</span></span> has a <span class=\"highlight\">c<span class=\"pattern\">ap</span></span>.",
+          "I see a <span class=\"highlight\">c<span class=\"pattern\">at</span></span> on the <span class=\"highlight\">m<span class=\"pattern\">at</span></span>.",
+          "The <span class=\"highlight\">f<span class=\"pattern\">an</span></span> is in the <span class=\"highlight\">v<span class=\"pattern\">an</span></span>.",
+          "Mom makes <span class=\"highlight\">j<span class=\"pattern\">am</span></span> with <span class=\"highlight\">h<span class=\"pattern\">am</span></span>.",
+          "My <span class=\"highlight\">d<span class=\"pattern\">ad</span></span> is <span class=\"pattern\">s<span class=\"pattern\">ad</span></span>.",
+          "Put the <span class=\"highlight\">t<span class=\"pattern\">ag</span></span> in the <span class=\"highlight\">b<span class=\"pattern\">ag</span></span>.",
+          "The <span class=\"highlight\">b<span class=\"pattern\">at</span></span> has a <span class=\"highlight\">h<span class=\"pattern\">at</span></span>.",
+          "I can <span class=\"highlight\">cl<span class=\"pattern\">ap</span></span> with the <span class=\"highlight\">m<span class=\"pattern\">ap</span></span>.",
+          "The <span class=\"highlight\">r<span class=\"pattern\">am</span></span> sits with <span class=\"highlight\">S<span class=\"pattern\">am</span></span>.",
+          "A <span class=\"highlight\">f<span class=\"pattern\">at</span></span> <span class=\"highlight\">c<span class=\"pattern\">at</span></span> takes a <span class=\"highlight\">n<span class=\"pattern\">ap</span></span>."
+        ]
+      },
+      "unit3": {
+        "name": "Unit 3",
+        "examples": [
+          "A <span class=\"highlight\">h<span class=\"pattern\">en</span></span> is on the <span class=\"highlight\">r<span class=\"pattern\">ed</span></span> <span class=\"highlight\">b<span class=\"pattern\">ed</span></span>.",
+          "I can <span class=\"highlight\">g<span class=\"pattern\">et</span></span> the <span class=\"highlight\">j<span class=\"pattern\">et</span></span>.",
+          "The <span class=\"highlight\">p<span class=\"pattern\">en</span></span> is for <span class=\"highlight\">B<span class=\"pattern\">en</span></span>.",
+          "Let me <span class=\"highlight\">p<span class=\"pattern\">et</span></span> the <span class=\"highlight\">w<span class=\"pattern\">et</span></span> dog.",
+          "Ten <span class=\"highlight\">m<span class=\"pattern\">en</span></span> sit in the <span class=\"highlight\">d<span class=\"pattern\">en</span></span>.",
+          "Mom fed the hen.",
+          "The <span class=\"highlight\">n<span class=\"pattern\">et</span></span> is <span class=\"highlight\">w<span class=\"pattern\">et</span></span>.",
+          "I led the way.",
+          "We met at ten.",
+          "She wed in a red dress."
+        ]
+      },
+      "unit4": {
+        "name": "Unit 4",
+        "examples": [
+          "A <span class=\"highlight\">b<span class=\"pattern\">ig</span></span> <span class=\"highlight\">p<span class=\"pattern\">in</span></span> is in the <span class=\"highlight\">b<span class=\"pattern\">in</span></span>.",
+          "I can <span class=\"highlight\">d<span class=\"pattern\">ig</span></span> with my <span class=\"highlight\">w<span class=\"pattern\">ig</span></span>.",
+          "Please sit on the big chair.",
+          "The <span class=\"highlight\">t<span class=\"pattern\">in</span></span> has a <span class=\"highlight\">l<span class=\"pattern\">ip</span></span>.",
+          "I hit the pit.",
+          "The fin is big.",
+          "Take a sip and sit.",
+          "Can you dip the chip?",
+          "I win a bit.",
+          "The pig can spin."
+        ]
+      },
+      "unit5": {
+        "name": "Unit 5",
+        "examples": [
+          "The fox is on top of the box.",
+          "It is hot in the pot.",
+          "I can hop on top.",
+          "The mop is in the box.",
+          "I got a dot.",
+          "Pop the pop on top.",
+          "A red fox in a box.",
+          "Put the cot on top.",
+          "Stop at the shop.",
+          "The pot is hot."
+        ]
+      },
+      "unit6": {
+        "name": "Unit 6",
+        "examples": [
+          "The bug can run in the sun.",
+          "I see a bug in my cup.",
+          "The pup is in the hut.",
+          "Give me a hug in the sun.",
+          "I can cut the nut.",
+          "The mug fell on the rug.",
+          "We run for fun.",
+          "Pick up the rug.",
+          "The bun is in the jug.",
+          "Shut the hut door."
+        ]
+      }
+    }
+  },
+  "level3": {
+    "title": "Long Vowels",
+    "units": {
+      "unit2": {
+        "name": "Unit 2",
+        "examples": [
+          "Let's play in the rain on a nice day.",
+          "The train comes every day.",
+          "I can paint in May.",
+          "The snail has a tail.",
+          "What did you say today?",
+          "The mail comes on Monday.",
+          "I can wait all day.",
+          "The tray has gray clay.",
+          "Let's sail away!",
+          "My dog can stay in the rain."
+        ]
+      },
+      "unit3": {
+        "name": "Unit 3",
+        "examples": [
+          "The happy bee loves tea and honey.",
+          "I can see the green tree.",
+          "The monkey reads a book.",
+          "My feet are sunny and warm.",
+          "Let's meet for tea.",
+          "The baby has a key.",
+          "I need to read this.",
+          "The sheep seems happy.",
+          "I see money near the sea.",
+          "The donkey sleeps in the snow."
+        ]
+      },
+      "unit4": {
+        "name": "Unit 4",
+        "examples": [
+          "I like to fly a kite and eat pie.",
+          "The sky is nice and blue.",
+          "I can ride my bike.",
+          "Don't tell a lie or cry.",
+          "The mice tried to hide.",
+          "I dive in water and dry off.",
+          "At nine I'll tie my shoe.",
+          "The pie is a nice size.",
+          "I try to write well.",
+          "The price is fine."
+        ]
+      },
+      "unit5": {
+        "name": "Unit 5",
+        "examples": [
+          "Look at snow on rose and boat.",
+          "I can row boat home.",
+          "The goat has a nose.",
+          "I know the road home.",
+          "The coat is below the rope.",
+          "I hope to see snow.",
+          "Let's grow a rose.",
+          "The toad jumps slow.",
+          "I throw the stone.",
+          "The bowl has soap in it."
+        ]
+      },
+      "unit6": {
+        "name": "Unit 6",
+        "examples": [
+          "The blue cube is new.",
+          "I knew true answer.",
+          "The mule drinks juice.",
+          "Put glue on the tube.",
+          "I chew fruit.",
+          "The suit is blue and new.",
+          "A few clues help me.",
+          "The cute bird flew away.",
+          "I need a cue for game.",
+          "The crew uses glue."
+        ]
+      }
+    }
+  },
+  "level4": {
+    "title": "Consonant Blends",
+    "units": {
+      "unit2": {
+        "name": "Unit 2",
+        "examples": [
+          "A frog sits on green grass.",
+          "My brother eats bread.",
+          "The crab crawls slowly.",
+          "I eat fresh fruit daily.",
+          "The grape is great!",
+          "I pray every day.",
+          "The train runs on track.",
+          "Look at brown tree.",
+          "I trust my friend.",
+          "The crow is brave."
+        ]
+      },
+      "unit3": {
+        "name": "Unit 3",
+        "examples": [
+          "The small snake can swim fast.",
+          "I smile at star.",
+          "The snail is small.",
+          "I can spell my name.",
+          "Please stop and stand still.",
+          "I swing on swings.",
+          "The snow is smooth.",
+          "I spot a star.",
+          "Let's sweep the steps.",
+          "A smart snake swims."
+        ]
+      },
+      "unit4": {
+        "name": "Unit 4",
+        "examples": [
+          "The king has a pink ring.",
+          "I fond a band.",
+          "Let's sing a song.",
+          "I think this is fun.",
+          "The ant went to tent.",
+          "I can drink from sink.",
+          "The strong man can stand.",
+          "I sang and winked.",
+          "The long rope went around.",
+          "Thank you for hand."
+        ]
+      },
+      "unit5": {
+        "name": "Unit 5",
+        "examples": [
+          "A fish in a dish can catch a ball."
+        ]
+      },
+      "unit6": {
+        "name": "Unit 6",
+        "examples": [
+          "Take a photo of white whale."
+        ]
+      },
+      "unit7": {
+        "name": "Unit 7",
+        "examples": [
+          "This queen has a black duck."
+        ]
+      }
+    }
+  },
+  "level5": {
+    "title": "Letter Combinations",
+    "units": {
+      "unit2": {
+        "name": "Unit 2",
+        "examples": [
+          "The girl sees a bird and a purple flower."
+        ]
+      },
+      "unit3": {
+        "name": "Unit 3",
+        "examples": [
+          "The brown mouse runs around the house."
+        ]
+      },
+      "unit4": {
+        "name": "Unit 4",
+        "examples": [
+          "The boy plays with a toy and a coin."
+        ]
+      },
+      "unit5": {
+        "name": "Unit 5",
+        "examples": [
+          "The moon is blue and food is good."
+        ]
+      },
+      "unit6": {
+        "name": "Unit 6",
+        "examples": [
+          "In autumn, I saw a tall horse walk."
+        ]
+      },
+      "unit7": {
+        "name": "Unit 7",
+        "examples": [
+          "The nice knight can write on a page."
+        ]
+      }
+    }
+  }
+}

@@ -14,8 +14,9 @@
             <div class="header">
                 <h1 class="main-title">🎨 Oxford Phonics World</h1>
                 <p class="subtitle">快乐学自然拼读！</p>
+                <button class="settings-home-btn" onclick="showSettings()">⚙️ 设置</button>
             </div>
-            
+
             <div class="levels-container">
                 <!-- Level 卡片将由 JavaScript 动态生成 -->
             </div>
@@ -92,6 +93,10 @@
                     <div class="word-display">
                         <span id="explore-word"></span>
                     </div>
+                    <div class="word-info-display">
+                        <span id="explore-phonetic" class="review-phonetic"></span>
+                        <span id="explore-definition" class="review-definition"></span>
+                    </div>
                 </div>
                 
                 <div class="review-controls">
@@ -109,17 +114,21 @@
                 <h2 class="page-title">🎯 复习模式</h2>
                 <p id="review-progress" class="review-progress"></p>
             </div>
-            
+
             <div class="review-container">
                 <div class="review-card">
                     <div class="word-display">
                         <span id="review-word"></span>
                     </div>
+                    <div class="word-info-display">
+                        <span id="review-phonetic" class="review-phonetic"></span>
+                        <span id="review-definition" class="review-definition"></span>
+                    </div>
                     <div class="word-image-placeholder">
                         <span class="image-icon">🖼️</span>
                     </div>
                 </div>
-                
+
                 <div class="review-controls">
                     <button class="control-btn prev-btn" onclick="previousWord()">← 上一个</button>
                     <button class="control-btn shuffle-btn" onclick="shuffleReview()">🔀 随机</button>
@@ -127,10 +136,100 @@
                 </div>
             </div>
         </div>
+
+        <!-- 设置页 -->
+        <div id="settings-page" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="navigateTo('home')">← 返回</button>
+                <h2 class="page-title">⚙️ 设置</h2>
+            </div>
+
+            <div class="settings-container">
+                <!-- 语音设置 -->
+                <div class="settings-section">
+                    <h3 class="settings-title">🎤 语音设置</h3>
+
+                    <div class="setting-item">
+                        <label class="setting-label">选择语音</label>
+                        <select id="voiceSelect" class="setting-select" onchange="updateVoice()">
+                            <option value="">加载中...</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-item">
+                        <label class="setting-label">测试文本</label>
+                        <input type="text" id="testWord" class="setting-input" value="Hello, how are you today?">
+                        <button class="test-btn" onclick="testVoice()">▶ 试听</button>
+                    </div>
+
+                    <div class="setting-item">
+                        <label class="setting-label">语速 <span id="rateValue">(0.8)</span></label>
+                        <input type="range" id="rateSlider" class="setting-range" min="0.5" max="1.5" step="0.1" value="0.8" oninput="updateRate()">
+                        <div class="range-labels">
+                            <span>慢</span>
+                            <span>快</span>
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <label class="setting-label">音调 <span id="pitchValue">(1.0)</span></label>
+                        <input type="range" id="pitchSlider" class="setting-range" min="0.5" max="1.5" step="0.1" value="1.0" oninput="updatePitch()">
+                        <div class="range-labels">
+                            <span>低</span>
+                            <span>高</span>
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <label class="setting-label">音量 <span id="volumeValue">(100%)</span></label>
+                        <input type="range" id="volumeSlider" class="setting-range" min="0" max="1" step="0.1" value="1" oninput="updateVolume()">
+                        <div class="range-labels">
+                            <span>静音</span>
+                            <span>最大</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 显示设置 -->
+                <div class="settings-section">
+                    <h3 class="settings-title">📺 显示设置</h3>
+
+                    <div class="setting-item">
+                        <label class="setting-label">显示音标</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="showPhonetic" checked onchange="updateDisplaySettings()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-item">
+                        <label class="setting-label">显示释义</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="showDefinition" checked onchange="updateDisplaySettings()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-item">
+                        <label class="setting-label">悬停显示（单词卡片）</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="hoverDisplay" checked onchange="updateDisplaySettings()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 重置按钮 -->
+                <div class="settings-section">
+                    <button class="reset-btn" onclick="resetSettings()">🔄 重置为默认</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 加载数据和应用脚本 -->
     <script src="data.js"></script>
+    <script src="word-info.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

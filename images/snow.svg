@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Snowflake 1 -->
+  <g transform="translate(30, 30)">
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#90CAF9" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#90CAF9" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-14" y1="-14" x2="14" y2="14" stroke="#90CAF9" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-14" y1="14" x2="14" y2="-14" stroke="#90CAF9" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Snowflake 2 -->
+  <g transform="translate(70, 70) scale(0.7)">
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#64B5F6" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#64B5F6" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-14" y1="-14" x2="14" y2="14" stroke="#64B5F6" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-14" y1="14" x2="14" y2="-14" stroke="#64B5F6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Falling snow -->
+  <circle cx="50" cy="10" r="4" fill="#E3F2FD"/>
+  <circle cx="15" cy="60" r="3" fill="#E3F2FD"/>
+  <circle cx="85" cy="30" r="3" fill="#E3F2FD"/>
+  <circle cx="45" cy="90" r="4" fill="#E3F2FD"/>
+</svg>

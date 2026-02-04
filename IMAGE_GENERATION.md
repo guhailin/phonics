@@ -77,6 +77,19 @@ python3 generate_images.py
 - **教育性**：专注于单词的主要含义
 - **1:1 比例**：适合作为flashcard使用
 
+## 当前SVG图片
+
+项目中已包含以下自定义SVG图片：
+
+| 文件名 | 描述 | 统一的单词 |
+|--------|------|------------|
+| `fruit.svg` | 苹果和葡萄组合 | fruit (ui/fr模式) |
+| `snow.svg` | 雪花图案 | snow (ow/sn模式) |
+| `brown.svg` | 棕色泰迪熊 | brown (br/ow模式) |
+| `jam.svg` | 果酱罐 | jam |
+
+这些SVG图片用于解决同一单词在不同发音模式下emoji不一致的问题，确保视觉一致性。
+
 ## 数据结构
 
 更新后的 `data.js` 中，单词对象会包含 `image` 字段：

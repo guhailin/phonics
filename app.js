@@ -8,6 +8,138 @@ let currentExploreIndex = 0;
 let currentExamples = [];
 let currentExampleIndex = 0;
 
+// ========== 朗读单词配置 ==========
+const speechConfig = {
+    lang: 'en-US',                           // 语言: en-US(美式), en-GB(英式), zh-CN(中文)
+    rate: 0.8,                               // 语速: 0.1(最慢) - 10(最快), 默认1
+    pitch: 1.0,                              // 音调: 0(最低) - 2(最高), 默认1
+    volume: 1,                               // 音量: 0(静音) - 1(最大)
+    voiceName: 'Google US English 1 (Natural)'  // 指定特定语音
+};
+
+// ========== 显示配置 ==========
+const displayConfig = {
+    showPhonetic: true,    // 显示音标
+    showDefinition: true,   // 显示释义
+    hoverDisplay: true      // 单词卡片悬停显示
+};
+
+// ========== 朗读单词功能 ==========
+function speakWord(word) {
+    // 使用浏览器内置的语音合成 API
+    if ('speechSynthesis' in window) {
+        // 取消正在播放的语音
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = speechConfig.lang;
+        utterance.rate = speechConfig.rate;
+        utterance.pitch = speechConfig.pitch;
+        utterance.volume = speechConfig.volume;
+
+        // 如果指定了特定语音名称，尝试选择
+        if (speechConfig.voiceName) {
+            const voices = window.speechSynthesis.getVoices();
+            const selectedVoice = voices.find(v => v.name.includes(speechConfig.voiceName));
+            if (selectedVoice) {
+                utterance.voice = selectedVoice;
+            }
+        }
+
+        window.speechSynthesis.speak(utterance);
+    } else {
+        console.warn('浏览器不支持语音合成功能');
+    }
+}
+
+// 获取可用语音列表（调试用）
+function listVoices() {
+    if ('speechSynthesis' in window) {
+        const voices = window.speechSynthesis.getVoices();
+        console.log('可用语音列表:');
+        voices.forEach((voice, i) => {
+            console.log(`${i}: ${voice.name} (${voice.lang})`);
+        });
+        return voices;
+    }
+    return [];
+}
+
+// 自动选择最佳语音
+function findBestVoice() {
+    if (!('speechSynthesis' in window)) return null;
+
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length === 0) return null;
+
+    // 按优先级排列的女声列表
+    const preferredVoices = [
+        'Samantha',         // macOS 美式女声 - 最推荐
+        'Karen',            // macOS 澳式女声
+        'Tessa',            // macOS 南非女声
+        'Moira',            // macOS 苏格兰女声
+        'Fiona',            // macOS 爱尔兰女声
+        'Veena',            // macOS 印度女声
+        'Zira',             // Windows 美式女声
+        'Hazel',            // Windows 英式女声
+        'Susan',            // Windows 美式女声
+        'Heera',            // Windows 印度女声
+        'Google US English', // Chrome 中性声
+        'Microsoft Zira Desktop',
+        'Microsoft Hazel Desktop'
+    ];
+
+    // 查找匹配的语音
+    for (const preferred of preferredVoices) {
+        const voice = voices.find(v => v.name.includes(preferred));
+        if (voice) {
+            console.log(`自动选择语音: ${voice.name}`);
+            return voice.name;
+        }
+    }
+
+    // 如果没找到推荐的，找第一个美式英语女声
+    const enFemale = voices.find(v =>
+        v.lang.startsWith('en') &&
+        (v.name.includes('Female') || v.name.includes('Woman') || v.name.includes('Zira') || v.name.includes('Hazel'))
+    );
+    if (enFemale) {
+        console.log(`自动选择语音: ${enFemale.name}`);
+        return enFemale.name;
+    }
+
+    // 最后回退到默认美式英语
+    const enDefault = voices.find(v => v.lang.startsWith('en'));
+    if (enDefault) {
+        console.log(`自动选择语音: ${enDefault.name}`);
+        return enDefault.name;
+    }
+
+    return '';
+}
+
+// 页面加载时自动选择最佳语音
+window.addEventListener('load', () => {
+    // 等待语音列表加载完成
+    setTimeout(() => {
+        const bestVoice = findBestVoice();
+        if (bestVoice && bestVoice !== speechConfig.voiceName) {
+            speechConfig.voiceName = bestVoice;
+            console.log(`已更新 voiceName 为: ${bestVoice}`);
+        }
+    }, 500);
+});
+
+// 获取单词信息（音标和释义）
+function getWordInfo(word) {
+    const lowerWord = word.toLowerCase();
+    if (wordInfo[lowerWord]) {
+        return wordInfo[lowerWord];
+    }
+    // 如果没有找到，返回空对象
+    return { phonetic: '', definition: '' };
+}
+
 // ========== 页面导航 ==========
 function navigateTo(pageName) {
     // 隐藏所有页面
@@ -122,21 +254,37 @@ function showUnitPage(levelId, unitId) {
             wordObj.highlight === cleanPattern || wordObj.highlight === pattern
         );
         
-        // 渲染该pattern的单词
+               // 渲染该pattern的单词
         patternWords.forEach(wordObj => {
             const wordCard = document.createElement('div');
             wordCard.className = 'word-card';
-            
-            // 高亮关键字母
-            const highlightedWord = highlightWord(wordObj.word, wordObj.highlight);
-            
+
+            // 获取音标和释义
+            const wordInfoData = getWordInfo(wordObj.word);
+
+            // 高亮显示文本
+            const displayedWord = highlightWord(wordObj.word, wordObj.highlight);
+
+            // 保存原始单词用于朗读
+            wordCard.dataset.word = wordObj.word;
+
             wordCard.innerHTML = `
+                <span class="speaker-icon">🔊</span>
                 <div class="word-image">
                     ${getWordImageHTML(wordObj)}
                 </div>
-                <div class="word-text">${highlightedWord}</div>
+                <div class="word-content">
+                    <div class="word-text">${displayedWord}</div>
+                    ${wordInfoData.phonetic ? `<div class="word-phonetic">${wordInfoData.phonetic}</div>` : ''}
+                    ${wordInfoData.definition ? `<div class="word-definition">${wordInfoData.definition}</div>` : ''}
+                </div>
             `;
-            
+
+            // 点击朗读单词
+            wordCard.addEventListener('click', () => {
+                speakWord(wordObj.word);
+            });
+
             wordsGrid.appendChild(wordCard);
         });
     });
@@ -211,18 +359,39 @@ function startReview() {
 
 function showReviewWord() {
     if (reviewWords.length === 0) return;
-    
+
     const wordObj = reviewWords[currentReviewIndex];
     const reviewWord = document.getElementById('review-word');
     reviewWord.innerHTML = highlightWord(wordObj.word, wordObj.highlight);
-    
+
+    // 获取音标和释义
+    const wordInfoData = getWordInfo(wordObj.word);
+    const reviewPhonetic = document.getElementById('review-phonetic');
+    const reviewDefinition = document.getElementById('review-definition');
+
+    if (reviewPhonetic) {
+        reviewPhonetic.textContent = wordInfoData.phonetic || '';
+        reviewPhonetic.style.display = wordInfoData.phonetic ? 'block' : 'none';
+    }
+    if (reviewDefinition) {
+        reviewDefinition.textContent = wordInfoData.definition || '';
+        reviewDefinition.style.display = wordInfoData.definition ? 'block' : 'none';
+    }
+
     // 更新图片
     const imagePlaceholder = document.querySelector('.word-image-placeholder');
     imagePlaceholder.innerHTML = getWordImageHTML(wordObj);
-    
+
     // 更新进度
     const progress = document.getElementById('review-progress');
     progress.textContent = `${currentReviewIndex + 1} / ${reviewWords.length}`;
+
+    // 添加点击朗读功能到单词显示区域
+    const wordDisplay = document.querySelector('#review-page .word-display');
+    if (wordDisplay) {
+        wordDisplay.style.cursor = 'pointer';
+        wordDisplay.onclick = () => speakWord(wordObj.word);
+    }
 }
 
 function nextWord() {
@@ -354,14 +523,35 @@ function startExplore() {
 
 function showExploreWord() {
     if (exploreWords.length === 0) return;
-    
+
     const wordObj = exploreWords[currentExploreIndex];
     const exploreWord = document.getElementById('explore-word');
     exploreWord.innerHTML = highlightWord(wordObj.word, wordObj.highlight);
-    
+
+    // 获取音标和释义
+    const wordInfoData = getWordInfo(wordObj.word);
+    const explorePhonetic = document.getElementById('explore-phonetic');
+    const exploreDefinition = document.getElementById('explore-definition');
+
+    if (explorePhonetic) {
+        explorePhonetic.textContent = wordInfoData.phonetic || '';
+        explorePhonetic.style.display = wordInfoData.phonetic ? 'block' : 'none';
+    }
+    if (exploreDefinition) {
+        exploreDefinition.textContent = wordInfoData.definition || '';
+        exploreDefinition.style.display = wordInfoData.definition ? 'block' : 'none';
+    }
+
     // 更新进度
     const progress = document.getElementById('explore-progress');
     progress.textContent = `${currentExploreIndex + 1} / ${exploreWords.length}`;
+
+    // 添加点击朗读功能到单词显示区域
+    const wordDisplay = document.querySelector('#explore-page .word-display');
+    if (wordDisplay) {
+        wordDisplay.style.cursor = 'pointer';
+        wordDisplay.onclick = () => speakWord(wordObj.word);
+    }
 }
 
 function nextExploreWord() {
@@ -442,12 +632,12 @@ function switchTab(tabName) {
 function renderExamples() {
     const container = document.querySelector('.examples-container');
     container.innerHTML = '';
-    
+
     if (currentExamples.length === 0) {
         container.innerHTML = '<p style="text-align: center; color: #999;">暂无例句</p>';
         return;
     }
-    
+
     // 创建所有例句项
     currentExamples.forEach((example, index) => {
         const exampleItem = document.createElement('div');
@@ -455,12 +645,31 @@ function renderExamples() {
         if (index === currentExampleIndex) {
             exampleItem.classList.add('active');
         }
-        exampleItem.innerHTML = example;
+
+        // 添加朗读按钮
+        exampleItem.innerHTML = `
+            <button class="example-speak-btn" onclick="speakExample(${index})">▶</button>
+            <div class="example-text">${example}</div>
+        `;
+
         container.appendChild(exampleItem);
     });
-    
+
     // 更新计数器
     updateExampleCounter();
+}
+
+// 朗读例句（提取纯文本）
+function speakExample(index) {
+    if (index < 0 || index >= currentExamples.length) return;
+
+    const exampleHTML = currentExamples[index];
+    // 从HTML中提取纯文本
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = exampleHTML;
+    const text = tempDiv.textContent || tempDiv.innerText;
+
+    speakWord(text);
 }
 
 function updateExampleCounter() {
@@ -502,4 +711,229 @@ function prevExample() {
     });
     
     updateExampleCounter();
+}
+// ========== 设置页面 ==========
+function showSettings() {
+    loadVoiceList();
+    loadSettingsToUI();
+    navigateTo('settings');
+}
+
+// 加载语音列表到下拉框
+function loadVoiceList() {
+    const voiceSelect = document.getElementById('voiceSelect');
+    if (!voiceSelect) return;
+
+    const voices = window.speechSynthesis.getVoices();
+
+    if (voices.length === 0) {
+        voiceSelect.innerHTML = '<option value="">没有可用语音</option>';
+        return;
+    }
+
+    // 按优先级排序
+    const preferredVoices = [
+        'Google US English 1 (Natural)',
+        'Google US English',
+        'Samantha',
+        'Karen',
+        'Zira',
+        'Hazel',
+        'Microsoft Zira Desktop'
+    ];
+
+    const sortedVoices = [...voices].sort((a, b) => {
+        const aIndex = preferredVoices.findIndex(v => a.name.includes(v));
+        const bIndex = preferredVoices.findIndex(v => b.name.includes(v));
+
+        if (aIndex !== -1 && bIndex !== -1) {
+            return aIndex - bIndex;
+        } else if (aIndex !== -1) {
+            return -1;
+        } else if (bIndex !== -1) {
+            return 1;
+        }
+        return a.name.localeCompare(b.name);
+    });
+
+    voiceSelect.innerHTML = '';
+    sortedVoices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.textContent = voice.name;
+
+        // 标记推荐语音
+        if (preferredVoices.some(p => voice.name.includes(p))) {
+            option.textContent += ' ⭐';
+        }
+
+        // 标记女声
+        if (voice.name.includes('Female') || voice.name.includes('Samantha') ||
+            voice.name.includes('Karen') || voice.name.includes('Zira')) {
+            option.textContent += ' 👩';
+        }
+
+        if (voice.name === speechConfig.voiceName) {
+            option.selected = true;
+        }
+
+        voiceSelect.appendChild(option);
+    });
+}
+
+// 更新语音选择
+function updateVoice() {
+    const voiceSelect = document.getElementById('voiceSelect');
+    if (voiceSelect) {
+        speechConfig.voiceName = voiceSelect.value;
+    }
+}
+
+// 测试语音
+function testVoice() {
+    const testWord = document.getElementById('testWord');
+    const text = testWord ? testWord.value : 'Hello, how are you today?';
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = speechConfig.lang;
+    utterance.rate = speechConfig.rate;
+    utterance.pitch = speechConfig.pitch;
+    utterance.volume = speechConfig.volume;
+
+    const voices = window.speechSynthesis.getVoices();
+    const voice = voices.find(v => v.name === speechConfig.voiceName);
+    if (voice) {
+        utterance.voice = voice;
+    }
+
+    window.speechSynthesis.speak(utterance);
+}
+
+// 更新语速
+function updateRate() {
+    const slider = document.getElementById('rateSlider');
+    const display = document.getElementById('rateValue');
+    if (slider) {
+        speechConfig.rate = parseFloat(slider.value);
+        if (display) display.textContent = '(' + slider.value + ')';
+    }
+}
+
+// 更新音调
+function updatePitch() {
+    const slider = document.getElementById('pitchSlider');
+    const display = document.getElementById('pitchValue');
+    if (slider) {
+        speechConfig.pitch = parseFloat(slider.value);
+        if (display) display.textContent = '(' + slider.value + ')';
+    }
+}
+
+// 更新音量
+function updateVolume() {
+    const slider = document.getElementById('volumeSlider');
+    const display = document.getElementById('volumeValue');
+    if (slider) {
+        speechConfig.volume = parseFloat(slider.value);
+        if (display) {
+            const volPercent = Math.round(slider.value * 100);
+            display.textContent = '(' + volPercent + '%)';
+        }
+    }
+}
+
+// 更新显示设置
+function updateDisplaySettings() {
+    const showPhonetic = document.getElementById('showPhonetic');
+    const showDefinition = document.getElementById('showDefinition');
+    const hoverDisplay = document.getElementById('hoverDisplay');
+
+    if (showPhonetic) displayConfig.showPhonetic = showPhonetic.checked;
+    if (showDefinition) displayConfig.showDefinition = showDefinition.checked;
+    if (hoverDisplay) displayConfig.hoverDisplay = hoverDisplay.checked;
+
+    applyDisplaySettings();
+}
+
+// 应用显示设置到页面
+function applyDisplaySettings() {
+    // 根据悬停设置更新CSS
+    const style = document.getElementById('dynamic-styles') || document.createElement('' + 'style');
+    style.id = 'dynamic-styles';
+
+    if (displayConfig.hoverDisplay) {
+        style.textContent = '.word-phonetic, .word-definition { opacity: 0; max-height: 0; overflow: hidden; transition: all 0.3s ease; } .word-card:hover .word-phonetic, .word-card:hover .word-definition { opacity: 1; max-height: 50px; }';
+    } else {
+        style.textContent = '.word-phonetic, .word-definition { opacity: 1; max-height: 50px; overflow: visible; }';
+    }
+
+    if (!document.getElementById('dynamic-styles')) {
+        document.head.appendChild(style);
+    }
+
+    // 控制音标和释义的显示
+    const phoneticElements = document.querySelectorAll('.word-phonetic, .review-phonetic, #explore-phonetic');
+    const definitionElements = document.querySelectorAll('.word-definition, .review-definition, #explore-definition');
+
+    phoneticElements.forEach(el => {
+        el.style.display = displayConfig.showPhonetic && el.textContent ? '' : 'none';
+    });
+    definitionElements.forEach(el => {
+        el.style.display = displayConfig.showDefinition && el.textContent ? '' : 'none';
+    });
+}
+
+// 加载设置到UI
+function loadSettingsToUI() {
+    const rateSlider = document.getElementById('rateSlider');
+    const pitchSlider = document.getElementById('pitchSlider');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const showPhonetic = document.getElementById('showPhonetic');
+    const showDefinition = document.getElementById('showDefinition');
+    const hoverDisplay = document.getElementById('hoverDisplay');
+
+    if (rateSlider) {
+        rateSlider.value = speechConfig.rate;
+        document.getElementById('rateValue').textContent = '(' + speechConfig.rate + ')';
+    }
+    if (pitchSlider) {
+        pitchSlider.value = speechConfig.pitch;
+        document.getElementById('pitchValue').textContent = '(' + speechConfig.pitch + ')';
+    }
+    if (volumeSlider) {
+        volumeSlider.value = speechConfig.volume;
+        const volPercent = Math.round(speechConfig.volume * 100);
+        document.getElementById('volumeValue').textContent = '(' + volPercent + '%)';
+    }
+    if (showPhonetic) showPhonetic.checked = displayConfig.showPhonetic;
+    if (showDefinition) showDefinition.checked = displayConfig.showDefinition;
+    if (hoverDisplay) hoverDisplay.checked = displayConfig.hoverDisplay;
+}
+
+// 重置设置为默认
+function resetSettings() {
+    speechConfig.rate = 0.8;
+    speechConfig.pitch = 1.0;
+    speechConfig.volume = 1;
+    speechConfig.voiceName = 'Google US English 1 (Natural)';
+    speechConfig.lang = 'en-US';
+
+    displayConfig.showPhonetic = true;
+    displayConfig.showDefinition = true;
+    displayConfig.hoverDisplay = true;
+
+    loadSettingsToUI();
+    loadVoiceList();
+    applyDisplaySettings();
+}
+
+// 确保语音列表加载
+if (window.speechSynthesis.onvoiceschanged !== undefined) {
+    window.speechSynthesis.onvoiceschanged = function() {
+        const voiceSelect = document.getElementById('voiceSelect');
+        if (voiceSelect && document.getElementById('settings-page').classList.contains('active')) {
+            loadVoiceList();
+        }
+    };
 }
