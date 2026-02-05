@@ -1,6 +1,380 @@
 // Oxford Phonics World 数据结构
 
 const phonicsData = {
+  level1: {
+    id: 'level1',
+    name: 'Level 1',
+    title: 'Alphabet & Sounds',
+    subtitle: '字母与发音',
+    color: '#9C27B0',
+    emoji: '🟣',
+    units: [
+      {
+        id: 'unit_a',
+        name: 'Letter A',
+        patterns: ['a'],
+        words: [
+          { word: 'apple', highlight: 'a', emoji: '🍎' },
+          { word: 'ant', highlight: 'a', emoji: '🐜' },
+          { word: 'alligator', highlight: 'a', emoji: '🐊' }
+        ],
+        exploreWords: [
+          { word: 'apple', highlight: 'a' }, { word: 'ant', highlight: 'a' }, { word: 'ax', highlight: 'a' }, { word: 'add', highlight: 'a' }, { word: 'and', highlight: 'a' },
+          { word: 'arm', highlight: 'a' }, { word: 'art', highlight: 'a' }, { word: 'ask', highlight: 'a' }, { word: 'act', highlight: 'a' }, { word: 'age', highlight: 'a' }
+        ]
+      },
+      {
+        id: 'unit_b',
+        name: 'Letter B',
+        patterns: ['b'],
+        words: [
+          { word: 'ball', highlight: 'b', emoji: '⚽' },
+          { word: 'bee', highlight: 'b', emoji: '🐝' },
+          { word: 'banana', highlight: 'b', emoji: '🍌' }
+        ],
+        exploreWords: [
+          { word: 'ball', highlight: 'b' }, { word: 'bee', highlight: 'b' }, { word: 'book', highlight: 'b' }, { word: 'box', highlight: 'b' }, { word: 'bus', highlight: 'b' },
+          { word: 'bed', highlight: 'b' }, { word: 'big', highlight: 'b' }, { word: 'bat', highlight: 'b' }, { word: 'bag', highlight: 'b' }, { word: 'boy', highlight: 'b' }
+        ]
+      },
+      {
+        id: 'unit_c',
+        name: 'Letter C',
+        patterns: ['c'],
+        words: [
+          { word: 'cat', highlight: 'c', emoji: '🐱' },
+          { word: 'cup', highlight: 'c', emoji: '☕' },
+          { word: 'cake', highlight: 'c', emoji: '🍰' }
+        ],
+        exploreWords: [
+          { word: 'cat', highlight: 'c' }, { word: 'cup', highlight: 'c' }, { word: 'car', highlight: 'c' }, { word: 'can', highlight: 'c' }, { word: 'cap', highlight: 'c' },
+          { word: 'cut', highlight: 'c' }, { word: 'cow', highlight: 'c' }, { word: 'cake', highlight: 'c' }, { word: 'coat', highlight: 'c' }, { word: 'corn', highlight: 'c' }
+        ]
+      },
+      {
+        id: 'unit_d',
+        name: 'Letter D',
+        patterns: ['d'],
+        words: [
+          { word: 'dog', highlight: 'd', emoji: '🐕' },
+          { word: 'duck', highlight: 'd', emoji: '🦆' },
+          { word: 'door', highlight: 'd', emoji: '🚪' }
+        ],
+        exploreWords: [
+          { word: 'dog', highlight: 'd' }, { word: 'duck', highlight: 'd' }, { word: 'door', highlight: 'd' }, { word: 'dad', highlight: 'd' }, { word: 'day', highlight: 'd' },
+          { word: 'doll', highlight: 'd' }, { word: 'dish', highlight: 'd' }, { word: 'desk', highlight: 'd' }, { word: 'dot', highlight: 'd' }, { word: 'dig', highlight: 'd' }
+        ]
+      },
+      {
+        id: 'unit_e',
+        name: 'Letter E',
+        patterns: ['e'],
+        words: [
+          { word: 'egg', highlight: 'e', emoji: '🥚' },
+          { word: 'elephant', highlight: 'e', emoji: '🐘' },
+          { word: 'ear', highlight: 'e', emoji: '👂' }
+        ],
+        exploreWords: [
+          { word: 'egg', highlight: 'e' }, { word: 'eat', highlight: 'e' }, { word: 'end', highlight: 'e' }, { word: 'ear', highlight: 'e' }, { word: 'eye', highlight: 'e' },
+          { word: 'elbow', highlight: 'e' }, { word: 'exit', highlight: 'e' }, { word: 'edge', highlight: 'e' }, { word: 'even', highlight: 'e' }, { word: 'every', highlight: 'e' }
+        ]
+      },
+      {
+        id: 'unit_f',
+        name: 'Letter F',
+        patterns: ['f'],
+        words: [
+          { word: 'fish', highlight: 'f', emoji: '🐟' },
+          { word: 'frog', highlight: 'f', emoji: '🐸' },
+          { word: 'flower', highlight: 'f', emoji: '🌸' }
+        ],
+        exploreWords: [
+          { word: 'fish', highlight: 'f' }, { word: 'frog', highlight: 'f' }, { word: 'fan', highlight: 'f' }, { word: 'fox', highlight: 'f' }, { word: 'fun', highlight: 'f' },
+          { word: 'flag', highlight: 'f' }, { word: 'foot', highlight: 'f' }, { word: 'five', highlight: 'f' }, { word: 'face', highlight: 'f' }, { word: 'fast', highlight: 'f' }
+        ]
+      },
+      {
+        id: 'unit_g',
+        name: 'Letter G',
+        patterns: ['g'],
+        words: [
+          { word: 'goat', highlight: 'g', emoji: '🐐' },
+          { word: 'gift', highlight: 'g', emoji: '🎁' },
+          { word: 'gorilla', highlight: 'g', emoji: '🦍' }
+        ],
+        exploreWords: [
+          { word: 'goat', highlight: 'g' }, { word: 'girl', highlight: 'g' }, { word: 'gas', highlight: 'g' }, { word: 'gap', highlight: 'g' }, { word: 'gate', highlight: 'g' },
+          { word: 'game', highlight: 'g' }, { word: 'get', highlight: 'g' }, { word: 'go', highlight: 'g' }, { word: 'good', highlight: 'g' }, { word: 'got', highlight: 'g' }
+        ]
+      },
+      {
+        id: 'unit_h',
+        name: 'Letter H',
+        patterns: ['h'],
+        words: [
+          { word: 'hat', highlight: 'h', emoji: '🎩' },
+          { word: 'horse', highlight: 'h', emoji: '🐴' },
+          { word: 'house', highlight: 'h', emoji: '🏠' }
+        ],
+        exploreWords: [
+          { word: 'hat', highlight: 'h' }, { word: 'house', highlight: 'h' }, { word: 'hand', highlight: 'h' }, { word: 'help', highlight: 'h' }, { word: 'hen', highlight: 'h' },
+          { word: 'hit', highlight: 'h' }, { word: 'hop', highlight: 'h' }, { word: 'hot', highlight: 'h' }, { word: 'hug', highlight: 'h' }, { word: 'ham', highlight: 'h' }
+        ]
+      },
+      {
+        id: 'unit_i',
+        name: 'Letter I',
+        patterns: ['i'],
+        words: [
+          { word: 'igloo', highlight: 'i', emoji: '🏔️' },
+          { word: 'ink', highlight: 'i', emoji: '🖊️' },
+          { word: 'island', highlight: 'i', emoji: '🏝️' }
+        ],
+        exploreWords: [
+          { word: 'ink', highlight: 'i' }, { word: 'in', highlight: 'i' }, { word: 'is', highlight: 'i' }, { word: 'it', highlight: 'i' }, { word: 'if', highlight: 'i' },
+          { word: 'ill', highlight: 'i' }, { word: 'inch', highlight: 'i' }, { word: 'ice', highlight: 'i' }, { word: 'into', highlight: 'i' }, { word: 'idea', highlight: 'i' }
+        ]
+      },
+      {
+        id: 'unit_j',
+        name: 'Letter J',
+        patterns: ['j'],
+        words: [
+          { word: 'jam', highlight: 'j', emoji: '🍓' },
+          { word: 'jump', highlight: 'j', emoji: '🦘' },
+          { word: 'juice', highlight: 'j', emoji: '🧃' }
+        ],
+        exploreWords: [
+          { word: 'jam', highlight: 'j' }, { word: 'jump', highlight: 'j' }, { word: 'jet', highlight: 'j' }, { word: 'joy', highlight: 'j' }, { word: 'jar', highlight: 'j' },
+          { word: 'job', highlight: 'j' }, { word: 'joke', highlight: 'j' }, { word: 'just', highlight: 'j' }, { word: 'join', highlight: 'j' }, { word: 'jog', highlight: 'j' }
+        ]
+      },
+      {
+        id: 'unit_k',
+        name: 'Letter K',
+        patterns: ['k'],
+        words: [
+          { word: 'kite', highlight: 'k', emoji: '🪁' },
+          { word: 'king', highlight: 'k', emoji: '👑' },
+          { word: 'koala', highlight: 'k', emoji: '🐨' }
+        ],
+        exploreWords: [
+          { word: 'kite', highlight: 'k' }, { word: 'king', highlight: 'k' }, { word: 'key', highlight: 'k' }, { word: 'kid', highlight: 'k' }, { word: 'kick', highlight: 'k' },
+          { word: 'keep', highlight: 'k' }, { word: 'kiss', highlight: 'k' }, { word: 'kind', highlight: 'k' }, { word: 'kit', highlight: 'k' }, { word: 'knee', highlight: 'k' }
+        ]
+      },
+      {
+        id: 'unit_l',
+        name: 'Letter L',
+        patterns: ['l'],
+        words: [
+          { word: 'lion', highlight: 'l', emoji: '🦁' },
+          { word: 'lamp', highlight: 'l', emoji: '💡' },
+          { word: 'lemon', highlight: 'l', emoji: '🍋' }
+        ],
+        exploreWords: [
+          { word: 'lion', highlight: 'l' }, { word: 'lamp', highlight: 'l' }, { word: 'leg', highlight: 'l' }, { word: 'lip', highlight: 'l' }, { word: 'log', highlight: 'l' },
+          { word: 'lid', highlight: 'l' }, { word: 'let', highlight: 'l' }, { word: 'lot', highlight: 'l' }, { word: 'lap', highlight: 'l' }, { word: 'look', highlight: 'l' }
+        ]
+      },
+      {
+        id: 'unit_m',
+        name: 'Letter M',
+        patterns: ['m'],
+        words: [
+          { word: 'monkey', highlight: 'm', emoji: '🐵' },
+          { word: 'milk', highlight: 'm', emoji: '🥛' },
+          { word: 'moon', highlight: 'm', emoji: '🌙' }
+        ],
+        exploreWords: [
+          { word: 'monkey', highlight: 'm' }, { word: 'milk', highlight: 'm' }, { word: 'man', highlight: 'm' }, { word: 'map', highlight: 'm' }, { word: 'mat', highlight: 'm' },
+          { word: 'mom', highlight: 'm' }, { word: 'mop', highlight: 'm' }, { word: 'met', highlight: 'm' }, { word: 'mix', highlight: 'm' }, { word: 'mud', highlight: 'm' }
+        ]
+      },
+      {
+        id: 'unit_n',
+        name: 'Letter N',
+        patterns: ['n'],
+        words: [
+          { word: 'nest', highlight: 'n', emoji: '🪺' },
+          { word: 'nose', highlight: 'n', emoji: '👃' },
+          { word: 'net', highlight: 'n', emoji: '🥅' }
+        ],
+        exploreWords: [
+          { word: 'nest', highlight: 'n' }, { word: 'nose', highlight: 'n' }, { word: 'net', highlight: 'n' }, { word: 'nap', highlight: 'n' }, { word: 'not', highlight: 'n' },
+          { word: 'nut', highlight: 'n' }, { word: 'now', highlight: 'n' }, { word: 'new', highlight: 'n' }, { word: 'nod', highlight: 'n' }, { word: 'next', highlight: 'n' }
+        ]
+      },
+      {
+        id: 'unit_o',
+        name: 'Letter O',
+        patterns: ['o'],
+        words: [
+          { word: 'octopus', highlight: 'o', emoji: '🐙' },
+          { word: 'owl', highlight: 'o', emoji: '🦉' },
+          { word: 'orange', highlight: 'o', emoji: '🍊' }
+        ],
+        exploreWords: [
+          { word: 'ox', highlight: 'o' }, { word: 'on', highlight: 'o' }, { word: 'odd', highlight: 'o' }, { word: 'off', highlight: 'o' }, { word: 'old', highlight: 'o' },
+          { word: 'one', highlight: 'o' }, { word: 'open', highlight: 'o' }, { word: 'over', highlight: 'o' }, { word: 'our', highlight: 'o' }, { word: 'out', highlight: 'o' }
+        ]
+      },
+      {
+        id: 'unit_p',
+        name: 'Letter P',
+        patterns: ['p'],
+        words: [
+          { word: 'pizza', highlight: 'p', emoji: '🍕' },
+          { word: 'pig', highlight: 'p', emoji: '🐷' },
+          { word: 'pen', highlight: 'p', emoji: '🖊️' }
+        ],
+        exploreWords: [
+          { word: 'pig', highlight: 'p' }, { word: 'pen', highlight: 'p' }, { word: 'pan', highlight: 'p' }, { word: 'pet', highlight: 'p' }, { word: 'pin', highlight: 'p' },
+          { word: 'pot', highlight: 'p' }, { word: 'pat', highlight: 'p' }, { word: 'peg', highlight: 'p' }, { word: 'put', highlight: 'p' }, { word: 'pack', highlight: 'p' }
+        ]
+      },
+      {
+        id: 'unit_q',
+        name: 'Letter Q',
+        patterns: ['q'],
+        words: [
+          { word: 'queen', highlight: 'q', emoji: '👸' },
+          { word: 'quilt', highlight: 'q', emoji: '🛏️' },
+          { word: 'question', highlight: 'q', emoji: '❓' }
+        ],
+        exploreWords: [
+          { word: 'queen', highlight: 'q' }, { word: 'quilt', highlight: 'q' }, { word: 'quick', highlight: 'q' }, { word: 'quiet', highlight: 'q' }, { word: 'quit', highlight: 'q' },
+          { word: 'quiz', highlight: 'q' }, { word: 'quack', highlight: 'q' }, { word: 'quest', highlight: 'q' }, { word: 'quote', highlight: 'q' }, { word: 'quart', highlight: 'q' }
+        ]
+      },
+      {
+        id: 'unit_r',
+        name: 'Letter R',
+        patterns: ['r'],
+        words: [
+          { word: 'rabbit', highlight: 'r', emoji: '🐰' },
+          { word: 'rose', highlight: 'r', emoji: '🌹' },
+          { word: 'ring', highlight: 'r', emoji: '💍' }
+        ],
+        exploreWords: [
+          { word: 'rabbit', highlight: 'r' }, { word: 'rose', highlight: 'r' }, { word: 'run', highlight: 'r' }, { word: 'rat', highlight: 'r' }, { word: 'red', highlight: 'r' },
+          { word: 'rug', highlight: 'r' }, { word: 'rain', highlight: 'r' }, { word: 'ring', highlight: 'r' }, { word: 'road', highlight: 'r' }, { word: 'rock', highlight: 'r' }
+        ]
+      },
+      {
+        id: 'unit_s',
+        name: 'Letter S',
+        patterns: ['s'],
+        words: [
+          { word: 'sun', highlight: 's', emoji: '☀️' },
+          { word: 'snake', highlight: 's', emoji: '🐍' },
+          { word: 'star', highlight: 's', emoji: '⭐' }
+        ],
+        exploreWords: [
+          { word: 'sun', highlight: 's' }, { word: 'sit', highlight: 's' }, { word: 'sad', highlight: 's' }, { word: 'sap', highlight: 's' }, { word: 'sip', highlight: 's' },
+          { word: 'set', highlight: 's' }, { word: 'six', highlight: 's' }, { word: 'sob', highlight: 's' }, { word: 'sod', highlight: 's' }, { word: 'sub', highlight: 's' }
+        ]
+      },
+      {
+        id: 'unit_t',
+        name: 'Letter T',
+        patterns: ['t'],
+        words: [
+          { word: 'tiger', highlight: 't', emoji: '🐯' },
+          { word: 'tree', highlight: 't', emoji: '🌳' },
+          { word: 'train', highlight: 't', emoji: '🚂' }
+        ],
+        exploreWords: [
+          { word: 'tiger', highlight: 't' }, { word: 'tree', highlight: 't' }, { word: 'tap', highlight: 't' }, { word: 'tan', highlight: 't' }, { word: 'ten', highlight: 't' },
+          { word: 'tip', highlight: 't' }, { word: 'top', highlight: 't' }, { word: 'tub', highlight: 't' }, { word: 'tag', highlight: 't' }, { word: 'tin', highlight: 't' }
+        ]
+      },
+      {
+        id: 'unit_u',
+        name: 'Letter U',
+        patterns: ['u'],
+        words: [
+          { word: 'umbrella', highlight: 'u', emoji: '☂️' },
+          { word: 'up', highlight: 'u', emoji: '⬆️' },
+          { word: 'unicorn', highlight: 'u', emoji: '🦄' }
+        ],
+        exploreWords: [
+          { word: 'up', highlight: 'u' }, { word: 'us', highlight: 'u' }, { word: 'under', highlight: 'u' }, { word: 'until', highlight: 'u' }, { word: 'upset', highlight: 'u' },
+          { word: 'use', highlight: 'u' }, { word: 'ugly', highlight: 'u' }, { word: 'undo', highlight: 'u' }, { word: 'uncle', highlight: 'u' }, { word: 'unit', highlight: 'u' }
+        ]
+      },
+      {
+        id: 'unit_v',
+        name: 'Letter V',
+        patterns: ['v'],
+        words: [
+          { word: 'violin', highlight: 'v', emoji: '🎻' },
+          { word: 'van', highlight: 'v', emoji: '🚐' },
+          { word: 'vase', highlight: 'v', emoji: '🏺' }
+        ],
+        exploreWords: [
+          { word: 'van', highlight: 'v' }, { word: 'vase', highlight: 'v' }, { word: 'vet', highlight: 'v' }, { word: 'vest', highlight: 'v' }, { word: 'vote', highlight: 'v' },
+          { word: 'voice', highlight: 'v' }, { word: 'visit', highlight: 'v' }, { word: 'very', highlight: 'v' }, { word: 'view', highlight: 'v' }, { word: 'vine', highlight: 'v' }
+        ]
+      },
+      {
+        id: 'unit_w',
+        name: 'Letter W',
+        patterns: ['w'],
+        words: [
+          { word: 'watch', highlight: 'w', emoji: '⌚' },
+          { word: 'whale', highlight: 'w', emoji: '🐋' },
+          { word: 'window', highlight: 'w', emoji: '🪟' }
+        ],
+        exploreWords: [
+          { word: 'watch', highlight: 'w' }, { word: 'whale', highlight: 'w' }, { word: 'wet', highlight: 'w' }, { word: 'web', highlight: 'w' }, { word: 'win', highlight: 'w' },
+          { word: 'wig', highlight: 'w' }, { word: 'wit', highlight: 'w' }, { word: 'wag', highlight: 'w' }, { word: 'wax', highlight: 'w' }, { word: 'way', highlight: 'w' }
+        ]
+      },
+      {
+        id: 'unit_x',
+        name: 'Letter X',
+        patterns: ['x'],
+        words: [
+          { word: 'box', highlight: 'x', emoji: '📦' },
+          { word: 'fox', highlight: 'x', emoji: '🦊' },
+          { word: 'six', highlight: 'x', emoji: '6️⃣' }
+        ],
+        exploreWords: [
+          { word: 'box', highlight: 'x' }, { word: 'fox', highlight: 'x' }, { word: 'six', highlight: 'x' }, { word: 'mix', highlight: 'x' }, { word: 'fix', highlight: 'x' },
+          { word: 'wax', highlight: 'x' }, { word: 'tax', highlight: 'x' }, { word: 'max', highlight: 'x' }, { word: 'next', highlight: 'x' }, { word: 'exit', highlight: 'x' }
+        ]
+      },
+      {
+        id: 'unit_y',
+        name: 'Letter Y',
+        patterns: ['y'],
+        words: [
+          { word: 'yellow', highlight: 'y', emoji: '💛' },
+          { word: 'yak', highlight: 'y', emoji: '🦬' },
+          { word: 'yoyo', highlight: 'y', emoji: '🪀' }
+        ],
+        exploreWords: [
+          { word: 'yellow', highlight: 'y' }, { word: 'yak', highlight: 'y' }, { word: 'yes', highlight: 'y' }, { word: 'yet', highlight: 'y' }, { word: 'yell', highlight: 'y' },
+          { word: 'yam', highlight: 'y' }, { word: 'yap', highlight: 'y' }, { word: 'yard', highlight: 'y' }, { word: 'yarn', highlight: 'y' }, { word: 'yawn', highlight: 'y' }
+        ]
+      },
+      {
+        id: 'unit_z',
+        name: 'Letter Z',
+        patterns: ['z'],
+        words: [
+          { word: 'zebra', highlight: 'z', emoji: '🦓' },
+          { word: 'zoo', highlight: 'z', emoji: '🦁' },
+          { word: 'zero', highlight: 'z', emoji: '0️⃣' }
+        ],
+        exploreWords: [
+          { word: 'zebra', highlight: 'z' }, { word: 'zoo', highlight: 'z' }, { word: 'zero', highlight: 'z' }, { word: 'zap', highlight: 'z' }, { word: 'zip', highlight: 'z' },
+          { word: 'zone', highlight: 'z' }, { word: 'zoom', highlight: 'z' }, { word: 'zest', highlight: 'z' }, { word: 'zigzag', highlight: 'z' }, { word: 'buzz', highlight: 'z' }
+        ]
+      }
+    ]
+  },
   level2: {
     id: 'level2',
     name: 'Level 2',
