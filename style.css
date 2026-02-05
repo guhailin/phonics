@@ -176,6 +176,7 @@ body {
 
 /* ========== 首页样式 ========== */
 .header {
+    position: relative;
     text-align: center;
     margin-bottom: 40px;
     animation: bounceIn 0.8s ease-out;

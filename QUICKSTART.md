@@ -4,9 +4,9 @@
 
 只需双击打开 `index.html` 文件，即可开始学习！
 
-## 图片优化完成 ✅
+## 图片显示 ✅
 
-已为 **133个单词** 优化了emoji图标，从默认的 📝 更新为更直观的专属图标：
+所有单词都配置了直观的emoji图标：
 
 ### 示例
 - 🐱 cat (猫)
@@ -21,36 +21,6 @@
 - 🚀 space (太空)
 - 🎭 stage (舞台)
 - 🏖️ beach (海滩)
-- ... 还有120+个单词！
-
-## 下一步（可选）
-
-如果想使用真实图片而不是emoji：
-
-### 方案 A：使用 AI 生成（需要API）
-```bash
-# 1. 安装依赖
-pip install google-generativeai requests
-
-# 2. 设置API密钥（二选一）
-export OPENAI_API_KEY="your-key"  # OpenAI DALL-E
-# 或
-export STABILITY_API_KEY="your-key"  # Stability AI
-
-# 3. 运行生成脚本
-python3 generate_images.py
-```
-
-### 方案 B：手动添加图片
-1. 创建 `images/` 目录
-2. 添加图片文件，命名为 `单词.png`（如 `cat.png`）
-3. 刷新页面，图片会自动显示
-
-### 方案 C：继续使用emoji（推荐）
-- ✅ **当前状态已经很好**
-- ✅ **无需额外成本**
-- ✅ **适合儿童学习**
-- ✅ **色彩丰富，直观易懂**
 
 ## 学习流程
 
@@ -84,25 +54,16 @@ python3 generate_images.py
 4. **探索模式**：完成一个Level后，用探索模式巩固
 5. **关注高亮**：重点观察高亮的字母组合规律
 
-## 技术支持
-
-- 详细说明：[README.md](README.md)
-- 图片生成：[IMAGE_GENERATION.md](IMAGE_GENERATION.md)
-- 更新状态：[IMAGES_STATUS.md](IMAGES_STATUS.md)
-
 ## 常见问题
 
-**Q: 为什么有些单词还是显示 📝？**  
-A: 这些单词暂时没有找到合适的emoji，可以手动添加图片。
-
-**Q: emoji图标够用吗？**  
-A: 完全够用！当前的emoji已经很直观，特别适合儿童学习。
+**Q: 可以离线使用吗？**  
+A: 可以！下载整个文件夹后，无需网络即可使用。
 
 **Q: 如何判断学习效果？**  
 A: 在复习模式中，如果能快速认读并说出单词含义，说明掌握良好。
 
-**Q: 可以离线使用吗？**  
-A: 可以！下载整个文件夹后，无需网络即可使用。
+**Q: 支持哪些浏览器？**  
+A: 支持所有现代浏览器（Chrome、Firefox、Safari、Edge）。
 
 ---
 
