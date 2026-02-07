@@ -4,373 +4,185 @@ const phonicsData = {
   level1: {
     id: 'level1',
     name: 'Level 1',
-    title: 'Alphabet & Sounds',
-    subtitle: '字母与发音',
+    title: 'The Alphabet',
+    subtitle: '字母音',
     color: '#9C27B0',
     emoji: '🟣',
     units: [
       {
-        id: 'unit_a',
-        name: 'Letter A',
-        patterns: ['a'],
+        id: 'unit1',
+        name: 'Unit 1: Aa, Bb, Cc',
+        patterns: ['a', 'b', 'c'],
         words: [
           { word: 'apple', highlight: 'a', emoji: '🍎' },
           { word: 'ant', highlight: 'a', emoji: '🐜' },
-          { word: 'alligator', highlight: 'a', emoji: '🐊' }
-        ],
-        exploreWords: [
-          { word: 'apple', highlight: 'a' }, { word: 'ant', highlight: 'a' }, { word: 'ax', highlight: 'a' }, { word: 'add', highlight: 'a' }, { word: 'and', highlight: 'a' },
-          { word: 'arm', highlight: 'a' }, { word: 'art', highlight: 'a' }, { word: 'ask', highlight: 'a' }, { word: 'act', highlight: 'a' }, { word: 'age', highlight: 'a' }
-        ]
-      },
-      {
-        id: 'unit_b',
-        name: 'Letter B',
-        patterns: ['b'],
-        words: [
+          { word: 'alligator', highlight: 'a', emoji: '🐊' },
           { word: 'ball', highlight: 'b', emoji: '⚽' },
           { word: 'bee', highlight: 'b', emoji: '🐝' },
-          { word: 'banana', highlight: 'b', emoji: '🍌' }
-        ],
-        exploreWords: [
-          { word: 'ball', highlight: 'b' }, { word: 'bee', highlight: 'b' }, { word: 'book', highlight: 'b' }, { word: 'box', highlight: 'b' }, { word: 'bus', highlight: 'b' },
-          { word: 'bed', highlight: 'b' }, { word: 'big', highlight: 'b' }, { word: 'bat', highlight: 'b' }, { word: 'bag', highlight: 'b' }, { word: 'boy', highlight: 'b' }
-        ]
-      },
-      {
-        id: 'unit_c',
-        name: 'Letter C',
-        patterns: ['c'],
-        words: [
+          { word: 'banana', highlight: 'b', emoji: '🍌' },
           { word: 'cat', highlight: 'c', emoji: '🐱' },
           { word: 'cup', highlight: 'c', emoji: '☕' },
           { word: 'cake', highlight: 'c', emoji: '🍰' }
         ],
         exploreWords: [
-          { word: 'cat', highlight: 'c' }, { word: 'cup', highlight: 'c' }, { word: 'car', highlight: 'c' }, { word: 'can', highlight: 'c' }, { word: 'cap', highlight: 'c' },
-          { word: 'cut', highlight: 'c' }, { word: 'cow', highlight: 'c' }, { word: 'cake', highlight: 'c' }, { word: 'coat', highlight: 'c' }, { word: 'corn', highlight: 'c' }
+          { word: 'apple', highlight: 'a' }, { word: 'ant', highlight: 'a' }, { word: 'alligator', highlight: 'a' }, { word: 'axe', highlight: 'a' }, { word: 'arrow', highlight: 'a' },
+          { word: 'bear', highlight: 'b' }, { word: 'bird', highlight: 'b' }, { word: 'bed', highlight: 'b' }, { word: 'boy', highlight: 'b' }, { word: 'banana', highlight: 'b' },
+          { word: 'cat', highlight: 'c' }, { word: 'cup', highlight: 'c' }, { word: 'car', highlight: 'c' }, { word: 'cap', highlight: 'c' }, { word: 'cake', highlight: 'c' }
         ]
       },
       {
-        id: 'unit_d',
-        name: 'Letter D',
-        patterns: ['d'],
+        id: 'unit2',
+        name: 'Unit 2: Dd, Ee, Ff',
+        patterns: ['d', 'e', 'f'],
         words: [
           { word: 'dog', highlight: 'd', emoji: '🐕' },
           { word: 'duck', highlight: 'd', emoji: '🦆' },
-          { word: 'door', highlight: 'd', emoji: '🚪' }
-        ],
-        exploreWords: [
-          { word: 'dog', highlight: 'd' }, { word: 'duck', highlight: 'd' }, { word: 'door', highlight: 'd' }, { word: 'dad', highlight: 'd' }, { word: 'day', highlight: 'd' },
-          { word: 'doll', highlight: 'd' }, { word: 'dish', highlight: 'd' }, { word: 'desk', highlight: 'd' }, { word: 'dot', highlight: 'd' }, { word: 'dig', highlight: 'd' }
-        ]
-      },
-      {
-        id: 'unit_e',
-        name: 'Letter E',
-        patterns: ['e'],
-        words: [
+          { word: 'door', highlight: 'd', emoji: '🚪' },
           { word: 'egg', highlight: 'e', emoji: '🥚' },
           { word: 'elephant', highlight: 'e', emoji: '🐘' },
-          { word: 'ear', highlight: 'e', emoji: '👂' }
-        ],
-        exploreWords: [
-          { word: 'egg', highlight: 'e' }, { word: 'eat', highlight: 'e' }, { word: 'end', highlight: 'e' }, { word: 'ear', highlight: 'e' }, { word: 'eye', highlight: 'e' },
-          { word: 'elbow', highlight: 'e' }, { word: 'exit', highlight: 'e' }, { word: 'edge', highlight: 'e' }, { word: 'even', highlight: 'e' }, { word: 'every', highlight: 'e' }
-        ]
-      },
-      {
-        id: 'unit_f',
-        name: 'Letter F',
-        patterns: ['f'],
-        words: [
+          { word: 'ear', highlight: 'e', emoji: '👂' },
           { word: 'fish', highlight: 'f', emoji: '🐟' },
           { word: 'frog', highlight: 'f', emoji: '🐸' },
           { word: 'flower', highlight: 'f', emoji: '🌸' }
         ],
         exploreWords: [
-          { word: 'fish', highlight: 'f' }, { word: 'frog', highlight: 'f' }, { word: 'fan', highlight: 'f' }, { word: 'fox', highlight: 'f' }, { word: 'fun', highlight: 'f' },
-          { word: 'flag', highlight: 'f' }, { word: 'foot', highlight: 'f' }, { word: 'five', highlight: 'f' }, { word: 'face', highlight: 'f' }, { word: 'fast', highlight: 'f' }
+          { word: 'dog', highlight: 'd' }, { word: 'duck', highlight: 'd' }, { word: 'doll', highlight: 'd' }, { word: 'dad', highlight: 'd' }, { word: 'desk', highlight: 'd' },
+          { word: 'egg', highlight: 'e' }, { word: 'elbow', highlight: 'e' }, { word: 'elephant', highlight: 'e' }, { word: 'envelope', highlight: 'e' }, { word: 'exit', highlight: 'e' },
+          { word: 'fan', highlight: 'f' }, { word: 'fish', highlight: 'f' }, { word: 'frog', highlight: 'f' }, { word: 'fox', highlight: 'f' }, { word: 'fork', highlight: 'f' }
         ]
       },
       {
-        id: 'unit_g',
-        name: 'Letter G',
-        patterns: ['g'],
+        id: 'unit3',
+        name: 'Unit 3: Gg, Hh, Ii',
+        patterns: ['g', 'h', 'i'],
         words: [
           { word: 'goat', highlight: 'g', emoji: '🐐' },
           { word: 'gift', highlight: 'g', emoji: '🎁' },
-          { word: 'gorilla', highlight: 'g', emoji: '🦍' }
-        ],
-        exploreWords: [
-          { word: 'goat', highlight: 'g' }, { word: 'girl', highlight: 'g' }, { word: 'gas', highlight: 'g' }, { word: 'gap', highlight: 'g' }, { word: 'gate', highlight: 'g' },
-          { word: 'game', highlight: 'g' }, { word: 'get', highlight: 'g' }, { word: 'go', highlight: 'g' }, { word: 'good', highlight: 'g' }, { word: 'got', highlight: 'g' }
-        ]
-      },
-      {
-        id: 'unit_h',
-        name: 'Letter H',
-        patterns: ['h'],
-        words: [
+          { word: 'gorilla', highlight: 'g', emoji: '🦍' },
           { word: 'hat', highlight: 'h', emoji: '🎩' },
           { word: 'horse', highlight: 'h', emoji: '🐴' },
-          { word: 'house', highlight: 'h', emoji: '🏠' }
-        ],
-        exploreWords: [
-          { word: 'hat', highlight: 'h' }, { word: 'house', highlight: 'h' }, { word: 'hand', highlight: 'h' }, { word: 'help', highlight: 'h' }, { word: 'hen', highlight: 'h' },
-          { word: 'hit', highlight: 'h' }, { word: 'hop', highlight: 'h' }, { word: 'hot', highlight: 'h' }, { word: 'hug', highlight: 'h' }, { word: 'ham', highlight: 'h' }
-        ]
-      },
-      {
-        id: 'unit_i',
-        name: 'Letter I',
-        patterns: ['i'],
-        words: [
+          { word: 'house', highlight: 'h', emoji: '🏠' },
           { word: 'igloo', highlight: 'i', emoji: '🏔️' },
           { word: 'ink', highlight: 'i', emoji: '🖊️' },
           { word: 'island', highlight: 'i', emoji: '🏝️' }
         ],
         exploreWords: [
-          { word: 'ink', highlight: 'i' }, { word: 'in', highlight: 'i' }, { word: 'is', highlight: 'i' }, { word: 'it', highlight: 'i' }, { word: 'if', highlight: 'i' },
-          { word: 'ill', highlight: 'i' }, { word: 'inch', highlight: 'i' }, { word: 'ice', highlight: 'i' }, { word: 'into', highlight: 'i' }, { word: 'idea', highlight: 'i' }
+          { word: 'goat', highlight: 'g' }, { word: 'girl', highlight: 'g' }, { word: 'gift', highlight: 'g' }, { word: 'gorilla', highlight: 'g' }, { word: 'gum', highlight: 'g' },
+          { word: 'hat', highlight: 'h' }, { word: 'horse', highlight: 'h' }, { word: 'house', highlight: 'h' }, { word: 'hippopotamus', highlight: 'h' }, { word: 'hand', highlight: 'h' },
+          { word: 'igloo', highlight: 'i' }, { word: 'iguana', highlight: 'i' }, { word: 'ink', highlight: 'i' }, { word: 'insect', highlight: 'i' }, { word: 'in', highlight: 'i' }
         ]
       },
       {
-        id: 'unit_j',
-        name: 'Letter J',
-        patterns: ['j'],
+        id: 'unit4',
+        name: 'Unit 4: Jj, Kk, Ll',
+        patterns: ['j', 'k', 'l'],
         words: [
           { word: 'jam', highlight: 'j', emoji: '🍓' },
           { word: 'jump', highlight: 'j', emoji: '🦘' },
-          { word: 'juice', highlight: 'j', emoji: '🧃' }
-        ],
-        exploreWords: [
-          { word: 'jam', highlight: 'j' }, { word: 'jump', highlight: 'j' }, { word: 'jet', highlight: 'j' }, { word: 'joy', highlight: 'j' }, { word: 'jar', highlight: 'j' },
-          { word: 'job', highlight: 'j' }, { word: 'joke', highlight: 'j' }, { word: 'just', highlight: 'j' }, { word: 'join', highlight: 'j' }, { word: 'jog', highlight: 'j' }
-        ]
-      },
-      {
-        id: 'unit_k',
-        name: 'Letter K',
-        patterns: ['k'],
-        words: [
+          { word: 'juice', highlight: 'j', emoji: '🧃' },
           { word: 'kite', highlight: 'k', emoji: '🪁' },
           { word: 'king', highlight: 'k', emoji: '👑' },
-          { word: 'koala', highlight: 'k', emoji: '🐨' }
-        ],
-        exploreWords: [
-          { word: 'kite', highlight: 'k' }, { word: 'king', highlight: 'k' }, { word: 'key', highlight: 'k' }, { word: 'kid', highlight: 'k' }, { word: 'kick', highlight: 'k' },
-          { word: 'keep', highlight: 'k' }, { word: 'kiss', highlight: 'k' }, { word: 'kind', highlight: 'k' }, { word: 'kit', highlight: 'k' }, { word: 'knee', highlight: 'k' }
-        ]
-      },
-      {
-        id: 'unit_l',
-        name: 'Letter L',
-        patterns: ['l'],
-        words: [
+          { word: 'koala', highlight: 'k', emoji: '🐨' },
           { word: 'lion', highlight: 'l', emoji: '🦁' },
           { word: 'lamp', highlight: 'l', emoji: '💡' },
           { word: 'lemon', highlight: 'l', emoji: '🍋' }
         ],
         exploreWords: [
-          { word: 'lion', highlight: 'l' }, { word: 'lamp', highlight: 'l' }, { word: 'leg', highlight: 'l' }, { word: 'lip', highlight: 'l' }, { word: 'log', highlight: 'l' },
-          { word: 'lid', highlight: 'l' }, { word: 'let', highlight: 'l' }, { word: 'lot', highlight: 'l' }, { word: 'lap', highlight: 'l' }, { word: 'look', highlight: 'l' }
+          { word: 'jam', highlight: 'j' }, { word: 'jet', highlight: 'j' }, { word: 'jelly', highlight: 'j' }, { word: 'jacket', highlight: 'j' }, { word: 'jump', highlight: 'j' },
+          { word: 'king', highlight: 'k' }, { word: 'kite', highlight: 'k' }, { word: 'kangaroo', highlight: 'k' }, { word: 'key', highlight: 'k' }, { word: 'koala', highlight: 'k' },
+          { word: 'lion', highlight: 'l' }, { word: 'lamp', highlight: 'l' }, { word: 'lemon', highlight: 'l' }, { word: 'leaf', highlight: 'l' }, { word: 'leg', highlight: 'l' }
         ]
       },
       {
-        id: 'unit_m',
-        name: 'Letter M',
-        patterns: ['m'],
+        id: 'unit5',
+        name: 'Unit 5: Mm, Nn, Oo',
+        patterns: ['m', 'n', 'o'],
         words: [
           { word: 'monkey', highlight: 'm', emoji: '🐵' },
           { word: 'milk', highlight: 'm', emoji: '🥛' },
-          { word: 'moon', highlight: 'm', emoji: '🌙' }
-        ],
-        exploreWords: [
-          { word: 'monkey', highlight: 'm' }, { word: 'milk', highlight: 'm' }, { word: 'man', highlight: 'm' }, { word: 'map', highlight: 'm' }, { word: 'mat', highlight: 'm' },
-          { word: 'mom', highlight: 'm' }, { word: 'mop', highlight: 'm' }, { word: 'met', highlight: 'm' }, { word: 'mix', highlight: 'm' }, { word: 'mud', highlight: 'm' }
-        ]
-      },
-      {
-        id: 'unit_n',
-        name: 'Letter N',
-        patterns: ['n'],
-        words: [
+          { word: 'moon', highlight: 'm', emoji: '🌙' },
           { word: 'nest', highlight: 'n', emoji: '🪺' },
           { word: 'nose', highlight: 'n', emoji: '👃' },
-          { word: 'net', highlight: 'n', emoji: '🥅' }
-        ],
-        exploreWords: [
-          { word: 'nest', highlight: 'n' }, { word: 'nose', highlight: 'n' }, { word: 'net', highlight: 'n' }, { word: 'nap', highlight: 'n' }, { word: 'not', highlight: 'n' },
-          { word: 'nut', highlight: 'n' }, { word: 'now', highlight: 'n' }, { word: 'new', highlight: 'n' }, { word: 'nod', highlight: 'n' }, { word: 'next', highlight: 'n' }
-        ]
-      },
-      {
-        id: 'unit_o',
-        name: 'Letter O',
-        patterns: ['o'],
-        words: [
+          { word: 'net', highlight: 'n', emoji: '🥅' },
           { word: 'octopus', highlight: 'o', emoji: '🐙' },
           { word: 'owl', highlight: 'o', emoji: '🦉' },
           { word: 'orange', highlight: 'o', emoji: '🍊' }
         ],
         exploreWords: [
-          { word: 'ox', highlight: 'o' }, { word: 'on', highlight: 'o' }, { word: 'odd', highlight: 'o' }, { word: 'off', highlight: 'o' }, { word: 'old', highlight: 'o' },
-          { word: 'one', highlight: 'o' }, { word: 'open', highlight: 'o' }, { word: 'over', highlight: 'o' }, { word: 'our', highlight: 'o' }, { word: 'out', highlight: 'o' }
+          { word: 'monkey', highlight: 'm' }, { word: 'moon', highlight: 'm' }, { word: 'mouse', highlight: 'm' }, { word: 'map', highlight: 'm' }, { word: 'milk', highlight: 'm' },
+          { word: 'nose', highlight: 'n' }, { word: 'nest', highlight: 'n' }, { word: 'net', highlight: 'n' }, { word: 'nut', highlight: 'n' }, { word: 'nine', highlight: 'n' },
+          { word: 'octopus', highlight: 'o' }, { word: 'ostrich', highlight: 'o' }, { word: 'ox', highlight: 'o' }, { word: 'olive', highlight: 'o' }, { word: 'on', highlight: 'o' }
         ]
       },
       {
-        id: 'unit_p',
-        name: 'Letter P',
-        patterns: ['p'],
+        id: 'unit6',
+        name: 'Unit 6: Pp, Qq, Rr',
+        patterns: ['p', 'q', 'r'],
         words: [
           { word: 'pizza', highlight: 'p', emoji: '🍕' },
           { word: 'pig', highlight: 'p', emoji: '🐷' },
-          { word: 'pen', highlight: 'p', emoji: '🖊️' }
-        ],
-        exploreWords: [
-          { word: 'pig', highlight: 'p' }, { word: 'pen', highlight: 'p' }, { word: 'pan', highlight: 'p' }, { word: 'pet', highlight: 'p' }, { word: 'pin', highlight: 'p' },
-          { word: 'pot', highlight: 'p' }, { word: 'pat', highlight: 'p' }, { word: 'peg', highlight: 'p' }, { word: 'put', highlight: 'p' }, { word: 'pack', highlight: 'p' }
-        ]
-      },
-      {
-        id: 'unit_q',
-        name: 'Letter Q',
-        patterns: ['q'],
-        words: [
+          { word: 'pen', highlight: 'p', emoji: '🖊️' },
           { word: 'queen', highlight: 'q', emoji: '👸' },
           { word: 'quilt', highlight: 'q', emoji: '🛏️' },
-          { word: 'question', highlight: 'q', emoji: '❓' }
-        ],
-        exploreWords: [
-          { word: 'queen', highlight: 'q' }, { word: 'quilt', highlight: 'q' }, { word: 'quick', highlight: 'q' }, { word: 'quiet', highlight: 'q' }, { word: 'quit', highlight: 'q' },
-          { word: 'quiz', highlight: 'q' }, { word: 'quack', highlight: 'q' }, { word: 'quest', highlight: 'q' }, { word: 'quote', highlight: 'q' }, { word: 'quart', highlight: 'q' }
-        ]
-      },
-      {
-        id: 'unit_r',
-        name: 'Letter R',
-        patterns: ['r'],
-        words: [
+          { word: 'question', highlight: 'q', emoji: '❓' },
           { word: 'rabbit', highlight: 'r', emoji: '🐰' },
           { word: 'rose', highlight: 'r', emoji: '🌹' },
           { word: 'ring', highlight: 'r', emoji: '💍' }
         ],
         exploreWords: [
-          { word: 'rabbit', highlight: 'r' }, { word: 'rose', highlight: 'r' }, { word: 'run', highlight: 'r' }, { word: 'rat', highlight: 'r' }, { word: 'red', highlight: 'r' },
-          { word: 'rug', highlight: 'r' }, { word: 'rain', highlight: 'r' }, { word: 'ring', highlight: 'r' }, { word: 'road', highlight: 'r' }, { word: 'rock', highlight: 'r' }
+          { word: 'pig', highlight: 'p' }, { word: 'pen', highlight: 'p' }, { word: 'panda', highlight: 'p' }, { word: 'pear', highlight: 'p' }, { word: 'piano', highlight: 'p' },
+          { word: 'queen', highlight: 'q' }, { word: 'quiet', highlight: 'q' }, { word: 'question', highlight: 'q' }, { word: 'quilt', highlight: 'q' }, { word: 'quack', highlight: 'q' },
+          { word: 'rabbit', highlight: 'r' }, { word: 'red', highlight: 'r' }, { word: 'ring', highlight: 'r' }, { word: 'rocket', highlight: 'r' }, { word: 'rug', highlight: 'r' }
         ]
       },
       {
-        id: 'unit_s',
-        name: 'Letter S',
-        patterns: ['s'],
+        id: 'unit7',
+        name: 'Unit 7: Ss, Tt, Uu, Vv',
+        patterns: ['s', 't', 'u', 'v'],
         words: [
           { word: 'sun', highlight: 's', emoji: '☀️' },
           { word: 'snake', highlight: 's', emoji: '🐍' },
-          { word: 'star', highlight: 's', emoji: '⭐' }
-        ],
-        exploreWords: [
-          { word: 'sun', highlight: 's' }, { word: 'sit', highlight: 's' }, { word: 'sad', highlight: 's' }, { word: 'sap', highlight: 's' }, { word: 'sip', highlight: 's' },
-          { word: 'set', highlight: 's' }, { word: 'six', highlight: 's' }, { word: 'sob', highlight: 's' }, { word: 'sod', highlight: 's' }, { word: 'sub', highlight: 's' }
-        ]
-      },
-      {
-        id: 'unit_t',
-        name: 'Letter T',
-        patterns: ['t'],
-        words: [
+          { word: 'star', highlight: 's', emoji: '⭐' },
           { word: 'tiger', highlight: 't', emoji: '🐯' },
           { word: 'tree', highlight: 't', emoji: '🌳' },
-          { word: 'train', highlight: 't', emoji: '🚂' }
-        ],
-        exploreWords: [
-          { word: 'tiger', highlight: 't' }, { word: 'tree', highlight: 't' }, { word: 'tap', highlight: 't' }, { word: 'tan', highlight: 't' }, { word: 'ten', highlight: 't' },
-          { word: 'tip', highlight: 't' }, { word: 'top', highlight: 't' }, { word: 'tub', highlight: 't' }, { word: 'tag', highlight: 't' }, { word: 'tin', highlight: 't' }
-        ]
-      },
-      {
-        id: 'unit_u',
-        name: 'Letter U',
-        patterns: ['u'],
-        words: [
+          { word: 'train', highlight: 't', emoji: '🚂' },
           { word: 'umbrella', highlight: 'u', emoji: '☂️' },
           { word: 'up', highlight: 'u', emoji: '⬆️' },
-          { word: 'unicorn', highlight: 'u', emoji: '🦄' }
-        ],
-        exploreWords: [
-          { word: 'up', highlight: 'u' }, { word: 'us', highlight: 'u' }, { word: 'under', highlight: 'u' }, { word: 'until', highlight: 'u' }, { word: 'upset', highlight: 'u' },
-          { word: 'use', highlight: 'u' }, { word: 'ugly', highlight: 'u' }, { word: 'undo', highlight: 'u' }, { word: 'uncle', highlight: 'u' }, { word: 'unit', highlight: 'u' }
-        ]
-      },
-      {
-        id: 'unit_v',
-        name: 'Letter V',
-        patterns: ['v'],
-        words: [
+          { word: 'unicorn', highlight: 'u', emoji: '🦄' },
           { word: 'violin', highlight: 'v', emoji: '🎻' },
           { word: 'van', highlight: 'v', emoji: '🚐' },
           { word: 'vase', highlight: 'v', emoji: '🏺' }
         ],
         exploreWords: [
-          { word: 'van', highlight: 'v' }, { word: 'vase', highlight: 'v' }, { word: 'vet', highlight: 'v' }, { word: 'vest', highlight: 'v' }, { word: 'vote', highlight: 'v' },
-          { word: 'voice', highlight: 'v' }, { word: 'visit', highlight: 'v' }, { word: 'very', highlight: 'v' }, { word: 'view', highlight: 'v' }, { word: 'vine', highlight: 'v' }
+          { word: 'sun', highlight: 's' }, { word: 'snake', highlight: 's' }, { word: 'seal', highlight: 's' }, { word: 'soap', highlight: 's' }, { word: 'sock', highlight: 's' },
+          { word: 'tiger', highlight: 't' }, { word: 'ten', highlight: 't' }, { word: 'tent', highlight: 't' }, { word: 'turtle', highlight: 't' }, { word: 'top', highlight: 't' },
+          { word: 'umbrella', highlight: 'u' }, { word: 'up', highlight: 'u' }, { word: 'uncle', highlight: 'u' }, { word: 'under', highlight: 'u' }, { word: 'umpire', highlight: 'u' },
+          { word: 'van', highlight: 'v' }, { word: 'vest', highlight: 'v' }, { word: 'violin', highlight: 'v' }, { word: 'vase', highlight: 'v' }, { word: 'vet', highlight: 'v' }
         ]
       },
       {
-        id: 'unit_w',
-        name: 'Letter W',
-        patterns: ['w'],
+        id: 'unit8',
+        name: 'Unit 8: Ww, Xx, Yy, Zz',
+        patterns: ['w', 'x', 'y', 'z'],
         words: [
           { word: 'watch', highlight: 'w', emoji: '⌚' },
           { word: 'whale', highlight: 'w', emoji: '🐋' },
-          { word: 'window', highlight: 'w', emoji: '🪟' }
-        ],
-        exploreWords: [
-          { word: 'watch', highlight: 'w' }, { word: 'whale', highlight: 'w' }, { word: 'wet', highlight: 'w' }, { word: 'web', highlight: 'w' }, { word: 'win', highlight: 'w' },
-          { word: 'wig', highlight: 'w' }, { word: 'wit', highlight: 'w' }, { word: 'wag', highlight: 'w' }, { word: 'wax', highlight: 'w' }, { word: 'way', highlight: 'w' }
-        ]
-      },
-      {
-        id: 'unit_x',
-        name: 'Letter X',
-        patterns: ['x'],
-        words: [
+          { word: 'window', highlight: 'w', emoji: '🪟' },
           { word: 'box', highlight: 'x', emoji: '📦' },
           { word: 'fox', highlight: 'x', emoji: '🦊' },
-          { word: 'six', highlight: 'x', emoji: '6️⃣' }
-        ],
-        exploreWords: [
-          { word: 'box', highlight: 'x' }, { word: 'fox', highlight: 'x' }, { word: 'six', highlight: 'x' }, { word: 'mix', highlight: 'x' }, { word: 'fix', highlight: 'x' },
-          { word: 'wax', highlight: 'x' }, { word: 'tax', highlight: 'x' }, { word: 'max', highlight: 'x' }, { word: 'next', highlight: 'x' }, { word: 'exit', highlight: 'x' }
-        ]
-      },
-      {
-        id: 'unit_y',
-        name: 'Letter Y',
-        patterns: ['y'],
-        words: [
+          { word: 'six', highlight: 'x', emoji: '6️⃣' },
           { word: 'yellow', highlight: 'y', emoji: '💛' },
           { word: 'yak', highlight: 'y', emoji: '🦬' },
-          { word: 'yoyo', highlight: 'y', emoji: '🪀' }
-        ],
-        exploreWords: [
-          { word: 'yellow', highlight: 'y' }, { word: 'yak', highlight: 'y' }, { word: 'yes', highlight: 'y' }, { word: 'yet', highlight: 'y' }, { word: 'yell', highlight: 'y' },
-          { word: 'yam', highlight: 'y' }, { word: 'yap', highlight: 'y' }, { word: 'yard', highlight: 'y' }, { word: 'yarn', highlight: 'y' }, { word: 'yawn', highlight: 'y' }
-        ]
-      },
-      {
-        id: 'unit_z',
-        name: 'Letter Z',
-        patterns: ['z'],
-        words: [
+          { word: 'yoyo', highlight: 'y', emoji: '🪀' },
           { word: 'zebra', highlight: 'z', emoji: '🦓' },
           { word: 'zoo', highlight: 'z', emoji: '🦁' },
           { word: 'zero', highlight: 'z', emoji: '0️⃣' }
         ],
         exploreWords: [
-          { word: 'zebra', highlight: 'z' }, { word: 'zoo', highlight: 'z' }, { word: 'zero', highlight: 'z' }, { word: 'zap', highlight: 'z' }, { word: 'zip', highlight: 'z' },
-          { word: 'zone', highlight: 'z' }, { word: 'zoom', highlight: 'z' }, { word: 'zest', highlight: 'z' }, { word: 'zigzag', highlight: 'z' }, { word: 'buzz', highlight: 'z' }
+          { word: 'watch', highlight: 'w' }, { word: 'window', highlight: 'w' }, { word: 'water', highlight: 'w' }, { word: 'whale', highlight: 'w' }, { word: 'wolf', highlight: 'w' },
+          { word: 'box', highlight: 'x' }, { word: 'fox', highlight: 'x' }, { word: 'six', highlight: 'x' }, { word: 'axe', highlight: 'x' }, { word: 'ox', highlight: 'x' },
+          { word: 'yoyo', highlight: 'y' }, { word: 'yak', highlight: 'y' }, { word: 'yellow', highlight: 'y' }, { word: 'yacht', highlight: 'y' }, { word: 'yard', highlight: 'y' },
+          { word: 'zebra', highlight: 'z' }, { word: 'zero', highlight: 'z' }, { word: 'zoo', highlight: 'z' }, { word: 'zipper', highlight: 'z' }, { word: 'zigzag', highlight: 'z' }
         ]
       }
     ]
@@ -384,20 +196,30 @@ const phonicsData = {
     emoji: '🟢',
     units: [
       {
-        id: 'unit2',
-        name: 'Unit 2',
+        id: 'unit1',
+        name: 'Unit 1',
         patterns: ['-am', '-an', '-ad', '-ag', '-ap', '-at'],
         examples: [
-          'The <span class="highlight">m<span class="pattern">an</span></span> has a <span class="highlight">c<span class="pattern">ap</span></span>.',
-          'I see a <span class="highlight">c<span class="pattern">at</span></span> on the <span class="highlight">m<span class="pattern">at</span></span>.',
+          'The <span class="highlight">f<span class="pattern">at</span></span> <span class="highlight">c<span class="pattern">at</span></span> is on the <span class="highlight">m<span class="pattern">at</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> has a <span class="highlight">m<span class="pattern">ap</span></span> and a <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'The <span class="highlight">m<span class="pattern">an</span></span> is in the <span class="highlight">t<span class="pattern">an</span></span> <span class="highlight">v<span class="pattern">an</span></span>.',
+          'I <span class="highlight">c<span class="pattern">an</span></span> see a <span class="highlight">t<span class="pattern">ag</span></span> on the <span class="highlight">b<span class="pattern">ag</span></span>.',
+          '<span class="highlight">S<span class="pattern">am</span></span> has a <span class="highlight">c<span class="pattern">ap</span></span> and a <span class="highlight">b<span class="pattern">at</span></span>.',
+          'The <span class="highlight">c<span class="pattern">at</span></span> <span class="highlight">h<span class="pattern">ad</span></span> a <span class="highlight">n<span class="pattern">ap</span></span> on the <span class="highlight">l<span class="pattern">ap</span></span>.',
+          'Look <span class="highlight"><span class="pattern">at</span></span> the <span class="highlight">j<span class="pattern">am</span></span> in the <span class="highlight">p<span class="pattern">an</span></span>.',
+          'The <span class="highlight">m<span class="pattern">ad</span></span> <span class="highlight">l<span class="pattern">ad</span></span> is on the <span class="highlight">m<span class="pattern">at</span></span>.',
+          'I have a <span class="highlight">h<span class="pattern">at</span></span> in my <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'The <span class="highlight">r<span class="pattern">am</span></span> is near the <span class="highlight">d<span class="pattern">am</span></span>.',
+          'Put the <span class="highlight">c<span class="pattern">an</span></span> in the <span class="highlight">v<span class="pattern">an</span></span>.',
+          'The <span class="highlight">s<span class="pattern">ad</span></span> <span class="highlight">m<span class="pattern">an</span></span> has no <span class="highlight">j<span class="pattern">am</span></span>.',
+          'I see a <span class="highlight">b<span class="pattern">at</span></span> on the <span class="highlight">c<span class="pattern">ap</span></span>.',
+          'The <span class="highlight">c<span class="pattern">at</span></span> <span class="highlight">r<span class="pattern">an</span></span> to the <span class="highlight">d<span class="pattern">am</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> is a <span class="highlight">b<span class="pattern">ad</span></span> <span class="highlight">m<span class="pattern">an</span></span> today.',
+          'I <span class="highlight">c<span class="pattern">an</span></span> <span class="highlight">t<span class="pattern">ap</span></span> the <span class="highlight">m<span class="pattern">ap</span></span> with a pen.',
+          'The <span class="highlight">f<span class="pattern">at</span></span> <span class="highlight">r<span class="pattern">at</span></span> is in the <span class="highlight">b<span class="pattern">ag</span></span>.',
+          '<span class="highlight">S<span class="pattern">am</span></span> <span class="highlight">h<span class="pattern">ad</span></span> <span class="highlight">h<span class="pattern">am</span></span> and <span class="highlight">j<span class="pattern">am</span></span> on <span class="highlight">m<span class="pattern">at</span></span>.',
           'The <span class="highlight">f<span class="pattern">an</span></span> is in the <span class="highlight">v<span class="pattern">an</span></span>.',
-          'Mom makes <span class="highlight">j<span class="pattern">am</span></span> with <span class="highlight">h<span class="pattern">am</span></span>.',
-          'My <span class="highlight">d<span class="pattern">ad</span></span> is <span class="pattern">s<span class="pattern">ad</span></span>.',
-          'Put the <span class="highlight">t<span class="pattern">ag</span></span> in the <span class="highlight">b<span class="pattern">ag</span></span>.',
-          'The <span class="highlight">b<span class="pattern">at</span></span> has a <span class="highlight">h<span class="pattern">at</span></span>.',
-          'I can <span class="highlight">cl<span class="pattern">ap</span></span> with the <span class="highlight">m<span class="pattern">ap</span></span>.',
-          'The <span class="highlight">r<span class="pattern">am</span></span> sits with <span class="highlight">S<span class="pattern">am</span></span>.',
-          'A <span class="highlight">f<span class="pattern">at</span></span> <span class="highlight">c<span class="pattern">at</span></span> takes a <span class="highlight">n<span class="pattern">ap</span></span>.'
+          'Look <span class="highlight"><span class="pattern">at</span></span> the <span class="highlight">t<span class="pattern">ag</span></span> on the <span class="highlight">h<span class="pattern">at</span></span>.'
         ],
         words: [
           { word: 'fan', highlight: 'an', emoji: '🪭' },
@@ -452,20 +274,60 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
+        id: 'unit2',
+        name: 'Unit 2',
         patterns: ['-et', '-en', '-ed'],
         examples: [
-          'A <span class="highlight">h<span class="pattern">en</span></span> is on the <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ed</span></span>.',
-          'I can <span class="highlight">g<span class="pattern">et</span></span> the <span class="highlight">j<span class="pattern">et</span></span>.',
-          'The <span class="highlight">p<span class="pattern">en</span></span> is for <span class="highlight">B<span class="pattern">en</span></span>.',
-          'Let me <span class="highlight">p<span class="pattern">et</span></span> the <span class="highlight">w<span class="pattern">et</span></span> dog.',
-          'Ten <span class="highlight">m<span class="pattern">en</span></span> sit in the <span class="highlight">d<span class="pattern">en</span></span>.',
-          'Mom <span class="highlight">f<span class="pattern">ed</span></span> the hen.',
-          'The <span class="highlight">n<span class="pattern">et</span></span> is <span class="highlight">w<span class="pattern">et</span></span>.',
-          'I <span class="highlight">l<span class="pattern">ed</span></span> the way.',
-          'We <span class="highlight">m<span class="pattern">et</span></span> at <span class="highlight">t<span class="pattern">en</span></span>.',
-          'She w<span class="highlight"><span class="pattern">ed</span></span> in a <span class="highlight">r<span class="pattern">ed</span></span> dress.'
+          'Look at the big <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">p<span class="pattern">et</span></span>.',
+          'I can see a red <span class="highlight">j<span class="pattern">et</span></span>.',
+          'The <span class="highlight">p<span class="pattern">et</span></span> is in the <span class="highlight">n<span class="pattern">et</span></span>.',
+          'Do not <span class="highlight">g<span class="pattern">et</span></span> the <span class="highlight">p<span class="pattern">et</span></span> <span class="highlight">w<span class="pattern">et</span></span>.',
+          'A cat is in the <span class="highlight">n<span class="pattern">et</span></span>.',
+          'I <span class="highlight">m<span class="pattern">et</span></span> a man with a <span class="highlight">p<span class="pattern">et</span></span>.',
+          'Let the <span class="highlight">p<span class="pattern">et</span></span> go to the <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'The <span class="highlight">j<span class="pattern">et</span></span> is up in the sky.',
+          'Can I <span class="highlight">g<span class="pattern">et</span></span> a <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">n<span class="pattern">et</span></span>?',
+          'My <span class="highlight">p<span class="pattern">et</span></span> is on the <span class="highlight">j<span class="pattern">et</span></span>.',
+          'I see <span class="highlight">t<span class="pattern">en</span></span> red <span class="highlight">h<span class="pattern">en</span></span>s.',
+          'The <span class="highlight">h<span class="pattern">en</span></span> is in the <span class="highlight">d<span class="pattern">en</span></span>.',
+          'I have a <span class="highlight">p<span class="pattern">en</span></span> in my bag.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">m<span class="pattern">en</span></span> are on the bus.',
+          'Look at the <span class="highlight">h<span class="pattern">en</span></span> and the <span class="highlight">p<span class="pattern">en</span></span>.',
+          'The <span class="highlight">m<span class="pattern">en</span></span> are in the big <span class="highlight">d<span class="pattern">en</span></span>.',
+          'I can see <span class="highlight">t<span class="pattern">en</span></span> blue <span class="highlight">p<span class="pattern">en</span></span>s.',
+          'The <span class="highlight">h<span class="pattern">en</span></span> has a big egg.',
+          'Put the <span class="highlight">p<span class="pattern">en</span></span> on the mat.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">m<span class="pattern">en</span></span> see the red <span class="highlight">h<span class="pattern">en</span></span>.',
+          'The <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ed</span></span> is very big.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> is on the <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'I <span class="highlight">f<span class="pattern">ed</span></span> my little <span class="highlight">p<span class="pattern">et</span></span> today.',
+          'Look at my new <span class="highlight">r<span class="pattern">ed</span></span> hat.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> has a <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">p<span class="pattern">en</span></span>.',
+          'The <span class="highlight">h<span class="pattern">en</span></span> is on the <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'I <span class="highlight">f<span class="pattern">ed</span></span> the <span class="highlight">h<span class="pattern">en</span></span> in the <span class="highlight">d<span class="pattern">en</span></span>.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> is a happy boy.',
+          'The <span class="highlight">r<span class="pattern">ed</span></span> apple is for you.',
+          'Put the <span class="highlight">r<span class="pattern">ed</span></span> bag on the <span class="highlight">b<span class="pattern">ed</span></span>.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">p<span class="pattern">et</span></span>s are on the <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'The <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">j<span class="pattern">et</span></span> is very fast.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> has a <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">n<span class="pattern">et</span></span>.',
+          'I <span class="highlight">f<span class="pattern">ed</span></span> the <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">h<span class="pattern">en</span></span>s.',
+          '<span class="highlight">G<span class="pattern">et</span></span> the <span class="highlight">p<span class="pattern">en</span></span> for the <span class="highlight">m<span class="pattern">en</span></span>.',
+          'The <span class="highlight">p<span class="pattern">et</span></span> is in the <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">d<span class="pattern">en</span></span>.',
+          'Let the <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">m<span class="pattern">en</span></span> in.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> <span class="highlight">m<span class="pattern">et</span></span> a <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">h<span class="pattern">en</span></span>.',
+          'The <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">p<span class="pattern">en</span></span> is in the <span class="highlight">n<span class="pattern">et</span></span>.',
+          'I see <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">p<span class="pattern">et</span></span>s on the <span class="highlight">j<span class="pattern">et</span></span>.',
+          'The <span class="highlight">f<span class="pattern">at</span></span> cat is on the <span class="highlight">b<span class="pattern">ed</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> has a <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'A <span class="highlight">r<span class="pattern">at</span></span> is in the <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">n<span class="pattern">et</span></span>.',
+          'The <span class="highlight">m<span class="pattern">an</span></span> has <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">c<span class="pattern">an</span></span>s.',
+          '<span class="highlight">S<span class="pattern">am</span></span> is on the <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">m<span class="pattern">at</span></span>.',
+          'The <span class="highlight">m<span class="pattern">ad</span></span> <span class="highlight">h<span class="pattern">en</span></span> is in the <span class="highlight">v<span class="pattern">an</span></span>.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> has a <span class="highlight">c<span class="pattern">ap</span></span> and a <span class="highlight">p<span class="pattern">en</span></span>.',
+          'Look at the <span class="highlight">j<span class="pattern">am</span></span> on the <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'A <span class="highlight">s<span class="pattern">ad</span></span> <span class="highlight">l<span class="pattern">ad</span></span> is in the <span class="highlight">j<span class="pattern">et</span></span>.',
+          'The <span class="highlight">r<span class="pattern">am</span></span> is with the <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">h<span class="pattern">en</span></span>s.'
         ],
         words: [
           { word: 'bed', highlight: 'ed', emoji: '🛏️' },
@@ -497,20 +359,60 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
+        id: 'unit3',
+        name: 'Unit 3',
         patterns: ['-ig', '-in', '-it', '-ip'],
         examples: [
-          'A <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">in</span></span> is in the <span class="highlight">b<span class="pattern">in</span></span>.',
-          'I can <span class="highlight">d<span class="pattern">ig</span></span> with my <span class="highlight">w<span class="pattern">ig</span></span>.',
-          'Please <span class="highlight">s<span class="pattern">it</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> chair.',
-          'The <span class="highlight">t<span class="pattern">in</span></span> has a <span class="highlight">l<span class="pattern">ip</span></span>.',
-          'I <span class="highlight">h<span class="pattern">it</span></span> the <span class="highlight">p<span class="pattern">it</span></span>.',
-          'The <span class="highlight">f<span class="pattern">in</span></span> is <span class="highlight">b<span class="pattern">ig</span></span>.',
-          'Take a <span class="highlight">s<span class="pattern">ip</span></span> and <span class="highlight">s<span class="pattern">it</span></span>.',
-          'Can you <span class="highlight">d<span class="pattern">ip</span></span> the <span class="highlight">ch<span class="pattern">ip</span></span>?',
-          'I <span class="highlight">w<span class="pattern">in</span></span> a <span class="highlight">b<span class="pattern">it</span></span>.',
-          'The <span class="highlight">p<span class="pattern">ig</span></span> can <span class="highlight">sp<span class="pattern">in</span></span>.'
+          'I can see a <span class="highlight">b<span class="pattern">ig</span></span> fat <span class="highlight">p<span class="pattern">ig</span></span>.',
+          'The dog likes to <span class="highlight">d<span class="pattern">ig</span></span> in the <span class="highlight">p<span class="pattern">it</span></span>.',
+          'The funny cat has a pink <span class="highlight">w<span class="pattern">ig</span></span>.',
+          'I see a small <span class="highlight">f<span class="pattern">ig</span></span> on the mat.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> man has a <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'Look at the <span class="highlight">w<span class="pattern">ig</span></span> on the red <span class="highlight">h<span class="pattern">en</span></span>.',
+          'Can you <span class="highlight">d<span class="pattern">ig</span></span> a hole for me?',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">ig</span></span> is on the red <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'I have a <span class="highlight">b<span class="pattern">ig</span></span> red apple for you.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">j<span class="pattern">et</span></span> is up in the sky.',
+          'Put the bad <span class="highlight">c<span class="pattern">an</span></span> in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'The red <span class="highlight">p<span class="pattern">in</span></span> is on the map.',
+          'I can <span class="highlight">w<span class="pattern">in</span></span> the game with <span class="highlight">D<span class="pattern">ad</span></span>.',
+          'Look at the <span class="highlight">f<span class="pattern">in</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> fish.',
+          'A silver <span class="highlight">p<span class="pattern">in</span></span> is on my blue <span class="highlight">c<span class="pattern">ap</span></span>.',
+          'The <span class="highlight">b<span class="pattern">in</span></span> is near the red <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'I want to <span class="highlight">w<span class="pattern">in</span></span> a <span class="highlight">b<span class="pattern">ig</span></span> red toy.',
+          'The fish has a <span class="highlight">b<span class="pattern">ig</span></span> blue <span class="highlight">f<span class="pattern">in</span></span>.',
+          'Put the <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">r<span class="pattern">ag</span></span> in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'I see a <span class="highlight">p<span class="pattern">in</span></span> on the <span class="highlight">t<span class="pattern">an</span></span> <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'I like to <span class="highlight">s<span class="pattern">it</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> mat.',
+          'Can you fix the broken red <span class="highlight">j<span class="pattern">et</span></span>?',
+          'I see six <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">in</span></span>s in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'Do not <span class="highlight">h<span class="pattern">it</span></span> the ball in the <span class="highlight">d<span class="pattern">en</span></span>.',
+          'I mix the red <span class="highlight">j<span class="pattern">am</span></span> in the cup.',
+          'The little cat <span class="highlight">b<span class="pattern">it</span></span> the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">f<span class="pattern">ig</span></span>.',
+          'Six <span class="highlight">m<span class="pattern">en</span></span> <span class="highlight">s<span class="pattern">it</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">v<span class="pattern">an</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> can fix the <span class="highlight">b<span class="pattern">ig</span></span> blue <span class="highlight">f<span class="pattern">an</span></span>.',
+          'I <span class="highlight">s<span class="pattern">it</span></span> with my <span class="highlight">p<span class="pattern">et</span></span> on the <span class="highlight">b<span class="pattern">ed</span></span>.',
+          'Let us mix the <span class="highlight">j<span class="pattern">am</span></span> and the <span class="highlight">h<span class="pattern">am</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">ig</span></span> is in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'Six <span class="highlight">p<span class="pattern">in</span></span>s are in the <span class="highlight">b<span class="pattern">ig</span></span> box.',
+          'I <span class="highlight">s<span class="pattern">it</span></span> and fix my red <span class="highlight">w<span class="pattern">ig</span></span>.',
+          'The fish with a <span class="highlight">f<span class="pattern">in</span></span> can <span class="highlight">w<span class="pattern">in</span></span>.',
+          '<span class="highlight">D<span class="pattern">ig</span></span> a <span class="highlight">p<span class="pattern">it</span></span> and put the <span class="highlight">b<span class="pattern">in</span></span> in.',
+          'I <span class="highlight">b<span class="pattern">it</span></span> a <span class="highlight">b<span class="pattern">ig</span></span> red <span class="highlight">f<span class="pattern">ig</span></span> today.',
+          'Six <span class="highlight">p<span class="pattern">ig</span></span>s <span class="highlight">s<span class="pattern">it</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> hill.',
+          'Can you fix the <span class="highlight">b<span class="pattern">ig</span></span> blue <span class="highlight">p<span class="pattern">in</span></span>?',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> cat is in the <span class="highlight">p<span class="pattern">it</span></span>.',
+          'I mix six eggs in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">an</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">ig</span></span> is on the red <span class="highlight">b<span class="pattern">ed</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> has six red <span class="highlight">p<span class="pattern">en</span></span>s in the <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'A fat cat <span class="highlight">s<span class="pattern">it</span></span>s on the <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">m<span class="pattern">at</span></span>.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">m<span class="pattern">en</span></span> <span class="highlight">d<span class="pattern">ig</span></span> a <span class="highlight">b<span class="pattern">ig</span></span> deep <span class="highlight">p<span class="pattern">it</span></span>.',
+          'The red <span class="highlight">h<span class="pattern">en</span></span> is in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">in</span></span>.',
+          '<span class="highlight">S<span class="pattern">am</span></span> has a <span class="highlight">w<span class="pattern">ig</span></span> and a red <span class="highlight">h<span class="pattern">at</span></span>.',
+          'I <span class="highlight">f<span class="pattern">ed</span></span> the six <span class="highlight">p<span class="pattern">ig</span></span>s in the <span class="highlight">d<span class="pattern">en</span></span>.',
+          'Look at the <span class="highlight">b<span class="pattern">ig</span></span> map on the <span class="highlight">j<span class="pattern">et</span></span>.',
+          'The bad <span class="highlight">r<span class="pattern">at</span></span> is in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">n<span class="pattern">et</span></span>.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> has a <span class="highlight">p<span class="pattern">in</span></span> on his blue <span class="highlight">c<span class="pattern">ap</span></span>.'
         ],
         words: [
           { word: 'big', highlight: 'ig', emoji: '🦣' },
@@ -552,20 +454,60 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
+        id: 'unit4',
+        name: 'Unit 4',
         patterns: ['-ot', '-op', '-ox'],
         examples: [
-          'The <span class="highlight">f<span class="pattern">ox</span></span> is on <span class="highlight">t<span class="pattern">op</span></span> of the <span class="highlight">b<span class="pattern">ox</span></span>.',
-          'It is <span class="highlight">h<span class="pattern">ot</span></span> in the <span class="highlight">p<span class="pattern">ot</span></span>.',
-          'I can <span class="highlight">h<span class="pattern">op</span></span> on <span class="highlight">t<span class="pattern">op</span></span>.',
-          'The <span class="highlight">m<span class="pattern">op</span></span> is in the <span class="highlight">b<span class="pattern">ox</span></span>.',
-          'I <span class="highlight">g<span class="pattern">ot</span></span> a <span class="highlight">d<span class="pattern">ot</span></span>.',
-          'Pop the <span class="highlight">p<span class="pattern">op</span></span> on <span class="highlight">t<span class="pattern">op</span></span>.',
-          'A red <span class="highlight">f<span class="pattern">ox</span></span> in a <span class="highlight">b<span class="pattern">ox</span></span>.',
-          'Put the <span class="highlight">c<span class="pattern">ot</span></span> on <span class="highlight">t<span class="pattern">op</span></span>.',
-          'Stop at the <span class="highlight">sh<span class="pattern">op</span></span>.',
-          'The <span class="highlight">p<span class="pattern">ot</span></span> is <span class="highlight">h<span class="pattern">ot</span></span>.'
+          'The <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">ot</span></span> is on the mat.',
+          'I see a small <span class="highlight">d<span class="pattern">ot</span></span> on it.',
+          'The <span class="highlight">f<span class="pattern">ox</span></span> is in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'I can <span class="highlight">h<span class="pattern">op</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">c<span class="pattern">ot</span></span>.',
+          'The <span class="highlight">m<span class="pattern">op</span></span> is in the <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">b<span class="pattern">in</span></span>.',
+          'A red <span class="highlight">t<span class="pattern">op</span></span> is on the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">p<span class="pattern">ot</span></span> is very <span class="highlight">h<span class="pattern">ot</span></span> for me.',
+          'Look at the <span class="highlight">f<span class="pattern">ox</span></span> on the <span class="highlight">c<span class="pattern">ot</span></span>.',
+          'I see a <span class="highlight">d<span class="pattern">ot</span></span> on the <span class="highlight">m<span class="pattern">op</span></span>.',
+          '<span class="highlight">P<span class="pattern">op</span></span> the <span class="highlight">b<span class="pattern">ag</span></span> with a <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">in</span></span>.',
+          'The <span class="highlight">f<span class="pattern">ox</span></span> can <span class="highlight">h<span class="pattern">op</span></span> to the <span class="highlight">d<span class="pattern">en</span></span>.',
+          'Put the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">ot</span></span> in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'Six <span class="highlight">d<span class="pattern">ot</span></span>s are on the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">m<span class="pattern">op</span></span> is on the red <span class="highlight">c<span class="pattern">ot</span></span>.',
+          'I have a <span class="highlight">f<span class="pattern">ox</span></span> in my <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'The <span class="highlight">t<span class="pattern">op</span></span> is on the <span class="highlight">b<span class="pattern">ig</span></span> mat.',
+          'Do not touch the <span class="highlight">h<span class="pattern">ot</span></span> red <span class="highlight">p<span class="pattern">ot</span></span>.',
+          'I see a <span class="highlight">f<span class="pattern">ox</span></span> with a <span class="highlight">h<span class="pattern">at</span></span>.',
+          '<span class="highlight">H<span class="pattern">op</span></span> to the <span class="highlight">b<span class="pattern">ox</span></span> for the <span class="highlight">t<span class="pattern">op</span></span>.',
+          'The <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">f<span class="pattern">ox</span></span> <span class="highlight">s<span class="pattern">it</span></span>s on the <span class="highlight">c<span class="pattern">ot</span></span>.',
+          'A <span class="highlight">d<span class="pattern">ot</span></span> is on the red <span class="highlight">t<span class="pattern">op</span></span>.',
+          'The <span class="highlight">m<span class="pattern">op</span></span> is for the <span class="highlight">w<span class="pattern">et</span></span> floor.',
+          'I see a <span class="highlight">f<span class="pattern">ox</span></span> in the <span class="highlight">j<span class="pattern">et</span></span>.',
+          'Put the <span class="highlight">t<span class="pattern">op</span></span> in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">p<span class="pattern">ot</span></span> is on the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">an</span></span>.',
+          'I can <span class="highlight">h<span class="pattern">op</span></span> like a little <span class="highlight">f<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">d<span class="pattern">ot</span></span> is red and very <span class="highlight">b<span class="pattern">ig</span></span>.',
+          'Look at the <span class="highlight">m<span class="pattern">op</span></span> on the <span class="highlight">c<span class="pattern">ot</span></span>.',
+          'A <span class="highlight">f<span class="pattern">ox</span></span> had a <span class="highlight">p<span class="pattern">op</span></span> today.',
+          'The <span class="highlight">t<span class="pattern">op</span></span> is for the <span class="highlight">s<span class="pattern">ad</span></span> <span class="highlight">l<span class="pattern">ad</span></span>.',
+          'I see <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">d<span class="pattern">ot</span></span>s on the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">ot</span></span> has a <span class="highlight">b<span class="pattern">ig</span></span> lid.',
+          '<span class="highlight">H<span class="pattern">op</span></span> on the mat with the <span class="highlight">t<span class="pattern">op</span></span>.',
+          'The <span class="highlight">f<span class="pattern">ox</span></span> <span class="highlight">r<span class="pattern">an</span></span> to the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'I fix the <span class="highlight">t<span class="pattern">op</span></span> on the <span class="highlight">c<span class="pattern">ot</span></span>.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">f<span class="pattern">ox</span></span>es are in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">d<span class="pattern">en</span></span>.',
+          'The <span class="highlight">m<span class="pattern">op</span></span> is in the <span class="highlight">b<span class="pattern">ig</span></span> red <span class="highlight">b<span class="pattern">in</span></span>.',
+          'I see a <span class="highlight">d<span class="pattern">ot</span></span> on the map.',
+          'The <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">ot</span></span> is for the <span class="highlight">m<span class="pattern">en</span></span>.',
+          '<span class="highlight">P<span class="pattern">op</span></span> the <span class="highlight">t<span class="pattern">op</span></span> of the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">f<span class="pattern">at</span></span> cat is in the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> has a <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">ot</span></span> on <span class="highlight">b<span class="pattern">ed</span></span>.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">f<span class="pattern">ox</span></span>es are in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">j<span class="pattern">et</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> has a <span class="highlight">m<span class="pattern">op</span></span> and a <span class="highlight">b<span class="pattern">ag</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">ig</span></span> is near the <span class="highlight">p<span class="pattern">ot</span></span>.',
+          '<span class="highlight">S<span class="pattern">am</span></span> has a red <span class="highlight">t<span class="pattern">op</span></span> on mat.',
+          'A <span class="highlight">r<span class="pattern">at</span></span> is on the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">c<span class="pattern">ot</span></span>.',
+          'Six <span class="highlight">p<span class="pattern">in</span></span>s are in the red <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">w<span class="pattern">et</span></span> dog is in the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'Log on the map is for <span class="highlight">T<span class="pattern">ed</span></span>.'
         ],
         words: [
           { word: 'hot', highlight: 'ot', emoji: '🔥' },
@@ -597,20 +539,60 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
+        id: 'unit5',
+        name: 'Unit 5',
         patterns: ['-ug', '-un', '-ut', '-up'],
         examples: [
-          'The <span class="highlight">b<span class="pattern">ug</span></span> can <span class="highlight">r<span class="pattern">un</span></span> in the <span class="highlight">s<span class="pattern">un</span></span>.',
-          'I see a <span class="highlight">b<span class="pattern">ug</span></span> in my <span class="highlight">c<span class="pattern">up</span></span>.',
-          'The <span class="highlight">p<span class="pattern">up</span></span> is in the <span class="highlight">h<span class="pattern">ut</span></span>.',
-          'Give me a <span class="highlight">h<span class="pattern">ug</span></span> in the <span class="highlight">s<span class="pattern">un</span></span>.',
-          'I can <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">n<span class="pattern">ut</span></span>.',
-          'The <span class="highlight">m<span class="pattern">ug</span></span> fell on the <span class="highlight">r<span class="pattern">ug</span></span>.',
-          'We <span class="highlight">r<span class="pattern">un</span></span> for <span class="highlight">f<span class="pattern">un</span></span>.',
-          'Pick <span class="highlight"><span class="pattern">up</span></span> the <span class="highlight">r<span class="pattern">ug</span></span>.',
-          'The <span class="highlight">b<span class="pattern">un</span></span> is in the <span class="highlight">j<span class="pattern">ug</span></span>.',
-          'Shut the <span class="highlight">h<span class="pattern">ut</span></span> door.'
+          'The <span class="highlight">b<span class="pattern">ug</span></span> is on the red <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'I can <span class="highlight">r<span class="pattern">un</span></span> in the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">s<span class="pattern">un</span></span>.',
+          'The <span class="highlight">n<span class="pattern">ut</span></span> is in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">m<span class="pattern">ug</span></span>.',
+          'We have <span class="highlight">f<span class="pattern">un</span></span> in the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">s<span class="pattern">un</span></span>.',
+          'I see a <span class="highlight">b<span class="pattern">ug</span></span> in the <span class="highlight">j<span class="pattern">ug</span></span>.',
+          'Do not <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">b<span class="pattern">ig</span></span> red <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">b<span class="pattern">un</span></span> is in the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">m<span class="pattern">ug</span></span>.',
+          'I can <span class="highlight">r<span class="pattern">un</span></span> to the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'Look at the <span class="highlight">b<span class="pattern">ug</span></span> on the <span class="highlight">b<span class="pattern">un</span></span>.',
+          'I have a <span class="highlight">n<span class="pattern">ut</span></span> in my <span class="highlight">m<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">j<span class="pattern">ug</span></span> is on the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'It is <span class="highlight">f<span class="pattern">un</span></span> to <span class="highlight">r<span class="pattern">un</span></span> to <span class="highlight">h<span class="pattern">ut</span></span>.',
+          '<span class="highlight">C<span class="pattern">ut</span></span> the <span class="highlight">b<span class="pattern">un</span></span> for the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">m<span class="pattern">an</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ug</span></span> is in the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">j<span class="pattern">ug</span></span>.',
+          'I see a <span class="highlight">n<span class="pattern">ut</span></span> on the <span class="highlight">r<span class="pattern">ug</span></span>.',
+          '<span class="highlight">R<span class="pattern">un</span></span> to the <span class="highlight">h<span class="pattern">ut</span></span> with the <span class="highlight">m<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">s<span class="pattern">un</span></span> is <span class="highlight">h<span class="pattern">ot</span></span> on the <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'I can <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">n<span class="pattern">ut</span></span> with <span class="highlight">p<span class="pattern">in</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ug</span></span> is having <span class="highlight">f<span class="pattern">un</span></span> now.',
+          'Put the <span class="highlight">m<span class="pattern">ug</span></span> on the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ug</span></span> has a <span class="highlight">b<span class="pattern">un</span></span> in <span class="highlight">s<span class="pattern">un</span></span>.',
+          'I <span class="highlight">r<span class="pattern">un</span></span> and <span class="highlight">h<span class="pattern">op</span></span> on the <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">n<span class="pattern">ut</span></span> is for the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ug</span></span>.',
+          'See the <span class="highlight">s<span class="pattern">un</span></span> on the red <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'I <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">b<span class="pattern">un</span></span> in the <span class="highlight">j<span class="pattern">ug</span></span>.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">b<span class="pattern">ug</span></span>s are on the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'It is <span class="highlight">f<span class="pattern">un</span></span> to <span class="highlight">s<span class="pattern">it</span></span> in <span class="highlight">s<span class="pattern">un</span></span>.',
+          'The <span class="highlight">m<span class="pattern">ug</span></span> is for the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">b<span class="pattern">un</span></span>.',
+          'I see a <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">ug</span></span> in <span class="highlight">h<span class="pattern">ut</span></span>.',
+          '<span class="highlight">R<span class="pattern">un</span></span> and <span class="highlight">g<span class="pattern">et</span></span> the <span class="highlight">b<span class="pattern">ig</span></span> red <span class="highlight">j<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">n<span class="pattern">ut</span></span> is on the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'I have <span class="highlight">f<span class="pattern">un</span></span> with my <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">m<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">s<span class="pattern">un</span></span> is up for the <span class="highlight">b<span class="pattern">ug</span></span>.',
+          '<span class="highlight">C<span class="pattern">ut</span></span> the red <span class="highlight">b<span class="pattern">un</span></span> for the <span class="highlight">p<span class="pattern">et</span></span>.',
+          'The <span class="highlight">j<span class="pattern">ug</span></span> is near the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'I see a <span class="highlight">n<span class="pattern">ut</span></span> and a <span class="highlight">b<span class="pattern">ug</span></span>.',
+          '<span class="highlight">R<span class="pattern">un</span></span> to the <span class="highlight">s<span class="pattern">un</span></span> and have <span class="highlight">f<span class="pattern">un</span></span>.',
+          'The <span class="highlight">r<span class="pattern">ug</span></span> is in the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'I <span class="highlight">c<span class="pattern">ut</span></span> the <span class="highlight">n<span class="pattern">ut</span></span> on the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ug</span></span> <span class="highlight">r<span class="pattern">an</span></span> to the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">s<span class="pattern">un</span></span>.',
+          'The <span class="highlight">f<span class="pattern">ox</span></span> can <span class="highlight">r<span class="pattern">un</span></span> to the <span class="highlight">b<span class="pattern">ox</span></span>.',
+          'Six <span class="highlight">b<span class="pattern">ug</span></span>s are on the <span class="highlight">w<span class="pattern">et</span></span> <span class="highlight">b<span class="pattern">ed</span></span>.',
+          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">n<span class="pattern">ut</span></span>s are in the <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">p<span class="pattern">ot</span></span>.',
+          'The <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">ig</span></span> <span class="highlight">s<span class="pattern">it</span></span>s on the <span class="highlight">r<span class="pattern">ug</span></span>.',
+          '<span class="highlight">T<span class="pattern">ed</span></span> had a <span class="highlight">b<span class="pattern">un</span></span> in the <span class="highlight">j<span class="pattern">et</span></span>.',
+          '<span class="highlight">D<span class="pattern">ad</span></span> put the <span class="highlight">n<span class="pattern">ut</span></span> in the <span class="highlight">b<span class="pattern">in</span></span>.',
+          'The <span class="highlight">w<span class="pattern">et</span></span> cat is on the <span class="highlight">r<span class="pattern">ug</span></span>.',
+          'Six <span class="highlight">m<span class="pattern">en</span></span> <span class="highlight">r<span class="pattern">un</span></span> to the <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">h<span class="pattern">ut</span></span>.',
+          'I see a <span class="highlight">d<span class="pattern">ot</span></span> on the <span class="highlight">m<span class="pattern">ug</span></span>.',
+          'The <span class="highlight">h<span class="pattern">ot</span></span> <span class="highlight">b<span class="pattern">un</span></span> is on the mat.'
         ],
         words: [
           { word: 'bug', highlight: 'ug', emoji: '🐛' },
@@ -659,8 +641,8 @@ const phonicsData = {
     emoji: '🔵',
     units: [
       {
-        id: 'unit2',
-        name: 'Unit 2',
+        id: 'unit1',
+        name: 'Unit 1',
         patterns: ['ai', 'ay'],
         examples: [
           'Let\'s <span class="highlight">pl<span class="pattern">ay</span></span> in the <span class="highlight">r<span class="pattern">ai</span>n</span> on a nice <span class="highlight">d<span class="pattern">ay</span></span>.',
@@ -707,8 +689,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
+        id: 'unit2',
+        name: 'Unit 2',
         patterns: ['ee', 'ea', 'y', 'ey'],
         examples: [
           'The <span class="highlight">happ<span class="pattern">y</span></span> <span class="highlight">b<span class="pattern">ee</span></span> loves <span class="highlight">t<span class="pattern">ea</span></span> and <span class="highlight">hon<span class="pattern">ey</span></span>.',
@@ -775,8 +757,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
+        id: 'unit2',
+        name: 'Unit 2',
         patterns: ['i_e', 'ie', 'y'],
         examples: [
           'I like to <span class="highlight">fl<span class="pattern">y</span></span> a <span class="highlight">k<span class="pattern">i_e</span>t</span> and eat <span class="highlight">p<span class="pattern">ie</span></span>.',
@@ -828,8 +810,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
+        id: 'unit3',
+        name: 'Unit 3',
         patterns: ['o_e', 'oa', 'ow'],
         examples: [
           'Look at the <span class="highlight">sn<span class="pattern">ow</span></span> on the <span class="highlight">r<span class="pattern">ose</span></span> and <span class="highlight">b<span class="pattern">oat</span></span>.',
@@ -883,8 +865,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
+        id: 'unit4',
+        name: 'Unit 4',
         patterns: ['u_e', 'ue', 'ui', 'ew'],
         examples: [
           'The <span class="highlight">bl<span class="highlight"><span class="pattern">u_e</span></span></span> <span class="highlight">c<span class="highlight"><span class="pattern">u_e</span></span>b</span> is <span class="highlight">n<span class="pattern">ew</span></span>.',
@@ -951,8 +933,8 @@ const phonicsData = {
     emoji: '🟡',
     units: [
       {
-        id: 'unit2',
-        name: 'Unit 2',
+        id: 'unit1',
+        name: 'Unit 1',
         patterns: ['br', 'cr', 'fr', 'gr', 'pr', 'tr'],
         examples: [
           'A <span class="highlight"><span class="pattern">fr</span>og</span> sits on <span class="highlight"><span class="pattern">gr</span>een</span> <span class="highlight"><span class="pattern">gr</span>ass</span>.',
@@ -1027,8 +1009,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
+        id: 'unit2',
+        name: 'Unit 2',
         patterns: ['sm', 'sn', 'sp', 'st', 'sw'],
         examples: [
           'The <span class="highlight"><span class="pattern">sm</span>all</span> <span class="highlight"><span class="pattern">sn</span>ake</span> can <span class="highlight"><span class="pattern">sw</span>im</span> fast.',
@@ -1097,8 +1079,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
+        id: 'unit3',
+        name: 'Unit 3',
         patterns: ['nd', 'nk', 'nt', 'ng'],
         examples: [
           'The <span class="highlight">ki<span class="pattern">ng</span></span> has a <span class="highlight">pi<span class="pattern">nk</span></span> <span class="highlight">ri<span class="pattern">ng</span></span>.',
@@ -1166,8 +1148,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
+        id: 'unit4',
+        name: 'Unit 4',
         patterns: ['sh', 'ch', 'tch'],
         examples: [
           'A <span class="highlight">fi<span class="pattern">sh</span></span> in a <span class="highlight">di<span class="pattern">sh</span></span> swims.',
@@ -1227,8 +1209,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
+        id: 'unit5',
+        name: 'Unit 5',
         patterns: ['ph', 'wh'],
         examples: [
           'Take a <span class="highlight"><span class="pattern">ph</span>oto</span> with your <span class="highlight"><span class="pattern">ph</span>one</span>.',
@@ -1346,8 +1328,8 @@ const phonicsData = {
     emoji: '🔴',
     units: [
       {
-        id: 'unit2',
-        name: 'Unit 2',
+        id: 'unit1',
+        name: 'Unit 1',
         patterns: ['ir', 'ur', 'er'],
         examples: [
           'The <span class="highlight">g<span class="pattern">ir</span>l</span> sees a <span class="highlight">b<span class="pattern">ir</span>d</span>.',
@@ -1408,8 +1390,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
+        id: 'unit2',
+        name: 'Unit 2',
         patterns: ['ou', 'ow'],
         examples: [
           'The <span class="highlight">br<span class="pattern">ow</span>n</span> <span class="highlight">m<span class="pattern">ou</span>se</span> runs around.',
@@ -1462,8 +1444,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
+        id: 'unit3',
+        name: 'Unit 3',
         patterns: ['oi', 'oy'],
         examples: [
           'The <span class="highlight">b<span class="pattern">oy</span></span> plays with a <span class="highlight">t<span class="pattern">oy</span></span>.',
@@ -1511,8 +1493,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
+        id: 'unit4',
+        name: 'Unit 4',
         patterns: ['oo', 'u'],
         examples: [
           'The <span class="highlight">m<span class="pattern">oo</span>n</span> is <span class="highlight">bl<span class="pattern">ue</span></span>.',
@@ -1567,8 +1549,8 @@ const phonicsData = {
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
+        id: 'unit5',
+        name: 'Unit 5',
         patterns: ['au', 'aw', 'all', 'wa', 'or'],
         examples: [
           'In <span class="highlight"><span class="pattern">au</span>tumn</span>, I s<span class="highlight"><span class="pattern">aw</span></span> a h<span class="highlight"><span class="pattern">or</span>se</span>.',
