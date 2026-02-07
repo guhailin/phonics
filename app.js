@@ -11,7 +11,7 @@ let currentExampleIndex = 0;
 // ========== 朗读单词配置 ==========
 const speechConfig = {
     lang: 'en-US',                           // 语言: en-US(美式), en-GB(英式), zh-CN(中文)
-    rate: 0.8,                               // 语速: 0.1(最慢) - 10(最快), 默认1
+    rate: 0.4,                               // 语速: 0.1(最慢) - 10(最快), 默认1
     pitch: 1.0,                              // 音调: 0(最低) - 2(最高), 默认1
     volume: 1,                               // 音量: 0(静音) - 1(最大)
     voiceName: 'Google US English 1 (Natural)'  // 指定特定语音
