@@ -250,9 +250,15 @@ function showUnitPage(levelId, unitId) {
         const cleanPattern = pattern.replace(/^-/, ''); // 去掉前导的'-'
         
         // 找到该pattern的所有单词
-        const patternWords = unit.words.filter(wordObj => 
-            wordObj.highlight === cleanPattern || wordObj.highlight === pattern
-        );
+        const patternWords = unit.words.filter(wordObj => {
+            // 对于 magic e 模式 (如 a_e, i_e, o_e, u_e)，匹配所有该元音的单词
+            if (cleanPattern.includes('_')) {
+                const vowel = cleanPattern.split('_')[0];
+                return wordObj.highlight.includes(vowel);
+            }
+            // 普通模式匹配
+            return wordObj.highlight === cleanPattern || wordObj.highlight === pattern;
+        });
         
                // 渲染该pattern的单词
         patternWords.forEach(wordObj => {
