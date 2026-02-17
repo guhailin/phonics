@@ -25,37 +25,49 @@ const displayConfig = {
 };
 
 // ========== 朗读单词功能 ==========
+// 缓存已加载的语音列表
+let cachedVoices = [];
+
+function loadVoices() {
+    cachedVoices = window.speechSynthesis.getVoices();
+    return cachedVoices;
+}
+
 function speakWord(word) {
     // 使用浏览器内置的语音合成 API
-    if ('speechSynthesis' in window) {
-        // 取消正在播放的语音
-        window.speechSynthesis.cancel();
-
-        const utterance = new SpeechSynthesisUtterance(word);
-        utterance.lang = speechConfig.lang;
-        utterance.rate = speechConfig.rate;
-        utterance.pitch = speechConfig.pitch;
-        utterance.volume = speechConfig.volume;
-
-        // 如果指定了特定语音名称，尝试选择
-        if (speechConfig.voiceName) {
-            const voices = window.speechSynthesis.getVoices();
-            const selectedVoice = voices.find(v => v.name.includes(speechConfig.voiceName));
-            if (selectedVoice) {
-                utterance.voice = selectedVoice;
-            }
-        }
-
-        window.speechSynthesis.speak(utterance);
-    } else {
+    if (!('speechSynthesis' in window)) {
         console.warn('浏览器不支持语音合成功能');
+        return;
     }
+
+    // 取消正在播放的语音
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = speechConfig.lang;
+    utterance.rate = speechConfig.rate;
+    utterance.pitch = speechConfig.pitch;
+    utterance.volume = speechConfig.volume;
+
+    // 尝试选择指定语音
+    const voices = cachedVoices.length > 0 ? cachedVoices : loadVoices();
+    if (speechConfig.voiceName && voices.length > 0) {
+        const selectedVoice = voices.find(v => v.name === speechConfig.voiceName)
+            || voices.find(v => v.name.includes(speechConfig.voiceName));
+        if (selectedVoice) {
+            utterance.voice = selectedVoice;
+        }
+    }
+
+    // 必须在用户手势的同步上下文中直接调用 speak()
+    // 不能放在 setTimeout 里，否则浏览器会因为安全策略拒绝播放
+    window.speechSynthesis.speak(utterance);
 }
 
 // 获取可用语音列表（调试用）
 function listVoices() {
     if ('speechSynthesis' in window) {
-        const voices = window.speechSynthesis.getVoices();
+        const voices = cachedVoices.length > 0 ? cachedVoices : loadVoices();
         console.log('可用语音列表:');
         voices.forEach((voice, i) => {
             console.log(`${i}: ${voice.name} (${voice.lang})`);
@@ -69,7 +81,7 @@ function listVoices() {
 function findBestVoice() {
     if (!('speechSynthesis' in window)) return null;
 
-    const voices = window.speechSynthesis.getVoices();
+    const voices = cachedVoices.length > 0 ? cachedVoices : loadVoices();
     if (voices.length === 0) return null;
 
     // 按优先级排列的女声列表
@@ -119,16 +131,32 @@ function findBestVoice() {
 }
 
 // 页面加载时自动选择最佳语音
-window.addEventListener('load', () => {
-    // 等待语音列表加载完成
-    setTimeout(() => {
-        const bestVoice = findBestVoice();
-        if (bestVoice && bestVoice !== speechConfig.voiceName) {
-            speechConfig.voiceName = bestVoice;
-            console.log(`已更新 voiceName 为: ${bestVoice}`);
+function initVoices() {
+    loadVoices();
+    const bestVoice = findBestVoice();
+    if (bestVoice) {
+        speechConfig.voiceName = bestVoice;
+        console.log(`已更新 voiceName 为: ${bestVoice}`);
+    }
+}
+
+// 监听 voiceschanged 事件（Chrome 等浏览器异步加载语音列表）
+if ('speechSynthesis' in window) {
+    // 某些浏览器立即可用，某些需要等事件
+    window.speechSynthesis.onvoiceschanged = () => {
+        initVoices();
+        // 如果设置页面打开中，同步刷新语音下拉框
+        const voiceSelect = document.getElementById('voiceSelect');
+        const settingsPage = document.getElementById('settings-page');
+        if (voiceSelect && settingsPage && settingsPage.classList.contains('active')) {
+            loadVoiceList();
         }
-    }, 500);
-});
+    };
+    // 也在 load 时尝试一次（Safari 等不触发 voiceschanged 的浏览器）
+    window.addEventListener('load', () => {
+        setTimeout(initVoices, 200);
+    });
+}
 
 // 获取单词信息（音标和释义）
 function getWordInfo(word) {
@@ -251,12 +279,7 @@ function showUnitPage(levelId, unitId) {
         
         // 找到该pattern的所有单词
         const patternWords = unit.words.filter(wordObj => {
-            // 对于 magic e 模式 (如 a_e, i_e, o_e, u_e)，匹配所有该元音的单词
-            if (cleanPattern.includes('_')) {
-                const vowel = cleanPattern.split('_')[0];
-                return wordObj.highlight.includes(vowel);
-            }
-            // 普通模式匹配
+            // 精确匹配 highlight 值
             return wordObj.highlight === cleanPattern || wordObj.highlight === pattern;
         });
         
@@ -730,7 +753,7 @@ function loadVoiceList() {
     const voiceSelect = document.getElementById('voiceSelect');
     if (!voiceSelect) return;
 
-    const voices = window.speechSynthesis.getVoices();
+    const voices = cachedVoices.length > 0 ? cachedVoices : loadVoices();
 
     if (voices.length === 0) {
         voiceSelect.innerHTML = '<option value="">没有可用语音</option>';
@@ -801,13 +824,14 @@ function testVoice() {
     const text = testWord ? testWord.value : 'Hello, how are you today?';
 
     window.speechSynthesis.cancel();
+
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = speechConfig.lang;
     utterance.rate = speechConfig.rate;
     utterance.pitch = speechConfig.pitch;
     utterance.volume = speechConfig.volume;
 
-    const voices = window.speechSynthesis.getVoices();
+    const voices = cachedVoices.length > 0 ? cachedVoices : loadVoices();
     const voice = voices.find(v => v.name === speechConfig.voiceName);
     if (voice) {
         utterance.voice = voice;
@@ -934,12 +958,4 @@ function resetSettings() {
     applyDisplaySettings();
 }
 
-// 确保语音列表加载
-if (window.speechSynthesis.onvoiceschanged !== undefined) {
-    window.speechSynthesis.onvoiceschanged = function() {
-        const voiceSelect = document.getElementById('voiceSelect');
-        if (voiceSelect && document.getElementById('settings-page').classList.contains('active')) {
-            loadVoiceList();
-        }
-    };
-}
+
