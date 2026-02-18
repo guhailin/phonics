@@ -11,10 +11,10 @@ let currentExampleIndex = 0;
 // ========== 朗读单词配置 ==========
 const speechConfig = {
     lang: 'en-US',                           // 语言: en-US(美式), en-GB(英式), zh-CN(中文)
-    rate: 0.4,                               // 语速: 0.1(最慢) - 10(最快), 默认1
+    rate: 0.9,                               // 语速: 0.1(最慢) - 10(最快), 默认1
     pitch: 1.0,                              // 音调: 0(最低) - 2(最高), 默认1
     volume: 1,                               // 音量: 0(静音) - 1(最大)
-    voiceName: 'Google US English 1 (Natural)'  // 指定特定语音
+    voiceName: ''                             // 留空使用系统默认语音，initVoices 会自动选择最佳
 };
 
 // ========== 显示配置 ==========
@@ -33,6 +33,9 @@ function loadVoices() {
     return cachedVoices;
 }
 
+// 追踪当前活跃的 utterance，用于手动静音取代 cancel()
+let _currentUtterance = null;
+
 function speakWord(word) {
     // 使用浏览器内置的语音合成 API
     if (!('speechSynthesis' in window)) {
@@ -40,9 +43,17 @@ function speakWord(word) {
         return;
     }
 
-    // 取消正在播放的语音
-    window.speechSynthesis.cancel();
+    const synth = window.speechSynthesis;
 
+    // 确保语音列表已加载
+    if (cachedVoices.length === 0) {
+        loadVoices();
+    }
+
+    // 停止之前的语音播放
+    synth.cancel();
+
+    // 创建新的 utterance
     const utterance = new SpeechSynthesisUtterance(word);
     utterance.lang = speechConfig.lang;
     utterance.rate = speechConfig.rate;
@@ -50,18 +61,33 @@ function speakWord(word) {
     utterance.volume = speechConfig.volume;
 
     // 尝试选择指定语音
-    const voices = cachedVoices.length > 0 ? cachedVoices : loadVoices();
-    if (speechConfig.voiceName && voices.length > 0) {
-        const selectedVoice = voices.find(v => v.name === speechConfig.voiceName)
-            || voices.find(v => v.name.includes(speechConfig.voiceName));
+    if (speechConfig.voiceName && cachedVoices.length > 0) {
+        const selectedVoice = cachedVoices.find(v => v.name === speechConfig.voiceName)
+            || cachedVoices.find(v => v.name.includes(speechConfig.voiceName));
         if (selectedVoice) {
             utterance.voice = selectedVoice;
         }
     }
 
-    // 必须在用户手势的同步上下文中直接调用 speak()
-    // 不能放在 setTimeout 里，否则浏览器会因为安全策略拒绝播放
-    window.speechSynthesis.speak(utterance);
+    // 播放结束时清除引用
+    utterance.onend = () => {
+        if (_currentUtterance === utterance) {
+            _currentUtterance = null;
+        }
+    };
+    utterance.onerror = (e) => {
+        if (e.error !== 'canceled' && e.error !== 'interrupted') {
+            console.error('语音播放错误:', e.error, word);
+        }
+        if (_currentUtterance === utterance) {
+            _currentUtterance = null;
+        }
+    };
+
+    _currentUtterance = utterance;
+
+    // 直接播放
+    synth.speak(utterance);
 }
 
 // 获取可用语音列表（调试用）
@@ -105,7 +131,6 @@ function findBestVoice() {
     for (const preferred of preferredVoices) {
         const voice = voices.find(v => v.name.includes(preferred));
         if (voice) {
-            console.log(`自动选择语音: ${voice.name}`);
             return voice.name;
         }
     }
@@ -116,14 +141,12 @@ function findBestVoice() {
         (v.name.includes('Female') || v.name.includes('Woman') || v.name.includes('Zira') || v.name.includes('Hazel'))
     );
     if (enFemale) {
-        console.log(`自动选择语音: ${enFemale.name}`);
         return enFemale.name;
     }
 
     // 最后回退到默认美式英语
     const enDefault = voices.find(v => v.lang.startsWith('en'));
     if (enDefault) {
-        console.log(`自动选择语音: ${enDefault.name}`);
         return enDefault.name;
     }
 
@@ -136,12 +159,24 @@ function initVoices() {
     const bestVoice = findBestVoice();
     if (bestVoice) {
         speechConfig.voiceName = bestVoice;
-        console.log(`已更新 voiceName 为: ${bestVoice}`);
     }
 }
 
-// 监听 voiceschanged 事件（Chrome 等浏览器异步加载语音列表）
-if ('speechSynthesis' in window) {
+// 初始化语音系统
+function initSpeechSynthesis() {
+    if (!('speechSynthesis' in window)) {
+        console.warn('浏览器不支持语音合成功能');
+        return;
+    }
+
+    // Chrome bug 修复: 长时间空闲后 speechSynthesis 会挂起
+    // 定期调用 resume() 防止语音合成卡死
+    setInterval(() => {
+        if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.resume();
+        }
+    }, 5000);
+
     // 某些浏览器立即可用，某些需要等事件
     window.speechSynthesis.onvoiceschanged = () => {
         initVoices();
@@ -152,10 +187,23 @@ if ('speechSynthesis' in window) {
             loadVoiceList();
         }
     };
-    // 也在 load 时尝试一次（Safari 等不触发 voiceschanged 的浏览器）
-    window.addEventListener('load', () => {
-        setTimeout(initVoices, 200);
-    });
+
+    // 立即尝试加载一次（Safari 等不触发 voiceschanged 的浏览器）
+    // 延迟一些时间确保语音列表已加载
+    setTimeout(() => {
+        if (cachedVoices.length === 0) {
+            loadVoices();
+            initVoices();
+        }
+    }, 100);
+
+    // 再次延迟尝试（某些浏览器需要更长时间）
+    setTimeout(() => {
+        if (cachedVoices.length === 0) {
+            loadVoices();
+            initVoices();
+        }
+    }, 500);
 }
 
 // 获取单词信息（音标和释义）
@@ -272,18 +320,18 @@ function showUnitPage(levelId, unitId) {
     // 按pattern分组并排序单词
     const wordsGrid = document.querySelector('.words-grid');
     wordsGrid.innerHTML = '';
-    
+
     // 按照patterns顺序分组单词
     unit.patterns.forEach(pattern => {
         const cleanPattern = pattern.replace(/^-/, ''); // 去掉前导的'-'
-        
+
         // 找到该pattern的所有单词
         const patternWords = unit.words.filter(wordObj => {
             // 精确匹配 highlight 值
             return wordObj.highlight === cleanPattern || wordObj.highlight === pattern;
         });
-        
-               // 渲染该pattern的单词
+
+        // 渲染该pattern的单词
         patternWords.forEach(wordObj => {
             const wordCard = document.createElement('div');
             wordCard.className = 'word-card';
@@ -317,7 +365,7 @@ function showUnitPage(levelId, unitId) {
             wordsGrid.appendChild(wordCard);
         });
     });
-    
+
     navigateTo('unit');
 }
 
@@ -489,6 +537,9 @@ function getWordImageHTML(wordObj) {
 
 // ========== 初始化应用 ==========
 document.addEventListener('DOMContentLoaded', () => {
+    // 初始化语音系统
+    initSpeechSynthesis();
+    // 渲染首页
     renderHomePage();
     navigateTo('home');
 });
@@ -943,7 +994,7 @@ function loadSettingsToUI() {
 
 // 重置设置为默认
 function resetSettings() {
-    speechConfig.rate = 0.8;
+    speechConfig.rate = 0.9;
     speechConfig.pitch = 1.0;
     speechConfig.volume = 1;
     speechConfig.voiceName = 'Google US English 1 (Natural)';

@@ -384,6 +384,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 280px;
+    position: relative;
 }
 
 .word-card:hover {
