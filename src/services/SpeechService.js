@@ -128,12 +128,29 @@ class SpeechService {
       // Stop any current speech
       await this.stop();
 
-      const { rate = 0.4, pitch = 1.0, onDone } = options;
+      const { rate = 0.35, pitch = 1.0, onDone } = options;
 
-      // Add multiple periods and spaces to force TTS engine to fully pronounce
-      // trailing voiceless consonants (p, t, k, s, f, etc.)
-      // This creates a longer pause that helps the engine complete the word
-      const processedText = text.trim() + '...';
+      // 增强文本处理，确保结尾辅音清晰可听
+      let processedText = text.trim();
+
+      // 为结尾辅音添加额外的停顿和重复
+      // 清辅音列表：p, t, k, s, f, sh, ch, th, h
+      const voicelessConsonants = ['p', 't', 'k', 's', 'f', 'sh', 'ch', 'th'];
+      const lastChar = processedText.slice(-1).toLowerCase();
+      const lastTwoChars = processedText.slice(-2).toLowerCase();
+
+      // 检查是否以清辅音结尾
+      const endsWithVoiceless = voicelessConsonants.includes(lastChar) ||
+                                voicelessConsonants.includes(lastTwoChars);
+
+      if (endsWithVoiceless) {
+        // 对于清辅音结尾的单词，添加多个停顿和轻微的重复
+        // 使用多个省略号、空格和逗号来创建更长的停顿
+        processedText = processedText + '...   ...   ...';
+      } else {
+        // 其他单词也添加适当的停顿
+        processedText = processedText + '...   ...';
+      }
 
       const speakOptions = {
         rate,

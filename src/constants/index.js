@@ -20,8 +20,8 @@ export const MAGIC_E_PATTERNS = ['a_e', 'e_e', 'i_e', 'o_e', 'u_e'];
 
 // Default speech configuration
 export const DEFAULT_SPEECH_CONFIG = {
-  rate: 0.8,  // Slower for children
-  pitch: 1.1, // Slightly higher
+  rate: 0.35, // Even slower for clearest pronunciation of trailing consonants
+  pitch: 1.0, // Natural pitch
   volume: 1.0,
   voice: null, // Will be set to Samantha on iOS
 };

@@ -14,8 +14,8 @@ import SpeechService from '../services/SpeechService';
 
 const SettingsScreen = () => {
   const { speechConfig, updateSpeechConfig, speakWord } = useApp();
-  const [rate, setRate] = useState(speechConfig?.rate || 0.8);
-  const [pitch, setPitch] = useState(speechConfig?.pitch || 1.1);
+  const [rate, setRate] = useState(speechConfig?.rate || 0.35);
+  const [pitch, setPitch] = useState(speechConfig?.pitch || 1.0);
   const [currentVoice, setCurrentVoice] = useState(null);
   const [availableVoices, setAvailableVoices] = useState([]);
 
