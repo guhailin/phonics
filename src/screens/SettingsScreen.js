@@ -5,29 +5,145 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Slider,
   SafeAreaView,
+  Alert,
 } from 'react-native';
+import Slider from '@react-native-community/slider';
 import { useApp } from '../contexts/AppContext';
+import SpeechService from '../services/SpeechService';
 
 const SettingsScreen = () => {
-  const { speechConfig, updateSpeechConfig } = useApp();
+  const { speechConfig, updateSpeechConfig, speakWord } = useApp();
   const [rate, setRate] = useState(speechConfig?.rate || 0.8);
   const [pitch, setPitch] = useState(speechConfig?.pitch || 1.1);
+  const [currentVoice, setCurrentVoice] = useState(null);
+  const [availableVoices, setAvailableVoices] = useState([]);
+
+  // 辅助函数：从语音标识符中提取语音名称
+  const extractVoiceName = (voice) => {
+    if (!voice || !voice.identifier) return 'Unknown';
+    const match = voice.identifier.match(/\.([^.]+)$/);
+    return match ? match[1] : 'Unknown';
+  };
+
+  // 辅助函数：检查是否为低质量声音
+  const isLowQuality = (identifier) => {
+    const lowQuality = ['super-compact', 'compact'];
+    return lowQuality.some(kw => identifier.toLowerCase().includes(kw));
+  };
 
   useEffect(() => {
     setRate(speechConfig?.rate || 0.8);
     setPitch(speechConfig?.pitch || 1.1);
   }, [speechConfig]);
 
+  useEffect(() => {
+    loadVoiceInfo();
+  }, []);
+
+  const loadVoiceInfo = async () => {
+    let voices = await SpeechService.getVoices();
+
+    // 如果第一次加载没有语音，尝试重新初始化 SpeechService
+    if (!voices || voices.length === 0) {
+      console.log('No voices found, reinitializing SpeechService...');
+      await SpeechService.init();
+      voices = await SpeechService.getVoices();
+    }
+
+    setAvailableVoices(voices);
+
+    // 获取所有英语语音
+    const enVoices = voices.filter(v => v.language?.startsWith('en'));
+
+    // 女声优先级列表（与 SpeechService 保持一致）
+    const femaleVoiceNames = [
+      'Samantha', 'Victoria', 'Karen', 'Allison', 'Ava', 'Tessa',
+      'Susan', 'Serena', 'Moira', 'Fiona', 'sfg', 'sfs', 'sfc'
+    ];
+
+    // 1. 优先找指定的女声 (优先非 compact 版本，找不到可以接受 compact)
+    let preferredVoice = null;
+    for (const name of femaleVoiceNames) {
+      // 先找非 compact 版本
+      let voice = enVoices.find(v =>
+        v.identifier.includes(name) &&
+        !isLowQuality(v.identifier)
+      );
+      // 如果没找到，再找任何版本
+      if (!voice) {
+        voice = enVoices.find(v =>
+          v.identifier.includes(name)
+        );
+      }
+      if (voice) {
+        preferredVoice = voice;
+        break;
+      }
+    }
+
+    // 2. 如果没找到指定女声，选择任何非 compact 的英语语音
+    if (!preferredVoice) {
+      preferredVoice = enVoices.find(v => !isLowQuality(v.identifier));
+    }
+
+    // 3. 最后的回退
+    if (!preferredVoice && enVoices.length > 0) {
+      preferredVoice = enVoices[0];
+    }
+
+    if (preferredVoice) {
+      setCurrentVoice(preferredVoice);
+      // 自动设置为当前使用的语音
+      SpeechService.setVoice(preferredVoice.identifier);
+    }
+  };
+
+  const handleRefreshVoices = () => {
+    Alert.alert(
+      'Refresh Voices',
+      'This will reload all available voices. Continue?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        { text: 'Refresh', onPress: loadVoiceInfo }
+      ]
+    );
+  };
+
   const handleSave = () => {
     updateSpeechConfig({ rate, pitch });
   };
 
   const handleTest = () => {
-    const { useApp } = require('../contexts/AppContext');
-    const { speakWord } = useApp();
     speakWord('Hello, welcome to Phonics World');
+  };
+
+  const showVoicePicker = () => {
+    const enVoices = availableVoices.filter(v => v.language?.startsWith('en'));
+    if (enVoices.length === 0) {
+      Alert.alert('No Voices', 'No English voices available');
+      return;
+    }
+
+    const voiceOptions = enVoices.map((v, index) => ({
+      text: `${extractVoiceName(v)} (${v.language})${isLowQuality(v.identifier) ? ' [Compact]' : ''}`,
+      onPress: () => selectVoice(v),
+    }));
+
+    voiceOptions.push({ text: 'Cancel', style: 'cancel' });
+
+    Alert.alert(
+      'Select Voice',
+      'Choose a voice for speech',
+      voiceOptions,
+      { cancelable: true }
+    );
+  };
+
+  const selectVoice = (voice) => {
+    SpeechService.setVoice(voice.identifier);
+    setCurrentVoice(voice);
+    Alert.alert('Voice Changed', `Selected: ${voice.identifier}`);
   };
 
   return (
@@ -82,6 +198,27 @@ const SettingsScreen = () => {
               <Text style={styles.sliderMaxLabel}>High</Text>
             </View>
           </View>
+
+          <View style={styles.voiceInfo}>
+            <Text style={styles.voiceLabel}>Current Voice:</Text>
+            <Text style={styles.voiceValue}>
+              {currentVoice ? extractVoiceName(currentVoice) : 'Default'}
+            </Text>
+            <Text style={styles.voiceId}>
+              {currentVoice?.identifier || ''}
+            </Text>
+            <Text style={styles.voiceLanguage}>
+              {currentVoice?.language || ''}
+            </Text>
+          </View>
+
+          <TouchableOpacity style={styles.voiceButton} onPress={showVoicePicker}>
+            <Text style={styles.voiceButtonText}>🎙️ Change Voice</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={[styles.voiceButton, {backgroundColor: '#FF9800'}]} onPress={handleRefreshVoices}>
+            <Text style={styles.voiceButtonText}>🔄 Refresh Voices</Text>
+          </TouchableOpacity>
 
           <TouchableOpacity style={styles.testButton} onPress={handleTest}>
             <Text style={styles.testButtonText}>🔊 Test Speech</Text>
@@ -195,6 +332,45 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
     marginBottom: 4,
+  },
+  voiceInfo: {
+    backgroundColor: '#f8f8f8',
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 16,
+  },
+  voiceLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 4,
+  },
+  voiceValue: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#9C27B0',
+    marginBottom: 4,
+  },
+  voiceId: {
+    fontSize: 11,
+    color: '#888',
+    marginBottom: 2,
+  },
+  voiceLanguage: {
+    fontSize: 12,
+    color: '#999',
+  },
+  voiceButton: {
+    backgroundColor: '#4CAF50',
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  voiceButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#fff',
   },
 });
 
