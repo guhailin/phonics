@@ -224,16 +224,16 @@ const styles = StyleSheet.create({
     opacity: 0,
   },
   cardEmoji: {
-    fontSize: 60,
-    marginBottom: 20,
+    fontSize: 80,
+    marginBottom: 24,
   },
   cardWord: {
-    fontSize: 36,
+    fontSize: 48,
     fontWeight: 'bold',
     color: '#333',
   },
   cardWordBack: {
-    fontSize: 28,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 10,
