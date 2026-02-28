@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,28 @@ import {
 } from 'react-native';
 import { LEVEL_COLORS } from '../constants';
 import phonicsData from '../assets/data/phonicsData';
+import { getVideoFile } from '../assets/data/videoInfo';
+import VideoPlayer from '../components/VideoPlayer';
 
 const LevelScreen = ({ route, navigation }) => {
   const { levelId } = route.params;
   const levelData = phonicsData[levelId];
   const color = LEVEL_COLORS[levelId];
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [videoVisible, setVideoVisible] = useState(false);
+
+  const handlePlayVideo = (unitId) => {
+    const videoFile = getVideoFile(levelId, unitId);
+    if (videoFile) {
+      setSelectedVideo(videoFile);
+      setVideoVisible(true);
+    }
+  };
 
   const renderUnitItem = ({ item: unit }) => {
+    const videoFile = getVideoFile(levelId, unit.id);
+    const hasVideo = !!videoFile;
+
     return (
       <TouchableOpacity
         style={[styles.unitCard, { borderLeftColor: color, borderLeftWidth: 6 }]}
@@ -24,10 +39,24 @@ const LevelScreen = ({ route, navigation }) => {
             levelId,
             unitId: unit.id,
             unitName: unit.name,
+            color: color,
           })
         }
       >
-        <Text style={styles.unitName}>{unit.name}</Text>
+        <View style={styles.unitHeader}>
+          <Text style={styles.unitName}>{unit.name}</Text>
+          {hasVideo && (
+            <TouchableOpacity
+              style={[styles.videoButton, { backgroundColor: color }]}
+              onPress={(e) => {
+                e.stopPropagation();
+                handlePlayVideo(unit.id);
+              }}
+            >
+              <Text style={styles.videoButtonText}>▶ Video</Text>
+            </TouchableOpacity>
+          )}
+        </View>
         <Text style={styles.patternLabel}>Patterns:</Text>
         <View style={styles.patternsContainer}>
           {unit.patterns.map((pattern, index) => (
@@ -57,6 +86,15 @@ const LevelScreen = ({ route, navigation }) => {
         renderItem={renderUnitItem}
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.listContainer}
+      />
+
+      <VideoPlayer
+        videoFile={selectedVideo}
+        visible={videoVisible}
+        onClose={() => {
+          setVideoVisible(false);
+          setSelectedVideo(null);
+        }}
       />
     </SafeAreaView>
   );
@@ -95,11 +133,27 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 2,
   },
+  unitHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
   unitName: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 8,
+    flex: 1,
+  },
+  videoButton: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+  },
+  videoButtonText: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: 'bold',
   },
   patternLabel: {
     fontSize: 12,

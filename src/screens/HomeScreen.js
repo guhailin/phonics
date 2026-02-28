@@ -25,6 +25,7 @@ const HomeScreen = ({ navigation }) => {
           navigation.navigate('Level', {
             levelId,
             levelTitle: levelData.name,
+            color: colors,
           })
         }
       >

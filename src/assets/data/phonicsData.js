@@ -832,7 +832,7 @@ const phonicsData = {
         name: 'Unit 2',
         patterns: ['i_e', 'ime', 'ike', 'ive', 'ine'],
         examples: [
-          'I see a kite.',
+          'I see a <span class="highlight">k<span class="pattern">ite</span></span>.',
           'I see a <span class="highlight">p<span class="pattern">ine</span></span>.',
           'I ride a <span class="highlight">b<span class="pattern">ike</span></span>.',
           'This is a <span class="highlight">f<span class="pattern">ine</span></span> <span class="highlight">b<span class="pattern">ike</span></span>.',
@@ -849,7 +849,7 @@ const phonicsData = {
           'I see <span class="highlight">n<span class="pattern">ine</span></span> <span class="highlight">b<span class="pattern">ike</span>s</span> now.',
           'I <span class="highlight">l<span class="pattern">ike</span></span> my <span class="highlight">b<span class="pattern">ike</span></span>.',
           '<span class="highlight">T<span class="pattern">ime</span></span> to <span class="highlight">h<span class="pattern">ike</span></span>.',
-          'I see <span class="highlight">f<span class="pattern">ive</span></span> kites up.',
+          'I see <span class="highlight">f<span class="pattern">ive</span></span> <span class="highlight">k<span class="pattern">ite</span>s</span> up.',
           'I <span class="highlight">h<span class="pattern">ike</span></span> at <span class="highlight">n<span class="pattern">ine</span></span>.',
           '<span class="highlight">P<span class="pattern">ine</span></span> is nice.',
         ],

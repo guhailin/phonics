@@ -40,6 +40,27 @@ class StorageService {
   static async setSpeechConfig(config) {
     return await this.setItem(STORAGE_KEYS.SPEECH_CONFIG, config);
   }
+
+  // Favorites helpers
+  static async getFavorites() {
+    const favorites = await this.getItem(STORAGE_KEYS.FAVORITES);
+    return favorites || [];
+  }
+
+  static async addFavorite(word) {
+    const favorites = await this.getFavorites();
+    if (!favorites.includes(word)) {
+      favorites.push(word);
+      return await this.setItem(STORAGE_KEYS.FAVORITES, favorites);
+    }
+    return true;
+  }
+
+  static async removeFavorite(word) {
+    const favorites = await this.getFavorites();
+    const filtered = favorites.filter(w => w !== word);
+    return await this.setItem(STORAGE_KEYS.FAVORITES, filtered);
+  }
 }
 
 export default StorageService;

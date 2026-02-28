@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { AppProvider } from './src/contexts/AppContext';
+import { LEVEL_COLORS } from './src/constants';
 
 import HomeScreen from './src/screens/HomeScreen';
 import LevelScreen from './src/screens/LevelScreen';
@@ -21,14 +22,25 @@ const App = () => {
         <NavigationContainer>
           <Stack.Navigator
             initialRouteName="Home"
-            screenOptions={{
-              headerStyle: {
-                backgroundColor: '#9C27B0',
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
+            screenOptions={({ route }) => {
+              // Get color from route params or use default
+              let headerColor = '#9C27B0'; // Default purple for Home
+
+              if (route.params?.color) {
+                headerColor = route.params.color;
+              } else if (route.params?.levelId) {
+                headerColor = LEVEL_COLORS[route.params.levelId] || headerColor;
+              }
+
+              return {
+                headerStyle: {
+                  backgroundColor: headerColor,
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                },
+              };
             }}
           >
             <Stack.Screen

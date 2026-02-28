@@ -7,14 +7,6 @@ class SpeechService {
   static async init() {
     try {
       const voices = await Speech.getAvailableVoicesAsync();
-      console.log('===========================================');
-      console.log('Total voices available:', voices.length);
-      console.log('All voices:');
-      voices.forEach((v, i) => {
-        const isEn = v.language?.startsWith('en') ? '✓EN' : '';
-        console.log(`  ${i}: ${v.identifier} (${v.language}) ${isEn}`);
-      });
-      console.log('===========================================');
 
       // 获取所有英语语音 (包括 en-US, en-GB, en-AU 等)
       const englishVoices = voices.filter(v =>
@@ -106,17 +98,8 @@ class SpeechService {
         voiceName = extractVoiceName(currentVoice);
       }
 
-      // 打印最终选择的语音详情
-      if (currentVoice) {
-        console.log('✅ ===========================================');
-        console.log('✅ Speech initialized successfully');
-        console.log(`✅ Voice Name: ${voiceName || 'Unknown'}`);
-        console.log(`✅ Voice ID: ${currentVoice.identifier}`);
-        console.log(`✅ Voice Language: ${currentVoice.language || 'Unknown'}`);
-        console.log(`✅ Voice Quality: ${currentVoice.quality || 'Unknown'}`);
-        console.log('✅ ===========================================');
-      } else {
-        console.error('❌ No voice could be selected!');
+      if (!currentVoice) {
+        console.error('No voice could be selected!');
       }
     } catch (error) {
       console.error('Failed to initialize speech:', error);

@@ -46,7 +46,6 @@ const SettingsScreen = () => {
 
     // 如果第一次加载没有语音，尝试重新初始化 SpeechService
     if (!voices || voices.length === 0) {
-      console.log('No voices found, reinitializing SpeechService...');
       await SpeechService.init();
       voices = await SpeechService.getVoices();
     }
