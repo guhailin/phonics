@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"python3 << 'PYEOF'\\nimport os\\nimport re\\nfrom pathlib import Path\\n\\nVIDEO_DIR = Path(\\\"/Users/e99g41y/worksapce/phonics_rn/assets/video\\\")\\n\\ndef extract_level(filename):\\n    match = re...",
+  "error": "Exit code 1\nTraceback (most recent call last):\n  File \"<stdin>\", line 80, in <module>\nEOFError: EOF when reading a line\n\nFound 186 video files\n\nPreview of rename order:\n================================================================================\n001. [Level 1 ] Oxford_Phonics_World_student_book_level_...\n     -> 001_level1_Oxford_Phonics_World_student_book_level_1_the_alphabet_disc_1_intro_ABC_Song.mp4\n002. [Level 1 ] Oxford_Phonics_World_student_book_level_...\n     -> 002_level1_Oxford_Phon...",
+  "timestamp": "2026-02-28T08:21:32.934Z",
+  "retry_count": 1
+}

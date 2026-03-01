@@ -1,0 +1,174 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1772199955493,
+  "projectRoot": "/Users/e99g41y/worksapce/phonics_rn",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.1.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.1.0",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run start",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo run:android",
+      "ios": "expo run:ios",
+      "web": "expo start --web"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 5,
+      "lastAccessed": 1772199955475,
+      "keyFiles": [
+        "adaptive-icon.png",
+        "favicon.png",
+        "icon.png",
+        "splash-icon.png"
+      ]
+    },
+    "ios": {
+      "path": "ios",
+      "purpose": null,
+      "fileCount": 6,
+      "lastAccessed": 1772199955488,
+      "keyFiles": [
+        "Podfile",
+        "Podfile.lock",
+        "Podfile.properties.json"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 1,
+      "lastAccessed": 1772199955488,
+      "keyFiles": [
+        "AGENTS.md"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1772199955489,
+      "keyFiles": [
+        "AGENTS.md"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 1,
+      "lastAccessed": 1772199955489,
+      "keyFiles": [
+        "VideoPlayer.js"
+      ]
+    },
+    "src/services": {
+      "path": "src/services",
+      "purpose": "Business logic services",
+      "fileCount": 4,
+      "lastAccessed": 1772199955489,
+      "keyFiles": [
+        "AGENTS.md",
+        "SpeechService.js",
+        "StorageService.js"
+      ]
+    },
+    "src/utils": {
+      "path": "src/utils",
+      "purpose": "Utility functions",
+      "fileCount": 0,
+      "lastAccessed": 1772199955489,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/services/SpeechService.js",
+      "accessCount": 4,
+      "lastAccessed": 1772260812427,
+      "type": "file"
+    },
+    {
+      "path": "rename_videos.py",
+      "accessCount": 3,
+      "lastAccessed": 1772266804787,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/SettingsScreen.js",
+      "accessCount": 2,
+      "lastAccessed": 1772260943471,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1772199978935,
+      "type": "file"
+    },
+    {
+      "path": "App.js",
+      "accessCount": 1,
+      "lastAccessed": 1772263148874,
+      "type": "file"
+    },
+    {
+      "path": "src/screens/HomeScreen.js",
+      "accessCount": 1,
+      "lastAccessed": 1772263186704,
+      "type": "file"
+    },
+    {
+      "path": "download-videos.sh",
+      "accessCount": 1,
+      "lastAccessed": 1772266661396,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
