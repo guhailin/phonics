@@ -265,11 +265,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 8,
+    fontFamily: 'SassoonPrimary',
   },
   sectionDescription: {
     fontSize: 14,
     color: '#666',
     marginBottom: 16,
+    fontFamily: 'SassoonPrimary',
   },
   sliderContainer: {
     marginBottom: 24,
@@ -284,10 +286,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   sliderValue: {
     fontSize: 14,
     color: '#666',
+    fontFamily: 'SassoonPrimary',
   },
   slider: {
     height: 40,
@@ -299,10 +303,12 @@ const styles = StyleSheet.create({
   sliderMinLabel: {
     fontSize: 12,
     color: '#999',
+    fontFamily: 'SassoonPrimary',
   },
   sliderMaxLabel: {
     fontSize: 12,
     color: '#999',
+    fontFamily: 'SassoonPrimary',
   },
   testButton: {
     backgroundColor: '#f0f0f0',
@@ -315,6 +321,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   saveButton: {
     backgroundColor: '#9C27B0',
@@ -326,11 +333,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
   aboutText: {
     fontSize: 14,
     color: '#666',
     marginBottom: 4,
+    fontFamily: 'SassoonPrimary',
   },
   voiceInfo: {
     backgroundColor: '#f8f8f8',
@@ -343,21 +352,25 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#333',
     marginBottom: 4,
+    fontFamily: 'SassoonPrimary',
   },
   voiceValue: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#9C27B0',
     marginBottom: 4,
+    fontFamily: 'SassoonPrimary',
   },
   voiceId: {
     fontSize: 11,
     color: '#888',
     marginBottom: 2,
+    fontFamily: 'SassoonPrimary',
   },
   voiceLanguage: {
     fontSize: 12,
     color: '#999',
+    fontFamily: 'SassoonPrimary',
   },
   voiceButton: {
     backgroundColor: '#4CAF50',
@@ -370,6 +383,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
 });
 

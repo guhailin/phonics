@@ -1,5 +1,5 @@
 <!-- Parent: ../AGENTS.md -->
-<!-- Generated: 2026-02-25 | Updated: 2026-02-25 -->
+<!-- Generated: 2026-02-25 | Updated: 2026-03-02 -->
 
 # src
 
@@ -13,6 +13,7 @@
 | Directory | Purpose |
 |-----------|---------|
 | `assets/` | 静态资源和数据文件（见 `assets/AGENTS.md`） |
+| `components/` | 可复用 React 组件（见 `components/AGENTS.md`） |
 | `constants/` | 应用常量定义（见 `constants/AGENTS.md`） |
 | `contexts/` | React Context 状态管理（见 `contexts/AGENTS.md`） |
 | `screens/` | 应用屏幕组件（见 `screens/AGENTS.md`） |

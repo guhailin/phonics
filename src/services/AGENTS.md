@@ -9,8 +9,9 @@
 ## Key Files
 | File | Description |
 |------|-------------|
-| `SpeechService.js` - 文本转语音服务（TTS），使用 expo-speech |
-| `StorageService.js` - 存储服务，封装 @react-native-async-storage/async-storage |
+| `SpeechService.js` | 文本转语音服务（TTS），使用 expo-speech |
+| `StorageService.js` | 存储服务，封装 @react-native-async-storage/async-storage |
+| `VideoService.js` | 视频资源服务，处理视频 URI 获取和预加载 |
 
 ## Subdirectories
 无
@@ -37,6 +38,11 @@
 - `@phonics_favorites` - 收藏的单词
 - `@phonics_progress` - 学习进度
 
+### VideoService Features
+- `getVideoUri(filename)` - 获取视频文件 URI，尝试多种加载方式
+- `preloadVideos(filenames)` - 预加载多个视频文件
+- 支持本地文件、Asset 等多种加载策略
+
 ## Dependencies
 
 ### Internal
@@ -45,5 +51,7 @@
 ### External
 - expo-speech - 文本转语音
 - @react-native-async-storage/async-storage - 持久化存储
+- expo-asset - 资源管理
+- expo-file-system - 文件系统访问
 
 <!-- MANUAL: -->

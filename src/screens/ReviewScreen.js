@@ -188,11 +188,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
   headerSubtitle: {
     fontSize: 14,
     color: 'rgba(255,255,255,0.8)',
     marginTop: 4,
+    fontFamily: 'SassoonPrimary',
   },
   cardContainer: {
     flex: 1,
@@ -231,12 +233,14 @@ const styles = StyleSheet.create({
     fontSize: 48,
     fontWeight: 'bold',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   cardWordBack: {
     fontSize: 36,
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 10,
+    fontFamily: 'SassoonPrimary',
   },
   speakButton: {
     marginTop: 20,
@@ -251,18 +255,21 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 12,
     color: '#999',
+    fontFamily: 'SassoonPrimary',
   },
   phoneticBack: {
     fontSize: 20,
     color: '#666',
     fontStyle: 'italic',
     marginBottom: 8,
+    fontFamily: 'SassoonPrimary',
   },
   definitionBack: {
     fontSize: 16,
     color: '#444',
     textAlign: 'center',
     paddingHorizontal: 20,
+    fontFamily: 'SassoonPrimary',
   },
   patternContainer: {
     marginTop: 20,
@@ -271,11 +278,13 @@ const styles = StyleSheet.create({
   patternLabelBack: {
     fontSize: 12,
     color: '#999',
+    fontFamily: 'SassoonPrimary',
   },
   patternValue: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   controlsContainer: {
     flexDirection: 'row',
@@ -299,6 +308,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   emptyContainer: {
     flex: 1,
@@ -308,6 +318,7 @@ const styles = StyleSheet.create({
   emptyText: {
     fontSize: 16,
     color: '#666',
+    fontFamily: 'SassoonPrimary',
   },
 });
 

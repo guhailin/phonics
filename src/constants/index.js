@@ -32,3 +32,8 @@ export const STORAGE_KEYS = {
   FAVORITES: '@phonics_favorites',
   PROGRESS: '@phonics_progress',
 };
+
+// Font constants - Using custom Sassoon Primary font for kids
+export const FONTS = {
+  primary: 'SassoonPrimary',
+};

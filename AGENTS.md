@@ -1,4 +1,4 @@
-<!-- Generated: 2026-02-25 | Updated: 2026-02-25 -->
+<!-- Generated: 2026-02-25 | Updated: 2026-03-02 -->
 
 # phonics_rn
 
@@ -16,12 +16,16 @@ React Native 移动应用，基于 Oxford Phonics World 课程（Level 1-5）教
 | `package.json` | 项目依赖和脚本 |
 | `CLAUDE.md` | Claude Code 项目指南 |
 | `phonics.md` | 课程数据的事实来源 |
+| `VIDEO_FEATURE.md` | 视频功能文档 |
+| `VIDEO_SETUP.md` | 视频设置指南 |
+| `video_mapping.json` | 视频文件映射配置 |
 
 ## Subdirectories
 | Directory | Purpose |
 |-----------|---------|
-| `assets/` | 静态资源（图片、字体等） |
+| `assets/` | 静态资源（图片、字体等）（见 `assets/AGENTS.md`） |
 | `src/` | 应用源代码（见 `src/AGENTS.md`） |
+| `ios/` | iOS 原生项目文件（expo prebuild 生成） |
 
 ## For AI Agents
 
@@ -55,6 +59,10 @@ React Native 移动应用，基于 Oxford Phonics World 课程（Level 1-5）教
 - Expo ~54.0.33 - 开发平台
 - React Navigation v7 - 导航库
 - expo-speech - 文本转语音
+- expo-av - 音频/视频播放
+- expo-asset - 资源管理
+- expo-file-system - 文件系统访问
+- expo-font - 字体加载
 - @react-native-async-storage/async-storage - 持久化存储
 
 <!-- MANUAL: -->

@@ -143,11 +143,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
   headerSubtitle: {
     fontSize: 14,
     color: 'rgba(255,255,255,0.8)',
     marginTop: 4,
+    fontFamily: 'SassoonPrimary',
   },
   content: {
     flex: 1,
@@ -173,6 +175,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 16,
+    fontFamily: 'SassoonPrimary',
   },
   infoContainer: {
     alignItems: 'center',
@@ -183,11 +186,13 @@ const styles = StyleSheet.create({
     color: '#666',
     fontStyle: 'italic',
     marginBottom: 8,
+    fontFamily: 'SassoonPrimary',
   },
   definition: {
     fontSize: 14,
     color: '#444',
     textAlign: 'center',
+    fontFamily: 'SassoonPrimary',
   },
   patternContainer: {
     flexDirection: 'row',
@@ -196,11 +201,13 @@ const styles = StyleSheet.create({
   patternLabel: {
     fontSize: 14,
     color: '#666',
+    fontFamily: 'SassoonPrimary',
   },
   patternValue: {
     fontSize: 14,
     fontWeight: 'bold',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   speakButton: {
     paddingHorizontal: 24,
@@ -213,6 +220,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
   controlsContainer: {
     flexDirection: 'row',
@@ -236,6 +244,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   emptyContainer: {
     flex: 1,
@@ -245,6 +254,7 @@ const styles = StyleSheet.create({
   emptyText: {
     fontSize: 16,
     color: '#666',
+    fontFamily: 'SassoonPrimary',
   },
 });
 

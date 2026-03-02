@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
-  FlatList,
   TouchableOpacity,
   SafeAreaView,
-  Dimensions,
+  Platform,
+  useWindowDimensions,
 } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { LEVEL_COLORS } from '../constants';
@@ -18,6 +18,7 @@ import VideoPlayer from '../components/VideoPlayer';
 import videoMapping from '../../video_mapping.json';
 
 const Tab = createBottomTabNavigator();
+const isWeb = Platform.OS === 'web';
 
 // Videos Tab Component
 const VideosTab = ({ route }) => {
@@ -25,6 +26,17 @@ const VideosTab = ({ route }) => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videoVisible, setVideoVisible] = useState(false);
   const color = LEVEL_COLORS[levelId];
+  const { height } = useWindowDimensions();
+
+  // Calculate ScrollView height for web (subtract header + tab bar ~120px)
+  const scrollViewStyle = useMemo(() => {
+    if (isWeb) {
+      return {
+        height: height - 120,
+      };
+    }
+    return null;
+  }, [height]);
 
   // Get videos for this unit
   const levelVideos = videoMapping[levelId] || { units: {}, other: [] };
@@ -34,27 +46,26 @@ const VideosTab = ({ route }) => {
   const allVideos = [...unitVideos, ...otherVideos];
 
   const handlePlayVideo = (filename) => {
-    // For React Native, we need to use require with static assets
-    // In a real implementation, you would need to set up proper asset loading
-    // For now, we'll just show the video player with a placeholder
     setSelectedVideo(filename);
     setVideoVisible(true);
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {/* Render video list */}
       {allVideos.length === 0 ? (
         <View style={styles.emptyContainer}>
           <Text style={styles.emptyText}>No videos available for this unit</Text>
         </View>
       ) : (
-        <FlatList
-          data={allVideos}
-          keyExtractor={(item, index) => `${item.filename}-${index}`}
+        <ScrollView
+          style={[styles.scrollView, scrollViewStyle]}
           contentContainerStyle={styles.videosList}
-          renderItem={({ item }) => (
+          showsVerticalScrollIndicator={true}
+        >
+          {allVideos.map((item, index) => (
             <TouchableOpacity
+              key={`${item.filename}-${index}`}
               style={styles.videoItem}
               onPress={() => handlePlayVideo(item.filename)}
             >
@@ -68,8 +79,8 @@ const VideosTab = ({ route }) => {
                 <Text style={styles.videoType}>{item.type}</Text>
               </View>
             </TouchableOpacity>
-          )}
-        />
+          ))}
+        </ScrollView>
       )}
 
       {/* Video Player */}
@@ -81,7 +92,7 @@ const VideosTab = ({ route }) => {
           setSelectedVideo(null);
         }}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -159,12 +170,23 @@ const WordsTab = ({ route }) => {
   const unitData = phonicsData[levelId]?.units.find(u => u.id === unitId);
   const color = LEVEL_COLORS[levelId];
   const { speakWord } = useApp();
+  const { height } = useWindowDimensions();
+
+  // Calculate ScrollView height for web (subtract header + tab bar ~120px)
+  const scrollViewStyle = useMemo(() => {
+    if (isWeb) {
+      return {
+        height: height - 120,
+      };
+    }
+    return null;
+  }, [height]);
 
   if (!unitData) {
     return (
-      <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
         <Text>Unit not found</Text>
-      </SafeAreaView>
+      </View>
     );
   }
 
@@ -175,27 +197,31 @@ const WordsTab = ({ route }) => {
   });
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        {groupedWords.map((group, index) => (
-          <View key={index} style={styles.patternSection}>
-            <View style={[styles.patternHeader, { backgroundColor: color }]}>
-              <Text style={styles.patternText}>{group.pattern}</Text>
-            </View>
-            <View style={styles.wordsGrid}>
-              {group.words.map((wordData, idx) => (
-                <WordCard
-                  key={idx}
-                  wordData={wordData}
-                  color={color}
-                  onPress={() => speakWord(wordData.word)}
-                />
-              ))}
-            </View>
+    <ScrollView
+      style={[styles.scrollView, scrollViewStyle]}
+      contentContainerStyle={styles.scrollContent}
+      scrollEnabled={true}
+      showsVerticalScrollIndicator={true}
+      nestedScrollEnabled={true}
+    >
+      {groupedWords.map((group, index) => (
+        <View key={index} style={styles.patternSection}>
+          <View style={[styles.patternHeader, { backgroundColor: color }]}>
+            <Text style={styles.patternText}>{group.pattern}</Text>
           </View>
-        ))}
-      </ScrollView>
-    </SafeAreaView>
+          <View style={styles.wordsGrid}>
+            {group.words.map((wordData, idx) => (
+              <WordCard
+                key={idx}
+                wordData={wordData}
+                color={color}
+                onPress={() => speakWord(wordData.word)}
+              />
+            ))}
+          </View>
+        </View>
+      ))}
+    </ScrollView>
   );
 };
 
@@ -261,8 +287,8 @@ const ExampleHighlight = ({ html, color }) => {
           key={index}
           style={[
             styles.exampleSegmentText,
-            segment.isPattern && { color: color, fontWeight: 'bold' },
-            segment.isHighlight && !segment.isPattern && { fontWeight: '600' },
+            segment.isPattern && { color: color, fontWeight: 'bold', fontFamily: 'SassoonPrimary' },
+            segment.isHighlight && !segment.isPattern && { fontWeight: '600', fontFamily: 'SassoonPrimary' },
           ]}
         >
           {segment.text}
@@ -309,7 +335,7 @@ const ExamplesTab = ({ route }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.examplePagerContainer}>
         {/* Example Card */}
         <TouchableOpacity
@@ -363,7 +389,7 @@ const ExamplesTab = ({ route }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -371,21 +397,33 @@ const ExamplesTab = ({ route }) => {
 const UnitScreen = ({ route }) => {
   const { levelId, unitId } = route.params || {};
   const color = LEVEL_COLORS[levelId];
+  const { height } = useWindowDimensions();
+
+  // Calculate SafeAreaView height for web
+  const safeAreaStyle = useMemo(() => {
+    if (isWeb) {
+      return {
+        height: height,
+      };
+    }
+    return null;
+  }, [height]);
 
   return (
-    <Tab.Navigator
-      initialRouteName="Words"
-      screenOptions={{
-        tabBarActiveTintColor: color,
-        tabBarInactiveTintColor: '#666',
-        tabBarStyle: {
-          backgroundColor: '#fff',
-          borderTopWidth: 1,
-          borderTopColor: '#eee',
-        },
-        headerShown: false,
-      }}
-    >
+    <SafeAreaView style={[styles.safeArea, safeAreaStyle]}>
+      <Tab.Navigator
+        initialRouteName="Words"
+        screenOptions={{
+          tabBarActiveTintColor: color,
+          tabBarInactiveTintColor: '#666',
+          tabBarStyle: {
+            backgroundColor: '#fff',
+            borderTopWidth: 1,
+            borderTopColor: '#eee',
+          },
+          headerShown: false,
+        }}
+      >
       <Tab.Screen
         name="Videos"
         component={VideosTab}
@@ -419,12 +457,21 @@ const UnitScreen = ({ route }) => {
           ),
         }}
       />
-    </Tab.Navigator>
+      </Tab.Navigator>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
   container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  scrollView: {
     flex: 1,
     backgroundColor: '#f5f5f5',
   },
@@ -445,6 +492,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'SassoonPrimary',
   },
   wordsGrid: {
     flexDirection: 'row',
@@ -477,15 +525,18 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   letter: {
     color: '#666',
     fontSize: 32,
+    fontFamily: 'SassoonPrimary',
   },
   highlightedLetter: {
     color: '#E91E63',
     fontWeight: 'bold',
     fontSize: 32,
+    fontFamily: 'SassoonPrimary',
   },
   infoContainer: {
     alignItems: 'center',
@@ -494,11 +545,13 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
     fontStyle: 'italic',
+    fontFamily: 'SassoonPrimary',
   },
   definition: {
     fontSize: 12,
     color: '#888',
     marginTop: 2,
+    fontFamily: 'SassoonPrimary',
   },
   emptyContainer: {
     flex: 1,
@@ -509,6 +562,7 @@ const styles = StyleSheet.create({
   emptyText: {
     fontSize: 16,
     color: '#666',
+    fontFamily: 'SassoonPrimary',
   },
   examplesList: {
     padding: 12,
@@ -534,6 +588,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 14,
+    fontFamily: 'SassoonPrimary',
   },
   exampleText: {
     flex: 1,
@@ -568,12 +623,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 14,
+    fontFamily: 'SassoonPrimary',
   },
   examplePagerTotal: {
     color: '#fff',
     fontSize: 10,
     marginLeft: 4,
     opacity: 0.8,
+    fontFamily: 'SassoonPrimary',
   },
   examplePagerContent: {
     flex: 1,
@@ -596,6 +653,7 @@ const styles = StyleSheet.create({
     fontSize: 38,
     color: '#333',
     lineHeight: 50,
+    fontFamily: 'SassoonPrimary',
   },
   exampleTapHint: {
     alignItems: 'center',
@@ -604,6 +662,7 @@ const styles = StyleSheet.create({
   exampleTapHintText: {
     fontSize: 12,
     color: '#999',
+    fontFamily: 'SassoonPrimary',
   },
   pageNavRow: {
     flexDirection: 'row',
@@ -638,6 +697,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#333',
+    fontFamily: 'SassoonPrimary',
   },
   exampleNavButtonTextDisabled: {
     color: '#ccc',
@@ -690,12 +750,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#333',
     lineHeight: 20,
+    fontFamily: 'SassoonPrimary',
   },
   videoType: {
     fontSize: 12,
     color: '#999',
     marginTop: 4,
     textTransform: 'capitalize',
+    fontFamily: 'SassoonPrimary',
   },
 });
 

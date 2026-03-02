@@ -15,6 +15,7 @@
 | `ReviewScreen.js` | 抽认卡复习模式 |
 | `ExploreScreen.js` | 扩展单词探索 |
 | `SettingsScreen.js` | 应用设置（语音配置等） |
+| `FontTestScreen.js` | 字体测试页面（用于调试字体显示） |
 
 ## Subdirectories
 无

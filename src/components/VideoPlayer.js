@@ -169,11 +169,13 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+    fontFamily: 'SassoonPrimary',
   },
   title: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+    fontFamily: 'SassoonPrimary',
   },
   placeholder: {
     width: 60,
@@ -201,10 +203,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 12,
     marginBottom: 4,
+    fontFamily: 'SassoonPrimary',
   },
   hintText: {
     color: '#888',
     fontSize: 10,
+    fontFamily: 'SassoonPrimary',
   },
   controls: {
     padding: 20,
@@ -221,6 +225,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+    fontFamily: 'SassoonPrimary',
   },
   loadingContainer: {
     flex: 1,
@@ -232,10 +237,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 8,
+    fontFamily: 'SassoonPrimary',
   },
   loadingSubtext: {
     color: '#888',
     fontSize: 12,
+    fontFamily: 'SassoonPrimary',
   },
   errorContainer: {
     flex: 1,
@@ -248,12 +255,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 8,
+    fontFamily: 'SassoonPrimary',
   },
   errorSubtext: {
     color: '#ffcccc',
     fontSize: 14,
     textAlign: 'center',
     marginBottom: 16,
+    fontFamily: 'SassoonPrimary',
   },
   placeholderVideo: {
     flex: 1,
@@ -266,12 +275,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 8,
+    fontFamily: 'SassoonPrimary',
   },
   placeholderSubtext: {
     color: '#888',
     fontSize: 14,
     textAlign: 'center',
     marginBottom: 16,
+    fontFamily: 'SassoonPrimary',
   },
   retryButton: {
     backgroundColor: '#333',
@@ -284,6 +295,7 @@ const styles = StyleSheet.create({
     color: '#E91E63',
     fontSize: 16,
     fontWeight: '600',
+    fontFamily: 'SassoonPrimary',
   },
 });
 

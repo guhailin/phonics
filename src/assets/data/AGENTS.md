@@ -1,5 +1,5 @@
 <!-- Parent: ../../AGENTS.md -->
-<!-- Generated: 2026-02-25 | Updated: 2026-02-25 -->
+<!-- Generated: 2026-02-25 | Updated: 2026-03-02 -->
 
 # data
 
@@ -11,6 +11,7 @@
 |------|-------------|
 | `phonicsData.js` | 核心课程数据（必须与 phonics.md 完全匹配） |
 | `wordInfo.js` | 单词的音标和中文定义 |
+| `videoInfo.js` | 视频信息映射，将级别和单元映射到视频文件 |
 
 ## Subdirectories
 无
@@ -35,6 +36,12 @@
 - 例句使用 HTML span 格式进行高亮
 - Magic E 模式使用下划线表示（如 `i_e`、`a_e`）
 - 单词对象格式：`{ word, highlight, emoji }`
+
+### Video Info Structure
+- `VIDEO_INFO` - 包含每个级别的播放列表和单元视频映射
+- `getVideoFile(levelId, unitId)` - 获取特定级别和单元的视频文件名
+- `hasVideo(levelId, unitId)` - 检查是否存在视频
+- 视频文件命名格式：`level{X}-unit{Y}.mp4`
 
 ## Dependencies
 

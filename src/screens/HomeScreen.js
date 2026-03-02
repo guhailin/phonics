@@ -70,11 +70,13 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
   headerSubtitle: {
     fontSize: 14,
     color: 'rgba(255,255,255,0.8)',
     marginTop: 4,
+    fontFamily: 'SassoonPrimary',
   },
   listContainer: {
     padding: 10,
@@ -104,17 +106,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
+    fontFamily: 'SassoonPrimary',
   },
   levelSubtitle: {
     fontSize: 14,
     color: 'rgba(255,255,255,0.9)',
     marginTop: 4,
+    fontFamily: 'SassoonPrimary',
   },
   levelDescription: {
     fontSize: 12,
     color: 'rgba(255,255,255,0.7)',
     marginTop: 4,
     textAlign: 'center',
+    fontFamily: 'SassoonPrimary',
   },
 });
 
