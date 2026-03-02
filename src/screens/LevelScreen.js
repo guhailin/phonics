@@ -86,6 +86,7 @@ const LevelScreen = ({ route, navigation }) => {
         renderItem={renderUnitItem}
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.listContainer}
+        style={styles.flatList}
       />
 
       <VideoPlayer
@@ -113,14 +114,19 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'SassoonPrimary',
   },
   headerSubtitle: {
     fontSize: 14,
     color: 'rgba(255,255,255,0.8)',
     marginTop: 4,
+    fontFamily: 'SassoonPrimary',
   },
   listContainer: {
     padding: 12,
+  },
+  flatList: {
+    flex: 1,
   },
   unitCard: {
     backgroundColor: '#fff',
@@ -144,6 +150,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     flex: 1,
+    fontFamily: 'SassoonPrimary',
   },
   videoButton: {
     paddingHorizontal: 12,
@@ -154,11 +161,13 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 12,
     fontWeight: 'bold',
+    fontFamily: 'SassoonPrimary',
   },
   patternLabel: {
     fontSize: 12,
     color: '#666',
     marginBottom: 6,
+    fontFamily: 'SassoonPrimary',
   },
   patternsContainer: {
     flexDirection: 'row',
@@ -175,6 +184,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 12,
     fontWeight: '600',
+    fontFamily: 'SassoonPrimary',
   },
   statsContainer: {
     borderTopWidth: 1,
@@ -184,6 +194,7 @@ const styles = StyleSheet.create({
   statsText: {
     fontSize: 12,
     color: '#888',
+    fontFamily: 'SassoonPrimary',
   },
 });
 
