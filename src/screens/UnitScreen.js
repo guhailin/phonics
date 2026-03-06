@@ -15,6 +15,7 @@ import phonicsData from '../assets/data/phonicsData';
 import { wordInfo } from '../assets/data/wordInfo';
 import { useApp } from '../contexts/AppContext';
 import VideoPlayer from '../components/VideoPlayer';
+import DrawingCanvas from '../components/DrawingCanvas';
 import videoMapping from '../../video_mapping.json';
 
 const Tab = createBottomTabNavigator();
@@ -305,6 +306,7 @@ const ExamplesTab = ({ route }) => {
   const color = LEVEL_COLORS[levelId];
   const { speakWord } = useApp();
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [drawingVisible, setDrawingVisible] = React.useState(false);
 
   if (!unitData || !unitData.examples || unitData.examples.length === 0) {
     return (
@@ -345,7 +347,10 @@ const ExamplesTab = ({ route }) => {
           >
             <Text style={styles.iconText}>🔊</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.iconButton}>
+          <TouchableOpacity
+            style={styles.iconButton}
+            onPress={() => setDrawingVisible(true)}
+          >
             <Text style={styles.iconText}>🖌️</Text>
           </TouchableOpacity>
         </View>
@@ -396,6 +401,14 @@ const ExamplesTab = ({ route }) => {
           </TouchableOpacity>
         </View>
       </View>
+
+      {/* Drawing Canvas Modal */}
+      <DrawingCanvas
+        visible={drawingVisible}
+        onClose={() => setDrawingVisible(false)}
+        exampleHtml={currentExample}
+        color={color}
+      />
     </View>
   );
 };
