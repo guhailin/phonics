@@ -337,18 +337,25 @@ const ExamplesTab = ({ route }) => {
   return (
     <View style={styles.container}>
       <View style={styles.examplePagerContainer}>
+        {/* Icon Bar */}
+        <View style={styles.iconBar}>
+          <TouchableOpacity
+            style={styles.iconButton}
+            onPress={() => speakWord(getPlainText(currentExample))}
+          >
+            <Text style={styles.iconText}>🔊</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconButton}>
+            <Text style={styles.iconText}>🖌️</Text>
+          </TouchableOpacity>
+        </View>
+
         {/* Example Card */}
-        <TouchableOpacity
-          style={styles.examplePagerCard}
-          onPress={() => speakWord(getPlainText(currentExample))}
-        >
+        <View style={styles.examplePagerCard}>
           <View style={styles.examplePagerContent}>
             <ExampleHighlight html={currentExample} color={color} />
           </View>
-          <View style={styles.exampleTapHint}>
-            <Text style={styles.exampleTapHintText}>Tap to listen 🔊</Text>
-          </View>
-        </TouchableOpacity>
+        </View>
 
         {/* Page Number and Navigation Buttons - Same Row */}
         <View style={styles.pageNavRow}>
@@ -600,6 +607,28 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     justifyContent: 'center',
+  },
+  iconBar: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    marginBottom: 12,
+    gap: 12,
+  },
+  iconButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  iconText: {
+    fontSize: 22,
   },
   examplePagerCard: {
     backgroundColor: '#fff',
