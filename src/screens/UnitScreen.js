@@ -515,7 +515,7 @@ const styles = StyleSheet.create({
     minHeight: 180,
   },
   emoji: {
-    fontSize: 32,
+    fontSize: 56,
     marginBottom: 8,
   },
   wordContainer: {
