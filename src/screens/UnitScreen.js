@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   Platform,
   useWindowDimensions,
+  Image,
 } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { LEVEL_COLORS } from '../constants';
@@ -339,22 +340,6 @@ const ExamplesTab = ({ route }) => {
   return (
     <View style={styles.container}>
       <View style={styles.examplePagerContainer}>
-        {/* Icon Bar */}
-        <View style={styles.iconBar}>
-          <TouchableOpacity
-            style={styles.iconButton}
-            onPress={() => speakWord(getPlainText(currentExample))}
-          >
-            <Text style={styles.iconText}>🔊</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.iconButton}
-            onPress={() => setDrawingVisible(true)}
-          >
-            <Text style={styles.iconText}>🖌️</Text>
-          </TouchableOpacity>
-        </View>
-
         {/* Example Card */}
         <View style={styles.examplePagerCard}>
           <View style={styles.examplePagerContent}>
@@ -398,6 +383,28 @@ const ExamplesTab = ({ route }) => {
               styles.exampleNavButtonText,
               currentIndex === examples.length - 1 && styles.exampleNavButtonTextDisabled,
             ]}>Next →</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Icon Bar - Bottom */}
+        <View style={styles.iconBar}>
+          <TouchableOpacity
+            style={styles.iconButton}
+            onPress={() => speakWord(getPlainText(currentExample))}
+          >
+            <Image
+              source={require('../../assets/images/icon-speaker.png')}
+              style={styles.iconImage}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.iconButton}
+            onPress={() => setDrawingVisible(true)}
+          >
+            <Image
+              source={require('../../assets/images/icon-paintbrush.png')}
+              style={styles.iconImage}
+            />
           </TouchableOpacity>
         </View>
       </View>
@@ -462,7 +469,10 @@ const UnitScreen = ({ route }) => {
         options={{
           tabBarLabel: 'Words',
           tabBarIcon: () => (
-            <Text style={{ fontSize: 20 }}>🔤</Text>
+            <Image
+              source={require('../../assets/images/icon-words.png')}
+              style={{ width: 24, height: 24 }}
+            />
           ),
         }}
       />
@@ -473,7 +483,10 @@ const UnitScreen = ({ route }) => {
         options={{
           tabBarLabel: 'Examples',
           tabBarIcon: () => (
-            <Text style={{ fontSize: 20 }}>📖</Text>
+            <Image
+              source={require('../../assets/images/icon-examples.png')}
+              style={{ width: 24, height: 24 }}
+            />
           ),
         }}
       />
@@ -623,25 +636,30 @@ const styles = StyleSheet.create({
   },
   iconBar: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    marginBottom: 12,
-    gap: 12,
+    justifyContent: 'center',
+    marginTop: 40,
+    gap: 32,
   },
   iconButton: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 90,
+    height: 90,
+    borderRadius: 45,
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
-    elevation: 2,
+    elevation: 4,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
   },
   iconText: {
-    fontSize: 22,
+    fontSize: 40,
+  },
+  iconImage: {
+    width: 52,
+    height: 52,
+    resizeMode: 'contain',
   },
   examplePagerCard: {
     backgroundColor: '#fff',
