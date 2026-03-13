@@ -15,9 +15,9 @@ import { LEVEL_COLORS } from '../constants';
 import phonicsData from '../assets/data/phonicsData';
 import { wordInfo } from '../assets/data/wordInfo';
 import { useApp } from '../contexts/AppContext';
-import VideoPlayer from '../components/VideoPlayer';
+import BilibiliVideoPlayer from '../components/BilibiliVideoPlayer';
 import DrawingCanvas from '../components/DrawingCanvas';
-import videoMapping from '../../video_mapping.json';
+import bilibiliVideos from '../assets/data/bilibiliVideos';
 
 const Tab = createBottomTabNavigator();
 const isWeb = Platform.OS === 'web';
@@ -25,8 +25,8 @@ const isWeb = Platform.OS === 'web';
 // Videos Tab Component
 const VideosTab = ({ route }) => {
   const { levelId, unitId } = route.params || {};
-  const [selectedVideo, setSelectedVideo] = useState(null);
-  const [videoVisible, setVideoVisible] = useState(false);
+  const [selectedBilibiliVideo, setSelectedBilibiliVideo] = useState(null);
+  const [bilibiliVisible, setBilibiliVisible] = useState(false);
   const color = LEVEL_COLORS[levelId];
   const { height } = useWindowDimensions();
 
@@ -40,22 +40,21 @@ const VideosTab = ({ route }) => {
     return null;
   }, [height]);
 
-  // Get videos for this unit
-  const levelVideos = videoMapping[levelId] || { units: {}, other: [] };
-  const unitVideos = levelVideos.units[unitId] || [];
-  const otherVideos = levelVideos.other || [];
+  // Get Bilibili videos for this unit
+  const bilibiliLevelData = bilibiliVideos[levelId] || { units: {}, other: [] };
+  const bilibiliUnitVideos = bilibiliLevelData.units[unitId] || [];
+  const bilibiliOtherVideos = bilibiliLevelData.other || [];
+  const allBilibiliVideos = [...bilibiliUnitVideos, ...bilibiliOtherVideos];
 
-  const allVideos = [...unitVideos, ...otherVideos];
-
-  const handlePlayVideo = (filename) => {
-    setSelectedVideo(filename);
-    setVideoVisible(true);
+  const handlePlayBilibiliVideo = (video) => {
+    setSelectedBilibiliVideo(video);
+    setBilibiliVisible(true);
   };
 
   return (
     <View style={styles.container}>
       {/* Render video list */}
-      {allVideos.length === 0 ? (
+      {allBilibiliVideos.length === 0 ? (
         <View style={styles.emptyContainer}>
           <Text style={styles.emptyText}>No videos available for this unit</Text>
         </View>
@@ -65,18 +64,18 @@ const VideosTab = ({ route }) => {
           contentContainerStyle={styles.videosList}
           showsVerticalScrollIndicator={true}
         >
-          {allVideos.map((item, index) => (
+          {allBilibiliVideos.map((item, index) => (
             <TouchableOpacity
-              key={`${item.filename}-${index}`}
+              key={`bilibili-${index}`}
               style={styles.videoItem}
-              onPress={() => handlePlayVideo(item.filename)}
+              onPress={() => handlePlayBilibiliVideo(item)}
             >
               <View style={styles.videoIcon}>
                 <Text style={{ fontSize: 24 }}>▶️</Text>
               </View>
               <View style={styles.videoInfo}>
                 <Text style={styles.videoTitle} numberOfLines={2}>
-                  {item.filename.replace('.mp4', '')}
+                  {item.title}
                 </Text>
                 <Text style={styles.videoType}>{item.type}</Text>
               </View>
@@ -85,13 +84,14 @@ const VideosTab = ({ route }) => {
         </ScrollView>
       )}
 
-      {/* Video Player */}
-      <VideoPlayer
-        videoFile={selectedVideo}
-        visible={videoVisible}
+      {/* Bilibili Video Player */}
+      <BilibiliVideoPlayer
+        videoUrl={selectedBilibiliVideo?.url}
+        visible={bilibiliVisible}
+        title={selectedBilibiliVideo?.title}
         onClose={() => {
-          setVideoVisible(false);
-          setSelectedVideo(null);
+          setBilibiliVisible(false);
+          setSelectedBilibiliVideo(null);
         }}
       />
     </View>
