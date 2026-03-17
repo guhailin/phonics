@@ -139,12 +139,12 @@ const bilibiliVideos = {
         {"title": "short vowels - disc 2 - unit 5 - short i - ig - fig wig", "url": "https://www.bilibili.com/video/BV1YMNwzWEUp/", "bvid": "BV1YMNwzWEUp", "type": "lesson", "index": 21, "disc": "2"},
         {"title": "short vowels - disc 2 - unit 5 - short i - it ix - pit", "url": "https://www.bilibili.com/video/BV1XMNwzWEDV/", "bvid": "BV1XMNwzWEDV", "type": "lesson", "index": 22, "disc": "2"},
         {"title": "short vowels - disc 2 - unit 5 - short i - in ig it ix - story", "url": "https://www.bilibili.com/video/BV1YMNwzWExy/", "bvid": "BV1YMNwzWExy", "type": "story", "index": 23, "disc": "2"},
-        {"title": "short vowels - disc 2 - unit 5 - short o - o ot op - story", "url": "https://www.bilibili.com/video/BV1aMNwzWEZM/", "bvid": "BV1aMNwzWEZM", "type": "story", "index": 27, "disc": "2"},
       ],
       unit6: [
         {"title": "short vowels - disc 2 - unit 6 - short o - o - fox log", "url": "https://www.bilibili.com/video/BV1YMNwzWEGp/", "bvid": "BV1YMNwzWEGp", "type": "lesson", "index": 24, "disc": "2"},
         {"title": "short vowels - disc 2 - unit 6 - short o - ot - cot pot", "url": "https://www.bilibili.com/video/BV1YMNwzWEzF/", "bvid": "BV1YMNwzWEzF", "type": "lesson", "index": 25, "disc": "2"},
         {"title": "short vowels - disc 2 - unit 6 - short o - op - pop hop", "url": "https://www.bilibili.com/video/BV1VMNwzWEEU/", "bvid": "BV1VMNwzWEEU", "type": "lesson", "index": 26, "disc": "2"},
+        {"title": "short vowels - disc 2 - unit 5 - short o - o ot op - story", "url": "https://www.bilibili.com/video/BV1aMNwzWEZM/", "bvid": "BV1aMNwzWEZM", "type": "story", "index": 27, "disc": "2"},
       ],
       unit7: [
         {"title": "short vowels - disc 2 - unit 7 - short u - u - sun jug", "url": "https://www.bilibili.com/video/BV1GMNwzWEqR/", "bvid": "BV1GMNwzWEqR", "type": "lesson", "index": 29, "disc": "2"},
@@ -303,7 +303,6 @@ const bilibiliVideos = {
         {"title": "Consonant blends - disc 1 - unit 1 - br cr - broom crab", "url": "https://www.bilibili.com/video/BV1LRcfzyEAE/", "bvid": "BV1LRcfzyEAE", "type": "lesson", "index": 3, "disc": "1"},
         {"title": "Consonant blends - disc 1 - unit 1 - fl gl - flag globe", "url": "https://www.bilibili.com/video/BV1RRcfzCEjB/", "bvid": "BV1RRcfzCEjB", "type": "lesson", "index": 4, "disc": "1"},
         {"title": "Consonant blends - disc 1 - unit 1 - story ＂ the club ＂", "url": "https://www.bilibili.com/video/BV1vRcfzCEg6/", "bvid": "BV1vRcfzCEg6", "type": "story", "index": 5, "disc": "1"},
-        {"title": "Consonant blends - disc 1 - unit 1 , 2 - review 1 - song", "url": "https://www.bilibili.com/video/BV1XFwFzgEua/", "bvid": "BV1XFwFzgEua", "type": "song", "index": 10, "disc": "1"},
       ],
       unit2: [
         {"title": "Consonant blends - disc 1 - unit 2 - fr gr - frog green", "url": "https://www.bilibili.com/video/BV1RRcfzCEfg/", "bvid": "BV1RRcfzCEfg", "type": "lesson", "index": 6, "disc": "1"},
@@ -316,7 +315,6 @@ const bilibiliVideos = {
         {"title": "Consonant blends - disc 1 - unit 3 - sp sw - spoon swim", "url": "https://www.bilibili.com/video/BV1aFwFzgEXJ/", "bvid": "BV1aFwFzgEXJ", "type": "lesson", "index": 12, "disc": "1"},
         {"title": "Consonant blends - disc 1 - unit 3 - st - stop test fast", "url": "https://www.bilibili.com/video/BV1aFwFzgEe4/", "bvid": "BV1aFwFzgEe4", "type": "lesson", "index": 13, "disc": "1"},
         {"title": "Consonant blends - disc 1 - unit 3 - story seasons", "url": "https://www.bilibili.com/video/BV1aFwFzgEZa/", "bvid": "BV1aFwFzgEZa", "type": "story", "index": 14, "disc": "1"},
-        {"title": "Consonant blends - disc 1 - unit 3 , 4 - review 2 - song", "url": "https://www.bilibili.com/video/BV1iDcfzjEQv/", "bvid": "BV1iDcfzjEQv", "type": "song", "index": 19, "disc": "1"},
       ],
       unit4: [
         {"title": "Consonant blends - disc 1 - unit 4 - sh - shell fish", "url": "https://www.bilibili.com/video/BV1XFwFzgEP5/", "bvid": "BV1XFwFzgEP5", "type": "lesson", "index": 15, "disc": "1"},
@@ -329,7 +327,6 @@ const bilibiliVideos = {
         {"title": "Consonant blends - disc 2 - unit 5 - th - three think", "url": "https://www.bilibili.com/video/BV1qDcfzjEcH/", "bvid": "BV1qDcfzjEcH", "type": "lesson", "index": 21, "disc": "2"},
         {"title": "Consonant blends - disc 2 - unit 5 - ck qu - rocket duck", "url": "https://www.bilibili.com/video/BV1iDcfzjEQJ/", "bvid": "BV1iDcfzjEQJ", "type": "lesson", "index": 22, "disc": "2"},
         {"title": "Consonant blends - disc 2 - unit 5 -story Meet My Family", "url": "https://www.bilibili.com/video/BV1oDcfzjEnj/", "bvid": "BV1oDcfzjEnj", "type": "story", "index": 23, "disc": "2"},
-        {"title": "Consonant blends - disc 2 - unit 5 , 6 - review 3 - song", "url": "https://www.bilibili.com/video/BV1qDcfzjELT/", "bvid": "BV1qDcfzjELT", "type": "song", "index": 28, "disc": "2"},
       ],
       unit6: [
         {"title": "Consonant blends - disc 2 - unit 6 - ng nk - king bank", "url": "https://www.bilibili.com/video/BV1iDcfzjEoz/", "bvid": "BV1iDcfzjEoz", "type": "lesson", "index": 24, "disc": "2"},
@@ -358,6 +355,30 @@ const bilibiliVideos = {
             "type": "intro",
             "index": 1,
             "disc": "1"
+        },
+        {
+            "title": "Consonant blends - disc 1 - unit 1 , 2 - review 1 - song",
+            "url": "https://www.bilibili.com/video/BV1XFwFzgEua/",
+            "bvid": "BV1XFwFzgEua",
+            "type": "song",
+            "index": 10,
+            "disc": "1"
+        },
+        {
+            "title": "Consonant blends - disc 1 - unit 3 , 4 - review 2 - song",
+            "url": "https://www.bilibili.com/video/BV1iDcfzjEQv/",
+            "bvid": "BV1iDcfzjEQv",
+            "type": "song",
+            "index": 19,
+            "disc": "1"
+        },
+        {
+            "title": "Consonant blends - disc 2 - unit 5 , 6 - review 3 - song",
+            "url": "https://www.bilibili.com/video/BV1qDcfzjELT/",
+            "bvid": "BV1qDcfzjELT",
+            "type": "song",
+            "index": 28,
+            "disc": "2"
         },
         {
             "title": "Consonant blends - disc 2 - review 4 - song",

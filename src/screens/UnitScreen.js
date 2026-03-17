@@ -43,8 +43,7 @@ const VideosTab = ({ route }) => {
   // Get Bilibili videos for this unit
   const bilibiliLevelData = bilibiliVideos[levelId] || { units: {}, other: [] };
   const bilibiliUnitVideos = bilibiliLevelData.units[unitId] || [];
-  const bilibiliOtherVideos = bilibiliLevelData.other || [];
-  const allBilibiliVideos = [...bilibiliUnitVideos, ...bilibiliOtherVideos];
+  const allBilibiliVideos = bilibiliUnitVideos;
 
   const handlePlayBilibiliVideo = (video) => {
     setSelectedBilibiliVideo(video);
@@ -75,7 +74,7 @@ const VideosTab = ({ route }) => {
               </View>
               <View style={styles.videoInfo}>
                 <Text style={styles.videoTitle} numberOfLines={2}>
-                  {item.title}
+                  {item.index}. {item.title}
                 </Text>
                 <Text style={styles.videoType}>{item.type}</Text>
               </View>
