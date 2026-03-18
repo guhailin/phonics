@@ -124,7 +124,7 @@ at: mat, hat, sat, fat, rat
 20条例句:
 1. Dad has a bag.
 2. This is a bad bag.
-3. My bag is on.
+3. My bag is on it.
 4. This rag is wet.
 5. I tag my bag.
 6. My cap is on.
@@ -139,7 +139,7 @@ at: mat, hat, sat, fat, rat
 15. I see a rat.
 16. Tag the cap.
 17. Tap the map.
-18. A rag on a bag.
+18. A rag is on a bag.
 19. Dad sat on the mat.
 20. A fat cat sat.
 
@@ -167,9 +167,9 @@ ed: bed, red, fed, led, wed
 11. I get a pen.
 12. Ten kids sit.
 13. Red bed? No.
-14. A red hen.
-15. An egg in a net.
-16. A wet web.
+14. That is a red hen.
+15. An egg is in a net.
+16. That is a wet web.
 17. Set the bed.
 18. The jet is big.
 19. I see ten hens.
@@ -296,11 +296,11 @@ up: pup, cup, up, sup
 11. Mud is on me.
 12. I see a bud.
 13. A pup can run.
-14. A cup on the rug.
+14. A cup is on the rug.
 15. Stand up now, please.
 16. A bug is on the rug.
 17. Tug, then stop.
-18. Mud on a cup.
+18. Mud is on a cup.
 19. The pup is in a tub.
 20. The sun is hot.
 
@@ -326,7 +326,7 @@ un: fun, bun, run, sun, gun
 8. Rub it with your hand.
 9. Hum a tune.
 10. Sum is six.
-11. Fun in a hut.
+11. We have fun in a hut.
 12. A bun is fun.
 13. Run to the sun.
 14. The sun is up.
@@ -498,8 +498,8 @@ y ey: baby, happy, sunny, key, money
 15. Money is in my bag.
 16. Read to me.
 17. A tree has a leaf.
-18. Seed in my hand.
-19. Feet on sand.
+18. A seed is in my hand.
+19. My feet are on sand.
 20. Happy baby, happy me.
 
 Unit 6: Long i
@@ -741,7 +741,7 @@ wh: whale, wheel, what, when, white
 17. Watch the ship.
 18. The ship has a wheel.
 19. Chop, then stop.
-20. A fish and a shell.
+20. I see a fish and a shell.
 
 Unit 5: Digraphs & Blends
 单词列表：
@@ -873,11 +873,11 @@ s: rose, jeans, legs, nose
 11. My legs can run.
 12. My nose is OK.
 13. Ice on my leg.
-14. A big city.
-15. A gem and rice.
+14. That is a big city.
+15. I see a gem and rice.
 16. A giraffe is big.
 17. A rose is red.
-18. Pencil in my bag.
+18. A pencil is in my bag.
 19. My nose is in my face.
 20. Ice cream is nice.
 
@@ -953,7 +953,7 @@ u: bush, put, pull, full, push
 17. A boy has a toy.
 18. Oil on the book.
 19. Put the coin in.
-20. Joy at home.
+20. We have joy at home.
 
 Unit 3: AU/AW & OR Sounds
 单词列表：
@@ -978,7 +978,7 @@ oar: roar, oar, board, soar, roast
 5. The lawn is green.
 6. A ball is big.
 7. The wall is tall.
-8. A small dog.
+8. That is a small dog.
 9. Water is cold.
 10. Wash the cup.
 11. I see a horse.
@@ -988,8 +988,8 @@ oar: roar, oar, board, soar, roast
 15. An oar is in it.
 16. No, not on the wall.
 17. Wash sauce off.
-18. A small ball.
-19. A horse and corn.
+18. That is a small ball.
+19. I see a horse and corn.
 20. I saw a horse.
 
 Unit 4: AIR/EAR Sounds
@@ -1057,10 +1057,10 @@ u: music, unit, human, humor, pupil
 14. Music is on.
 15. This unit is new.
 16. Baby and me can play.
-17. Paper on the table.
+17. Paper is on the table.
 18. She can play.
 19. I like music.
-20. An acorn on the table.
+20. An acorn is on the table.
 
 Unit 6: Schwa Sound
 单词列表：
@@ -1093,10 +1093,10 @@ schwa o: monkey, doctor, color, cotton, come
 13. Color it with a red pen.
 14. Cotton is soft.
 15. Come with me.
-16. A zebra and a panda.
+16. I see a zebra and a panda.
 17. The doctor is here.
-18. Pencil on paper.
-19. Lemon and banana.
+18. A pencil is on paper.
+19. I see lemon and banana.
 20. The monkey is home.
 
 Unit 7: Silent Letters
@@ -1133,8 +1133,8 @@ st: ghost, listen, castle, fasten, whistle
 16. Knock at the castle.
 17. Write my name.
 18. A ghost is here.
-19. Cake on my plate.
-20. My thumb on my knee.
+19. Cake is on my plate.
+20. My thumb is on my knee.
 
 Unit 8: Word Endings
 单词列表：
