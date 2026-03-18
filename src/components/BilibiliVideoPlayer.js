@@ -23,11 +23,17 @@ const BilibiliVideoPlayer = ({ videoUrl, visible, onClose, title }) => {
     const bvMatch = url.match(/BV[a-zA-Z0-9]+/);
     if (bvMatch) {
       const bvid = bvMatch[0];
-      return `https://player.bilibili.com/player.html?bvid=${bvid}&high_quality=1&danmaku=0`;
+      // Add autoplay=1 and muted=1 (muted may be required for autoplay on some platforms)
+      return `https://player.bilibili.com/player.html?bvid=${bvid}&high_quality=1&danmaku=0&autoplay=1&muted=0`;
     }
 
     // If it's already an embed URL, return it
     if (url.includes('player.bilibili.com')) {
+      // Ensure autoplay parameters are present
+      if (!url.includes('autoplay=')) {
+        const separator = url.includes('?') ? '&' : '?';
+        return url + separator + 'autoplay=1&muted=0';
+      }
       return url;
     }
 
@@ -68,6 +74,23 @@ const BilibiliVideoPlayer = ({ videoUrl, visible, onClose, title }) => {
       );
     }
 
+    // JavaScript to auto-click play button as fallback
+    const injectedJavaScript = `
+      (function() {
+        // Try to auto-play by clicking the play button
+        setTimeout(function() {
+          var playButton = document.querySelector('.bpx-player-ctrl-btn.bpx-player-ctrl-play') ||
+                           document.querySelector('.play-btn') ||
+                           document.querySelector('.play-button') ||
+                           document.querySelector('button[title*="play" i]');
+          if (playButton) {
+            playButton.click();
+          }
+        }, 1500);
+      })();
+      true;
+    `;
+
     return (
       <WebView
         source={{ uri: embedUrl }}
@@ -79,6 +102,15 @@ const BilibiliVideoPlayer = ({ videoUrl, visible, onClose, title }) => {
         domStorageEnabled={true}
         allowsFullscreenVideo={true}
         mixedContentMode="compatibility"
+        // iOS: Disable user action requirement for media playback
+        mediaPlaybackRequiresUserAction={false}
+        // Android: Also set via the same prop (supported in newer versions)
+        androidHardwareAccelerationDisabled={false}
+        // Inject JavaScript to auto-click play button as fallback
+        injectedJavaScript={injectedJavaScript}
+        // For older Android versions compatibility
+        setBuiltInZoomControls={false}
+        displayZoomControls={false}
       />
     );
   };
