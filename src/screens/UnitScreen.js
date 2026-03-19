@@ -117,10 +117,16 @@ const WordHighlight = ({ word, highlight }) => {
       });
     }
 
+    // Handle schwa patterns (schwa a, schwa e, etc.) - extract just the letter part
+    let actualHighlight = highlight;
+    if (highlight.startsWith('schwa ')) {
+      actualHighlight = highlight.split(' ')[1]; // Get 'a', 'e', etc.
+    }
+
     // Standard highlighting
     const letters = word.split('');
     const lowerWord = word.toLowerCase();
-    const lowerHighlight = highlight.toLowerCase();
+    const lowerHighlight = actualHighlight.toLowerCase();
     const startIndex = lowerWord.indexOf(lowerHighlight);
 
     if (startIndex === -1) {
@@ -128,7 +134,7 @@ const WordHighlight = ({ word, highlight }) => {
     }
 
     return letters.map((letter, index) => {
-      const isHighlighted = index >= startIndex && index < startIndex + highlight.length;
+      const isHighlighted = index >= startIndex && index < startIndex + actualHighlight.length;
       return (
         <Text key={index} style={isHighlighted ? styles.highlightedLetter : styles.letter}>
           {letter}
