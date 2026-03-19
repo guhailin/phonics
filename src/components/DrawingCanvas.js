@@ -192,6 +192,15 @@ const DrawingCanvas = ({ visible, onClose, exampleHtml, color }) => {
   const [currentTool, setCurrentTool] = useState('brush'); // 'brush' or 'eraser'
   const canvasLayout = useRef(null);
 
+  // Reset canvas state when visible changes to true (opening a new canvas)
+  React.useEffect(() => {
+    if (visible) {
+      setPaths([]);
+      setHistory([]);
+      setCurrentPath([]);
+    }
+  }, [visible]);
+
   // Save current state to history
   const saveToHistory = useCallback((currentPaths) => {
     setHistory((prev) => {
