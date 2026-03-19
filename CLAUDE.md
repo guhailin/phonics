@@ -4,9 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **React Native** mobile application for teaching phonics to children, based on Oxford Phonics World curriculum (Level 1-5). It was migrated from a pure web frontend project to React Native using Expo.
+This is a **React Native** mobile application for teaching phonics to children, based on Oxford Phonics World curriculum (Level 1-5). It was migrated from a pure web frontend project to React Native using Expo and now includes enhanced features like video integration and drawing canvas.
 
 **Critical Requirement**: Word cards and example sentences must strictly follow the data and order defined in `phonics.md`. This is the single source of truth for all content.
+
+**App Name**: Phonics World
+**Version**: 1.0.0
 
 ## Tech Stack
 
@@ -15,8 +18,11 @@ This is a **React Native** mobile application for teaching phonics to children, 
 - **State Management**: React Context API (AppContext)
 - **Storage**: @react-native-async-storage/async-storage
 - **Speech**: expo-speech (TTS)
-- **Audio**: expo-av (for future audio playback)
+- **Audio/Video**: expo-av, react-native-webview
+- **Video**: Bilibili video integration (186 educational videos)
+- **Drawing**: react-native-svg for drawing canvas
 - **UI**: React Native built-in components + react-native-vector-icons
+- **Font**: Custom SassoonPrimary child-friendly font
 
 ## Running the Application
 
@@ -30,22 +36,23 @@ npm start
 expo start
 
 # Run on specific platform
-npm run ios      # iOS simulator
-npm run android  # Android emulator
+npm run ios      # iOS (expo run:ios)
+npm run android  # Android (expo run:android)
 npm run web      # Web browser
 ```
 
 ## Project Structure
 
 ```
-/Users/e99g41y/worksapce/phonics_rn/
+/Users/e99g41y/worksapce/phonics/
 ├── App.js                      # App entry point with navigation setup
 ├── app.json                    # Expo configuration
 ├── index.js                    # Main entry (expo/AppEntry)
 ├── package.json                # Dependencies
 ├── phonics.md                  # Source of truth for curriculum data
-├── assets/                     # Static assets (images, fonts)
+├── assets/                     # Static assets (images, fonts, icons)
 ├── ios/                        # iOS native project (expo prebuild)
+├── android/                    # Android native project (expo prebuild)
 └── src/
     ├── contexts/
     │   └── AppContext.js       # Global state management (React Context)
@@ -54,16 +61,28 @@ npm run web      # Web browser
     ├── screens/
     │   ├── HomeScreen.js       # Level selection screen
     │   ├── LevelScreen.js      # Unit selection for a level
-    │   ├── UnitScreen.js       # Word cards and patterns
+    │   ├── UnitScreen.js       # Word cards, patterns, videos (with Bottom Tab Navigator)
     │   ├── ReviewScreen.js     # Flashcard review mode
     │   ├── ExploreScreen.js    # Extended word exploration
-    │   └── SettingsScreen.js   # App settings (speech, etc.)
+    │   ├── SettingsScreen.js   # App settings (speech, etc.)
+    │   └── FontTestScreen.js   # Font testing screen
     ├── services/
     │   ├── SpeechService.js    # TTS using expo-speech
-    │   └── StorageService.js   # AsyncStorage wrapper
+    │   ├── StorageService.js   # AsyncStorage wrapper
+    │   └── VideoService.js     # Video service utilities
+    ├── components/
+    │   ├── BilibiliVideoPlayer.js  # Bilibili video player component
+    │   ├── DrawingCanvas.js         # Drawing canvas for practice
+    │   ├── VideoPlayer.js           # Video player component
+    │   ├── common/                  # Common UI components
+    │   ├── examples/                # Example sentence components
+    │   ├── review/                  # Review mode components
+    │   └── words/                   # Word card components
     └── assets/data/
         ├── phonicsData.js      # Core curriculum data (matches phonics.md)
-        └── wordInfo.js         # Word phonetics and definitions
+        ├── wordInfo.js         # Word phonetics and definitions
+        ├── bilibiliVideos.js   # Bilibili video mappings
+        └── videoInfo.js        # Video information data
 ```
 
 ## Code Architecture
@@ -74,10 +93,15 @@ npm run web      # Web browser
 Home (Stack Navigator root)
 ├── HomeScreen           # Level 1-5 selection
 ├── LevelScreen          # Units for selected level
-├── UnitScreen           # Word cards and patterns
+├── UnitScreen           # Word cards, examples, videos, drawing (with Bottom Tab Navigator)
+│   ├── Words Tab        # Word cards display
+│   ├── Examples Tab     # Example sentences
+│   ├── Videos Tab       # Bilibili video player
+│   └── Drawing Tab      # Drawing canvas for practice
 ├── ReviewScreen         # Flashcard review mode
 ├── ExploreScreen        # Extended word exploration
-└── SettingsScreen       # App settings
+├── SettingsScreen       # App settings (speech rate/pitch)
+└── FontTestScreen       # Font testing screen
 ```
 
 ### Data Flow Pattern
@@ -127,27 +151,23 @@ Each Level contains 8 Units. Each Unit has:
   currentLevel,      // Current selected level (e.g., 'level1')
   currentUnit,       // Current selected unit (e.g., 'unit1')
 
-  // Review mode state
-  reviewWords,       // Array of words in review mode
-  currentReviewIndex,
+  // Speech configuration
+  speechConfig,      // { rate, pitch, volume, voice }
+  updateSpeechConfig,
 
-  // Explore mode state
-  exploreWords,      // Array of words in explore mode
-  currentExploreIndex,
+  // Favorites
+  favorites,         // Array of favorite words
+  toggleFavorite,
 
-  // Example sentences
-  currentExamples,
-  currentExampleIndex,
+  // Helper methods
+  speakWord,         // Speak a word with current speech config
+
+  // Loading state
+  isLoading,
 
   // Actions
   setCurrentLevel,
   setCurrentUnit,
-  setReviewWords,
-  setCurrentReviewIndex,
-  setExploreWords,
-  setCurrentExploreIndex,
-  setCurrentExamples,
-  setCurrentExampleIndex,
 }
 ```
 
@@ -178,6 +198,32 @@ Features:
   - Detects voiceless consonants (p, t, k, s, f, sh, ch, th) at word end
   - Adds extra pauses for words ending with voiceless consonants: `word...   ...   ...`
   - Adds moderate pauses for other words: `word...   ...`
+
+## Enhanced Features
+
+### Bilibili Video Integration
+- **186 educational videos** mapped to all 40 units
+- Videos accessible via the **Videos tab** in UnitScreen
+- Components: `BilibiliVideoPlayer.js`, `VideoPlayer.js`
+- Data: `bilibiliVideos.js` (video mappings), `videoInfo.js` (video metadata)
+- Uses `react-native-webview` for embedded video playback
+
+### Drawing Canvas
+- **Interactive drawing practice** via the **Drawing tab** in UnitScreen
+- Component: `DrawingCanvas.js`
+- Uses `react-native-svg` for vector drawing
+- Features: Multiple brush sizes, color picker, clear canvas
+
+### Custom Font
+- **SassoonPrimary** font - child-friendly typeface designed for early readers
+- Loaded via `expo-font` in App.js
+- Applied to navigation headers and key UI elements
+- Font test screen available at `FontTestScreen`
+
+### Favorites System
+- Users can bookmark favorite words
+- Persisted via AsyncStorage
+- Managed through AppContext: `favorites` array and `toggleFavorite()` method
 
 ## Storage Service
 
@@ -240,6 +286,11 @@ STORAGE_KEYS = {
   SPEECH_CONFIG: '@phonics_speech_config',
   FAVORITES: '@phonics_favorites',
   PROGRESS: '@phonics_progress',
+}
+
+// Font constants
+FONTS = {
+  primary: 'SassoonPrimary',
 }
 ```
 
@@ -304,6 +355,7 @@ Before committing changes to `phonicsData.js`:
 - [ ] Level 1 has no examples; Levels 2-5 have 160 examples total (20 per unit)
 - [ ] All example sentences have proper HTML span formatting
 - [ ] `wordInfo.js` has entries for all 768 curated words
+- [ ] `bilibiliVideos.js` has video mappings for all 40 units (186 videos total)
 
 ## Common Issues
 
