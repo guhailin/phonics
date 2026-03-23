@@ -1,4 +1,4 @@
-# Phonics - 儿童自然拼读学习应用
+# Phonics World - 儿童自然拼读学习应用
 
 一款基于 **Oxford Phonics World** 课程体系开发的 React Native 移动应用，帮助儿童学习自然拼读（Phonics）。支持 iOS、Android 和 Web 平台。
 
@@ -11,26 +11,30 @@
 ## ✨ 功能特点
 
 ### 📚 分级课程体系（Level 1-5）
-| 等级 | 主题 | 内容 |
-|------|------|------|
-| **Level 1** | The Alphabet | 26个字母音 |
-| **Level 2** | Short Vowels | 短元音（a, e, i, o, u）|
-| **Level 3** | Long Vowels | 长元音（Magic E）|
-| **Level 4** | Consonant Blends | 辅音组合 |
-| **Level 5** | Letter Combinations | 字母组合 |
+| 等级 | 主题 | 副标题 | 内容 |
+|------|------|--------|------|
+| **Level 1** | The Alphabet | 字母音 | 26个字母音 |
+| **Level 2** | Short Vowels | 短元音 | CVC拼读（a, e, i, o, u）|
+| **Level 3** | Long Vowels | 长元音 | Magic E 规则 |
+| **Level 4** | Consonant Blends | 辅音组合 | 辅音连读 |
+| **Level 5** | Letter Combinations | 字母组合 | 复合字母发音 |
 
 ### 🎯 核心功能
 - **单词卡片** - 每个 Unit 展示精选单词，配有音标、中文释义和表情符号
-- **例句练习** - 每个单词配有例句，帮助理解用法
-- **语音朗读** - 支持 TTS 语音朗读单词和例句（可调节语速）
+- **例句练习** - 160个例句帮助理解单词用法（Level 2-5）
+- **语音朗读** - TTS 语音朗读单词和例句，针对尾音自动优化停顿
+- **视频教程** - 集成 Bilibili 教育视频（186个视频覆盖全部40个单元）
+- **画板练习** - 交互式画板，支持多画笔尺寸和颜色选择
 - **复习模式** - 闪卡式复习，巩固学习成果
-- **探索模式** - 更多扩展单词，拓展词汇量
+- **探索模式** - 820个扩展单词，拓展词汇量
+- **收藏功能** - 收藏喜欢的单词，方便复习
 - **学习进度** - 自动保存学习进度
 
 ### 🎨 界面特色
 - 色彩丰富的分级主题（紫色、绿色、蓝色、橙色、红色）
-- 适合儿童的大字体、大按钮设计
-- 直观的手势操作和导航
+- 儿童友好的 **SassoonPrimary** 专用字体
+- 大字体、大按钮设计，适合儿童操作
+- 底部标签导航，直观切换单词/例句/视频/画板
 - 支持横竖屏适配
 
 ---
@@ -40,12 +44,14 @@
 | 类别 | 技术 |
 |------|------|
 | **框架** | React Native 0.81.5 + Expo ~54.0.33 |
-| **导航** | React Navigation v7 |
+| **导航** | React Navigation v7 (Stack + Bottom Tabs) |
 | **状态管理** | React Context API |
 | **存储** | @react-native-async-storage/async-storage |
 | **语音** | expo-speech (TTS) |
-| **音频** | expo-av |
+| **音频/视频** | expo-av, react-native-webview |
+| **图形** | react-native-svg (画板) |
 | **图标** | react-native-vector-icons |
+| **字体** | SassoonPrimary (儿童专用字体) |
 
 ---
 
@@ -62,7 +68,7 @@
 ```bash
 # 1. 克隆仓库
 git clone <repository-url>
-cd phonics_rn
+cd phonics
 
 # 2. 安装依赖
 npm install
@@ -91,7 +97,7 @@ npm run web
 ## 📁 项目结构
 
 ```
-phonics_rn/
+phonics/
 ├── App.js                      # 应用入口（导航配置）
 ├── app.json                    # Expo 配置
 ├── index.js                    # 主入口
@@ -108,16 +114,28 @@ phonics_rn/
     ├── screens/
     │   ├── HomeScreen.js       # 首页（Level 选择）
     │   ├── LevelScreen.js      # 单元列表
-    │   ├── UnitScreen.js       # 单词卡片
+    │   ├── UnitScreen.js       # 单词卡片（含底部标签导航）
     │   ├── ReviewScreen.js     # 复习模式
     │   ├── ExploreScreen.js    # 探索模式
-    │   └── SettingsScreen.js   # 设置
+    │   ├── SettingsScreen.js   # 设置（语音调节）
+    │   └── FontTestScreen.js   # 字体测试
     ├── services/
-    │   ├── SpeechService.js    # 语音服务
-    │   └── StorageService.js   # 存储服务
+    │   ├── SpeechService.js    # 语音服务（TTS）
+    │   ├── StorageService.js   # 存储服务
+    │   └── VideoService.js     # 视频服务
+    ├── components/
+    │   ├── BilibiliVideoPlayer.js  # Bilibili 视频播放器
+    │   ├── DrawingCanvas.js        # 画板组件
+    │   ├── VideoPlayer.js          # 视频播放器
+    │   ├── common/                 # 通用UI组件
+    │   ├── examples/               # 例句组件
+    │   ├── review/                 # 复习模式组件
+    │   └── words/                  # 单词卡片组件
     └── assets/data/
-        ├── phonicsData.js      # 课程数据
-        └── wordInfo.js         # 单词音标和释义
+        ├── phonicsData.js      # 课程数据（768精选+820扩展）
+        ├── wordInfo.js         # 单词音标和释义
+        ├── bilibiliVideos.js   # Bilibili视频映射（186个）
+        └── videoInfo.js        # 视频元数据
 ```
 
 ---
@@ -128,9 +146,10 @@ phonics_rn/
 
 | 文件 | 说明 | 数据量 |
 |------|------|--------|
-| `phonics.md` | 课程数据参考文档 | - |
+| `phonics.md` | 课程数据参考文档（唯一数据源） | - |
 | `phonicsData.js` | 主数据结构 | 768 精选单词 + 820 扩展单词 |
 | `wordInfo.js` | 单词音标和中文释义 | 768 条 |
+| `bilibiliVideos.js` | Bilibili视频ID映射 | 186 个视频 |
 
 ### 数据结构示例
 
@@ -138,14 +157,14 @@ phonics_rn/
 {
   id: 'unit1',
   name: 'Unit 1: Short a',
-  patterns: ['a', 'am', 'an'],      // 发音模式
+  patterns: ['a', 'am', 'an'],      // 发音模式（决定显示顺序）
   words: [
     { word: 'ant', highlight: 'a', emoji: '🐜' },
     { word: 'yam', highlight: 'am', emoji: '🍠' },
     // ...
   ],
   exploreWords: [ /* 扩展单词 */ ],
-  examples: [ /* 例句 */ ]
+  examples: [ /* 例句（HTML格式） */ ]
 }
 ```
 
@@ -153,12 +172,31 @@ phonics_rn/
 
 ## 🔊 语音功能
 
-应用使用 `expo-speech` 提供 TTS 功能：
+应用使用 `expo-speech` 提供 TTS 功能，针对儿童学习进行了特别优化：
 
 - **语速调节**: 0.1 - 0.8（默认 0.35，适合儿童学习）
 - **音调**: 1.0（自然音调）
-- **智能停顿**: 针对尾音（如 t, p, k）自动添加额外停顿
+- **智能停顿**: 自动检测尾音（p, t, k, s等），添加额外停顿确保清晰
 - **语音偏好**: Premium > Enhanced > Compact
+- **默认语音**: Samantha (en-US) 或最佳可用英语语音
+
+---
+
+## 🎬 视频功能
+
+- **186个教育视频** 映射到全部40个单元
+- 通过 Unit 页面的 **Videos** 标签访问
+- 使用 Bilibili 嵌入式播放器
+- 支持自动播放
+
+---
+
+## 🎨 画板功能
+
+- 交互式矢量画板，使用 react-native-svg
+- 支持多画笔尺寸选择
+- 颜色选择器
+- 一键清除功能
 
 ---
 
@@ -176,9 +214,11 @@ phonics_rn/
 
 ```javascript
 LEVEL_COLORS = {
-  level1: '#9C27B0', // 紫色
-  level2: '#4CAF50', // 绿色
-  // ...
+  level1: '#9C27B0', // 紫色 - 字母音
+  level2: '#4CAF50', // 绿色 - 短元音
+  level3: '#2196F3', // 蓝色 - 长元音
+  level4: '#FF9800', // 橙色 - 辅音组合
+  level5: '#F44336', // 红色 - 字母组合
 }
 ```
 
@@ -188,7 +228,7 @@ LEVEL_COLORS = {
 # 清除 Expo 缓存
 npx expo start --clear
 
-# 重置 node_modules
+# 重置 node_modules 缓存
 rm -rf node_modules/.cache
 ```
 
@@ -196,14 +236,29 @@ rm -rf node_modules/.cache
 
 ## 📋 课程统计
 
-| 等级 | Units | 精选单词 | 扩展单词 | 例句 |
-|------|-------|----------|----------|------|
-| Level 1 | 8 | ~100 | ~100 | - |
-| Level 2 | 8 | ~150 | ~150 | 160 |
-| Level 3 | 8 | ~150 | ~150 | - |
-| Level 4 | 8 | ~200 | ~200 | - |
-| Level 5 | 8 | ~168 | ~220 | - |
-| **总计** | **40** | **768** | **820** | **160** |
+| 等级 | Units | 精选单词 | 扩展单词 | 例句 | 视频 |
+|------|-------|----------|----------|------|------|
+| Level 1 | 8 | 100 | 100 | - | 38 |
+| Level 2 | 8 | 150 | 150 | 160 | 35 |
+| Level 3 | 8 | 150 | 150 | - | 40 |
+| Level 4 | 8 | 200 | 200 | - | 38 |
+| Level 5 | 8 | 168 | 220 | - | 35 |
+| **总计** | **40** | **768** | **820** | **160** | **186** |
+
+---
+
+## 🔄 从 Web 迁移到 React Native
+
+本项目已从纯 Web 前端迁移到 React Native：
+
+| Web (旧版) | React Native (当前) |
+|-----------|---------------------|
+| Vanilla JS + HTML + CSS | React Native + Expo |
+| Web Speech API | expo-speech |
+| LocalStorage | @react-native-async-storage/async-storage |
+| DOM 操作 | React 组件 |
+| CSS 样式 | StyleSheet |
+| index.html 页面 | React Navigation 屏幕 |
 
 ---
 
@@ -216,5 +271,7 @@ MIT License
 ## 🙏 致谢
 
 - 课程内容基于 **Oxford Phonics World**
+- 字体：**SassoonPrimary**（儿童专用字体）
 - 图标来自 [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - 开发框架 [Expo](https://expo.dev/)
+- 视频内容来自 Bilibili
