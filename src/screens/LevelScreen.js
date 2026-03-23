@@ -40,11 +40,6 @@ const LevelScreen = ({ route, navigation }) => {
             </View>
           ))}
         </View>
-        <View style={styles.statsContainer}>
-          <Text style={styles.statsText}>
-            {unit.words.length} words
-          </Text>
-        </View>
       </TouchableOpacity>
     );
   };
@@ -139,16 +134,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 12,
     fontWeight: '600',
-    fontFamily: 'SassoonPrimary',
-  },
-  statsContainer: {
-    borderTopWidth: 1,
-    borderTopColor: '#eee',
-    paddingTop: 8,
-  },
-  statsText: {
-    fontSize: 12,
-    color: '#888',
     fontFamily: 'SassoonPrimary',
   },
 });
