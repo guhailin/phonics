@@ -12,7 +12,6 @@ import HomeScreen from './src/screens/HomeScreen';
 import LevelScreen from './src/screens/LevelScreen';
 import UnitScreen from './src/screens/UnitScreen';
 import ReviewScreen from './src/screens/ReviewScreen';
-import ExploreScreen from './src/screens/ExploreScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import FontTestScreen from './src/screens/FontTestScreen';
 
@@ -84,11 +83,6 @@ const App = () => {
               name="Review"
               component={ReviewScreen}
               options={{ title: 'Review Mode' }}
-            />
-            <Stack.Screen
-              name="Explore"
-              component={ExploreScreen}
-              options={{ title: 'Explore Words' }}
             />
             <Stack.Screen
               name="Settings"

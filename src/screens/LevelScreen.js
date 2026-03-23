@@ -42,7 +42,7 @@ const LevelScreen = ({ route, navigation }) => {
         </View>
         <View style={styles.statsContainer}>
           <Text style={styles.statsText}>
-            {unit.words.length} words • {unit.exploreWords?.length || 0} explore
+            {unit.words.length} words
           </Text>
         </View>
       </TouchableOpacity>
