@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -9,27 +9,13 @@ import {
 } from 'react-native';
 import { LEVEL_COLORS } from '../constants';
 import phonicsData from '../assets/data/phonicsData';
-import { getVideoFile } from '../assets/data/videoInfo';
-import VideoPlayer from '../components/VideoPlayer';
 
 const LevelScreen = ({ route, navigation }) => {
   const { levelId } = route.params;
   const levelData = phonicsData[levelId];
   const color = LEVEL_COLORS[levelId];
-  const [selectedVideo, setSelectedVideo] = useState(null);
-  const [videoVisible, setVideoVisible] = useState(false);
-
-  const handlePlayVideo = (unitId) => {
-    const videoFile = getVideoFile(levelId, unitId);
-    if (videoFile) {
-      setSelectedVideo(videoFile);
-      setVideoVisible(true);
-    }
-  };
 
   const renderUnitItem = ({ item: unit }) => {
-    const videoFile = getVideoFile(levelId, unit.id);
-    const hasVideo = !!videoFile;
 
     return (
       <TouchableOpacity
@@ -45,17 +31,6 @@ const LevelScreen = ({ route, navigation }) => {
       >
         <View style={styles.unitHeader}>
           <Text style={styles.unitName}>{unit.name}</Text>
-          {hasVideo && (
-            <TouchableOpacity
-              style={[styles.videoButton, { backgroundColor: color }]}
-              onPress={(e) => {
-                e.stopPropagation();
-                handlePlayVideo(unit.id);
-              }}
-            >
-              <Text style={styles.videoButtonText}>▶ Video</Text>
-            </TouchableOpacity>
-          )}
         </View>
         <Text style={styles.patternLabel}>Patterns:</Text>
         <View style={styles.patternsContainer}>
@@ -87,15 +62,6 @@ const LevelScreen = ({ route, navigation }) => {
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.listContainer}
         style={styles.flatList}
-      />
-
-      <VideoPlayer
-        videoFile={selectedVideo}
-        visible={videoVisible}
-        onClose={() => {
-          setVideoVisible(false);
-          setSelectedVideo(null);
-        }}
       />
     </SafeAreaView>
   );
@@ -150,17 +116,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     flex: 1,
-    fontFamily: 'SassoonPrimary',
-  },
-  videoButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
-  },
-  videoButtonText: {
-    color: '#fff',
-    fontSize: 12,
-    fontWeight: 'bold',
     fontFamily: 'SassoonPrimary',
   },
   patternLabel: {
