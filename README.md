@@ -92,6 +92,37 @@ npm run android
 npm run web
 ```
 
+### Xcode 运行与同步
+
+如果使用 Xcode 直接运行 iOS 工程，常用命令如下：
+
+```bash
+# 安装 JS 依赖
+npm install
+
+# 刷新 iOS Pods，修复原生依赖路径变化问题
+cd ios
+pod install
+cd ..
+
+# 启动 Expo / Metro，供 Xcode 的 Debug 包加载 JS
+npx expo start --dev-client
+
+# 或普通 Expo 开发服务器
+npm start
+
+# 重新生成并同步原生 iOS 工程（适合修改 app.json 后）
+npx expo run:ios
+
+# 重新预构建 iOS 工程并清理旧原生配置（适合图标、启动图、插件配置变更后）
+npx expo prebuild -p ios --clean
+```
+
+说明：
+- Xcode 运行 `Debug` 时，需要先启动 Metro，否则 App 会报 `No script URL provided`
+- Xcode 运行 `Release` 时，会使用内置 bundle，一般不依赖 Metro
+- 修改 [app.json](./app.json) 中的 `icon`、`splash`、`plugins` 后，建议执行 `npx expo run:ios` 或 `npx expo prebuild -p ios --clean` 同步到原生工程
+
 ---
 
 ## 📁 项目结构
