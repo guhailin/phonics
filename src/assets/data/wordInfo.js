@@ -699,7 +699,7 @@ export const wordInfo = {
   growl: { phonetic: '/ɡraʊl/', definition: 'v. 咆哮' },
   prowl: { phonetic: '/praʊl/', definition: 'v. 潜行' },
 
-  // Level 1 exploreWords - 探索单词
+  // Additional word entries
   ax: { phonetic: '/æks/', definition: 'n. 斧头' },
   add: { phonetic: '/æd/', definition: 'v. 增加' },
   and: { phonetic: '/ænd/', definition: 'conj. 和' },

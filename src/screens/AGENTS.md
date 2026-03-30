@@ -13,7 +13,6 @@
 | `LevelScreen.js` | 单元选择页面（选中级别后的单元列表） |
 | `UnitScreen.js` | 单词卡片和例句页面（包含单词和例句两个标签页） |
 | `ReviewScreen.js` | 抽认卡复习模式 |
-| `ExploreScreen.js` | 扩展单词探索 |
 | `SettingsScreen.js` | 应用设置（语音配置等） |
 | `FontTestScreen.js` | 字体测试页面（用于调试字体显示） |
 
@@ -35,7 +34,6 @@ Home (Stack Navigator root)
 ├── LevelScreen          → 选择单元
 ├── UnitScreen           → 单词卡片 + 例句 (Tab Navigator)
 ├── ReviewScreen         → 复习模式
-├── ExploreScreen        → 探索模式
 └── SettingsScreen       → 设置页面
 ```
 

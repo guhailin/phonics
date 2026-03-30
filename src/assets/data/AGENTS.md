@@ -25,7 +25,7 @@
 
 ### Data Validation Checklist
 在提交 `phonicsData.js` 的更改前：
-- [ ] 单词数量与 `phonics.md` 匹配（768 个精选 + 820 个探索）
+- [ ] 单词数量与 `phonics.md` 匹配（768 个精选）
 - [ ] 每个单元有正确的 `patterns` 顺序
 - [ ] 所有 `highlight` 值与 patterns 匹配
 - [ ] Level 1 没有例句；Level 2-5 共有 160 条例句（每单元 20 条）

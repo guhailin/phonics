@@ -63,7 +63,6 @@ npm run web      # Web browser
     │   ├── LevelScreen.js      # Unit selection for a level
     │   ├── UnitScreen.js       # Word cards, patterns, videos (with Bottom Tab Navigator)
     │   ├── ReviewScreen.js     # Flashcard review mode
-    │   ├── ExploreScreen.js    # Extended word exploration
     │   ├── SettingsScreen.js   # App settings (speech, etc.)
     │   └── FontTestScreen.js   # Font testing screen
     ├── services/
@@ -99,7 +98,6 @@ Home (Stack Navigator root)
 │   ├── Videos Tab       # Bilibili video player
 │   └── Drawing Tab      # Drawing canvas for practice
 ├── ReviewScreen         # Flashcard review mode
-├── ExploreScreen        # Extended word exploration
 ├── SettingsScreen       # App settings (speech rate/pitch)
 └── FontTestScreen       # Font testing screen
 ```
@@ -117,7 +115,6 @@ Home (Stack Navigator root)
 Each Level contains 8 Units. Each Unit has:
 - `patterns`: Array of phonics patterns (determines word display order)
 - `words`: Curated words with `{ word, highlight, emoji }`
-- `exploreWords`: Additional practice words with `{ word, highlight }`
 - `examples`: Array of HTML-formatted sentences (Level 1 has none)
 
 ```javascript
@@ -129,11 +126,6 @@ Each Level contains 8 Units. Each Unit has:
   words: [
     { word: 'ant', highlight: 'a', emoji: '🐜' },
     { word: 'yam', highlight: 'am', emoji: '🍠' },
-    // ...
-  ],
-  exploreWords: [
-    { word: 'ant', highlight: 'a' },
-    { word: 'yam', highlight: 'am' },
     // ...
   ],
   examples: [
@@ -349,10 +341,10 @@ The highlight logic will highlight 'a' and final 'e' separately.
 
 Before committing changes to `phonicsData.js`:
 
-- [ ] Word count matches `phonics.md` (768 curated + 820 explore)
+- [ ] Word count matches `phonics.md` (768 curated words)
 - [ ] Each Unit has correct `patterns` order
 - [ ] All `highlight` values match patterns
-- [ ] Level 1 has no examples; Levels 2-5 have 160 examples total (20 per unit)
+- [ ] Level 1 has no examples; Levels 2-5 have 640 examples total (20 per unit)
 - [ ] All example sentences have proper HTML span formatting
 - [ ] `wordInfo.js` has entries for all 768 curated words
 - [ ] `bilibiliVideos.js` has video mappings for all 40 units (186 videos total)
