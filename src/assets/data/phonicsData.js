@@ -1,2615 +1,8516 @@
 // Oxford Phonics World 数据结构
 
 const phonicsData = {
-  level1: {
-    id: 'level1',
-    name: 'Level 1',
-    title: 'The Alphabet',
-    subtitle: '字母音',
-    color: '#9C27B0',
-    emoji: '🟣',
-    units: [
+  "level1": {
+    "id": "level1",
+    "name": "Level 1",
+    "title": "The Alphabet",
+    "subtitle": "字母音",
+    "color": "#9C27B0",
+    "emoji": "🟣",
+    "units": [
       {
-        id: 'unit1',
-        name: 'Unit 1: Aa, Bb, Cc',
-        patterns: ['a', 'b', 'c'],
-        words: [
-          { word: 'apple', highlight: 'a', emoji: '🍎' },
-          { word: 'ant', highlight: 'a', emoji: '🐜' },
-          { word: 'alligator', highlight: 'a', emoji: '🐊' },
-          { word: 'bear', highlight: 'b', emoji: '🐻' },
-          { word: 'bird', highlight: 'b', emoji: '🐦' },
-          { word: 'bed', highlight: 'b', emoji: '🛏️' },
-          { word: 'cat', highlight: 'c', emoji: '🐱' },
-          { word: 'cup', highlight: 'c', emoji: '☕' },
-          { word: 'car', highlight: 'c', emoji: '🚗' }
+        "id": "unit1",
+        "name": "Unit 1: Aa, Bb, Cc",
+        "patterns": [
+          "a",
+          "b",
+          "c"
         ],
-        exploreWords: [
-          { word: 'apple', highlight: 'a' }, { word: 'ant', highlight: 'a' }, { word: 'alligator', highlight: 'a' }, { word: 'axe', highlight: 'a' }, { word: 'arrow', highlight: 'a' },
-          { word: 'bear', highlight: 'b' }, { word: 'bird', highlight: 'b' }, { word: 'bed', highlight: 'b' }, { word: 'boy', highlight: 'b' }, { word: 'banana', highlight: 'b' },
-          { word: 'cat', highlight: 'c' }, { word: 'cup', highlight: 'c' }, { word: 'car', highlight: 'c' }, { word: 'cap', highlight: 'c' }, { word: 'cake', highlight: 'c' }
+        "words": [
+          {
+            "word": "apple",
+            "highlight": "a",
+            "emoji": "🍎"
+          },
+          {
+            "word": "ant",
+            "highlight": "a",
+            "emoji": "🐜"
+          },
+          {
+            "word": "alligator",
+            "highlight": "a",
+            "emoji": "🐊"
+          },
+          {
+            "word": "bear",
+            "highlight": "b",
+            "emoji": "🐻"
+          },
+          {
+            "word": "bird",
+            "highlight": "b",
+            "emoji": "🐦"
+          },
+          {
+            "word": "bed",
+            "highlight": "b",
+            "emoji": "🛏️"
+          },
+          {
+            "word": "cat",
+            "highlight": "c",
+            "emoji": "🐱"
+          },
+          {
+            "word": "cup",
+            "highlight": "c",
+            "emoji": "☕"
+          },
+          {
+            "word": "car",
+            "highlight": "c",
+            "emoji": "🚗"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "apple",
+            "highlight": "a"
+          },
+          {
+            "word": "ant",
+            "highlight": "a"
+          },
+          {
+            "word": "alligator",
+            "highlight": "a"
+          },
+          {
+            "word": "axe",
+            "highlight": "a"
+          },
+          {
+            "word": "arrow",
+            "highlight": "a"
+          },
+          {
+            "word": "bear",
+            "highlight": "b"
+          },
+          {
+            "word": "bird",
+            "highlight": "b"
+          },
+          {
+            "word": "bed",
+            "highlight": "b"
+          },
+          {
+            "word": "boy",
+            "highlight": "b"
+          },
+          {
+            "word": "banana",
+            "highlight": "b"
+          },
+          {
+            "word": "cat",
+            "highlight": "c"
+          },
+          {
+            "word": "cup",
+            "highlight": "c"
+          },
+          {
+            "word": "car",
+            "highlight": "c"
+          },
+          {
+            "word": "cap",
+            "highlight": "c"
+          },
+          {
+            "word": "cake",
+            "highlight": "c"
+          }
         ]
       },
       {
-        id: 'unit2',
-        name: 'Unit 2: Dd, Ee, Ff',
-        patterns: ['d', 'e', 'f'],
-        words: [
-          { word: 'dog', highlight: 'd', emoji: '🐕' },
-          { word: 'duck', highlight: 'd', emoji: '🦆' },
-          { word: 'doll', highlight: 'd', emoji: '🧸' },
-          { word: 'egg', highlight: 'e', emoji: '🥚' },
-          { word: 'elbow', highlight: 'e', emoji: '💪' },
-          { word: 'elephant', highlight: 'e', emoji: '🐘' },
-          { word: 'fan', highlight: 'f', emoji: '🪭' },
-          { word: 'fish', highlight: 'f', emoji: '🐟' },
-          { word: 'frog', highlight: 'f', emoji: '🐸' }
+        "id": "unit2",
+        "name": "Unit 2: Dd, Ee, Ff",
+        "patterns": [
+          "d",
+          "e",
+          "f"
         ],
-        exploreWords: [
-          { word: 'dog', highlight: 'd' }, { word: 'duck', highlight: 'd' }, { word: 'doll', highlight: 'd' }, { word: 'dad', highlight: 'd' }, { word: 'desk', highlight: 'd' },
-          { word: 'egg', highlight: 'e' }, { word: 'elbow', highlight: 'e' }, { word: 'elephant', highlight: 'e' }, { word: 'envelope', highlight: 'e' }, { word: 'exit', highlight: 'e' },
-          { word: 'fan', highlight: 'f' }, { word: 'fish', highlight: 'f' }, { word: 'frog', highlight: 'f' }, { word: 'fox', highlight: 'f' }, { word: 'fork', highlight: 'f' }
+        "words": [
+          {
+            "word": "dog",
+            "highlight": "d",
+            "emoji": "🐕"
+          },
+          {
+            "word": "duck",
+            "highlight": "d",
+            "emoji": "🦆"
+          },
+          {
+            "word": "doll",
+            "highlight": "d",
+            "emoji": "🧸"
+          },
+          {
+            "word": "egg",
+            "highlight": "e",
+            "emoji": "🥚"
+          },
+          {
+            "word": "elbow",
+            "highlight": "e",
+            "emoji": "💪"
+          },
+          {
+            "word": "elephant",
+            "highlight": "e",
+            "emoji": "🐘"
+          },
+          {
+            "word": "fan",
+            "highlight": "f",
+            "emoji": "🪭"
+          },
+          {
+            "word": "fish",
+            "highlight": "f",
+            "emoji": "🐟"
+          },
+          {
+            "word": "frog",
+            "highlight": "f",
+            "emoji": "🐸"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "dog",
+            "highlight": "d"
+          },
+          {
+            "word": "duck",
+            "highlight": "d"
+          },
+          {
+            "word": "doll",
+            "highlight": "d"
+          },
+          {
+            "word": "dad",
+            "highlight": "d"
+          },
+          {
+            "word": "desk",
+            "highlight": "d"
+          },
+          {
+            "word": "egg",
+            "highlight": "e"
+          },
+          {
+            "word": "elbow",
+            "highlight": "e"
+          },
+          {
+            "word": "elephant",
+            "highlight": "e"
+          },
+          {
+            "word": "envelope",
+            "highlight": "e"
+          },
+          {
+            "word": "exit",
+            "highlight": "e"
+          },
+          {
+            "word": "fan",
+            "highlight": "f"
+          },
+          {
+            "word": "fish",
+            "highlight": "f"
+          },
+          {
+            "word": "frog",
+            "highlight": "f"
+          },
+          {
+            "word": "fox",
+            "highlight": "f"
+          },
+          {
+            "word": "fork",
+            "highlight": "f"
+          }
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3: Gg, Hh, Ii',
-        patterns: ['g', 'h', 'i'],
-        words: [
-          { word: 'goat', highlight: 'g', emoji: '🐐' },
-          { word: 'gift', highlight: 'g', emoji: '🎁' },
-          { word: 'gorilla', highlight: 'g', emoji: '🦍' },
-          { word: 'hat', highlight: 'h', emoji: '🎩' },
-          { word: 'horse', highlight: 'h', emoji: '🐴' },
-          { word: 'house', highlight: 'h', emoji: '🏠' },
-          { word: 'igloo', highlight: 'i', emoji: '🏔️' },
-          { word: 'iguana', highlight: 'i', emoji: '🦎' },
-          { word: 'ink', highlight: 'i', emoji: '🖊️' }
+        "id": "unit3",
+        "name": "Unit 3: Gg, Hh, Ii",
+        "patterns": [
+          "g",
+          "h",
+          "i"
         ],
-        exploreWords: [
-          { word: 'goat', highlight: 'g' }, { word: 'girl', highlight: 'g' }, { word: 'gift', highlight: 'g' }, { word: 'gorilla', highlight: 'g' }, { word: 'gum', highlight: 'g' },
-          { word: 'hat', highlight: 'h' }, { word: 'horse', highlight: 'h' }, { word: 'house', highlight: 'h' }, { word: 'hippopotamus', highlight: 'h' }, { word: 'hand', highlight: 'h' },
-          { word: 'igloo', highlight: 'i' }, { word: 'iguana', highlight: 'i' }, { word: 'ink', highlight: 'i' }, { word: 'insect', highlight: 'i' }, { word: 'in', highlight: 'i' }
+        "words": [
+          {
+            "word": "goat",
+            "highlight": "g",
+            "emoji": "🐐"
+          },
+          {
+            "word": "gift",
+            "highlight": "g",
+            "emoji": "🎁"
+          },
+          {
+            "word": "gorilla",
+            "highlight": "g",
+            "emoji": "🦍"
+          },
+          {
+            "word": "hat",
+            "highlight": "h",
+            "emoji": "🎩"
+          },
+          {
+            "word": "horse",
+            "highlight": "h",
+            "emoji": "🐴"
+          },
+          {
+            "word": "house",
+            "highlight": "h",
+            "emoji": "🏠"
+          },
+          {
+            "word": "igloo",
+            "highlight": "i",
+            "emoji": "🏔️"
+          },
+          {
+            "word": "iguana",
+            "highlight": "i",
+            "emoji": "🦎"
+          },
+          {
+            "word": "ink",
+            "highlight": "i",
+            "emoji": "🖊️"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "goat",
+            "highlight": "g"
+          },
+          {
+            "word": "girl",
+            "highlight": "g"
+          },
+          {
+            "word": "gift",
+            "highlight": "g"
+          },
+          {
+            "word": "gorilla",
+            "highlight": "g"
+          },
+          {
+            "word": "gum",
+            "highlight": "g"
+          },
+          {
+            "word": "hat",
+            "highlight": "h"
+          },
+          {
+            "word": "horse",
+            "highlight": "h"
+          },
+          {
+            "word": "house",
+            "highlight": "h"
+          },
+          {
+            "word": "hippopotamus",
+            "highlight": "h"
+          },
+          {
+            "word": "hand",
+            "highlight": "h"
+          },
+          {
+            "word": "igloo",
+            "highlight": "i"
+          },
+          {
+            "word": "iguana",
+            "highlight": "i"
+          },
+          {
+            "word": "ink",
+            "highlight": "i"
+          },
+          {
+            "word": "insect",
+            "highlight": "i"
+          },
+          {
+            "word": "in",
+            "highlight": "i"
+          }
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4: Jj, Kk, Ll',
-        patterns: ['j', 'k', 'l'],
-        words: [
-          { word: 'jam', highlight: 'j', emoji: '🍓' },
-          { word: 'jet', highlight: 'j', emoji: '✈️' },
-          { word: 'jelly', highlight: 'j', emoji: '🍮' },
-          { word: 'king', highlight: 'k', emoji: '👑' },
-          { word: 'kite', highlight: 'k', emoji: '🪁' },
-          { word: 'kangaroo', highlight: 'k', emoji: '🦘' },
-          { word: 'lion', highlight: 'l', emoji: '🦁' },
-          { word: 'lamp', highlight: 'l', emoji: '💡' },
-          { word: 'lemon', highlight: 'l', emoji: '🍋' }
+        "id": "unit4",
+        "name": "Unit 4: Jj, Kk, Ll",
+        "patterns": [
+          "j",
+          "k",
+          "l"
         ],
-        exploreWords: [
-          { word: 'jam', highlight: 'j' }, { word: 'jet', highlight: 'j' }, { word: 'jelly', highlight: 'j' }, { word: 'jacket', highlight: 'j' }, { word: 'jump', highlight: 'j' },
-          { word: 'king', highlight: 'k' }, { word: 'kite', highlight: 'k' }, { word: 'kangaroo', highlight: 'k' }, { word: 'key', highlight: 'k' }, { word: 'koala', highlight: 'k' },
-          { word: 'lion', highlight: 'l' }, { word: 'lamp', highlight: 'l' }, { word: 'lemon', highlight: 'l' }, { word: 'leaf', highlight: 'l' }, { word: 'leg', highlight: 'l' }
+        "words": [
+          {
+            "word": "jam",
+            "highlight": "j",
+            "emoji": "🍓"
+          },
+          {
+            "word": "jet",
+            "highlight": "j",
+            "emoji": "✈️"
+          },
+          {
+            "word": "jelly",
+            "highlight": "j",
+            "emoji": "🍮"
+          },
+          {
+            "word": "king",
+            "highlight": "k",
+            "emoji": "👑"
+          },
+          {
+            "word": "kite",
+            "highlight": "k",
+            "emoji": "🪁"
+          },
+          {
+            "word": "kangaroo",
+            "highlight": "k",
+            "emoji": "🦘"
+          },
+          {
+            "word": "lion",
+            "highlight": "l",
+            "emoji": "🦁"
+          },
+          {
+            "word": "lamp",
+            "highlight": "l",
+            "emoji": "💡"
+          },
+          {
+            "word": "lemon",
+            "highlight": "l",
+            "emoji": "🍋"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "jam",
+            "highlight": "j"
+          },
+          {
+            "word": "jet",
+            "highlight": "j"
+          },
+          {
+            "word": "jelly",
+            "highlight": "j"
+          },
+          {
+            "word": "jacket",
+            "highlight": "j"
+          },
+          {
+            "word": "jump",
+            "highlight": "j"
+          },
+          {
+            "word": "king",
+            "highlight": "k"
+          },
+          {
+            "word": "kite",
+            "highlight": "k"
+          },
+          {
+            "word": "kangaroo",
+            "highlight": "k"
+          },
+          {
+            "word": "key",
+            "highlight": "k"
+          },
+          {
+            "word": "koala",
+            "highlight": "k"
+          },
+          {
+            "word": "lion",
+            "highlight": "l"
+          },
+          {
+            "word": "lamp",
+            "highlight": "l"
+          },
+          {
+            "word": "lemon",
+            "highlight": "l"
+          },
+          {
+            "word": "leaf",
+            "highlight": "l"
+          },
+          {
+            "word": "leg",
+            "highlight": "l"
+          }
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5: Mm, Nn, Oo',
-        patterns: ['m', 'n', 'o'],
-        words: [
-          { word: 'monkey', highlight: 'm', emoji: '🐵' },
-          { word: 'moon', highlight: 'm', emoji: '🌙' },
-          { word: 'mouse', highlight: 'm', emoji: '🐭' },
-          { word: 'nose', highlight: 'n', emoji: '👃' },
-          { word: 'nest', highlight: 'n', emoji: '🪺' },
-          { word: 'net', highlight: 'n', emoji: '🥅' },
-          { word: 'octopus', highlight: 'o', emoji: '🐙' },
-          { word: 'ostrich', highlight: 'o', emoji: '🦩' },
-          { word: 'ox', highlight: 'o', emoji: '🐂' }
+        "id": "unit5",
+        "name": "Unit 5: Mm, Nn, Oo",
+        "patterns": [
+          "m",
+          "n",
+          "o"
         ],
-        exploreWords: [
-          { word: 'monkey', highlight: 'm' }, { word: 'moon', highlight: 'm' }, { word: 'mouse', highlight: 'm' }, { word: 'map', highlight: 'm' }, { word: 'milk', highlight: 'm' },
-          { word: 'nose', highlight: 'n' }, { word: 'nest', highlight: 'n' }, { word: 'net', highlight: 'n' }, { word: 'nut', highlight: 'n' }, { word: 'nine', highlight: 'n' },
-          { word: 'octopus', highlight: 'o' }, { word: 'ostrich', highlight: 'o' }, { word: 'ox', highlight: 'o' }, { word: 'olive', highlight: 'o' }, { word: 'on', highlight: 'o' }
+        "words": [
+          {
+            "word": "monkey",
+            "highlight": "m",
+            "emoji": "🐵"
+          },
+          {
+            "word": "moon",
+            "highlight": "m",
+            "emoji": "🌙"
+          },
+          {
+            "word": "mouse",
+            "highlight": "m",
+            "emoji": "🐭"
+          },
+          {
+            "word": "nose",
+            "highlight": "n",
+            "emoji": "👃"
+          },
+          {
+            "word": "nest",
+            "highlight": "n",
+            "emoji": "🪺"
+          },
+          {
+            "word": "net",
+            "highlight": "n",
+            "emoji": "🥅"
+          },
+          {
+            "word": "octopus",
+            "highlight": "o",
+            "emoji": "🐙"
+          },
+          {
+            "word": "ostrich",
+            "highlight": "o",
+            "emoji": "🦩"
+          },
+          {
+            "word": "ox",
+            "highlight": "o",
+            "emoji": "🐂"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "monkey",
+            "highlight": "m"
+          },
+          {
+            "word": "moon",
+            "highlight": "m"
+          },
+          {
+            "word": "mouse",
+            "highlight": "m"
+          },
+          {
+            "word": "map",
+            "highlight": "m"
+          },
+          {
+            "word": "milk",
+            "highlight": "m"
+          },
+          {
+            "word": "nose",
+            "highlight": "n"
+          },
+          {
+            "word": "nest",
+            "highlight": "n"
+          },
+          {
+            "word": "net",
+            "highlight": "n"
+          },
+          {
+            "word": "nut",
+            "highlight": "n"
+          },
+          {
+            "word": "nine",
+            "highlight": "n"
+          },
+          {
+            "word": "octopus",
+            "highlight": "o"
+          },
+          {
+            "word": "ostrich",
+            "highlight": "o"
+          },
+          {
+            "word": "ox",
+            "highlight": "o"
+          },
+          {
+            "word": "olive",
+            "highlight": "o"
+          },
+          {
+            "word": "on",
+            "highlight": "o"
+          }
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6: Pp, Qq, Rr',
-        patterns: ['p', 'q', 'r'],
-        words: [
-          { word: 'pig', highlight: 'p', emoji: '🐷' },
-          { word: 'pen', highlight: 'p', emoji: '🖊️' },
-          { word: 'panda', highlight: 'p', emoji: '🐼' },
-          { word: 'queen', highlight: 'q', emoji: '👸' },
-          { word: 'quiet', highlight: 'q', emoji: '🤫' },
-          { word: 'question', highlight: 'q', emoji: '❓' },
-          { word: 'rabbit', highlight: 'r', emoji: '🐰' },
-          { word: 'red', highlight: 'r', emoji: '🔴' },
-          { word: 'ring', highlight: 'r', emoji: '💍' }
+        "id": "unit6",
+        "name": "Unit 6: Pp, Qq, Rr",
+        "patterns": [
+          "p",
+          "q",
+          "r"
         ],
-        exploreWords: [
-          { word: 'pig', highlight: 'p' }, { word: 'pen', highlight: 'p' }, { word: 'panda', highlight: 'p' }, { word: 'pear', highlight: 'p' }, { word: 'piano', highlight: 'p' },
-          { word: 'queen', highlight: 'q' }, { word: 'quiet', highlight: 'q' }, { word: 'question', highlight: 'q' }, { word: 'quilt', highlight: 'q' }, { word: 'quack', highlight: 'q' },
-          { word: 'rabbit', highlight: 'r' }, { word: 'red', highlight: 'r' }, { word: 'ring', highlight: 'r' }, { word: 'rocket', highlight: 'r' }, { word: 'rug', highlight: 'r' }
+        "words": [
+          {
+            "word": "pig",
+            "highlight": "p",
+            "emoji": "🐷"
+          },
+          {
+            "word": "pen",
+            "highlight": "p",
+            "emoji": "🖊️"
+          },
+          {
+            "word": "panda",
+            "highlight": "p",
+            "emoji": "🐼"
+          },
+          {
+            "word": "queen",
+            "highlight": "q",
+            "emoji": "👸"
+          },
+          {
+            "word": "quiet",
+            "highlight": "q",
+            "emoji": "🤫"
+          },
+          {
+            "word": "question",
+            "highlight": "q",
+            "emoji": "❓"
+          },
+          {
+            "word": "rabbit",
+            "highlight": "r",
+            "emoji": "🐰"
+          },
+          {
+            "word": "red",
+            "highlight": "r",
+            "emoji": "🔴"
+          },
+          {
+            "word": "ring",
+            "highlight": "r",
+            "emoji": "💍"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "pig",
+            "highlight": "p"
+          },
+          {
+            "word": "pen",
+            "highlight": "p"
+          },
+          {
+            "word": "panda",
+            "highlight": "p"
+          },
+          {
+            "word": "pear",
+            "highlight": "p"
+          },
+          {
+            "word": "piano",
+            "highlight": "p"
+          },
+          {
+            "word": "queen",
+            "highlight": "q"
+          },
+          {
+            "word": "quiet",
+            "highlight": "q"
+          },
+          {
+            "word": "question",
+            "highlight": "q"
+          },
+          {
+            "word": "quilt",
+            "highlight": "q"
+          },
+          {
+            "word": "quack",
+            "highlight": "q"
+          },
+          {
+            "word": "rabbit",
+            "highlight": "r"
+          },
+          {
+            "word": "red",
+            "highlight": "r"
+          },
+          {
+            "word": "ring",
+            "highlight": "r"
+          },
+          {
+            "word": "rocket",
+            "highlight": "r"
+          },
+          {
+            "word": "rug",
+            "highlight": "r"
+          }
         ]
       },
       {
-        id: 'unit7',
-        name: 'Unit 7: Ss, Tt, Uu, Vv',
-        patterns: ['s', 't', 'u', 'v'],
-        words: [
-          { word: 'sun', highlight: 's', emoji: '☀️' },
-          { word: 'snake', highlight: 's', emoji: '🐍' },
-          { word: 'seal', highlight: 's', emoji: '🦭' },
-          { word: 'tiger', highlight: 't', emoji: '🐯' },
-          { word: 'ten', highlight: 't', emoji: '🔟' },
-          { word: 'tent', highlight: 't', emoji: '⛺' },
-          { word: 'umbrella', highlight: 'u', emoji: '☂️' },
-          { word: 'up', highlight: 'u', emoji: '⬆️' },
-          { word: 'uncle', highlight: 'u', emoji: '👨' },
-          { word: 'van', highlight: 'v', emoji: '🚐' },
-          { word: 'vest', highlight: 'v', emoji: '🦺' },
-          { word: 'violin', highlight: 'v', emoji: '🎻' }
+        "id": "unit7",
+        "name": "Unit 7: Ss, Tt, Uu, Vv",
+        "patterns": [
+          "s",
+          "t",
+          "u",
+          "v"
         ],
-        exploreWords: [
-          { word: 'sun', highlight: 's' }, { word: 'snake', highlight: 's' }, { word: 'seal', highlight: 's' }, { word: 'soap', highlight: 's' }, { word: 'sock', highlight: 's' },
-          { word: 'tiger', highlight: 't' }, { word: 'ten', highlight: 't' }, { word: 'tent', highlight: 't' }, { word: 'turtle', highlight: 't' }, { word: 'top', highlight: 't' },
-          { word: 'umbrella', highlight: 'u' }, { word: 'up', highlight: 'u' }, { word: 'uncle', highlight: 'u' }, { word: 'under', highlight: 'u' }, { word: 'umpire', highlight: 'u' },
-          { word: 'van', highlight: 'v' }, { word: 'vest', highlight: 'v' }, { word: 'violin', highlight: 'v' }, { word: 'vase', highlight: 'v' }, { word: 'vet', highlight: 'v' }
+        "words": [
+          {
+            "word": "sun",
+            "highlight": "s",
+            "emoji": "☀️"
+          },
+          {
+            "word": "snake",
+            "highlight": "s",
+            "emoji": "🐍"
+          },
+          {
+            "word": "seal",
+            "highlight": "s",
+            "emoji": "🦭"
+          },
+          {
+            "word": "tiger",
+            "highlight": "t",
+            "emoji": "🐯"
+          },
+          {
+            "word": "ten",
+            "highlight": "t",
+            "emoji": "🔟"
+          },
+          {
+            "word": "tent",
+            "highlight": "t",
+            "emoji": "⛺"
+          },
+          {
+            "word": "umbrella",
+            "highlight": "u",
+            "emoji": "☂️"
+          },
+          {
+            "word": "up",
+            "highlight": "u",
+            "emoji": "⬆️"
+          },
+          {
+            "word": "uncle",
+            "highlight": "u",
+            "emoji": "👨"
+          },
+          {
+            "word": "van",
+            "highlight": "v",
+            "emoji": "🚐"
+          },
+          {
+            "word": "vest",
+            "highlight": "v",
+            "emoji": "🦺"
+          },
+          {
+            "word": "violin",
+            "highlight": "v",
+            "emoji": "🎻"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "sun",
+            "highlight": "s"
+          },
+          {
+            "word": "snake",
+            "highlight": "s"
+          },
+          {
+            "word": "seal",
+            "highlight": "s"
+          },
+          {
+            "word": "soap",
+            "highlight": "s"
+          },
+          {
+            "word": "sock",
+            "highlight": "s"
+          },
+          {
+            "word": "tiger",
+            "highlight": "t"
+          },
+          {
+            "word": "ten",
+            "highlight": "t"
+          },
+          {
+            "word": "tent",
+            "highlight": "t"
+          },
+          {
+            "word": "turtle",
+            "highlight": "t"
+          },
+          {
+            "word": "top",
+            "highlight": "t"
+          },
+          {
+            "word": "umbrella",
+            "highlight": "u"
+          },
+          {
+            "word": "up",
+            "highlight": "u"
+          },
+          {
+            "word": "uncle",
+            "highlight": "u"
+          },
+          {
+            "word": "under",
+            "highlight": "u"
+          },
+          {
+            "word": "umpire",
+            "highlight": "u"
+          },
+          {
+            "word": "van",
+            "highlight": "v"
+          },
+          {
+            "word": "vest",
+            "highlight": "v"
+          },
+          {
+            "word": "violin",
+            "highlight": "v"
+          },
+          {
+            "word": "vase",
+            "highlight": "v"
+          },
+          {
+            "word": "vet",
+            "highlight": "v"
+          }
         ]
       },
       {
-        id: 'unit8',
-        name: 'Unit 8: Ww, Xx, Yy, Zz',
-        patterns: ['w', 'x', 'y', 'z'],
-        words: [
-          { word: 'watch', highlight: 'w', emoji: '⌚' },
-          { word: 'whale', highlight: 'w', emoji: '🐋' },
-          { word: 'window', highlight: 'w', emoji: '🪟' },
-          { word: 'box', highlight: 'x', emoji: '📦' },
-          { word: 'fox', highlight: 'x', emoji: '🦊' },
-          { word: 'six', highlight: 'x', emoji: '6️⃣' },
-          { word: 'yellow', highlight: 'y', emoji: '💛' },
-          { word: 'yak', highlight: 'y', emoji: '🦬' },
-          { word: 'yo-yo', highlight: 'y', emoji: '🪀' },
-          { word: 'zebra', highlight: 'z', emoji: '🦓' },
-          { word: 'zoo', highlight: 'z', emoji: '🦁' },
-          { word: 'zero', highlight: 'z', emoji: '0️⃣' }
+        "id": "unit8",
+        "name": "Unit 8: Ww, Xx, Yy, Zz",
+        "patterns": [
+          "w",
+          "x",
+          "y",
+          "z"
         ],
-        exploreWords: [
-          { word: 'watch', highlight: 'w' }, { word: 'window', highlight: 'w' }, { word: 'water', highlight: 'w' }, { word: 'whale', highlight: 'w' }, { word: 'wolf', highlight: 'w' },
-          { word: 'box', highlight: 'x' }, { word: 'fox', highlight: 'x' }, { word: 'six', highlight: 'x' }, { word: 'axe', highlight: 'x' }, { word: 'ox', highlight: 'x' },
-          { word: 'yo-yo', highlight: 'y' }, { word: 'yak', highlight: 'y' }, { word: 'yellow', highlight: 'y' }, { word: 'yacht', highlight: 'y' }, { word: 'yard', highlight: 'y' },
-          { word: 'zebra', highlight: 'z' }, { word: 'zero', highlight: 'z' }, { word: 'zoo', highlight: 'z' }, { word: 'zipper', highlight: 'z' }, { word: 'zigzag', highlight: 'z' }
+        "words": [
+          {
+            "word": "watch",
+            "highlight": "w",
+            "emoji": "⌚"
+          },
+          {
+            "word": "whale",
+            "highlight": "w",
+            "emoji": "🐋"
+          },
+          {
+            "word": "window",
+            "highlight": "w",
+            "emoji": "🪟"
+          },
+          {
+            "word": "box",
+            "highlight": "x",
+            "emoji": "📦"
+          },
+          {
+            "word": "fox",
+            "highlight": "x",
+            "emoji": "🦊"
+          },
+          {
+            "word": "six",
+            "highlight": "x",
+            "emoji": "6️⃣"
+          },
+          {
+            "word": "yellow",
+            "highlight": "y",
+            "emoji": "💛"
+          },
+          {
+            "word": "yak",
+            "highlight": "y",
+            "emoji": "🦬"
+          },
+          {
+            "word": "yo-yo",
+            "highlight": "y",
+            "emoji": "🪀"
+          },
+          {
+            "word": "zebra",
+            "highlight": "z",
+            "emoji": "🦓"
+          },
+          {
+            "word": "zoo",
+            "highlight": "z",
+            "emoji": "🦁"
+          },
+          {
+            "word": "zero",
+            "highlight": "z",
+            "emoji": "0️⃣"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "watch",
+            "highlight": "w"
+          },
+          {
+            "word": "window",
+            "highlight": "w"
+          },
+          {
+            "word": "water",
+            "highlight": "w"
+          },
+          {
+            "word": "whale",
+            "highlight": "w"
+          },
+          {
+            "word": "wolf",
+            "highlight": "w"
+          },
+          {
+            "word": "box",
+            "highlight": "x"
+          },
+          {
+            "word": "fox",
+            "highlight": "x"
+          },
+          {
+            "word": "six",
+            "highlight": "x"
+          },
+          {
+            "word": "axe",
+            "highlight": "x"
+          },
+          {
+            "word": "ox",
+            "highlight": "x"
+          },
+          {
+            "word": "yo-yo",
+            "highlight": "y"
+          },
+          {
+            "word": "yak",
+            "highlight": "y"
+          },
+          {
+            "word": "yellow",
+            "highlight": "y"
+          },
+          {
+            "word": "yacht",
+            "highlight": "y"
+          },
+          {
+            "word": "yard",
+            "highlight": "y"
+          },
+          {
+            "word": "zebra",
+            "highlight": "z"
+          },
+          {
+            "word": "zero",
+            "highlight": "z"
+          },
+          {
+            "word": "zoo",
+            "highlight": "z"
+          },
+          {
+            "word": "zipper",
+            "highlight": "z"
+          },
+          {
+            "word": "zigzag",
+            "highlight": "z"
+          }
         ]
       }
     ]
   },
-  level2: {
-    id: 'level2',
-    name: 'Level 2',
-    title: 'Short Vowels',
-    subtitle: '短元音',
-    color: '#4CAF50',
-    emoji: '🟢',
-    units: [
+  "level2": {
+    "id": "level2",
+    "name": "Level 2",
+    "title": "Short Vowels",
+    "subtitle": "短元音",
+    "color": "#4CAF50",
+    "emoji": "🟢",
+    "units": [
       {
-        id: 'unit1',
-        name: 'Unit 1',
-        patterns: ['a', 'am', 'an'],
-        examples: [
-          'I see <span class="highlight"><span class="pattern">an</span></span> <span class="highlight"><span class="pattern">an</span>t</span>.',
-          'A cat <span class="highlight">c<span class="pattern">an</span></span> sit.',
-          'The bat <span class="highlight">c<span class="pattern">an</span></span> fly.',
-          'My <span class="highlight">c<span class="pattern">a</span>p</span> is red.',
-          'The <span class="highlight">v<span class="pattern">an</span></span> is big.',
-          'I like <span class="highlight">y<span class="pattern">am</span></span>.',
-          'The <span class="highlight">d<span class="pattern">am</span></span> is big.',
-          'I eat <span class="highlight">h<span class="pattern">am</span></span>.',
-          '<span class="highlight">J<span class="pattern">am</span></span> is sweet.',
-          'A <span class="highlight">r<span class="pattern">am</span></span> <span class="highlight">c<span class="pattern">an</span></span> run.',
-          'The <span class="highlight">m<span class="pattern">an</span></span> <span class="highlight">c<span class="pattern">an</span></span> run.',
-          'A <span class="highlight">p<span class="pattern">an</span></span> is hot.',
-          'I <span class="highlight">c<span class="pattern">an</span></span> help.',
-          'The <span class="highlight">f<span class="pattern">an</span></span> is on.',
-          'He <span class="highlight">r<span class="pattern">an</span></span> fast.',
-          '<span class="highlight">D<span class="pattern">an</span></span> <span class="highlight">c<span class="pattern">an</span></span> clap.',
-          '<span class="highlight">S<span class="pattern">am</span></span> has <span class="highlight">h<span class="pattern">am</span></span>.',
-          '<span class="highlight">P<span class="pattern">am</span></span> likes <span class="highlight">j<span class="pattern">am</span></span>.',
-          '<span class="highlight">T<span class="pattern">an</span></span> <span class="highlight">c<span class="pattern">an</span></span> run.',
-          'I <span class="highlight">c<span class="pattern">an</span></span> <span class="highlight">f<span class="pattern">an</span></span> the <span class="highlight">p<span class="pattern">an</span></span>.',
+        "id": "unit1",
+        "name": "Unit 1",
+        "patterns": [
+          "a",
+          "am",
+          "an"
         ],
-        words: [
-          { word: 'ant', highlight: 'a', emoji: '🐜' },
-          { word: 'cat', highlight: 'a', emoji: '🐱' },
-          { word: 'bat', highlight: 'a', emoji: '🦇' },
-          { word: 'cap', highlight: 'a', emoji: '🧢' },
-          { word: 'van', highlight: 'a', emoji: '🚐' },
-          { word: 'yam', highlight: 'am', emoji: '🍠' },
-          { word: 'dam', highlight: 'am', emoji: '🏞️' },
-          { word: 'ham', highlight: 'am', emoji: '🍖' },
-          { word: 'jam', highlight: 'am', emoji: '🍓' },
-          { word: 'ram', highlight: 'am', emoji: '🐏' },
-          { word: 'man', highlight: 'an', emoji: '👨' },
-          { word: 'pan', highlight: 'an', emoji: '🍳' },
-          { word: 'can', highlight: 'an', emoji: '🥫' },
-          { word: 'fan', highlight: 'an', emoji: '🪭' },
-          { word: 'ran', highlight: 'an', emoji: '🏃' },
+        "examples": [
+          "I see <span class=\"highlight\"><span class=\"pattern\">an</span></span> <span class=\"highlight\"><span class=\"pattern\">an</span>t</span>.",
+          "A cat <span class=\"highlight\">c<span class=\"pattern\">an</span></span> sit.",
+          "The bat <span class=\"highlight\">c<span class=\"pattern\">an</span></span> fly.",
+          "My <span class=\"highlight\">c<span class=\"pattern\">a</span>p</span> is red.",
+          "The <span class=\"highlight\">v<span class=\"pattern\">an</span></span> is big.",
+          "I like <span class=\"highlight\">y<span class=\"pattern\">am</span></span>.",
+          "The <span class=\"highlight\">d<span class=\"pattern\">am</span></span> is big.",
+          "I eat <span class=\"highlight\">h<span class=\"pattern\">am</span></span>.",
+          "<span class=\"highlight\">J<span class=\"pattern\">am</span></span> is sweet.",
+          "A <span class=\"highlight\">r<span class=\"pattern\">am</span></span> <span class=\"highlight\">c<span class=\"pattern\">an</span></span> run.",
+          "The <span class=\"highlight\">m<span class=\"pattern\">an</span></span> <span class=\"highlight\">c<span class=\"pattern\">an</span></span> run.",
+          "A <span class=\"highlight\">p<span class=\"pattern\">an</span></span> is hot.",
+          "I <span class=\"highlight\">c<span class=\"pattern\">an</span></span> help.",
+          "The <span class=\"highlight\">f<span class=\"pattern\">an</span></span> is on.",
+          "He <span class=\"highlight\">r<span class=\"pattern\">an</span></span> fast.",
+          "<span class=\"highlight\">D<span class=\"pattern\">an</span></span> <span class=\"highlight\">c<span class=\"pattern\">an</span></span> clap.",
+          "<span class=\"highlight\">S<span class=\"pattern\">am</span></span> has <span class=\"highlight\">h<span class=\"pattern\">am</span></span>.",
+          "<span class=\"highlight\">P<span class=\"pattern\">am</span></span> likes <span class=\"highlight\">j<span class=\"pattern\">am</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">an</span></span> <span class=\"highlight\">c<span class=\"pattern\">an</span></span> run.",
+          "I <span class=\"highlight\">c<span class=\"pattern\">an</span></span> <span class=\"highlight\">f<span class=\"pattern\">an</span></span> the <span class=\"highlight\">p<span class=\"pattern\">an</span></span>."
         ],
-        exploreWords: [
-          { word: 'ant', highlight: 'a' },
-          { word: 'cat', highlight: 'a' },
-          { word: 'bat', highlight: 'a' },
-          { word: 'cap', highlight: 'a' },
-          { word: 'van', highlight: 'a' },
-          { word: 'yam', highlight: 'am' },
-          { word: 'dam', highlight: 'am' },
-          { word: 'ham', highlight: 'am' },
-          { word: 'jam', highlight: 'am' },
-          { word: 'ram', highlight: 'am' },
-          { word: 'man', highlight: 'an' },
-          { word: 'pan', highlight: 'an' },
-          { word: 'can', highlight: 'an' },
-          { word: 'fan', highlight: 'an' },
-          { word: 'ran', highlight: 'an' },
+        "words": [
+          {
+            "word": "ant",
+            "highlight": "a",
+            "emoji": "🐜"
+          },
+          {
+            "word": "cat",
+            "highlight": "a",
+            "emoji": "🐱"
+          },
+          {
+            "word": "bat",
+            "highlight": "a",
+            "emoji": "🦇"
+          },
+          {
+            "word": "cap",
+            "highlight": "a",
+            "emoji": "🧢"
+          },
+          {
+            "word": "van",
+            "highlight": "a",
+            "emoji": "🚐"
+          },
+          {
+            "word": "yam",
+            "highlight": "am",
+            "emoji": "🍠"
+          },
+          {
+            "word": "dam",
+            "highlight": "am",
+            "emoji": "🏞️"
+          },
+          {
+            "word": "ham",
+            "highlight": "am",
+            "emoji": "🍖"
+          },
+          {
+            "word": "jam",
+            "highlight": "am",
+            "emoji": "🍓"
+          },
+          {
+            "word": "ram",
+            "highlight": "am",
+            "emoji": "🐏"
+          },
+          {
+            "word": "man",
+            "highlight": "an",
+            "emoji": "👨"
+          },
+          {
+            "word": "pan",
+            "highlight": "an",
+            "emoji": "🍳"
+          },
+          {
+            "word": "can",
+            "highlight": "an",
+            "emoji": "🥫"
+          },
+          {
+            "word": "fan",
+            "highlight": "an",
+            "emoji": "🪭"
+          },
+          {
+            "word": "ran",
+            "highlight": "an",
+            "emoji": "🏃"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "ant",
+            "highlight": "a"
+          },
+          {
+            "word": "cat",
+            "highlight": "a"
+          },
+          {
+            "word": "bat",
+            "highlight": "a"
+          },
+          {
+            "word": "cap",
+            "highlight": "a"
+          },
+          {
+            "word": "van",
+            "highlight": "a"
+          },
+          {
+            "word": "yam",
+            "highlight": "am"
+          },
+          {
+            "word": "dam",
+            "highlight": "am"
+          },
+          {
+            "word": "ham",
+            "highlight": "am"
+          },
+          {
+            "word": "jam",
+            "highlight": "am"
+          },
+          {
+            "word": "ram",
+            "highlight": "am"
+          },
+          {
+            "word": "man",
+            "highlight": "an"
+          },
+          {
+            "word": "pan",
+            "highlight": "an"
+          },
+          {
+            "word": "can",
+            "highlight": "an"
+          },
+          {
+            "word": "fan",
+            "highlight": "an"
+          },
+          {
+            "word": "ran",
+            "highlight": "an"
+          }
         ]
       },
       {
-        id: 'unit2',
-        name: 'Unit 2',
-        patterns: ['ad', 'ag', 'ap', 'at'],
-        examples: [
-          '<span class="highlight">D<span class="pattern">ad</span></span> has a <span class="highlight">b<span class="pattern">ag</span></span>.',
-          'This is a <span class="highlight">b<span class="pattern">ad</span></span> <span class="highlight">b<span class="pattern">ag</span></span>.',
-          'My <span class="highlight">b<span class="pattern">ag</span></span> is on it.',
-          'This <span class="highlight">r<span class="pattern">ag</span></span> is wet.',
-          'I <span class="highlight">t<span class="pattern">ag</span></span> my <span class="highlight">b<span class="pattern">ag</span></span>.',
-          'My <span class="highlight">c<span class="pattern">ap</span></span> is on.',
-          'I see the <span class="highlight">m<span class="pattern">ap</span></span>.',
-          '<span class="highlight">T<span class="pattern">ap</span></span> the <span class="highlight">m<span class="pattern">at</span></span>.',
-          'A <span class="highlight">c<span class="pattern">at</span></span> sits on my <span class="highlight">l<span class="pattern">ap</span></span>.',
-          'I <span class="highlight">n<span class="pattern">ap</span></span> <span class="highlight"><span class="pattern">at</span></span> home.',
-          'The <span class="highlight">m<span class="pattern">at</span></span> is red.',
-          'His <span class="highlight">h<span class="pattern">at</span></span> is black.',
-          'We <span class="highlight">s<span class="pattern">at</span></span> on a <span class="highlight">m<span class="pattern">at</span></span>.',
-          'I see a <span class="highlight">f<span class="pattern">at</span></span> <span class="highlight">r<span class="pattern">at</span></span>.',
-          'I see a <span class="highlight">r<span class="pattern">at</span></span>.',
-          '<span class="highlight">T<span class="pattern">ag</span></span> the <span class="highlight">c<span class="pattern">ap</span></span>.',
-          '<span class="highlight">T<span class="pattern">ap</span></span> the <span class="highlight">m<span class="pattern">ap</span></span>.',
-          'A <span class="highlight">r<span class="pattern">ag</span></span> is on a <span class="highlight">b<span class="pattern">ag</span></span>.',
-          '<span class="highlight">D<span class="pattern">ad</span></span> <span class="highlight">s<span class="pattern">at</span></span> on the <span class="highlight">m<span class="pattern">at</span></span>.',
-          'A <span class="highlight">f<span class="pattern">at</span></span> <span class="highlight">c<span class="pattern">at</span></span> <span class="highlight">s<span class="pattern">at</span></span>.',
+        "id": "unit2",
+        "name": "Unit 2",
+        "patterns": [
+          "ad",
+          "ag",
+          "ap",
+          "at"
         ],
-        words: [
-          { word: 'dad', highlight: 'ad', emoji: '👨‍👧' },
-          { word: 'bad', highlight: 'ad', emoji: '👎' },
-          { word: 'mad', highlight: 'ad', emoji: '😡' },
-          { word: 'sad', highlight: 'ad', emoji: '😢' },
-          { word: 'had', highlight: 'ad', emoji: '✋' },
-          { word: 'bag', highlight: 'ag', emoji: '👜' },
-          { word: 'rag', highlight: 'ag', emoji: '🧹' },
-          { word: 'tag', highlight: 'ag', emoji: '🏷️' },
-          { word: 'wag', highlight: 'ag', emoji: '🐕' },
-          { word: 'sag', highlight: 'ag', emoji: '📉' },
-          { word: 'cap', highlight: 'ap', emoji: '🧢' },
-          { word: 'map', highlight: 'ap', emoji: '🗺️' },
-          { word: 'tap', highlight: 'ap', emoji: '🚰' },
-          { word: 'lap', highlight: 'ap', emoji: '🏃' },
-          { word: 'nap', highlight: 'ap', emoji: '😴' },
-          { word: 'mat', highlight: 'at', emoji: '🧘' },
-          { word: 'hat', highlight: 'at', emoji: '🎩' },
-          { word: 'sat', highlight: 'at', emoji: '💺' },
-          { word: 'fat', highlight: 'at', emoji: '🐘' },
-          { word: 'rat', highlight: 'at', emoji: '🐀' },
+        "examples": [
+          "<span class=\"highlight\">D<span class=\"pattern\">ad</span></span> has a <span class=\"highlight\">b<span class=\"pattern\">ag</span></span>.",
+          "This is a <span class=\"highlight\">b<span class=\"pattern\">ad</span></span> <span class=\"highlight\">b<span class=\"pattern\">ag</span></span>.",
+          "My <span class=\"highlight\">b<span class=\"pattern\">ag</span></span> is on it.",
+          "This <span class=\"highlight\">r<span class=\"pattern\">ag</span></span> is wet.",
+          "I <span class=\"highlight\">t<span class=\"pattern\">ag</span></span> my <span class=\"highlight\">b<span class=\"pattern\">ag</span></span>.",
+          "My <span class=\"highlight\">c<span class=\"pattern\">ap</span></span> is on.",
+          "I see the <span class=\"highlight\">m<span class=\"pattern\">ap</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ap</span></span> the <span class=\"highlight\">m<span class=\"pattern\">at</span></span>.",
+          "A <span class=\"highlight\">c<span class=\"pattern\">at</span></span> sits on my <span class=\"highlight\">l<span class=\"pattern\">ap</span></span>.",
+          "I <span class=\"highlight\">n<span class=\"pattern\">ap</span></span> <span class=\"highlight\"><span class=\"pattern\">at</span></span> home.",
+          "The <span class=\"highlight\">m<span class=\"pattern\">at</span></span> is red.",
+          "His <span class=\"highlight\">h<span class=\"pattern\">at</span></span> is black.",
+          "We <span class=\"highlight\">s<span class=\"pattern\">at</span></span> on a <span class=\"highlight\">m<span class=\"pattern\">at</span></span>.",
+          "I see a <span class=\"highlight\">f<span class=\"pattern\">at</span></span> <span class=\"highlight\">r<span class=\"pattern\">at</span></span>.",
+          "I see a <span class=\"highlight\">r<span class=\"pattern\">at</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ag</span></span> the <span class=\"highlight\">c<span class=\"pattern\">ap</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ap</span></span> the <span class=\"highlight\">m<span class=\"pattern\">ap</span></span>.",
+          "A <span class=\"highlight\">r<span class=\"pattern\">ag</span></span> is on a <span class=\"highlight\">b<span class=\"pattern\">ag</span></span>.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ad</span></span> <span class=\"highlight\">s<span class=\"pattern\">at</span></span> on the <span class=\"highlight\">m<span class=\"pattern\">at</span></span>.",
+          "A <span class=\"highlight\">f<span class=\"pattern\">at</span></span> <span class=\"highlight\">c<span class=\"pattern\">at</span></span> <span class=\"highlight\">s<span class=\"pattern\">at</span></span>."
         ],
-        exploreWords: [
-          { word: 'dad', highlight: 'ad' },
-          { word: 'bad', highlight: 'ad' },
-          { word: 'mad', highlight: 'ad' },
-          { word: 'sad', highlight: 'ad' },
-          { word: 'had', highlight: 'ad' },
-          { word: 'bag', highlight: 'ag' },
-          { word: 'rag', highlight: 'ag' },
-          { word: 'tag', highlight: 'ag' },
-          { word: 'wag', highlight: 'ag' },
-          { word: 'sag', highlight: 'ag' },
-          { word: 'cap', highlight: 'ap' },
-          { word: 'map', highlight: 'ap' },
-          { word: 'tap', highlight: 'ap' },
-          { word: 'lap', highlight: 'ap' },
-          { word: 'nap', highlight: 'ap' },
-          { word: 'mat', highlight: 'at' },
-          { word: 'hat', highlight: 'at' },
-          { word: 'sat', highlight: 'at' },
-          { word: 'fat', highlight: 'at' },
-          { word: 'rat', highlight: 'at' },
+        "words": [
+          {
+            "word": "dad",
+            "highlight": "ad",
+            "emoji": "👨‍👧"
+          },
+          {
+            "word": "bad",
+            "highlight": "ad",
+            "emoji": "👎"
+          },
+          {
+            "word": "mad",
+            "highlight": "ad",
+            "emoji": "😡"
+          },
+          {
+            "word": "sad",
+            "highlight": "ad",
+            "emoji": "😢"
+          },
+          {
+            "word": "had",
+            "highlight": "ad",
+            "emoji": "✋"
+          },
+          {
+            "word": "bag",
+            "highlight": "ag",
+            "emoji": "👜"
+          },
+          {
+            "word": "rag",
+            "highlight": "ag",
+            "emoji": "🧹"
+          },
+          {
+            "word": "tag",
+            "highlight": "ag",
+            "emoji": "🏷️"
+          },
+          {
+            "word": "wag",
+            "highlight": "ag",
+            "emoji": "🐕"
+          },
+          {
+            "word": "sag",
+            "highlight": "ag",
+            "emoji": "📉"
+          },
+          {
+            "word": "cap",
+            "highlight": "ap",
+            "emoji": "🧢"
+          },
+          {
+            "word": "map",
+            "highlight": "ap",
+            "emoji": "🗺️"
+          },
+          {
+            "word": "tap",
+            "highlight": "ap",
+            "emoji": "🚰"
+          },
+          {
+            "word": "lap",
+            "highlight": "ap",
+            "emoji": "🏃"
+          },
+          {
+            "word": "nap",
+            "highlight": "ap",
+            "emoji": "😴"
+          },
+          {
+            "word": "mat",
+            "highlight": "at",
+            "emoji": "🧘"
+          },
+          {
+            "word": "hat",
+            "highlight": "at",
+            "emoji": "🎩"
+          },
+          {
+            "word": "sat",
+            "highlight": "at",
+            "emoji": "💺"
+          },
+          {
+            "word": "fat",
+            "highlight": "at",
+            "emoji": "🐘"
+          },
+          {
+            "word": "rat",
+            "highlight": "at",
+            "emoji": "🐀"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "dad",
+            "highlight": "ad"
+          },
+          {
+            "word": "bad",
+            "highlight": "ad"
+          },
+          {
+            "word": "mad",
+            "highlight": "ad"
+          },
+          {
+            "word": "sad",
+            "highlight": "ad"
+          },
+          {
+            "word": "had",
+            "highlight": "ad"
+          },
+          {
+            "word": "bag",
+            "highlight": "ag"
+          },
+          {
+            "word": "rag",
+            "highlight": "ag"
+          },
+          {
+            "word": "tag",
+            "highlight": "ag"
+          },
+          {
+            "word": "wag",
+            "highlight": "ag"
+          },
+          {
+            "word": "sag",
+            "highlight": "ag"
+          },
+          {
+            "word": "cap",
+            "highlight": "ap"
+          },
+          {
+            "word": "map",
+            "highlight": "ap"
+          },
+          {
+            "word": "tap",
+            "highlight": "ap"
+          },
+          {
+            "word": "lap",
+            "highlight": "ap"
+          },
+          {
+            "word": "nap",
+            "highlight": "ap"
+          },
+          {
+            "word": "mat",
+            "highlight": "at"
+          },
+          {
+            "word": "hat",
+            "highlight": "at"
+          },
+          {
+            "word": "sat",
+            "highlight": "at"
+          },
+          {
+            "word": "fat",
+            "highlight": "at"
+          },
+          {
+            "word": "rat",
+            "highlight": "at"
+          }
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
-        patterns: ['e', 'et', 'en', 'ed'],
-        examples: [
-          'I see a <span class="highlight">w<span class="pattern">e</span>b</span>.',
-          'I see an <span class="highlight"><span class="pattern">e</span>gg</span>.',
-          'My <span class="highlight">b<span class="pattern">ed</span></span> is soft.',
-          'The <span class="highlight">p<span class="pattern">en</span></span> is <span class="highlight">r<span class="pattern">ed</span></span>.',
-          'A <span class="highlight">h<span class="pattern">en</span></span> is <span class="highlight">w<span class="pattern">et</span></span>.',
-          'I see a <span class="highlight">j<span class="pattern">et</span></span>.',
-          'The <span class="highlight">n<span class="pattern">et</span></span> is <span class="highlight">w<span class="pattern">et</span></span>.',
-          'My <span class="highlight">p<span class="pattern">et</span></span> is <span class="highlight">w<span class="pattern">et</span></span>.',
-          'I <span class="highlight">p<span class="pattern">et</span></span> the <span class="highlight">h<span class="pattern">en</span></span>.',
-          '<span class="highlight">S<span class="pattern">et</span></span> the <span class="highlight">p<span class="pattern">en</span></span> here.',
-          'I <span class="highlight">g<span class="pattern">et</span></span> a <span class="highlight">p<span class="pattern">en</span></span>.',
-          '<span class="highlight">T<span class="pattern">en</span></span> kids sit.',
-          '<span class="highlight">R<span class="pattern">ed</span></span> <span class="highlight">b<span class="pattern">ed</span></span>? No.',
-          'That is a <span class="highlight">r<span class="pattern">ed</span></span> <span class="highlight">h<span class="pattern">en</span></span>.',
-          'An egg is in a <span class="highlight">n<span class="pattern">et</span></span>.',
-          'That is a <span class="highlight">w<span class="pattern">et</span></span> web.',
-          '<span class="highlight">S<span class="pattern">et</span></span> the <span class="highlight">b<span class="pattern">ed</span></span>.',
-          'The <span class="highlight">j<span class="pattern">et</span></span> is big.',
-          'I see <span class="highlight">t<span class="pattern">en</span></span> <span class="highlight">h<span class="pattern">en</span>s</span>.',
-          '<span class="highlight">T<span class="pattern">en</span></span> <span class="highlight">p<span class="pattern">et</span>s</span> sit.',
+        "id": "unit3",
+        "name": "Unit 3",
+        "patterns": [
+          "e",
+          "et",
+          "en",
+          "ed"
         ],
-        words: [
-          { word: 'web', highlight: 'e', emoji: '🕸️' },
-          { word: 'egg', highlight: 'e', emoji: '🥚' },
-          { word: 'bed', highlight: 'ed', emoji: '🛏️' },
-          { word: 'red', highlight: 'ed', emoji: '🔴' },
-          { word: 'hen', highlight: 'en', emoji: '🐔' },
-          { word: 'jet', highlight: 'et', emoji: '✈️' },
-          { word: 'net', highlight: 'et', emoji: '🥅' },
-          { word: 'wet', highlight: 'et', emoji: '💧' },
-          { word: 'pet', highlight: 'et', emoji: '🐕' },
-          { word: 'set', highlight: 'et', emoji: '📦' },
-          { word: 'pen', highlight: 'en', emoji: '🖊️' },
-          { word: 'ten', highlight: 'en', emoji: '🔟' },
-          { word: 'men', highlight: 'en', emoji: '👨‍👨‍👦' },
-          { word: 'den', highlight: 'en', emoji: '🏠' },
-          { word: 'fed', highlight: 'ed', emoji: '🍼' },
-          { word: 'led', highlight: 'ed', emoji: '👉' },
-          { word: 'wed', highlight: 'ed', emoji: '💒' },
+        "examples": [
+          "I see a <span class=\"highlight\">w<span class=\"pattern\">e</span>b</span>.",
+          "I see an <span class=\"highlight\"><span class=\"pattern\">e</span>gg</span>.",
+          "My <span class=\"highlight\">b<span class=\"pattern\">e</span>d</span> is soft.",
+          "The <span class=\"highlight\">p<span class=\"pattern\">en</span></span> is <span class=\"highlight\">r<span class=\"pattern\">e</span>d</span>.",
+          "A <span class=\"highlight\">h<span class=\"pattern\">e</span>n</span> is <span class=\"highlight\">w<span class=\"pattern\">et</span></span>.",
+          "I see a <span class=\"highlight\">j<span class=\"pattern\">et</span></span>.",
+          "The <span class=\"highlight\">n<span class=\"pattern\">et</span></span> is <span class=\"highlight\">w<span class=\"pattern\">et</span></span>.",
+          "My <span class=\"highlight\">p<span class=\"pattern\">et</span></span> is <span class=\"highlight\">w<span class=\"pattern\">et</span></span>.",
+          "I <span class=\"highlight\">p<span class=\"pattern\">et</span></span> the <span class=\"highlight\">h<span class=\"pattern\">e</span>n</span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">et</span></span> the <span class=\"highlight\">p<span class=\"pattern\">en</span></span> here.",
+          "I get a <span class=\"highlight\">p<span class=\"pattern\">en</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">en</span></span> kids sit.",
+          "The <span class=\"highlight\">b<span class=\"pattern\">e</span>d</span> is <span class=\"highlight\">r<span class=\"pattern\">e</span>d</span>.",
+          "That is a <span class=\"highlight\">r<span class=\"pattern\">e</span>d</span> <span class=\"highlight\">h<span class=\"pattern\">e</span>n</span>.",
+          "An <span class=\"highlight\"><span class=\"pattern\">e</span>gg</span> is in a <span class=\"highlight\">n<span class=\"pattern\">et</span></span>.",
+          "That is a <span class=\"highlight\">w<span class=\"pattern\">et</span></span> <span class=\"highlight\">w<span class=\"pattern\">e</span>b</span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">et</span></span> the <span class=\"highlight\">b<span class=\"pattern\">e</span>d</span>.",
+          "The <span class=\"highlight\">j<span class=\"pattern\">et</span></span> is big.",
+          "I see <span class=\"highlight\">t<span class=\"pattern\">en</span></span> <span class=\"highlight\">h<span class=\"pattern\">e</span>ns</span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">en</span></span> <span class=\"highlight\">p<span class=\"pattern\">et</span>s</span> sit."
         ],
-        exploreWords: [
-          { word: 'web', highlight: 'eb' },
-          { word: 'egg', highlight: 'gg' },
-          { word: 'bed', highlight: 'ed' },
-          { word: 'red', highlight: 'ed' },
-          { word: 'hen', highlight: 'en' },
-          { word: 'jet', highlight: 'et' },
-          { word: 'net', highlight: 'et' },
-          { word: 'wet', highlight: 'et' },
-          { word: 'pet', highlight: 'et' },
-          { word: 'set', highlight: 'et' },
-          { word: 'pen', highlight: 'en' },
-          { word: 'ten', highlight: 'en' },
-          { word: 'men', highlight: 'en' },
-          { word: 'den', highlight: 'en' },
-          { word: 'fed', highlight: 'ed' },
-          { word: 'led', highlight: 'ed' },
-          { word: 'wed', highlight: 'ed' },
+        "words": [
+          {
+            "word": "web",
+            "highlight": "e",
+            "emoji": "🕸️"
+          },
+          {
+            "word": "egg",
+            "highlight": "e",
+            "emoji": "🥚"
+          },
+          {
+            "word": "bed",
+            "highlight": "ed",
+            "emoji": "🛏️"
+          },
+          {
+            "word": "red",
+            "highlight": "ed",
+            "emoji": "🔴"
+          },
+          {
+            "word": "hen",
+            "highlight": "en",
+            "emoji": "🐔"
+          },
+          {
+            "word": "jet",
+            "highlight": "et",
+            "emoji": "✈️"
+          },
+          {
+            "word": "net",
+            "highlight": "et",
+            "emoji": "🥅"
+          },
+          {
+            "word": "wet",
+            "highlight": "et",
+            "emoji": "💧"
+          },
+          {
+            "word": "pet",
+            "highlight": "et",
+            "emoji": "🐕"
+          },
+          {
+            "word": "set",
+            "highlight": "et",
+            "emoji": "📦"
+          },
+          {
+            "word": "pen",
+            "highlight": "en",
+            "emoji": "🖊️"
+          },
+          {
+            "word": "ten",
+            "highlight": "en",
+            "emoji": "🔟"
+          },
+          {
+            "word": "men",
+            "highlight": "en",
+            "emoji": "👨‍👨‍👦"
+          },
+          {
+            "word": "den",
+            "highlight": "en",
+            "emoji": "🏠"
+          },
+          {
+            "word": "fed",
+            "highlight": "ed",
+            "emoji": "🍼"
+          },
+          {
+            "word": "led",
+            "highlight": "ed",
+            "emoji": "👉"
+          },
+          {
+            "word": "wed",
+            "highlight": "ed",
+            "emoji": "💒"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "web",
+            "highlight": "eb"
+          },
+          {
+            "word": "egg",
+            "highlight": "gg"
+          },
+          {
+            "word": "bed",
+            "highlight": "ed"
+          },
+          {
+            "word": "red",
+            "highlight": "ed"
+          },
+          {
+            "word": "hen",
+            "highlight": "en"
+          },
+          {
+            "word": "jet",
+            "highlight": "et"
+          },
+          {
+            "word": "net",
+            "highlight": "et"
+          },
+          {
+            "word": "wet",
+            "highlight": "et"
+          },
+          {
+            "word": "pet",
+            "highlight": "et"
+          },
+          {
+            "word": "set",
+            "highlight": "et"
+          },
+          {
+            "word": "pen",
+            "highlight": "en"
+          },
+          {
+            "word": "ten",
+            "highlight": "en"
+          },
+          {
+            "word": "men",
+            "highlight": "en"
+          },
+          {
+            "word": "den",
+            "highlight": "en"
+          },
+          {
+            "word": "fed",
+            "highlight": "ed"
+          },
+          {
+            "word": "led",
+            "highlight": "ed"
+          },
+          {
+            "word": "wed",
+            "highlight": "ed"
+          }
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
-        patterns: ['i', 'ip', 'ib', 'id'],
-        examples: [
-          'My <span class="highlight">h<span class="pattern">ip</span></span> is OK.',
-          '<span class="highlight"><span class="pattern">In</span>k</span> is on me.',
-          'A <span class="highlight">k<span class="pattern">id</span></span> can sit.',
-          'A <span class="highlight">p<span class="pattern">i</span>g</span> is <span class="highlight">b<span class="pattern">i</span>g</span>.',
-          'I see a <span class="highlight">f<span class="pattern">in</span></span>.',
-          'My <span class="highlight">l<span class="pattern">ip</span></span> is wet.',
-          '<span class="highlight">S<span class="pattern">ip</span></span> it now, please.',
-          '<span class="highlight">T<span class="pattern">ip</span></span> the cup.',
-          '<span class="highlight">D<span class="pattern">ip</span></span> the <span class="highlight">ch<span class="pattern">ip</span></span>.',
-          'I <span class="highlight">r<span class="pattern">ip</span></span> the tag.',
-          'I see a <span class="highlight">r<span class="pattern">ib</span></span>.',
-          'My <span class="highlight">b<span class="pattern">ib</span></span> is big.',
-          'The <span class="highlight">l<span class="pattern">id</span></span> is on.',
-          'He <span class="highlight">d<span class="pattern">id</span></span> it.',
-          'The <span class="highlight">k<span class="pattern">id</span></span> can hop.',
-          'Ink on the <span class="highlight">l<span class="pattern">id</span></span>.',
-          '<span class="highlight">S<span class="pattern">ip</span></span>, then sit.',
-          '<span class="highlight">T<span class="pattern">ip</span></span> the <span class="highlight">l<span class="pattern">id</span></span>.',
-          'A <span class="highlight">p<span class="pattern">i</span>g</span> can <span class="highlight">d<span class="pattern">i</span>g</span>.',
-          'The <span class="highlight">b<span class="pattern">ib</span></span> is clean.',
+        "id": "unit4",
+        "name": "Unit 4",
+        "patterns": [
+          "i",
+          "ip",
+          "ib",
+          "id"
         ],
-        words: [
-          { word: 'hip', highlight: 'ip', emoji: '🦴' },
-          { word: 'ink', highlight: 'nk', emoji: '🖊️' },
-          { word: 'kid', highlight: 'id', emoji: '🧒' },
-          { word: 'pig', highlight: 'ig', emoji: '🐷' },
-          { word: 'fin', highlight: 'in', emoji: '🦈' },
-          { word: 'lip', highlight: 'ip', emoji: '👄' },
-          { word: 'sip', highlight: 'ip', emoji: '☕' },
-          { word: 'tip', highlight: 'ip', emoji: '💡' },
-          { word: 'dip', highlight: 'ip', emoji: '🥣' },
-          { word: 'rip', highlight: 'ip', emoji: '📄' },
-          { word: 'rib', highlight: 'ib', emoji: '🍖' },
-          { word: 'bib', highlight: 'ib', emoji: '👶' },
-          { word: 'fib', highlight: 'ib', emoji: '🤥' },
-          { word: 'nib', highlight: 'ib', emoji: '✒️' },
-          { word: 'crib', highlight: 'ib', emoji: '🛒' },
-          { word: 'lid', highlight: 'id', emoji: '🎩' },
-          { word: 'did', highlight: 'id', emoji: '✅' },
-          { word: 'hid', highlight: 'id', emoji: '🙈' },
-          { word: 'rid', highlight: 'id', emoji: '🗑️' },
-          { word: 'bed', highlight: 'e', emoji: '🛏️' },
-          { word: 'red', highlight: 'e', emoji: '🔴' },
-          { word: 'fed', highlight: 'ed', emoji: '🍼' },
-          { word: 'led', highlight: 'ed', emoji: '👉' },
-          { word: 'wed', highlight: 'ed', emoji: '💒' },
-          { word: 'pen', highlight: 'en', emoji: '🖊️' },
-          { word: 'ten', highlight: 'en', emoji: '🔟' },
-          { word: 'men', highlight: 'en', emoji: '👨' },
-          { word: 'den', highlight: 'en', emoji: '🏠' },
+        "examples": [
+          "My <span class=\"highlight\">h<span class=\"pattern\">i</span>p</span> is fine.",
+          "I see <span class=\"highlight\"><span class=\"pattern\">i</span>nk</span> on it.",
+          "A <span class=\"highlight\">k<span class=\"pattern\">i</span>d</span> can sit.",
+          "A <span class=\"highlight\">p<span class=\"pattern\">i</span>g</span> can dig.",
+          "I see a <span class=\"highlight\">f<span class=\"pattern\">i</span>n</span>.",
+          "My <span class=\"highlight\">l<span class=\"pattern\">ip</span></span> is wet.",
+          "<span class=\"highlight\">S<span class=\"pattern\">ip</span></span> it now, please.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ip</span></span> the cup.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ip</span></span> the chip.",
+          "I <span class=\"highlight\">r<span class=\"pattern\">ip</span></span> the tag.",
+          "I see a <span class=\"highlight\">r<span class=\"pattern\">ib</span></span>.",
+          "The <span class=\"highlight\">b<span class=\"pattern\">ib</span></span> is big.",
+          "The <span class=\"highlight\">n<span class=\"pattern\">ib</span></span> is red.",
+          "The <span class=\"highlight\">cr<span class=\"pattern\">ib</span></span> is here.",
+          "That <span class=\"highlight\">f<span class=\"pattern\">ib</span></span> is bad.",
+          "The <span class=\"highlight\">l<span class=\"pattern\">id</span></span> is on.",
+          "The <span class=\"highlight\">k<span class=\"pattern\">i</span>d</span> <span class=\"highlight\">h<span class=\"pattern\">id</span></span> it.",
+          "He <span class=\"highlight\">d<span class=\"pattern\">id</span></span> it.",
+          "The <span class=\"highlight\">l<span class=\"pattern\">id</span></span> is red.",
+          "I <span class=\"highlight\">h<span class=\"pattern\">id</span></span> the <span class=\"highlight\">l<span class=\"pattern\">id</span></span>."
         ],
-        exploreWords: [
-          { word: 'hip', highlight: 'ip' },
-          { word: 'ink', highlight: 'nk' },
-          { word: 'kid', highlight: 'id' },
-          { word: 'pig', highlight: 'ig' },
-          { word: 'fin', highlight: 'in' },
-          { word: 'lip', highlight: 'ip' },
-          { word: 'sip', highlight: 'ip' },
-          { word: 'tip', highlight: 'ip' },
-          { word: 'dip', highlight: 'ip' },
-          { word: 'rip', highlight: 'ip' },
-          { word: 'rib', highlight: 'ib' },
-          { word: 'bib', highlight: 'ib' },
-          { word: 'fib', highlight: 'ib' },
-          { word: 'nib', highlight: 'ib' },
-          { word: 'crib', highlight: 'ib' },
-          { word: 'lid', highlight: 'id' },
-          { word: 'did', highlight: 'id' },
-          { word: 'hid', highlight: 'id' },
-          { word: 'rid', highlight: 'id' },
+        "words": [
+          {
+            "word": "hip",
+            "highlight": "ip",
+            "emoji": "🦴"
+          },
+          {
+            "word": "ink",
+            "highlight": "nk",
+            "emoji": "🖊️"
+          },
+          {
+            "word": "kid",
+            "highlight": "id",
+            "emoji": "🧒"
+          },
+          {
+            "word": "pig",
+            "highlight": "ig",
+            "emoji": "🐷"
+          },
+          {
+            "word": "fin",
+            "highlight": "in",
+            "emoji": "🦈"
+          },
+          {
+            "word": "lip",
+            "highlight": "ip",
+            "emoji": "👄"
+          },
+          {
+            "word": "sip",
+            "highlight": "ip",
+            "emoji": "☕"
+          },
+          {
+            "word": "tip",
+            "highlight": "ip",
+            "emoji": "💡"
+          },
+          {
+            "word": "dip",
+            "highlight": "ip",
+            "emoji": "🥣"
+          },
+          {
+            "word": "rip",
+            "highlight": "ip",
+            "emoji": "📄"
+          },
+          {
+            "word": "rib",
+            "highlight": "ib",
+            "emoji": "🍖"
+          },
+          {
+            "word": "bib",
+            "highlight": "ib",
+            "emoji": "👶"
+          },
+          {
+            "word": "fib",
+            "highlight": "ib",
+            "emoji": "🤥"
+          },
+          {
+            "word": "nib",
+            "highlight": "ib",
+            "emoji": "✒️"
+          },
+          {
+            "word": "crib",
+            "highlight": "ib",
+            "emoji": "🛒"
+          },
+          {
+            "word": "lid",
+            "highlight": "id",
+            "emoji": "🎩"
+          },
+          {
+            "word": "did",
+            "highlight": "id",
+            "emoji": "✅"
+          },
+          {
+            "word": "hid",
+            "highlight": "id",
+            "emoji": "🙈"
+          },
+          {
+            "word": "rid",
+            "highlight": "id",
+            "emoji": "🗑️"
+          },
+          {
+            "word": "bed",
+            "highlight": "e",
+            "emoji": "🛏️"
+          },
+          {
+            "word": "red",
+            "highlight": "e",
+            "emoji": "🔴"
+          },
+          {
+            "word": "fed",
+            "highlight": "ed",
+            "emoji": "🍼"
+          },
+          {
+            "word": "led",
+            "highlight": "ed",
+            "emoji": "👉"
+          },
+          {
+            "word": "wed",
+            "highlight": "ed",
+            "emoji": "💒"
+          },
+          {
+            "word": "pen",
+            "highlight": "en",
+            "emoji": "🖊️"
+          },
+          {
+            "word": "ten",
+            "highlight": "en",
+            "emoji": "🔟"
+          },
+          {
+            "word": "men",
+            "highlight": "en",
+            "emoji": "👨"
+          },
+          {
+            "word": "den",
+            "highlight": "en",
+            "emoji": "🏠"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "hip",
+            "highlight": "ip"
+          },
+          {
+            "word": "ink",
+            "highlight": "nk"
+          },
+          {
+            "word": "kid",
+            "highlight": "id"
+          },
+          {
+            "word": "pig",
+            "highlight": "ig"
+          },
+          {
+            "word": "fin",
+            "highlight": "in"
+          },
+          {
+            "word": "lip",
+            "highlight": "ip"
+          },
+          {
+            "word": "sip",
+            "highlight": "ip"
+          },
+          {
+            "word": "tip",
+            "highlight": "ip"
+          },
+          {
+            "word": "dip",
+            "highlight": "ip"
+          },
+          {
+            "word": "rip",
+            "highlight": "ip"
+          },
+          {
+            "word": "rib",
+            "highlight": "ib"
+          },
+          {
+            "word": "bib",
+            "highlight": "ib"
+          },
+          {
+            "word": "fib",
+            "highlight": "ib"
+          },
+          {
+            "word": "nib",
+            "highlight": "ib"
+          },
+          {
+            "word": "crib",
+            "highlight": "ib"
+          },
+          {
+            "word": "lid",
+            "highlight": "id"
+          },
+          {
+            "word": "did",
+            "highlight": "id"
+          },
+          {
+            "word": "hid",
+            "highlight": "id"
+          },
+          {
+            "word": "rid",
+            "highlight": "id"
+          }
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
-        patterns: ['in', 'ig', 'it', 'ix'],
-        examples: [
-          '<span class="highlight">P<span class="pattern">in</span></span> <span class="highlight"><span class="pattern">it</span></span> on.',
-          'We can <span class="highlight">w<span class="pattern">in</span></span> today.',
-          'I see a <span class="highlight">f<span class="pattern">in</span></span>.',
-          'A <span class="highlight">t<span class="pattern">in</span></span> is <span class="highlight">b<span class="pattern">ig</span></span>.',
-          'The <span class="highlight">b<span class="pattern">in</span></span> is full.',
-          'I like a <span class="highlight">f<span class="pattern">ig</span></span>.',
-          'The <span class="highlight">w<span class="pattern">ig</span></span> is <span class="highlight">b<span class="pattern">ig</span></span>.',
-          'A <span class="highlight">p<span class="pattern">ig</span></span> can <span class="highlight">d<span class="pattern">ig</span></span>.',
-          '<span class="highlight">D<span class="pattern">ig</span></span> <span class="highlight"><span class="pattern">in</span></span> the <span class="highlight">p<span class="pattern">it</span></span>.',
-          'I see a <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">p<span class="pattern">ig</span></span>.',
-          'The <span class="highlight">p<span class="pattern">it</span></span> is <span class="highlight">b<span class="pattern">ig</span></span>.',
-          '<span class="highlight">H<span class="pattern">it</span></span> the ball.',
-          '<span class="highlight">S<span class="pattern">it</span></span> <span class="highlight">w<span class="pattern">it</span>h</span> me.',
-          '<span class="highlight">F<span class="pattern">ix</span></span> <span class="highlight"><span class="pattern">it</span></span> <span class="highlight">w<span class="pattern">it</span>h</span> a <span class="highlight">p<span class="pattern">in</span></span>.',
-          '<span class="highlight">S<span class="pattern">ix</span></span> <span class="highlight">p<span class="pattern">ig</span>s</span> <span class="highlight">s<span class="pattern">it</span></span>.',
-          'I <span class="highlight">w<span class="pattern">in</span></span> a <span class="highlight">p<span class="pattern">in</span></span>.',
-          '<span class="highlight">D<span class="pattern">ig</span></span> for a <span class="highlight">f<span class="pattern">ig</span></span>.',
-          'A <span class="highlight">b<span class="pattern">ig</span></span> <span class="highlight">b<span class="pattern">in</span></span> is full.',
-          '<span class="highlight">S<span class="pattern">it</span></span>, then <span class="highlight">h<span class="pattern">it</span></span>.',
-          '<span class="highlight">F<span class="pattern">ix</span></span> <span class="highlight">s<span class="pattern">ix</span></span> <span class="highlight">p<span class="pattern">in</span>s</span>.',
+        "id": "unit5",
+        "name": "Unit 5",
+        "patterns": [
+          "in",
+          "ig",
+          "it",
+          "ix"
         ],
-        words: [
-          { word: 'pin', highlight: 'in', emoji: '📍' },
-          { word: 'win', highlight: 'in', emoji: '🏆' },
-          { word: 'fin', highlight: 'in', emoji: '🦈' },
-          { word: 'tin', highlight: 'in', emoji: '🥫' },
-          { word: 'bin', highlight: 'in', emoji: '🗑️' },
-          { word: 'fig', highlight: 'ig', emoji: '🫐' },
-          { word: 'wig', highlight: 'ig', emoji: '🧑‍🦱' },
-          { word: 'pig', highlight: 'ig', emoji: '🐷' },
-          { word: 'dig', highlight: 'ig', emoji: '⛏️' },
-          { word: 'big', highlight: 'ig', emoji: '🦣' },
-          { word: 'pit', highlight: 'it', emoji: '🕳️' },
-          { word: 'hit', highlight: 'it', emoji: '👊' },
-          { word: 'sit', highlight: 'it', emoji: '💺' },
-          { word: 'bit', highlight: 'it', emoji: '🦷' },
-          { word: 'kit', highlight: 'it', emoji: '🧰' },
-          { word: 'fix', highlight: 'ix', emoji: '🔧' },
-          { word: 'six', highlight: 'ix', emoji: '6️⃣' },
-          { word: 'mix', highlight: 'ix', emoji: '🥣' },
-          { word: 'nix', highlight: 'ix', emoji: '🚫' },
+        "examples": [
+          "<span class=\"highlight\">P<span class=\"pattern\">in</span></span> <span class=\"highlight\"><span class=\"pattern\">it</span></span> on.",
+          "We can <span class=\"highlight\">w<span class=\"pattern\">in</span></span> today.",
+          "I see a <span class=\"highlight\">f<span class=\"pattern\">in</span></span>.",
+          "A <span class=\"highlight\">t<span class=\"pattern\">in</span></span> is <span class=\"highlight\">b<span class=\"pattern\">ig</span></span>.",
+          "The <span class=\"highlight\">b<span class=\"pattern\">in</span></span> is full.",
+          "I like a <span class=\"highlight\">f<span class=\"pattern\">ig</span></span>.",
+          "The <span class=\"highlight\">w<span class=\"pattern\">ig</span></span> is <span class=\"highlight\">b<span class=\"pattern\">ig</span></span>.",
+          "A <span class=\"highlight\">p<span class=\"pattern\">ig</span></span> can <span class=\"highlight\">d<span class=\"pattern\">ig</span></span>.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ig</span></span> <span class=\"highlight\"><span class=\"pattern\">in</span></span> the <span class=\"highlight\">p<span class=\"pattern\">it</span></span>.",
+          "I see a <span class=\"highlight\">b<span class=\"pattern\">ig</span></span> <span class=\"highlight\">p<span class=\"pattern\">ig</span></span>.",
+          "The <span class=\"highlight\">p<span class=\"pattern\">it</span></span> is <span class=\"highlight\">b<span class=\"pattern\">ig</span></span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">it</span></span> the ball.",
+          "<span class=\"highlight\">S<span class=\"pattern\">it</span></span> <span class=\"highlight\">w<span class=\"pattern\">it</span>h</span> me.",
+          "<span class=\"highlight\">F<span class=\"pattern\">ix</span></span> <span class=\"highlight\"><span class=\"pattern\">it</span></span> <span class=\"highlight\">w<span class=\"pattern\">it</span>h</span> a <span class=\"highlight\">p<span class=\"pattern\">in</span></span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">ix</span></span> <span class=\"highlight\">p<span class=\"pattern\">ig</span>s</span> <span class=\"highlight\">s<span class=\"pattern\">it</span></span>.",
+          "I <span class=\"highlight\">w<span class=\"pattern\">in</span></span> a <span class=\"highlight\">p<span class=\"pattern\">in</span></span>.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ig</span></span> for a <span class=\"highlight\">f<span class=\"pattern\">ig</span></span>.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">ig</span></span> <span class=\"highlight\">b<span class=\"pattern\">in</span></span> is full.",
+          "<span class=\"highlight\">S<span class=\"pattern\">it</span></span>, then <span class=\"highlight\">h<span class=\"pattern\">it</span></span>.",
+          "<span class=\"highlight\">F<span class=\"pattern\">ix</span></span> <span class=\"highlight\">s<span class=\"pattern\">ix</span></span> <span class=\"highlight\">p<span class=\"pattern\">in</span>s</span>."
         ],
-        exploreWords: [
-          { word: 'pin', highlight: 'in' },
-          { word: 'win', highlight: 'in' },
-          { word: 'fin', highlight: 'in' },
-          { word: 'tin', highlight: 'in' },
-          { word: 'bin', highlight: 'in' },
-          { word: 'fig', highlight: 'ig' },
-          { word: 'wig', highlight: 'ig' },
-          { word: 'pig', highlight: 'ig' },
-          { word: 'dig', highlight: 'ig' },
-          { word: 'big', highlight: 'ig' },
-          { word: 'pit', highlight: 'it' },
-          { word: 'hit', highlight: 'it' },
-          { word: 'sit', highlight: 'it' },
-          { word: 'bit', highlight: 'it' },
-          { word: 'kit', highlight: 'it' },
-          { word: 'fix', highlight: 'ix' },
-          { word: 'six', highlight: 'ix' },
-          { word: 'mix', highlight: 'ix' },
-          { word: 'nix', highlight: 'ix' },
+        "words": [
+          {
+            "word": "pin",
+            "highlight": "in",
+            "emoji": "📍"
+          },
+          {
+            "word": "win",
+            "highlight": "in",
+            "emoji": "🏆"
+          },
+          {
+            "word": "fin",
+            "highlight": "in",
+            "emoji": "🦈"
+          },
+          {
+            "word": "tin",
+            "highlight": "in",
+            "emoji": "🥫"
+          },
+          {
+            "word": "bin",
+            "highlight": "in",
+            "emoji": "🗑️"
+          },
+          {
+            "word": "fig",
+            "highlight": "ig",
+            "emoji": "🫐"
+          },
+          {
+            "word": "wig",
+            "highlight": "ig",
+            "emoji": "🧑‍🦱"
+          },
+          {
+            "word": "pig",
+            "highlight": "ig",
+            "emoji": "🐷"
+          },
+          {
+            "word": "dig",
+            "highlight": "ig",
+            "emoji": "⛏️"
+          },
+          {
+            "word": "big",
+            "highlight": "ig",
+            "emoji": "🦣"
+          },
+          {
+            "word": "pit",
+            "highlight": "it",
+            "emoji": "🕳️"
+          },
+          {
+            "word": "hit",
+            "highlight": "it",
+            "emoji": "👊"
+          },
+          {
+            "word": "sit",
+            "highlight": "it",
+            "emoji": "💺"
+          },
+          {
+            "word": "bit",
+            "highlight": "it",
+            "emoji": "🦷"
+          },
+          {
+            "word": "kit",
+            "highlight": "it",
+            "emoji": "🧰"
+          },
+          {
+            "word": "fix",
+            "highlight": "ix",
+            "emoji": "🔧"
+          },
+          {
+            "word": "six",
+            "highlight": "ix",
+            "emoji": "6️⃣"
+          },
+          {
+            "word": "mix",
+            "highlight": "ix",
+            "emoji": "🥣"
+          },
+          {
+            "word": "nix",
+            "highlight": "ix",
+            "emoji": "🚫"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "pin",
+            "highlight": "in"
+          },
+          {
+            "word": "win",
+            "highlight": "in"
+          },
+          {
+            "word": "fin",
+            "highlight": "in"
+          },
+          {
+            "word": "tin",
+            "highlight": "in"
+          },
+          {
+            "word": "bin",
+            "highlight": "in"
+          },
+          {
+            "word": "fig",
+            "highlight": "ig"
+          },
+          {
+            "word": "wig",
+            "highlight": "ig"
+          },
+          {
+            "word": "pig",
+            "highlight": "ig"
+          },
+          {
+            "word": "dig",
+            "highlight": "ig"
+          },
+          {
+            "word": "big",
+            "highlight": "ig"
+          },
+          {
+            "word": "pit",
+            "highlight": "it"
+          },
+          {
+            "word": "hit",
+            "highlight": "it"
+          },
+          {
+            "word": "sit",
+            "highlight": "it"
+          },
+          {
+            "word": "bit",
+            "highlight": "it"
+          },
+          {
+            "word": "kit",
+            "highlight": "it"
+          },
+          {
+            "word": "fix",
+            "highlight": "ix"
+          },
+          {
+            "word": "six",
+            "highlight": "ix"
+          },
+          {
+            "word": "mix",
+            "highlight": "ix"
+          },
+          {
+            "word": "nix",
+            "highlight": "ix"
+          }
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
-        patterns: ['o', 'ot', 'op'],
-        examples: [
-          'I see a <span class="highlight">f<span class="pattern">o</span>x</span>.',
-          'I see a <span class="highlight">l<span class="pattern">o</span>g</span>.',
-          'My <span class="highlight">d<span class="pattern">o</span>g</span> can <span class="highlight">h<span class="pattern">op</span></span>.',
-          'The <span class="highlight">p<span class="pattern">ot</span></span> is <span class="highlight">h<span class="pattern">ot</span></span>.',
-          'The <span class="highlight">t<span class="pattern">op</span></span> is on.',
-          'I sit on a <span class="highlight">c<span class="pattern">ot</span></span>.',
-          'The <span class="highlight">p<span class="pattern">ot</span></span> is <span class="highlight">h<span class="pattern">ot</span></span> now.',
-          '<span class="highlight">D<span class="pattern">ot</span></span> the <span class="highlight">t<span class="pattern">op</span></span>.',
-          'A <span class="highlight">l<span class="pattern">ot</span></span> of <span class="highlight">d<span class="pattern">ot</span>s</span>.',
-          '<span class="highlight">P<span class="pattern">op</span></span> it on <span class="highlight">t<span class="pattern">op</span></span>.',
-          '<span class="highlight">H<span class="pattern">op</span></span> to the <span class="highlight">t<span class="pattern">op</span></span>.',
-          '<span class="highlight">M<span class="pattern">op</span></span> the <span class="highlight">p<span class="pattern">ot</span></span>? No.',
-          'A <span class="highlight">c<span class="pattern">op</span></span> can <span class="highlight">h<span class="pattern">op</span></span>.',
-          'The <span class="highlight">p<span class="pattern">ot</span></span> is <span class="highlight">h<span class="pattern">ot</span></span>.',
-          'The dog is on <span class="highlight">t<span class="pattern">op</span></span>.',
-          'The <span class="highlight">f<span class="pattern">o</span>x</span> is on a <span class="highlight">l<span class="pattern">o</span>g</span>.',
-          '<span class="highlight">D<span class="pattern">ot</span></span>, then <span class="highlight">st<span class="pattern">op</span></span>.',
-          '<span class="highlight">M<span class="pattern">op</span></span> it up now, please.',
-          '<span class="highlight">P<span class="pattern">op</span></span> the <span class="highlight">t<span class="pattern">op</span></span> off now.',
-          'A <span class="highlight">d<span class="pattern">o</span>g</span> can j<span class="highlight"><span class="pattern">o</span></span>g.',
+        "id": "unit6",
+        "name": "Unit 6",
+        "patterns": [
+          "o",
+          "ot",
+          "op"
         ],
-        words: [
-          { word: 'fox', highlight: 'o', emoji: '🦊' },
-          { word: 'log', highlight: 'o', emoji: '🪵' },
-          { word: 'dog', highlight: 'o', emoji: '🐕' },
-          { word: 'pot', highlight: 'ot', emoji: '🍲' },
-          { word: 'top', highlight: 'op', emoji: '🔝' },
-          { word: 'cot', highlight: 'ot', emoji: '🛏️' },
-          { word: 'hot', highlight: 'ot', emoji: '🔥' },
-          { word: 'dot', highlight: 'ot', emoji: '⚫' },
-          { word: 'lot', highlight: 'ot', emoji: '📦' },
-          { word: 'pop', highlight: 'op', emoji: '🎈' },
-          { word: 'hop', highlight: 'op', emoji: '🦘' },
-          { word: 'mop', highlight: 'op', emoji: '🧹' },
-          { word: 'cop', highlight: 'op', emoji: '👮' },
+        "examples": [
+          "I see a <span class=\"highlight\">f<span class=\"pattern\">o</span>x</span>.",
+          "I see a <span class=\"highlight\">l<span class=\"pattern\">o</span>g</span>.",
+          "My <span class=\"highlight\">d<span class=\"pattern\">o</span>g</span> can <span class=\"highlight\">h<span class=\"pattern\">op</span></span>.",
+          "The <span class=\"highlight\">p<span class=\"pattern\">o</span>t</span> is <span class=\"highlight\">h<span class=\"pattern\">ot</span></span>.",
+          "The <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span> is on.",
+          "I sit on a <span class=\"highlight\">c<span class=\"pattern\">ot</span></span>.",
+          "The <span class=\"highlight\">h<span class=\"pattern\">ot</span></span> <span class=\"highlight\">p<span class=\"pattern\">o</span>t</span> is on <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span>.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ot</span></span> the <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span>.",
+          "The <span class=\"highlight\">d<span class=\"pattern\">o</span>g</span> is on a <span class=\"highlight\">l<span class=\"pattern\">o</span>g</span>.",
+          "<span class=\"highlight\">P<span class=\"pattern\">op</span></span> it on <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">op</span></span> to the <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span>.",
+          "<span class=\"highlight\">M<span class=\"pattern\">op</span></span> the <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span> now.",
+          "A <span class=\"highlight\">c<span class=\"pattern\">op</span></span> can <span class=\"highlight\">h<span class=\"pattern\">op</span></span>.",
+          "The <span class=\"highlight\">f<span class=\"pattern\">o</span>x</span> can <span class=\"highlight\">h<span class=\"pattern\">op</span></span>.",
+          "The <span class=\"highlight\">d<span class=\"pattern\">o</span>g</span> is on <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span>.",
+          "The <span class=\"highlight\">f<span class=\"pattern\">o</span>x</span> is on a <span class=\"highlight\">l<span class=\"pattern\">o</span>g</span>.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ot</span></span> the <span class=\"highlight\">p<span class=\"pattern\">o</span>t</span>, then stop.",
+          "<span class=\"highlight\">M<span class=\"pattern\">op</span></span> it up now, please.",
+          "<span class=\"highlight\">P<span class=\"pattern\">op</span></span> the <span class=\"highlight\">t<span class=\"pattern\">o</span>p</span> off now.",
+          "A <span class=\"highlight\">d<span class=\"pattern\">ot</span></span> is on the <span class=\"highlight\">p<span class=\"pattern\">o</span>t</span>."
         ],
-        exploreWords: [
-          { word: 'fox', highlight: 'o' },
-          { word: 'log', highlight: 'o' },
-          { word: 'dog', highlight: 'o' },
-          { word: 'pot', highlight: 'ot' },
-          { word: 'top', highlight: 'op' },
-          { word: 'cot', highlight: 'ot' },
-          { word: 'hot', highlight: 'ot' },
-          { word: 'dot', highlight: 'ot' },
-          { word: 'lot', highlight: 'ot' },
-          { word: 'pop', highlight: 'op' },
-          { word: 'hop', highlight: 'op' },
-          { word: 'mop', highlight: 'op' },
-          { word: 'cop', highlight: 'op' },
+        "words": [
+          {
+            "word": "fox",
+            "highlight": "o",
+            "emoji": "🦊"
+          },
+          {
+            "word": "log",
+            "highlight": "o",
+            "emoji": "🪵"
+          },
+          {
+            "word": "dog",
+            "highlight": "o",
+            "emoji": "🐕"
+          },
+          {
+            "word": "pot",
+            "highlight": "ot",
+            "emoji": "🍲"
+          },
+          {
+            "word": "top",
+            "highlight": "op",
+            "emoji": "🔝"
+          },
+          {
+            "word": "cot",
+            "highlight": "ot",
+            "emoji": "🛏️"
+          },
+          {
+            "word": "hot",
+            "highlight": "ot",
+            "emoji": "🔥"
+          },
+          {
+            "word": "dot",
+            "highlight": "ot",
+            "emoji": "⚫"
+          },
+          {
+            "word": "lot",
+            "highlight": "ot",
+            "emoji": "📦"
+          },
+          {
+            "word": "pop",
+            "highlight": "op",
+            "emoji": "🎈"
+          },
+          {
+            "word": "hop",
+            "highlight": "op",
+            "emoji": "🦘"
+          },
+          {
+            "word": "mop",
+            "highlight": "op",
+            "emoji": "🧹"
+          },
+          {
+            "word": "cop",
+            "highlight": "op",
+            "emoji": "👮"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "fox",
+            "highlight": "o"
+          },
+          {
+            "word": "log",
+            "highlight": "o"
+          },
+          {
+            "word": "dog",
+            "highlight": "o"
+          },
+          {
+            "word": "pot",
+            "highlight": "ot"
+          },
+          {
+            "word": "top",
+            "highlight": "op"
+          },
+          {
+            "word": "cot",
+            "highlight": "ot"
+          },
+          {
+            "word": "hot",
+            "highlight": "ot"
+          },
+          {
+            "word": "dot",
+            "highlight": "ot"
+          },
+          {
+            "word": "lot",
+            "highlight": "ot"
+          },
+          {
+            "word": "pop",
+            "highlight": "op"
+          },
+          {
+            "word": "hop",
+            "highlight": "op"
+          },
+          {
+            "word": "mop",
+            "highlight": "op"
+          },
+          {
+            "word": "cop",
+            "highlight": "op"
+          }
         ]
       },
       {
-        id: 'unit7',
-        name: 'Unit 7',
-        patterns: ['u', 'ug', 'ud', 'up'],
-        examples: [
-          'The <span class="highlight">s<span class="pattern">un</span></span> is <span class="highlight"><span class="pattern">up</span></span>.',
-          'A <span class="highlight">j<span class="pattern">ug</span></span> is big.',
-          'My <span class="highlight">c<span class="pattern">up</span></span> is <span class="highlight"><span class="pattern">up</span></span>.',
-          'The <span class="highlight">b<span class="pattern">u</span>s</span> is here.',
-          '<span class="highlight">G<span class="pattern">um</span></span> is on me.',
-          'A <span class="highlight">r<span class="pattern">ug</span></span> is on it.',
-          'My <span class="highlight">m<span class="pattern">ug</span></span> is big.',
-          'I see a <span class="highlight">b<span class="pattern">ug</span></span>.',
-          '<span class="highlight">H<span class="pattern">ug</span></span> Mom now, please.',
-          '<span class="highlight">T<span class="pattern">ug</span></span> the <span class="highlight">r<span class="pattern">ug</span></span>.',
-          '<span class="highlight">M<span class="pattern">ud</span></span> is on me.',
-          'I see a <span class="highlight">b<span class="pattern">ud</span></span>.',
-          'A <span class="highlight">p<span class="pattern">up</span></span> can run.',
-          'A <span class="highlight">c<span class="pattern">up</span></span> is on the <span class="highlight">r<span class="pattern">ug</span></span>.',
-          'Stand <span class="highlight"><span class="pattern">up</span></span> now, please.',
-          'A <span class="highlight">b<span class="pattern">ug</span></span> is on the <span class="highlight">r<span class="pattern">ug</span></span>.',
-          '<span class="highlight">T<span class="pattern">ug</span></span>, then stop.',
-          '<span class="highlight">M<span class="pattern">ud</span></span> is on a <span class="highlight">c<span class="pattern">up</span></span>.',
-          'The <span class="highlight">p<span class="pattern">up</span></span> is in a tub.',
-          'The <span class="highlight">s<span class="pattern">un</span></span> is <span class="highlight">h<span class="pattern">o</span>t</span>.',
+        "id": "unit7",
+        "name": "Unit 7",
+        "patterns": [
+          "u",
+          "ug",
+          "ud",
+          "up"
         ],
-        words: [
-          { word: 'sun', highlight: 'u', emoji: '☀️' },
-          { word: 'jug', highlight: 'ug', emoji: '🏺' },
-          { word: 'cup', highlight: 'up', emoji: '☕' },
-          { word: 'bus', highlight: 'u', emoji: '🚌' },
-          { word: 'gum', highlight: 'um', emoji: '🍬' },
-          { word: 'rug', highlight: 'ug', emoji: '🧘' },
-          { word: 'mug', highlight: 'ug', emoji: '☕' },
-          { word: 'bug', highlight: 'ug', emoji: '🐛' },
-          { word: 'hug', highlight: 'ug', emoji: '🤗' },
-          { word: 'tug', highlight: 'ug', emoji: '⛵' },
-          { word: 'mud', highlight: 'ud', emoji: '💩' },
-          { word: 'bud', highlight: 'ud', emoji: '🌱' },
-          { word: 'cud', highlight: 'ud', emoji: '🐄' },
-          { word: 'dud', highlight: 'ud', emoji: '💣' },
-          { word: 'thud', highlight: 'ud', emoji: '💥' },
-          { word: 'pup', highlight: 'up', emoji: '🐕' },
-          { word: 'cup', highlight: 'up', emoji: '☕' },
-          { word: 'up', highlight: 'up', emoji: '⬆️' },
-          { word: 'sup', highlight: 'up', emoji: '🍵' },
+        "examples": [
+          "The <span class=\"highlight\">s<span class=\"pattern\">un</span></span> is <span class=\"highlight\"><span class=\"pattern\">up</span></span>.",
+          "A <span class=\"highlight\">j<span class=\"pattern\">ug</span></span> is big.",
+          "My <span class=\"highlight\">c<span class=\"pattern\">up</span></span> is <span class=\"highlight\"><span class=\"pattern\">up</span></span>.",
+          "The <span class=\"highlight\">b<span class=\"pattern\">u</span>s</span> is here.",
+          "<span class=\"highlight\">G<span class=\"pattern\">um</span></span> is on me.",
+          "A <span class=\"highlight\">r<span class=\"pattern\">ug</span></span> is on it.",
+          "My <span class=\"highlight\">m<span class=\"pattern\">ug</span></span> is big.",
+          "I see a <span class=\"highlight\">b<span class=\"pattern\">ug</span></span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">ug</span></span> Mom now, please.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ug</span></span> the <span class=\"highlight\">r<span class=\"pattern\">ug</span></span>.",
+          "<span class=\"highlight\">M<span class=\"pattern\">ud</span></span> is on me.",
+          "I see a <span class=\"highlight\">b<span class=\"pattern\">ud</span></span>.",
+          "A <span class=\"highlight\">p<span class=\"pattern\">up</span></span> can run.",
+          "A <span class=\"highlight\">c<span class=\"pattern\">up</span></span> is on the <span class=\"highlight\">r<span class=\"pattern\">ug</span></span>.",
+          "Stand <span class=\"highlight\"><span class=\"pattern\">up</span></span> now, please.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">ug</span></span> is on the <span class=\"highlight\">r<span class=\"pattern\">ug</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ug</span></span>, then stop.",
+          "<span class=\"highlight\">M<span class=\"pattern\">ud</span></span> is on a <span class=\"highlight\">c<span class=\"pattern\">up</span></span>.",
+          "The <span class=\"highlight\">p<span class=\"pattern\">up</span></span> is in a tub.",
+          "The <span class=\"highlight\">s<span class=\"pattern\">un</span></span> is <span class=\"highlight\">h<span class=\"pattern\">o</span>t</span>."
         ],
-        exploreWords: [
-          { word: 'sun', highlight: 'u' },
-          { word: 'jug', highlight: 'ug' },
-          { word: 'cup', highlight: 'up' },
-          { word: 'bus', highlight: 'u' },
-          { word: 'gum', highlight: 'um' },
-          { word: 'rug', highlight: 'ug' },
-          { word: 'mug', highlight: 'ug' },
-          { word: 'bug', highlight: 'ug' },
-          { word: 'hug', highlight: 'ug' },
-          { word: 'tug', highlight: 'ug' },
-          { word: 'mud', highlight: 'ud' },
-          { word: 'bud', highlight: 'ud' },
-          { word: 'cud', highlight: 'ud' },
-          { word: 'dud', highlight: 'ud' },
-          { word: 'thud', highlight: 'ud' },
-          { word: 'pup', highlight: 'up' },
-          { word: 'cup', highlight: 'up' },
-          { word: 'up', highlight: 'up' },
-          { word: 'sup', highlight: 'up' },
+        "words": [
+          {
+            "word": "sun",
+            "highlight": "u",
+            "emoji": "☀️"
+          },
+          {
+            "word": "jug",
+            "highlight": "ug",
+            "emoji": "🏺"
+          },
+          {
+            "word": "cup",
+            "highlight": "up",
+            "emoji": "☕"
+          },
+          {
+            "word": "bus",
+            "highlight": "u",
+            "emoji": "🚌"
+          },
+          {
+            "word": "gum",
+            "highlight": "um",
+            "emoji": "🍬"
+          },
+          {
+            "word": "rug",
+            "highlight": "ug",
+            "emoji": "🧘"
+          },
+          {
+            "word": "mug",
+            "highlight": "ug",
+            "emoji": "☕"
+          },
+          {
+            "word": "bug",
+            "highlight": "ug",
+            "emoji": "🐛"
+          },
+          {
+            "word": "hug",
+            "highlight": "ug",
+            "emoji": "🤗"
+          },
+          {
+            "word": "tug",
+            "highlight": "ug",
+            "emoji": "⛵"
+          },
+          {
+            "word": "mud",
+            "highlight": "ud",
+            "emoji": "💩"
+          },
+          {
+            "word": "bud",
+            "highlight": "ud",
+            "emoji": "🌱"
+          },
+          {
+            "word": "cud",
+            "highlight": "ud",
+            "emoji": "🐄"
+          },
+          {
+            "word": "dud",
+            "highlight": "ud",
+            "emoji": "💣"
+          },
+          {
+            "word": "thud",
+            "highlight": "ud",
+            "emoji": "💥"
+          },
+          {
+            "word": "pup",
+            "highlight": "up",
+            "emoji": "🐕"
+          },
+          {
+            "word": "cup",
+            "highlight": "up",
+            "emoji": "☕"
+          },
+          {
+            "word": "up",
+            "highlight": "up",
+            "emoji": "⬆️"
+          },
+          {
+            "word": "sup",
+            "highlight": "up",
+            "emoji": "🍵"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "sun",
+            "highlight": "u"
+          },
+          {
+            "word": "jug",
+            "highlight": "ug"
+          },
+          {
+            "word": "cup",
+            "highlight": "up"
+          },
+          {
+            "word": "bus",
+            "highlight": "u"
+          },
+          {
+            "word": "gum",
+            "highlight": "um"
+          },
+          {
+            "word": "rug",
+            "highlight": "ug"
+          },
+          {
+            "word": "mug",
+            "highlight": "ug"
+          },
+          {
+            "word": "bug",
+            "highlight": "ug"
+          },
+          {
+            "word": "hug",
+            "highlight": "ug"
+          },
+          {
+            "word": "tug",
+            "highlight": "ug"
+          },
+          {
+            "word": "mud",
+            "highlight": "ud"
+          },
+          {
+            "word": "bud",
+            "highlight": "ud"
+          },
+          {
+            "word": "cud",
+            "highlight": "ud"
+          },
+          {
+            "word": "dud",
+            "highlight": "ud"
+          },
+          {
+            "word": "thud",
+            "highlight": "ud"
+          },
+          {
+            "word": "pup",
+            "highlight": "up"
+          },
+          {
+            "word": "cup",
+            "highlight": "up"
+          },
+          {
+            "word": "up",
+            "highlight": "up"
+          },
+          {
+            "word": "sup",
+            "highlight": "up"
+          }
         ]
       },
       {
-        id: 'unit8',
-        name: 'Unit 8',
-        patterns: ['ut', 'ub', 'um', 'un'],
-        examples: [
-          '<span class="highlight">C<span class="pattern">ut</span></span> it, then <span class="highlight">sh<span class="pattern">ut</span></span> it.',
-          'A <span class="highlight">h<span class="pattern">ut</span></span> is up.',
-          'I see a <span class="highlight">n<span class="pattern">ut</span></span>.',
-          '<span class="highlight">B<span class="pattern">ut</span></span> I can.',
-          '<span class="highlight">Sh<span class="pattern">ut</span></span> it now, please.',
-          'A <span class="highlight">c<span class="pattern">ub</span></span> can <span class="highlight">r<span class="pattern">un</span></span>.',
-          'The <span class="highlight">t<span class="pattern">ub</span></span> is full.',
-          '<span class="highlight">R<span class="pattern">ub</span></span> it with your hand.',
-          '<span class="highlight">H<span class="pattern">um</span></span> a <span class="highlight">t<span class="pattern">un</span>e</span>.',
-          '<span class="highlight">S<span class="pattern">um</span></span> is six.',
-          'We have <span class="highlight">f<span class="pattern">un</span></span> in a <span class="highlight">h<span class="pattern">ut</span></span>.',
-          'A <span class="highlight">b<span class="pattern">un</span></span> is <span class="highlight">f<span class="pattern">un</span></span>.',
-          '<span class="highlight">R<span class="pattern">un</span></span> to the <span class="highlight">s<span class="pattern">un</span></span>.',
-          'The <span class="highlight">s<span class="pattern">un</span></span> is up.',
-          'No <span class="highlight">g<span class="pattern">un</span></span>, please. Use a toy.',
-          '<span class="highlight">Sh<span class="pattern">ut</span></span> the <span class="highlight">t<span class="pattern">ub</span></span>.',
-          '<span class="highlight">R<span class="pattern">ub</span></span> the <span class="highlight">n<span class="pattern">ut</span></span>.',
-          '<span class="highlight">H<span class="pattern">um</span></span>, then <span class="highlight">r<span class="pattern">un</span></span>.',
-          '<span class="highlight">C<span class="pattern">ut</span></span>, then <span class="highlight">sh<span class="pattern">ut</span></span>.',
-          '<span class="highlight">F<span class="pattern">un</span></span> in the <span class="highlight">s<span class="pattern">un</span></span>.',
+        "id": "unit8",
+        "name": "Unit 8",
+        "patterns": [
+          "ut",
+          "ub",
+          "um",
+          "un"
         ],
-        words: [
-          { word: 'cut', highlight: 'ut', emoji: '✂️' },
-          { word: 'hut', highlight: 'ut', emoji: '🏠' },
-          { word: 'nut', highlight: 'ut', emoji: '🥜' },
-          { word: 'but', highlight: 'ut', emoji: '🤔' },
-          { word: 'shut', highlight: 'ut', emoji: '🚪' },
-          { word: 'cub', highlight: 'ub', emoji: '🐻' },
-          { word: 'tub', highlight: 'ub', emoji: '🛁' },
-          { word: 'rub', highlight: 'ub', emoji: '✋' },
-          { word: 'sub', highlight: 'ub', emoji: '🚇' },
-          { word: 'hub', highlight: 'ub', emoji: '🔗' },
-          { word: 'hum', highlight: 'um', emoji: '🎵' },
-          { word: 'sum', highlight: 'um', emoji: '➕' },
-          { word: 'gum', highlight: 'um', emoji: '🍬' },
-          { word: 'drum', highlight: 'um', emoji: '🥁' },
-          { word: 'plum', highlight: 'um', emoji: '🫐' },
-          { word: 'fun', highlight: 'un', emoji: '🎉' },
-          { word: 'bun', highlight: 'un', emoji: '🍔' },
-          { word: 'run', highlight: 'un', emoji: '🏃' },
-          { word: 'sun', highlight: 'un', emoji: '☀️' },
-          { word: 'gun', highlight: 'un', emoji: '🔫' },
+        "examples": [
+          "<span class=\"highlight\">C<span class=\"pattern\">ut</span></span> it, then <span class=\"highlight\">sh<span class=\"pattern\">ut</span></span> it.",
+          "A <span class=\"highlight\">h<span class=\"pattern\">ut</span></span> is up.",
+          "I see a <span class=\"highlight\">n<span class=\"pattern\">ut</span></span>.",
+          "<span class=\"highlight\">B<span class=\"pattern\">ut</span></span> I can.",
+          "<span class=\"highlight\">Sh<span class=\"pattern\">ut</span></span> it now, please.",
+          "A <span class=\"highlight\">c<span class=\"pattern\">ub</span></span> can <span class=\"highlight\">r<span class=\"pattern\">un</span></span>.",
+          "The <span class=\"highlight\">t<span class=\"pattern\">ub</span></span> is full.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ub</span></span> it with your hand.",
+          "<span class=\"highlight\">H<span class=\"pattern\">um</span></span> a <span class=\"highlight\">t<span class=\"pattern\">un</span>e</span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">um</span></span> is six.",
+          "We have <span class=\"highlight\">f<span class=\"pattern\">un</span></span> in a <span class=\"highlight\">h<span class=\"pattern\">ut</span></span>.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">un</span></span> is <span class=\"highlight\">f<span class=\"pattern\">un</span></span>.",
+          "<span class=\"highlight\">R<span class=\"pattern\">un</span></span> to the <span class=\"highlight\">s<span class=\"pattern\">un</span></span>.",
+          "The <span class=\"highlight\">s<span class=\"pattern\">un</span></span> is up.",
+          "No <span class=\"highlight\">g<span class=\"pattern\">un</span></span>, please. Use a toy.",
+          "<span class=\"highlight\">Sh<span class=\"pattern\">ut</span></span> the <span class=\"highlight\">t<span class=\"pattern\">ub</span></span>.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ub</span></span> the <span class=\"highlight\">n<span class=\"pattern\">ut</span></span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">um</span></span>, then <span class=\"highlight\">r<span class=\"pattern\">un</span></span>.",
+          "<span class=\"highlight\">C<span class=\"pattern\">ut</span></span>, then <span class=\"highlight\">sh<span class=\"pattern\">ut</span></span>.",
+          "<span class=\"highlight\">F<span class=\"pattern\">un</span></span> in the <span class=\"highlight\">s<span class=\"pattern\">un</span></span>."
         ],
-        exploreWords: [
-          { word: 'cut', highlight: 'ut' },
-          { word: 'hut', highlight: 'ut' },
-          { word: 'nut', highlight: 'ut' },
-          { word: 'but', highlight: 'ut' },
-          { word: 'shut', highlight: 'ut' },
-          { word: 'cub', highlight: 'ub' },
-          { word: 'tub', highlight: 'ub' },
-          { word: 'rub', highlight: 'ub' },
-          { word: 'sub', highlight: 'ub' },
-          { word: 'hub', highlight: 'ub' },
-          { word: 'hum', highlight: 'um' },
-          { word: 'sum', highlight: 'um' },
-          { word: 'gum', highlight: 'um' },
-          { word: 'drum', highlight: 'um' },
-          { word: 'plum', highlight: 'um' },
-          { word: 'fun', highlight: 'un' },
-          { word: 'bun', highlight: 'un' },
-          { word: 'run', highlight: 'un' },
-          { word: 'sun', highlight: 'un' },
-          { word: 'gun', highlight: 'un' },
+        "words": [
+          {
+            "word": "cut",
+            "highlight": "ut",
+            "emoji": "✂️"
+          },
+          {
+            "word": "hut",
+            "highlight": "ut",
+            "emoji": "🏠"
+          },
+          {
+            "word": "nut",
+            "highlight": "ut",
+            "emoji": "🥜"
+          },
+          {
+            "word": "but",
+            "highlight": "ut",
+            "emoji": "🤔"
+          },
+          {
+            "word": "shut",
+            "highlight": "ut",
+            "emoji": "🚪"
+          },
+          {
+            "word": "cub",
+            "highlight": "ub",
+            "emoji": "🐻"
+          },
+          {
+            "word": "tub",
+            "highlight": "ub",
+            "emoji": "🛁"
+          },
+          {
+            "word": "rub",
+            "highlight": "ub",
+            "emoji": "✋"
+          },
+          {
+            "word": "sub",
+            "highlight": "ub",
+            "emoji": "🚇"
+          },
+          {
+            "word": "hub",
+            "highlight": "ub",
+            "emoji": "🔗"
+          },
+          {
+            "word": "hum",
+            "highlight": "um",
+            "emoji": "🎵"
+          },
+          {
+            "word": "sum",
+            "highlight": "um",
+            "emoji": "➕"
+          },
+          {
+            "word": "gum",
+            "highlight": "um",
+            "emoji": "🍬"
+          },
+          {
+            "word": "drum",
+            "highlight": "um",
+            "emoji": "🥁"
+          },
+          {
+            "word": "plum",
+            "highlight": "um",
+            "emoji": "🫐"
+          },
+          {
+            "word": "fun",
+            "highlight": "un",
+            "emoji": "🎉"
+          },
+          {
+            "word": "bun",
+            "highlight": "un",
+            "emoji": "🍔"
+          },
+          {
+            "word": "run",
+            "highlight": "un",
+            "emoji": "🏃"
+          },
+          {
+            "word": "sun",
+            "highlight": "un",
+            "emoji": "☀️"
+          },
+          {
+            "word": "gun",
+            "highlight": "un",
+            "emoji": "🔫"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "cut",
+            "highlight": "ut"
+          },
+          {
+            "word": "hut",
+            "highlight": "ut"
+          },
+          {
+            "word": "nut",
+            "highlight": "ut"
+          },
+          {
+            "word": "but",
+            "highlight": "ut"
+          },
+          {
+            "word": "shut",
+            "highlight": "ut"
+          },
+          {
+            "word": "cub",
+            "highlight": "ub"
+          },
+          {
+            "word": "tub",
+            "highlight": "ub"
+          },
+          {
+            "word": "rub",
+            "highlight": "ub"
+          },
+          {
+            "word": "sub",
+            "highlight": "ub"
+          },
+          {
+            "word": "hub",
+            "highlight": "ub"
+          },
+          {
+            "word": "hum",
+            "highlight": "um"
+          },
+          {
+            "word": "sum",
+            "highlight": "um"
+          },
+          {
+            "word": "gum",
+            "highlight": "um"
+          },
+          {
+            "word": "drum",
+            "highlight": "um"
+          },
+          {
+            "word": "plum",
+            "highlight": "um"
+          },
+          {
+            "word": "fun",
+            "highlight": "un"
+          },
+          {
+            "word": "bun",
+            "highlight": "un"
+          },
+          {
+            "word": "run",
+            "highlight": "un"
+          },
+          {
+            "word": "sun",
+            "highlight": "un"
+          },
+          {
+            "word": "gun",
+            "highlight": "un"
+          }
         ]
       }
     ]
   },
-  level3: {
-    id: 'level3',
-    name: 'Level 3',
-    title: 'Long Vowels',
-    subtitle: '长元音',
-    color: '#2196F3',
-    emoji: '🔵',
-    units: [
+  "level3": {
+    "id": "level3",
+    "name": "Level 3",
+    "title": "Long Vowels",
+    "subtitle": "长元音",
+    "color": "#2196F3",
+    "emoji": "🔵",
+    "units": [
       {
-        id: 'unit1',
-        name: 'Unit 1',
-        patterns: ['a_e', 'ame', 'ake', 'ate', 'ave'],
-        examples: [
-          'I <span class="highlight">t<span class="pattern">a</span>p<span class="pattern">e</span></span> a note.',
-          'A <span class="highlight">m<span class="pattern">a</span>n<span class="pattern">e</span></span> is big.',
-          'I like <span class="highlight">c<span class="pattern">ake</span></span>.',
-          'My <span class="highlight">n<span class="pattern">ame</span></span> is Ben.',
-          'We are <span class="highlight">l<span class="pattern">ate</span></span>.',
-          'I play a <span class="highlight">g<span class="pattern">ame</span></span>.',
-          '<span class="highlight">S<span class="pattern">ame</span></span> <span class="highlight">g<span class="pattern">ame</span></span>, <span class="highlight">s<span class="pattern">ame</span></span> <span class="highlight">n<span class="pattern">ame</span></span>.',
-          'I see a <span class="highlight">l<span class="pattern">ake</span></span>.',
-          '<span class="highlight">C<span class="pattern">ake</span></span> is on a <span class="highlight">pl<span class="pattern">ate</span></span>.',
-          'The <span class="highlight">l<span class="pattern">ake</span></span> is big.',
-          'The <span class="highlight">g<span class="pattern">ate</span></span> is up.',
-          'We wait at the <span class="highlight">g<span class="pattern">ate</span></span>.',
-          'A <span class="highlight">d<span class="pattern">ate</span></span> is here.',
-          '<span class="highlight">S<span class="pattern">ave</span></span> the <span class="highlight">c<span class="pattern">ake</span></span>.',
-          'I <span class="highlight">w<span class="pattern">ave</span></span> to you now.',
-          'I <span class="highlight">s<span class="pattern">ave</span></span> my <span class="highlight">n<span class="pattern">ame</span></span>.',
-          'The <span class="highlight">g<span class="pattern">ate</span></span> is big.',
-          'I <span class="highlight">b<span class="pattern">ake</span></span> a <span class="highlight">c<span class="pattern">ake</span></span>.',
-          '<span class="highlight">N<span class="pattern">ame</span></span> the <span class="highlight">g<span class="pattern">ame</span></span>.',
-          'We <span class="highlight">w<span class="pattern">ave</span></span> at home.',
+        "id": "unit1",
+        "name": "Unit 1",
+        "patterns": [
+          "a_e",
+          "ame",
+          "ake",
+          "ate",
+          "ave"
         ],
-        words: [
-          { word: 'tape', highlight: 'a_e', emoji: '📼' },
-          { word: 'mane', highlight: 'a_e', emoji: '🦁' },
-          { word: 'cake', highlight: 'a_e', emoji: '🍰' },
-          { word: 'name', highlight: 'a_e', emoji: '📝' },
-          { word: 'late', highlight: 'a_e', emoji: '⏰' },
-          { word: 'game', highlight: 'ame', emoji: '🎮' },
-          { word: 'same', highlight: 'ame', emoji: '👯' },
-          { word: 'name', highlight: 'ame', emoji: '📝' },
-          { word: 'tame', highlight: 'ame', emoji: '🐴' },
-          { word: 'fame', highlight: 'ame', emoji: '⭐' },
-          { word: 'cake', highlight: 'ake', emoji: '🍰' },
-          { word: 'lake', highlight: 'ake', emoji: '🏞️' },
-          { word: 'make', highlight: 'ake', emoji: '🔨' },
-          { word: 'take', highlight: 'ake', emoji: '🤲' },
-          { word: 'bake', highlight: 'ake', emoji: '👨‍🍳' },
-          { word: 'gate', highlight: 'ate', emoji: '🚪' },
-          { word: 'late', highlight: 'ate', emoji: '⏰' },
-          { word: 'date', highlight: 'ate', emoji: '📅' },
-          { word: 'mate', highlight: 'ate', emoji: '🤝' },
-          { word: 'rate', highlight: 'ate', emoji: '📊' },
-          { word: 'save', highlight: 'ave', emoji: '💾' },
-          { word: 'wave', highlight: 'ave', emoji: '👋' },
-          { word: 'cave', highlight: 'ave', emoji: '🕳️' },
-          { word: 'gave', highlight: 'ave', emoji: '🎁' },
-          { word: 'brave', highlight: 'ave', emoji: '🦸' },
+        "examples": [
+          "I <span class=\"highlight\">t<span class=\"pattern\">a</span>p<span class=\"pattern\">e</span></span> a note.",
+          "A <span class=\"highlight\">m<span class=\"pattern\">a</span>n<span class=\"pattern\">e</span></span> is big.",
+          "I like <span class=\"highlight\">c<span class=\"pattern\">ake</span></span>.",
+          "My <span class=\"highlight\">n<span class=\"pattern\">ame</span></span> is Ben.",
+          "We are <span class=\"highlight\">l<span class=\"pattern\">ate</span></span>.",
+          "I play a <span class=\"highlight\">g<span class=\"pattern\">ame</span></span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">ame</span></span> <span class=\"highlight\">g<span class=\"pattern\">ame</span></span>, <span class=\"highlight\">s<span class=\"pattern\">ame</span></span> <span class=\"highlight\">n<span class=\"pattern\">ame</span></span>.",
+          "I see a <span class=\"highlight\">l<span class=\"pattern\">ake</span></span>.",
+          "<span class=\"highlight\">C<span class=\"pattern\">ake</span></span> is on a <span class=\"highlight\">pl<span class=\"pattern\">ate</span></span>.",
+          "The <span class=\"highlight\">l<span class=\"pattern\">ake</span></span> is big.",
+          "The <span class=\"highlight\">g<span class=\"pattern\">ate</span></span> is up.",
+          "We wait at the <span class=\"highlight\">g<span class=\"pattern\">ate</span></span>.",
+          "A <span class=\"highlight\">d<span class=\"pattern\">ate</span></span> is here.",
+          "<span class=\"highlight\">S<span class=\"pattern\">ave</span></span> the <span class=\"highlight\">c<span class=\"pattern\">ake</span></span>.",
+          "I <span class=\"highlight\">w<span class=\"pattern\">ave</span></span> to you now.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">ave</span></span> my <span class=\"highlight\">n<span class=\"pattern\">ame</span></span>.",
+          "The <span class=\"highlight\">g<span class=\"pattern\">ate</span></span> is big.",
+          "I <span class=\"highlight\">b<span class=\"pattern\">ake</span></span> a <span class=\"highlight\">c<span class=\"pattern\">ake</span></span>.",
+          "<span class=\"highlight\">N<span class=\"pattern\">ame</span></span> the <span class=\"highlight\">g<span class=\"pattern\">ame</span></span>.",
+          "We <span class=\"highlight\">w<span class=\"pattern\">ave</span></span> at home."
         ],
-        exploreWords: [
-          { word: 'tape', highlight: 'a_e' },
-          { word: 'mane', highlight: 'a_e' },
-          { word: 'cake', highlight: 'a_e' },
-          { word: 'name', highlight: 'a_e' },
-          { word: 'late', highlight: 'a_e' },
-          { word: 'game', highlight: 'ame' },
-          { word: 'same', highlight: 'ame' },
-          { word: 'name', highlight: 'ame' },
-          { word: 'tame', highlight: 'ame' },
-          { word: 'fame', highlight: 'ame' },
-          { word: 'cake', highlight: 'ake' },
-          { word: 'lake', highlight: 'ake' },
-          { word: 'make', highlight: 'ake' },
-          { word: 'take', highlight: 'ake' },
-          { word: 'bake', highlight: 'ake' },
-          { word: 'gate', highlight: 'ate' },
-          { word: 'late', highlight: 'ate' },
-          { word: 'date', highlight: 'ate' },
-          { word: 'mate', highlight: 'ate' },
-          { word: 'rate', highlight: 'ate' },
-          { word: 'save', highlight: 'ave' },
-          { word: 'wave', highlight: 'ave' },
-          { word: 'cave', highlight: 'ave' },
-          { word: 'gave', highlight: 'ave' },
-          { word: 'brave', highlight: 'ave' },
+        "words": [
+          {
+            "word": "tape",
+            "highlight": "a_e",
+            "emoji": "📼"
+          },
+          {
+            "word": "mane",
+            "highlight": "a_e",
+            "emoji": "🦁"
+          },
+          {
+            "word": "cake",
+            "highlight": "a_e",
+            "emoji": "🍰"
+          },
+          {
+            "word": "name",
+            "highlight": "a_e",
+            "emoji": "📝"
+          },
+          {
+            "word": "late",
+            "highlight": "a_e",
+            "emoji": "⏰"
+          },
+          {
+            "word": "game",
+            "highlight": "ame",
+            "emoji": "🎮"
+          },
+          {
+            "word": "same",
+            "highlight": "ame",
+            "emoji": "👯"
+          },
+          {
+            "word": "name",
+            "highlight": "ame",
+            "emoji": "📝"
+          },
+          {
+            "word": "tame",
+            "highlight": "ame",
+            "emoji": "🐴"
+          },
+          {
+            "word": "fame",
+            "highlight": "ame",
+            "emoji": "⭐"
+          },
+          {
+            "word": "cake",
+            "highlight": "ake",
+            "emoji": "🍰"
+          },
+          {
+            "word": "lake",
+            "highlight": "ake",
+            "emoji": "🏞️"
+          },
+          {
+            "word": "make",
+            "highlight": "ake",
+            "emoji": "🔨"
+          },
+          {
+            "word": "take",
+            "highlight": "ake",
+            "emoji": "🤲"
+          },
+          {
+            "word": "bake",
+            "highlight": "ake",
+            "emoji": "👨‍🍳"
+          },
+          {
+            "word": "gate",
+            "highlight": "ate",
+            "emoji": "🚪"
+          },
+          {
+            "word": "late",
+            "highlight": "ate",
+            "emoji": "⏰"
+          },
+          {
+            "word": "date",
+            "highlight": "ate",
+            "emoji": "📅"
+          },
+          {
+            "word": "mate",
+            "highlight": "ate",
+            "emoji": "🤝"
+          },
+          {
+            "word": "rate",
+            "highlight": "ate",
+            "emoji": "📊"
+          },
+          {
+            "word": "save",
+            "highlight": "ave",
+            "emoji": "💾"
+          },
+          {
+            "word": "wave",
+            "highlight": "ave",
+            "emoji": "👋"
+          },
+          {
+            "word": "cave",
+            "highlight": "ave",
+            "emoji": "🕳️"
+          },
+          {
+            "word": "gave",
+            "highlight": "ave",
+            "emoji": "🎁"
+          },
+          {
+            "word": "brave",
+            "highlight": "ave",
+            "emoji": "🦸"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "tape",
+            "highlight": "a_e"
+          },
+          {
+            "word": "mane",
+            "highlight": "a_e"
+          },
+          {
+            "word": "cake",
+            "highlight": "a_e"
+          },
+          {
+            "word": "name",
+            "highlight": "a_e"
+          },
+          {
+            "word": "late",
+            "highlight": "a_e"
+          },
+          {
+            "word": "game",
+            "highlight": "ame"
+          },
+          {
+            "word": "same",
+            "highlight": "ame"
+          },
+          {
+            "word": "name",
+            "highlight": "ame"
+          },
+          {
+            "word": "tame",
+            "highlight": "ame"
+          },
+          {
+            "word": "fame",
+            "highlight": "ame"
+          },
+          {
+            "word": "cake",
+            "highlight": "ake"
+          },
+          {
+            "word": "lake",
+            "highlight": "ake"
+          },
+          {
+            "word": "make",
+            "highlight": "ake"
+          },
+          {
+            "word": "take",
+            "highlight": "ake"
+          },
+          {
+            "word": "bake",
+            "highlight": "ake"
+          },
+          {
+            "word": "gate",
+            "highlight": "ate"
+          },
+          {
+            "word": "late",
+            "highlight": "ate"
+          },
+          {
+            "word": "date",
+            "highlight": "ate"
+          },
+          {
+            "word": "mate",
+            "highlight": "ate"
+          },
+          {
+            "word": "rate",
+            "highlight": "ate"
+          },
+          {
+            "word": "save",
+            "highlight": "ave"
+          },
+          {
+            "word": "wave",
+            "highlight": "ave"
+          },
+          {
+            "word": "cave",
+            "highlight": "ave"
+          },
+          {
+            "word": "gave",
+            "highlight": "ave"
+          },
+          {
+            "word": "brave",
+            "highlight": "ave"
+          }
         ]
       },
       {
-        id: 'unit2',
-        name: 'Unit 2',
-        patterns: ['i_e', 'ime', 'ike', 'ive', 'ine'],
-        examples: [
-          'I see a <span class="highlight">k<span class="pattern">ite</span></span>.',
-          'I see a <span class="highlight">p<span class="pattern">ine</span></span>.',
-          'I ride a <span class="highlight">b<span class="pattern">ike</span></span>.',
-          'This is a <span class="highlight">f<span class="pattern">ine</span></span> <span class="highlight">b<span class="pattern">ike</span></span>.',
-          '<span class="highlight">N<span class="pattern">ine</span></span> kids smile.',
-          'It is <span class="highlight">t<span class="pattern">ime</span></span>.',
-          'A <span class="highlight">d<span class="pattern">ime</span></span> is <span class="highlight">m<span class="pattern">ine</span></span>.',
-          'I <span class="highlight">l<span class="pattern">ike</span></span> <span class="highlight">l<span class="pattern">ime</span></span>.',
-          'I <span class="highlight">l<span class="pattern">ike</span></span> pie.',
-          'We <span class="highlight">h<span class="pattern">ike</span></span> up the hill.',
-          '<span class="highlight">F<span class="pattern">ive</span></span> dogs sit.',
-          'Fish <span class="highlight">l<span class="pattern">ive</span></span> here.',
-          'I can <span class="highlight">d<span class="pattern">ive</span></span>.',
-          'This is a <span class="highlight">f<span class="pattern">ine</span></span> <span class="highlight">l<span class="pattern">ine</span></span>.',
-          'I see <span class="highlight">n<span class="pattern">ine</span></span> <span class="highlight">b<span class="pattern">ike</span>s</span> now.',
-          'I <span class="highlight">l<span class="pattern">ike</span></span> my <span class="highlight">b<span class="pattern">ike</span></span>.',
-          '<span class="highlight">T<span class="pattern">ime</span></span> to <span class="highlight">h<span class="pattern">ike</span></span>.',
-          'I see <span class="highlight">f<span class="pattern">ive</span></span> <span class="highlight">k<span class="pattern">ite</span>s</span> up.',
-          'I <span class="highlight">h<span class="pattern">ike</span></span> at <span class="highlight">n<span class="pattern">ine</span></span>.',
-          '<span class="highlight">P<span class="pattern">ine</span></span> is nice.',
+        "id": "unit2",
+        "name": "Unit 2",
+        "patterns": [
+          "i_e",
+          "ime",
+          "ike",
+          "ive",
+          "ine"
         ],
-        words: [
-          { word: 'kite', highlight: 'i_e', emoji: '🪁' },
-          { word: 'pine', highlight: 'ine', emoji: '🌲' },
-          { word: 'bike', highlight: 'ike', emoji: '🚲' },
-          { word: 'fine', highlight: 'ine', emoji: '👍' },
-          { word: 'nine', highlight: 'ine', emoji: '9️⃣' },
-          { word: 'time', highlight: 'ime', emoji: '⏰' },
-          { word: 'dime', highlight: 'ime', emoji: '💰' },
-          { word: 'lime', highlight: 'ime', emoji: '🍋' },
-          { word: 'mime', highlight: 'ime', emoji: '🤡' },
-          { word: 'chime', highlight: 'ime', emoji: '🔔' },
-          { word: 'like', highlight: 'ike', emoji: '👍' },
-          { word: 'hike', highlight: 'ike', emoji: '🥾' },
-          { word: 'pike', highlight: 'ike', emoji: '🐟' },
-          { word: 'strike', highlight: 'ike', emoji: '⚡' },
-          { word: 'five', highlight: 'ive', emoji: '5️⃣' },
-          { word: 'live', highlight: 'ive', emoji: '🏠' },
-          { word: 'dive', highlight: 'ive', emoji: '🤿' },
-          { word: 'hive', highlight: 'ive', emoji: '🐝' },
-          { word: 'drive', highlight: 'ive', emoji: '🚗' },
-          { word: 'line', highlight: 'ine', emoji: '📏' },
-          { word: 'mine', highlight: 'ine', emoji: '⛏️' },
+        "examples": [
+          "I see a <span class=\"highlight\">k<span class=\"pattern\">ite</span></span>.",
+          "I see a <span class=\"highlight\">p<span class=\"pattern\">ine</span></span>.",
+          "I ride a <span class=\"highlight\">b<span class=\"pattern\">ike</span></span>.",
+          "This is a <span class=\"highlight\">f<span class=\"pattern\">ine</span></span> <span class=\"highlight\">b<span class=\"pattern\">ike</span></span>.",
+          "<span class=\"highlight\">N<span class=\"pattern\">ine</span></span> kids smile.",
+          "It is <span class=\"highlight\">t<span class=\"pattern\">ime</span></span>.",
+          "A <span class=\"highlight\">d<span class=\"pattern\">ime</span></span> is <span class=\"highlight\">m<span class=\"pattern\">ine</span></span>.",
+          "I <span class=\"highlight\">l<span class=\"pattern\">ike</span></span> <span class=\"highlight\">l<span class=\"pattern\">ime</span></span>.",
+          "I <span class=\"highlight\">l<span class=\"pattern\">ike</span></span> pie.",
+          "We <span class=\"highlight\">h<span class=\"pattern\">ike</span></span> up the hill.",
+          "<span class=\"highlight\">F<span class=\"pattern\">ive</span></span> dogs sit.",
+          "Fish <span class=\"highlight\">l<span class=\"pattern\">ive</span></span> here.",
+          "I can <span class=\"highlight\">d<span class=\"pattern\">ive</span></span>.",
+          "This is a <span class=\"highlight\">f<span class=\"pattern\">ine</span></span> <span class=\"highlight\">l<span class=\"pattern\">ine</span></span>.",
+          "I see <span class=\"highlight\">n<span class=\"pattern\">ine</span></span> <span class=\"highlight\">b<span class=\"pattern\">ike</span>s</span> now.",
+          "I <span class=\"highlight\">l<span class=\"pattern\">ike</span></span> my <span class=\"highlight\">b<span class=\"pattern\">ike</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ime</span></span> to <span class=\"highlight\">h<span class=\"pattern\">ike</span></span>.",
+          "I see <span class=\"highlight\">f<span class=\"pattern\">ive</span></span> <span class=\"highlight\">k<span class=\"pattern\">ite</span>s</span> up.",
+          "I <span class=\"highlight\">h<span class=\"pattern\">ike</span></span> at <span class=\"highlight\">n<span class=\"pattern\">ine</span></span>.",
+          "<span class=\"highlight\">P<span class=\"pattern\">ine</span></span> is nice."
         ],
-        exploreWords: [
-          { word: 'kite', highlight: 'i_e' },
-          { word: 'pine', highlight: 'ine' },
-          { word: 'bike', highlight: 'ike' },
-          { word: 'fine', highlight: 'ine' },
-          { word: 'nine', highlight: 'ine' },
-          { word: 'time', highlight: 'ime' },
-          { word: 'dime', highlight: 'ime' },
-          { word: 'lime', highlight: 'ime' },
-          { word: 'mime', highlight: 'ime' },
-          { word: 'chime', highlight: 'ime' },
-          { word: 'like', highlight: 'ike' },
-          { word: 'hike', highlight: 'ike' },
-          { word: 'pike', highlight: 'ike' },
-          { word: 'strike', highlight: 'ike' },
-          { word: 'five', highlight: 'ive' },
-          { word: 'live', highlight: 'ive' },
-          { word: 'dive', highlight: 'ive' },
-          { word: 'hive', highlight: 'ive' },
-          { word: 'drive', highlight: 'ive' },
-          { word: 'line', highlight: 'ine' },
-          { word: 'mine', highlight: 'ine' },
+        "words": [
+          {
+            "word": "kite",
+            "highlight": "i_e",
+            "emoji": "🪁"
+          },
+          {
+            "word": "pine",
+            "highlight": "ine",
+            "emoji": "🌲"
+          },
+          {
+            "word": "bike",
+            "highlight": "ike",
+            "emoji": "🚲"
+          },
+          {
+            "word": "fine",
+            "highlight": "ine",
+            "emoji": "👍"
+          },
+          {
+            "word": "nine",
+            "highlight": "ine",
+            "emoji": "9️⃣"
+          },
+          {
+            "word": "time",
+            "highlight": "ime",
+            "emoji": "⏰"
+          },
+          {
+            "word": "dime",
+            "highlight": "ime",
+            "emoji": "💰"
+          },
+          {
+            "word": "lime",
+            "highlight": "ime",
+            "emoji": "🍋"
+          },
+          {
+            "word": "mime",
+            "highlight": "ime",
+            "emoji": "🤡"
+          },
+          {
+            "word": "chime",
+            "highlight": "ime",
+            "emoji": "🔔"
+          },
+          {
+            "word": "like",
+            "highlight": "ike",
+            "emoji": "👍"
+          },
+          {
+            "word": "hike",
+            "highlight": "ike",
+            "emoji": "🥾"
+          },
+          {
+            "word": "pike",
+            "highlight": "ike",
+            "emoji": "🐟"
+          },
+          {
+            "word": "strike",
+            "highlight": "ike",
+            "emoji": "⚡"
+          },
+          {
+            "word": "five",
+            "highlight": "ive",
+            "emoji": "5️⃣"
+          },
+          {
+            "word": "live",
+            "highlight": "ive",
+            "emoji": "🏠"
+          },
+          {
+            "word": "dive",
+            "highlight": "ive",
+            "emoji": "🤿"
+          },
+          {
+            "word": "hive",
+            "highlight": "ive",
+            "emoji": "🐝"
+          },
+          {
+            "word": "drive",
+            "highlight": "ive",
+            "emoji": "🚗"
+          },
+          {
+            "word": "line",
+            "highlight": "ine",
+            "emoji": "📏"
+          },
+          {
+            "word": "mine",
+            "highlight": "ine",
+            "emoji": "⛏️"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "kite",
+            "highlight": "i_e"
+          },
+          {
+            "word": "pine",
+            "highlight": "ine"
+          },
+          {
+            "word": "bike",
+            "highlight": "ike"
+          },
+          {
+            "word": "fine",
+            "highlight": "ine"
+          },
+          {
+            "word": "nine",
+            "highlight": "ine"
+          },
+          {
+            "word": "time",
+            "highlight": "ime"
+          },
+          {
+            "word": "dime",
+            "highlight": "ime"
+          },
+          {
+            "word": "lime",
+            "highlight": "ime"
+          },
+          {
+            "word": "mime",
+            "highlight": "ime"
+          },
+          {
+            "word": "chime",
+            "highlight": "ime"
+          },
+          {
+            "word": "like",
+            "highlight": "ike"
+          },
+          {
+            "word": "hike",
+            "highlight": "ike"
+          },
+          {
+            "word": "pike",
+            "highlight": "ike"
+          },
+          {
+            "word": "strike",
+            "highlight": "ike"
+          },
+          {
+            "word": "five",
+            "highlight": "ive"
+          },
+          {
+            "word": "live",
+            "highlight": "ive"
+          },
+          {
+            "word": "dive",
+            "highlight": "ive"
+          },
+          {
+            "word": "hive",
+            "highlight": "ive"
+          },
+          {
+            "word": "drive",
+            "highlight": "ive"
+          },
+          {
+            "word": "line",
+            "highlight": "ine"
+          },
+          {
+            "word": "mine",
+            "highlight": "ine"
+          }
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
-        patterns: ['o_e', 'u_e'],
-        examples: [
-          'I go <span class="highlight">h<span class="pattern">o</span>m<span class="pattern">e</span></span>.',
-          'I see a <span class="highlight">b<span class="pattern">o</span>n<span class="pattern">e</span></span>.',
-          'I see a <span class="highlight">c<span class="pattern">o</span>n<span class="pattern">e</span></span>.',
-          '<span class="highlight">R<span class="pattern">o</span>p<span class="pattern">e</span></span> is long.',
-          'A <span class="highlight">n<span class="pattern">o</span>t<span class="pattern">e</span></span> is here.',
-          'I see a <span class="highlight">c<span class="pattern">u</span>t<span class="pattern">e</span></span> pup.',
-          'A <span class="highlight">c<span class="pattern">u</span>b<span class="pattern">e</span></span> is big.',
-          'A <span class="highlight">m<span class="pattern">u</span>l<span class="pattern">e</span></span> can run.',
-          'A <span class="highlight">r<span class="pattern">u</span>l<span class="pattern">e</span></span> is good.',
-          'A <span class="highlight">t<span class="pattern">u</span>b<span class="pattern">e</span></span> is long.',
-          'I like this <span class="highlight">t<span class="pattern">u</span>n<span class="pattern">e</span></span>.',
-          '<span class="highlight">J<span class="pattern">u</span>n<span class="pattern">e</span></span> is here.',
-          '<span class="highlight"><span class="pattern">U</span>s<span class="pattern">e</span></span> the <span class="highlight">r<span class="pattern">o</span>p<span class="pattern">e</span></span>.',
-          'A <span class="highlight">f<span class="pattern">u</span>s<span class="pattern">e</span></span> is in it.',
-          'Do not be <span class="highlight">r<span class="pattern">u</span>d<span class="pattern">e</span></span>.',
-          '<span class="highlight">H<span class="pattern">o</span>m<span class="pattern">e</span></span> is good.',
-          'I have a new <span class="highlight">n<span class="pattern">o</span>t<span class="pattern">e</span></span>.',
-          'This is a <span class="highlight">c<span class="pattern">u</span>t<span class="pattern">e</span></span> <span class="highlight">c<span class="pattern">u</span>b<span class="pattern">e</span></span>.',
-          'I <span class="highlight"><span class="pattern">u</span>s<span class="pattern">e</span></span> a <span class="highlight">t<span class="pattern">u</span>b<span class="pattern">e</span></span>.',
-          '<span class="highlight">J<span class="pattern">u</span>n<span class="pattern">e</span></span> is warm.',
+        "id": "unit3",
+        "name": "Unit 3",
+        "patterns": [
+          "o_e",
+          "u_e"
         ],
-        words: [
-          { word: 'home', highlight: 'o_e', emoji: '🏠' },
-          { word: 'bone', highlight: 'o_e', emoji: '🦴' },
-          { word: 'cone', highlight: 'o_e', emoji: '🍦' },
-          { word: 'rope', highlight: 'o_e', emoji: '🪢' },
-          { word: 'note', highlight: 'o_e', emoji: '📝' },
-          { word: 'cute', highlight: 'u_e', emoji: '🥰' },
-          { word: 'cube', highlight: 'u_e', emoji: '🧊' },
-          { word: 'mule', highlight: 'u_e', emoji: '🫏' },
-          { word: 'rule', highlight: 'u_e', emoji: '📏' },
-          { word: 'tube', highlight: 'u_e', emoji: '🧪' },
-          { word: 'tune', highlight: 'u_e', emoji: '🎵' },
-          { word: 'June', highlight: 'u_e', emoji: '📅' },
-          { word: 'use', highlight: 'u_e', emoji: '🔨' },
-          { word: 'fuse', highlight: 'u_e', emoji: '💡' },
-          { word: 'rude', highlight: 'u_e', emoji: '😠' },
+        "examples": [
+          "I go <span class=\"highlight\">h<span class=\"pattern\">o</span>m<span class=\"pattern\">e</span></span>.",
+          "I see a <span class=\"highlight\">b<span class=\"pattern\">o</span>n<span class=\"pattern\">e</span></span>.",
+          "I see a <span class=\"highlight\">c<span class=\"pattern\">o</span>n<span class=\"pattern\">e</span></span>.",
+          "<span class=\"highlight\">R<span class=\"pattern\">o</span>p<span class=\"pattern\">e</span></span> is long.",
+          "A <span class=\"highlight\">n<span class=\"pattern\">o</span>t<span class=\"pattern\">e</span></span> is here.",
+          "I see a <span class=\"highlight\">c<span class=\"pattern\">u</span>t<span class=\"pattern\">e</span></span> pup.",
+          "A <span class=\"highlight\">c<span class=\"pattern\">u</span>b<span class=\"pattern\">e</span></span> is big.",
+          "A <span class=\"highlight\">m<span class=\"pattern\">u</span>l<span class=\"pattern\">e</span></span> can run.",
+          "A <span class=\"highlight\">r<span class=\"pattern\">u</span>l<span class=\"pattern\">e</span></span> is good.",
+          "A <span class=\"highlight\">t<span class=\"pattern\">u</span>b<span class=\"pattern\">e</span></span> is long.",
+          "I like this <span class=\"highlight\">t<span class=\"pattern\">u</span>n<span class=\"pattern\">e</span></span>.",
+          "<span class=\"highlight\">J<span class=\"pattern\">u</span>n<span class=\"pattern\">e</span></span> is here.",
+          "<span class=\"highlight\"><span class=\"pattern\">U</span>s<span class=\"pattern\">e</span></span> the <span class=\"highlight\">r<span class=\"pattern\">o</span>p<span class=\"pattern\">e</span></span>.",
+          "A <span class=\"highlight\">f<span class=\"pattern\">u</span>s<span class=\"pattern\">e</span></span> is in it.",
+          "Do not be <span class=\"highlight\">r<span class=\"pattern\">u</span>d<span class=\"pattern\">e</span></span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">o</span>m<span class=\"pattern\">e</span></span> is good.",
+          "I have a new <span class=\"highlight\">n<span class=\"pattern\">o</span>t<span class=\"pattern\">e</span></span>.",
+          "This is a <span class=\"highlight\">c<span class=\"pattern\">u</span>t<span class=\"pattern\">e</span></span> <span class=\"highlight\">c<span class=\"pattern\">u</span>b<span class=\"pattern\">e</span></span>.",
+          "I <span class=\"highlight\"><span class=\"pattern\">u</span>s<span class=\"pattern\">e</span></span> a <span class=\"highlight\">t<span class=\"pattern\">u</span>b<span class=\"pattern\">e</span></span>.",
+          "<span class=\"highlight\">J<span class=\"pattern\">u</span>n<span class=\"pattern\">e</span></span> is warm."
         ],
-        exploreWords: [
-          { word: 'home', highlight: 'o_e' },
-          { word: 'bone', highlight: 'o_e' },
-          { word: 'cone', highlight: 'o_e' },
-          { word: 'rope', highlight: 'o_e' },
-          { word: 'note', highlight: 'o_e' },
-          { word: 'cute', highlight: 'u_e' },
-          { word: 'cube', highlight: 'u_e' },
-          { word: 'mule', highlight: 'u_e' },
-          { word: 'rule', highlight: 'u_e' },
-          { word: 'tube', highlight: 'u_e' },
-          { word: 'tune', highlight: 'u_e' },
-          { word: 'June', highlight: 'u_e' },
-          { word: 'use', highlight: 'u_e' },
-          { word: 'fuse', highlight: 'u_e' },
-          { word: 'rude', highlight: 'u_e' },
+        "words": [
+          {
+            "word": "home",
+            "highlight": "o_e",
+            "emoji": "🏠"
+          },
+          {
+            "word": "bone",
+            "highlight": "o_e",
+            "emoji": "🦴"
+          },
+          {
+            "word": "cone",
+            "highlight": "o_e",
+            "emoji": "🍦"
+          },
+          {
+            "word": "rope",
+            "highlight": "o_e",
+            "emoji": "🪢"
+          },
+          {
+            "word": "note",
+            "highlight": "o_e",
+            "emoji": "📝"
+          },
+          {
+            "word": "cute",
+            "highlight": "u_e",
+            "emoji": "🥰"
+          },
+          {
+            "word": "cube",
+            "highlight": "u_e",
+            "emoji": "🧊"
+          },
+          {
+            "word": "mule",
+            "highlight": "u_e",
+            "emoji": "🫏"
+          },
+          {
+            "word": "rule",
+            "highlight": "u_e",
+            "emoji": "📏"
+          },
+          {
+            "word": "tube",
+            "highlight": "u_e",
+            "emoji": "🧪"
+          },
+          {
+            "word": "tune",
+            "highlight": "u_e",
+            "emoji": "🎵"
+          },
+          {
+            "word": "June",
+            "highlight": "u_e",
+            "emoji": "📅"
+          },
+          {
+            "word": "use",
+            "highlight": "u_e",
+            "emoji": "🔨"
+          },
+          {
+            "word": "fuse",
+            "highlight": "u_e",
+            "emoji": "💡"
+          },
+          {
+            "word": "rude",
+            "highlight": "u_e",
+            "emoji": "😠"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "home",
+            "highlight": "o_e"
+          },
+          {
+            "word": "bone",
+            "highlight": "o_e"
+          },
+          {
+            "word": "cone",
+            "highlight": "o_e"
+          },
+          {
+            "word": "rope",
+            "highlight": "o_e"
+          },
+          {
+            "word": "note",
+            "highlight": "o_e"
+          },
+          {
+            "word": "cute",
+            "highlight": "u_e"
+          },
+          {
+            "word": "cube",
+            "highlight": "u_e"
+          },
+          {
+            "word": "mule",
+            "highlight": "u_e"
+          },
+          {
+            "word": "rule",
+            "highlight": "u_e"
+          },
+          {
+            "word": "tube",
+            "highlight": "u_e"
+          },
+          {
+            "word": "tune",
+            "highlight": "u_e"
+          },
+          {
+            "word": "June",
+            "highlight": "u_e"
+          },
+          {
+            "word": "use",
+            "highlight": "u_e"
+          },
+          {
+            "word": "fuse",
+            "highlight": "u_e"
+          },
+          {
+            "word": "rude",
+            "highlight": "u_e"
+          }
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
-        patterns: ['ai', 'ay'],
-        examples: [
-          '<span class="highlight">W<span class="pattern">ai</span>t</span> for me.',
-          'A <span class="highlight">t<span class="pattern">ai</span>l</span> can wag.',
-          '<span class="highlight">R<span class="pattern">ai</span>n</span> is here.',
-          'My arm has <span class="highlight">p<span class="pattern">ai</span>n</span>.',
-          '<span class="highlight">M<span class="pattern">ai</span>l</span> is here.',
-          'It is <span class="highlight">d<span class="pattern">ay</span></span>.',
-          'I see a <span class="highlight">b<span class="pattern">ay</span></span>.',
-          '<span class="highlight">S<span class="pattern">ay</span></span> it to me now.',
-          'We <span class="highlight">pl<span class="pattern">ay</span></span> all <span class="highlight">d<span class="pattern">ay</span></span> now.',
-          '<span class="highlight">M<span class="pattern">ay</span></span> is here.',
-          '<span class="highlight">W<span class="pattern">ai</span>t</span>, then <span class="highlight">pl<span class="pattern">ay</span></span>.',
-          '<span class="highlight">R<span class="pattern">ai</span>n</span> can <span class="highlight">st<span class="pattern">ay</span></span>.',
-          '<span class="highlight">M<span class="pattern">ai</span>l</span> for <span class="highlight">M<span class="pattern">ay</span></span>.',
-          'A <span class="highlight">t<span class="pattern">ai</span>l</span> is big.',
-          '<span class="highlight">S<span class="pattern">ay</span></span> no to that.',
-          '<span class="highlight">Pl<span class="pattern">ay</span></span> all <span class="highlight">d<span class="pattern">ay</span></span>.',
-          'We <span class="highlight">pl<span class="pattern">ay</span></span> by the <span class="highlight">b<span class="pattern">ay</span></span> <span class="highlight">tod<span class="pattern">ay</span></span>.',
-          '<span class="highlight">P<span class="pattern">ai</span>n</span> is gone.',
-          '<span class="highlight">R<span class="pattern">ai</span>n</span> in <span class="highlight">M<span class="pattern">ay</span></span>.',
-          '<span class="highlight">W<span class="pattern">ai</span>t</span> by the <span class="highlight">b<span class="pattern">ay</span></span>.',
+        "id": "unit4",
+        "name": "Unit 4",
+        "patterns": [
+          "ai",
+          "ay"
         ],
-        words: [
-          { word: 'wait', highlight: 'ai', emoji: '⏳' },
-          { word: 'tail', highlight: 'ai', emoji: '🦊' },
-          { word: 'rain', highlight: 'ai', emoji: '🌧️' },
-          { word: 'pain', highlight: 'ai', emoji: '😫' },
-          { word: 'mail', highlight: 'ai', emoji: '📬' },
-          { word: 'day', highlight: 'ay', emoji: '☀️' },
-          { word: 'bay', highlight: 'ay', emoji: '🏖️' },
-          { word: 'say', highlight: 'ay', emoji: '💬' },
-          { word: 'play', highlight: 'ay', emoji: '🎮' },
-          { word: 'may', highlight: 'ay', emoji: '📅' },
+        "examples": [
+          "<span class=\"highlight\">W<span class=\"pattern\">ai</span>t</span> for me.",
+          "A <span class=\"highlight\">t<span class=\"pattern\">ai</span>l</span> can wag.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ai</span>n</span> is here.",
+          "My arm has <span class=\"highlight\">p<span class=\"pattern\">ai</span>n</span>.",
+          "<span class=\"highlight\">M<span class=\"pattern\">ai</span>l</span> is here.",
+          "It is <span class=\"highlight\">d<span class=\"pattern\">ay</span></span>.",
+          "I see a <span class=\"highlight\">b<span class=\"pattern\">ay</span></span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">ay</span></span> it to me now.",
+          "We <span class=\"highlight\">pl<span class=\"pattern\">ay</span></span> all <span class=\"highlight\">d<span class=\"pattern\">ay</span></span> now.",
+          "<span class=\"highlight\">M<span class=\"pattern\">ay</span></span> is here.",
+          "<span class=\"highlight\">W<span class=\"pattern\">ai</span>t</span>, then <span class=\"highlight\">pl<span class=\"pattern\">ay</span></span>.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ai</span>n</span> can <span class=\"highlight\">st<span class=\"pattern\">ay</span></span>.",
+          "<span class=\"highlight\">M<span class=\"pattern\">ai</span>l</span> for <span class=\"highlight\">M<span class=\"pattern\">ay</span></span>.",
+          "A <span class=\"highlight\">t<span class=\"pattern\">ai</span>l</span> is big.",
+          "<span class=\"highlight\">S<span class=\"pattern\">ay</span></span> no to that.",
+          "<span class=\"highlight\">Pl<span class=\"pattern\">ay</span></span> all <span class=\"highlight\">d<span class=\"pattern\">ay</span></span>.",
+          "We <span class=\"highlight\">pl<span class=\"pattern\">ay</span></span> by the <span class=\"highlight\">b<span class=\"pattern\">ay</span></span> <span class=\"highlight\">tod<span class=\"pattern\">ay</span></span>.",
+          "<span class=\"highlight\">P<span class=\"pattern\">ai</span>n</span> is gone.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ai</span>n</span> in <span class=\"highlight\">M<span class=\"pattern\">ay</span></span>.",
+          "<span class=\"highlight\">W<span class=\"pattern\">ai</span>t</span> by the <span class=\"highlight\">b<span class=\"pattern\">ay</span></span>."
         ],
-        exploreWords: [
-          { word: 'wait', highlight: 'ai' },
-          { word: 'tail', highlight: 'ai' },
-          { word: 'rain', highlight: 'ai' },
-          { word: 'pain', highlight: 'ai' },
-          { word: 'mail', highlight: 'ai' },
-          { word: 'day', highlight: 'ay' },
-          { word: 'bay', highlight: 'ay' },
-          { word: 'say', highlight: 'ay' },
-          { word: 'play', highlight: 'ay' },
-          { word: 'may', highlight: 'ay' },
+        "words": [
+          {
+            "word": "wait",
+            "highlight": "ai",
+            "emoji": "⏳"
+          },
+          {
+            "word": "tail",
+            "highlight": "ai",
+            "emoji": "🦊"
+          },
+          {
+            "word": "rain",
+            "highlight": "ai",
+            "emoji": "🌧️"
+          },
+          {
+            "word": "pain",
+            "highlight": "ai",
+            "emoji": "😫"
+          },
+          {
+            "word": "mail",
+            "highlight": "ai",
+            "emoji": "📬"
+          },
+          {
+            "word": "day",
+            "highlight": "ay",
+            "emoji": "☀️"
+          },
+          {
+            "word": "bay",
+            "highlight": "ay",
+            "emoji": "🏖️"
+          },
+          {
+            "word": "say",
+            "highlight": "ay",
+            "emoji": "💬"
+          },
+          {
+            "word": "play",
+            "highlight": "ay",
+            "emoji": "🎮"
+          },
+          {
+            "word": "may",
+            "highlight": "ay",
+            "emoji": "📅"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "wait",
+            "highlight": "ai"
+          },
+          {
+            "word": "tail",
+            "highlight": "ai"
+          },
+          {
+            "word": "rain",
+            "highlight": "ai"
+          },
+          {
+            "word": "pain",
+            "highlight": "ai"
+          },
+          {
+            "word": "mail",
+            "highlight": "ai"
+          },
+          {
+            "word": "day",
+            "highlight": "ay"
+          },
+          {
+            "word": "bay",
+            "highlight": "ay"
+          },
+          {
+            "word": "say",
+            "highlight": "ay"
+          },
+          {
+            "word": "play",
+            "highlight": "ay"
+          },
+          {
+            "word": "may",
+            "highlight": "ay"
+          }
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
-        patterns: ['ee', 'ea', 'y', 'ey'],
-        examples: [
-          'I <span class="highlight">s<span class="pattern">ee</span></span> a <span class="highlight">b<span class="pattern">ee</span></span>.',
-          'A <span class="highlight">j<span class="pattern">ee</span>p</span> is here.',
-          'I <span class="highlight">s<span class="pattern">ee</span></span> a <span class="highlight">s<span class="pattern">ee</span>d</span>.',
-          '<span class="highlight">M<span class="pattern">y</span></span> <span class="highlight">f<span class="pattern">ee</span>t</span> hurt.',
-          'A <span class="highlight">tr<span class="pattern">ee</span></span> is big.',
-          'A <span class="highlight">l<span class="pattern">ea</span>f</span> is <span class="highlight">gr<span class="pattern">ee</span>n</span>.',
-          'I <span class="highlight">s<span class="pattern">ee</span></span> the <span class="highlight">s<span class="pattern">ea</span></span>.',
-          'I <span class="highlight"><span class="pattern">ea</span>t</span> <span class="highlight">m<span class="pattern">ea</span>t</span>.',
-          'Our <span class="highlight">t<span class="pattern">ea</span>m</span> can win.',
-          'I can <span class="highlight">r<span class="pattern">ea</span>d</span>.',
-          'A <span class="highlight">bab<span class="pattern">y</span></span> can nap.',
-          'I am <span class="highlight">happ<span class="pattern">y</span></span>.',
-          'It is <span class="highlight">sunn<span class="pattern">y</span></span>.',
-          'I have a <span class="highlight">ke<span class="pattern">y</span></span>.',
-          '<span class="highlight">Mone<span class="pattern">y</span></span> is in <span class="highlight">m<span class="pattern">y</span></span> bag.',
-          '<span class="highlight">R<span class="pattern">ea</span>d</span> to me.',
-          'A <span class="highlight">tr<span class="pattern">ee</span></span> has a <span class="highlight">l<span class="pattern">ea</span>f</span>.',
-          'A <span class="highlight">s<span class="pattern">ee</span>d</span> is in <span class="highlight">m<span class="pattern">y</span></span> hand.',
-          'My <span class="highlight">f<span class="pattern">ee</span>t</span> are on sand.',
-          '<span class="highlight">Happ<span class="pattern">y</span></span> <span class="highlight">bab<span class="pattern">y</span></span>, <span class="highlight">happ<span class="pattern">y</span></span> me.',
+        "id": "unit5",
+        "name": "Unit 5",
+        "patterns": [
+          "ee",
+          "ea",
+          "y",
+          "ey"
         ],
-        words: [
-          { word: 'bee', highlight: 'ee', emoji: '🐝' },
-          { word: 'jeep', highlight: 'ee', emoji: '🚙' },
-          { word: 'seed', highlight: 'ee', emoji: '🌱' },
-          { word: 'feet', highlight: 'ee', emoji: '👣' },
-          { word: 'tree', highlight: 'ee', emoji: '🌳' },
-          { word: 'leaf', highlight: 'ea', emoji: '🍃' },
-          { word: 'sea', highlight: 'ea', emoji: '🌊' },
-          { word: 'meat', highlight: 'ea', emoji: '🍖' },
-          { word: 'team', highlight: 'ea', emoji: '⚽' },
-          { word: 'read', highlight: 'ea', emoji: '📖' },
-          { word: 'baby', highlight: 'y', emoji: '👶' },
-          { word: 'happy', highlight: 'y', emoji: '😊' },
-          { word: 'sunny', highlight: 'y', emoji: '☀️' },
-          { word: 'key', highlight: 'ey', emoji: '🔑' },
-          { word: 'money', highlight: 'ey', emoji: '💰' },
+        "examples": [
+          "I <span class=\"highlight\">s<span class=\"pattern\">ee</span></span> a <span class=\"highlight\">b<span class=\"pattern\">ee</span></span>.",
+          "A <span class=\"highlight\">j<span class=\"pattern\">ee</span>p</span> is here.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">ee</span></span> a <span class=\"highlight\">s<span class=\"pattern\">ee</span>d</span>.",
+          "<span class=\"highlight\">M<span class=\"pattern\">y</span></span> <span class=\"highlight\">f<span class=\"pattern\">ee</span>t</span> hurt.",
+          "A <span class=\"highlight\">tr<span class=\"pattern\">ee</span></span> is big.",
+          "A <span class=\"highlight\">l<span class=\"pattern\">ea</span>f</span> is <span class=\"highlight\">gr<span class=\"pattern\">ee</span>n</span>.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">ee</span></span> the <span class=\"highlight\">s<span class=\"pattern\">ea</span></span>.",
+          "I <span class=\"highlight\"><span class=\"pattern\">ea</span>t</span> <span class=\"highlight\">m<span class=\"pattern\">ea</span>t</span>.",
+          "Our <span class=\"highlight\">t<span class=\"pattern\">ea</span>m</span> can win.",
+          "I can <span class=\"highlight\">r<span class=\"pattern\">ea</span>d</span>.",
+          "A <span class=\"highlight\">bab<span class=\"pattern\">y</span></span> can nap.",
+          "I am <span class=\"highlight\">happ<span class=\"pattern\">y</span></span>.",
+          "It is <span class=\"highlight\">sunn<span class=\"pattern\">y</span></span>.",
+          "I have a <span class=\"highlight\">ke<span class=\"pattern\">y</span></span>.",
+          "<span class=\"highlight\">Mone<span class=\"pattern\">y</span></span> is in <span class=\"highlight\">m<span class=\"pattern\">y</span></span> bag.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ea</span>d</span> to me.",
+          "A <span class=\"highlight\">tr<span class=\"pattern\">ee</span></span> has a <span class=\"highlight\">l<span class=\"pattern\">ea</span>f</span>.",
+          "A <span class=\"highlight\">s<span class=\"pattern\">ee</span>d</span> is in <span class=\"highlight\">m<span class=\"pattern\">y</span></span> hand.",
+          "My <span class=\"highlight\">f<span class=\"pattern\">ee</span>t</span> are on sand.",
+          "<span class=\"highlight\">Happ<span class=\"pattern\">y</span></span> <span class=\"highlight\">bab<span class=\"pattern\">y</span></span>, <span class=\"highlight\">happ<span class=\"pattern\">y</span></span> me."
         ],
-        exploreWords: [
-          { word: 'bee', highlight: 'ee' },
-          { word: 'jeep', highlight: 'ee' },
-          { word: 'seed', highlight: 'ee' },
-          { word: 'feet', highlight: 'ee' },
-          { word: 'tree', highlight: 'ee' },
-          { word: 'leaf', highlight: 'ea' },
-          { word: 'sea', highlight: 'ea' },
-          { word: 'meat', highlight: 'ea' },
-          { word: 'team', highlight: 'ea' },
-          { word: 'read', highlight: 'ea' },
-          { word: 'baby', highlight: 'y' },
-          { word: 'happy', highlight: 'y' },
-          { word: 'sunny', highlight: 'y' },
-          { word: 'key', highlight: 'ey' },
-          { word: 'money', highlight: 'ey' },
+        "words": [
+          {
+            "word": "bee",
+            "highlight": "ee",
+            "emoji": "🐝"
+          },
+          {
+            "word": "jeep",
+            "highlight": "ee",
+            "emoji": "🚙"
+          },
+          {
+            "word": "seed",
+            "highlight": "ee",
+            "emoji": "🌱"
+          },
+          {
+            "word": "feet",
+            "highlight": "ee",
+            "emoji": "👣"
+          },
+          {
+            "word": "tree",
+            "highlight": "ee",
+            "emoji": "🌳"
+          },
+          {
+            "word": "leaf",
+            "highlight": "ea",
+            "emoji": "🍃"
+          },
+          {
+            "word": "sea",
+            "highlight": "ea",
+            "emoji": "🌊"
+          },
+          {
+            "word": "meat",
+            "highlight": "ea",
+            "emoji": "🍖"
+          },
+          {
+            "word": "team",
+            "highlight": "ea",
+            "emoji": "⚽"
+          },
+          {
+            "word": "read",
+            "highlight": "ea",
+            "emoji": "📖"
+          },
+          {
+            "word": "baby",
+            "highlight": "y",
+            "emoji": "👶"
+          },
+          {
+            "word": "happy",
+            "highlight": "y",
+            "emoji": "😊"
+          },
+          {
+            "word": "sunny",
+            "highlight": "y",
+            "emoji": "☀️"
+          },
+          {
+            "word": "key",
+            "highlight": "ey",
+            "emoji": "🔑"
+          },
+          {
+            "word": "money",
+            "highlight": "ey",
+            "emoji": "💰"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "bee",
+            "highlight": "ee"
+          },
+          {
+            "word": "jeep",
+            "highlight": "ee"
+          },
+          {
+            "word": "seed",
+            "highlight": "ee"
+          },
+          {
+            "word": "feet",
+            "highlight": "ee"
+          },
+          {
+            "word": "tree",
+            "highlight": "ee"
+          },
+          {
+            "word": "leaf",
+            "highlight": "ea"
+          },
+          {
+            "word": "sea",
+            "highlight": "ea"
+          },
+          {
+            "word": "meat",
+            "highlight": "ea"
+          },
+          {
+            "word": "team",
+            "highlight": "ea"
+          },
+          {
+            "word": "read",
+            "highlight": "ea"
+          },
+          {
+            "word": "baby",
+            "highlight": "y"
+          },
+          {
+            "word": "happy",
+            "highlight": "y"
+          },
+          {
+            "word": "sunny",
+            "highlight": "y"
+          },
+          {
+            "word": "key",
+            "highlight": "ey"
+          },
+          {
+            "word": "money",
+            "highlight": "ey"
+          }
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
-        patterns: ['igh', 'ie', 'y'],
-        examples: [
-          'Turn on the <span class="highlight">l<span class="pattern">igh</span>t</span>.',
-          'It is <span class="highlight">n<span class="pattern">igh</span>t</span>.',
-          'Go <span class="highlight">r<span class="pattern">igh</span>t</span> to the door.',
-          'I can <span class="highlight">fl<span class="pattern">y</span></span> a kite.',
-          'I <span class="highlight">s<span class="pattern">igh</span></span> and sit down.',
-          'Do not <span class="highlight">l<span class="pattern">ie</span></span>.',
-          '<span class="highlight">T<span class="pattern">ie</span></span> it on <span class="highlight">t<span class="pattern">igh</span>t</span> now.',
-          'I like <span class="highlight">p<span class="pattern">ie</span></span>.',
-          'I see a <span class="highlight">h<span class="pattern">igh</span></span> kite.',
-          '<span class="highlight">M<span class="pattern">y</span></span> <span class="highlight">p<span class="pattern">ie</span></span> is mine.',
-          'A <span class="highlight">sp<span class="pattern">y</span></span> can hide.',
-          'The <span class="highlight">sk<span class="pattern">y</span></span> is blue.',
-          '<span class="highlight">Bab<span class="pattern">ie</span>s</span> <span class="highlight">cr<span class="pattern">y</span></span> at <span class="highlight">n<span class="pattern">igh</span>t</span>.',
-          'Birds can <span class="highlight">fl<span class="pattern">y</span></span>.',
-          'This is <span class="highlight">m<span class="pattern">y</span></span> <span class="highlight">p<span class="pattern">ie</span></span>.',
-          'I see the <span class="highlight">n<span class="pattern">igh</span>t</span> <span class="highlight">sk<span class="pattern">y</span></span>.',
-          '<span class="highlight">T<span class="pattern">ie</span></span> it <span class="highlight">r<span class="pattern">igh</span>t</span>.',
-          'I <span class="highlight">s<span class="pattern">igh</span></span> at <span class="highlight">n<span class="pattern">igh</span>t</span>.',
-          'The <span class="highlight">l<span class="pattern">igh</span>t</span> is <span class="highlight">br<span class="pattern">igh</span>t</span>.',
-          'Do not <span class="highlight">l<span class="pattern">ie</span></span>.',
+        "id": "unit6",
+        "name": "Unit 6",
+        "patterns": [
+          "igh",
+          "ie",
+          "y"
         ],
-        words: [
-          { word: 'light', highlight: 'igh', emoji: '💡' },
-          { word: 'night', highlight: 'igh', emoji: '🌙' },
-          { word: 'right', highlight: 'igh', emoji: '➡️' },
-          { word: 'high', highlight: 'igh', emoji: '⬆️' },
-          { word: 'sigh', highlight: 'igh', emoji: '😮‍💨' },
-          { word: 'lie', highlight: 'ie', emoji: '🤥' },
-          { word: 'tie', highlight: 'ie', emoji: '👔' },
-          { word: 'pie', highlight: 'ie', emoji: '🥧' },
-          { word: 'die', highlight: 'ie', emoji: '💀' },
-          { word: 'vie', highlight: 'ie', emoji: '🏆' },
-          { word: 'spy', highlight: 'y', emoji: '🕵️' },
-          { word: 'sky', highlight: 'y', emoji: '🌌' },
-          { word: 'cry', highlight: 'y', emoji: '😢' },
-          { word: 'fly', highlight: 'y', emoji: '✈️' },
-          { word: 'my', highlight: 'y', emoji: '👆' },
+        "examples": [
+          "Turn on the <span class=\"highlight\">l<span class=\"pattern\">igh</span>t</span>.",
+          "It is <span class=\"highlight\">n<span class=\"pattern\">igh</span>t</span>.",
+          "Go <span class=\"highlight\">r<span class=\"pattern\">igh</span>t</span> to the door.",
+          "I can <span class=\"highlight\">fl<span class=\"pattern\">y</span></span> a kite.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">igh</span></span> and sit down.",
+          "Do not <span class=\"highlight\">l<span class=\"pattern\">ie</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ie</span></span> it on <span class=\"highlight\">t<span class=\"pattern\">igh</span>t</span> now.",
+          "I like <span class=\"highlight\">p<span class=\"pattern\">ie</span></span>.",
+          "I see a <span class=\"highlight\">h<span class=\"pattern\">igh</span></span> kite.",
+          "<span class=\"highlight\">M<span class=\"pattern\">y</span></span> <span class=\"highlight\">p<span class=\"pattern\">ie</span></span> is mine.",
+          "A <span class=\"highlight\">sp<span class=\"pattern\">y</span></span> can hide.",
+          "The <span class=\"highlight\">sk<span class=\"pattern\">y</span></span> is blue.",
+          "<span class=\"highlight\">Bab<span class=\"pattern\">ie</span>s</span> <span class=\"highlight\">cr<span class=\"pattern\">y</span></span> at <span class=\"highlight\">n<span class=\"pattern\">igh</span>t</span>.",
+          "Birds can <span class=\"highlight\">fl<span class=\"pattern\">y</span></span>.",
+          "This is <span class=\"highlight\">m<span class=\"pattern\">y</span></span> <span class=\"highlight\">p<span class=\"pattern\">ie</span></span>.",
+          "I see the <span class=\"highlight\">n<span class=\"pattern\">igh</span>t</span> <span class=\"highlight\">sk<span class=\"pattern\">y</span></span>.",
+          "<span class=\"highlight\">T<span class=\"pattern\">ie</span></span> it <span class=\"highlight\">r<span class=\"pattern\">igh</span>t</span>.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">igh</span></span> at <span class=\"highlight\">n<span class=\"pattern\">igh</span>t</span>.",
+          "The <span class=\"highlight\">l<span class=\"pattern\">igh</span>t</span> is <span class=\"highlight\">br<span class=\"pattern\">igh</span>t</span>.",
+          "Do not <span class=\"highlight\">l<span class=\"pattern\">ie</span></span>."
         ],
-        exploreWords: [
-          { word: 'light', highlight: 'igh' },
-          { word: 'night', highlight: 'igh' },
-          { word: 'right', highlight: 'igh' },
-          { word: 'high', highlight: 'igh' },
-          { word: 'sigh', highlight: 'igh' },
-          { word: 'lie', highlight: 'ie' },
-          { word: 'tie', highlight: 'ie' },
-          { word: 'pie', highlight: 'ie' },
-          { word: 'die', highlight: 'ie' },
-          { word: 'vie', highlight: 'ie' },
-          { word: 'spy', highlight: 'y' },
-          { word: 'sky', highlight: 'y' },
-          { word: 'cry', highlight: 'y' },
-          { word: 'fly', highlight: 'y' },
-          { word: 'my', highlight: 'y' },
+        "words": [
+          {
+            "word": "light",
+            "highlight": "igh",
+            "emoji": "💡"
+          },
+          {
+            "word": "night",
+            "highlight": "igh",
+            "emoji": "🌙"
+          },
+          {
+            "word": "right",
+            "highlight": "igh",
+            "emoji": "➡️"
+          },
+          {
+            "word": "high",
+            "highlight": "igh",
+            "emoji": "⬆️"
+          },
+          {
+            "word": "sigh",
+            "highlight": "igh",
+            "emoji": "😮‍💨"
+          },
+          {
+            "word": "lie",
+            "highlight": "ie",
+            "emoji": "🤥"
+          },
+          {
+            "word": "tie",
+            "highlight": "ie",
+            "emoji": "👔"
+          },
+          {
+            "word": "pie",
+            "highlight": "ie",
+            "emoji": "🥧"
+          },
+          {
+            "word": "die",
+            "highlight": "ie",
+            "emoji": "💀"
+          },
+          {
+            "word": "vie",
+            "highlight": "ie",
+            "emoji": "🏆"
+          },
+          {
+            "word": "spy",
+            "highlight": "y",
+            "emoji": "🕵️"
+          },
+          {
+            "word": "sky",
+            "highlight": "y",
+            "emoji": "🌌"
+          },
+          {
+            "word": "cry",
+            "highlight": "y",
+            "emoji": "😢"
+          },
+          {
+            "word": "fly",
+            "highlight": "y",
+            "emoji": "✈️"
+          },
+          {
+            "word": "my",
+            "highlight": "y",
+            "emoji": "👆"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "light",
+            "highlight": "igh"
+          },
+          {
+            "word": "night",
+            "highlight": "igh"
+          },
+          {
+            "word": "right",
+            "highlight": "igh"
+          },
+          {
+            "word": "high",
+            "highlight": "igh"
+          },
+          {
+            "word": "sigh",
+            "highlight": "igh"
+          },
+          {
+            "word": "lie",
+            "highlight": "ie"
+          },
+          {
+            "word": "tie",
+            "highlight": "ie"
+          },
+          {
+            "word": "pie",
+            "highlight": "ie"
+          },
+          {
+            "word": "die",
+            "highlight": "ie"
+          },
+          {
+            "word": "vie",
+            "highlight": "ie"
+          },
+          {
+            "word": "spy",
+            "highlight": "y"
+          },
+          {
+            "word": "sky",
+            "highlight": "y"
+          },
+          {
+            "word": "cry",
+            "highlight": "y"
+          },
+          {
+            "word": "fly",
+            "highlight": "y"
+          },
+          {
+            "word": "my",
+            "highlight": "y"
+          }
         ]
       },
       {
-        id: 'unit7',
-        name: 'Unit 7',
-        patterns: ['oa', 'ow'],
-        examples: [
-          'I see the <span class="highlight">r<span class="pattern">oa</span>d</span>.',
-          'My <span class="highlight">c<span class="pattern">oa</span>t</span> is new.',
-          'A <span class="highlight">b<span class="pattern">oa</span>t</span> is in the bay.',
-          'A <span class="highlight">g<span class="pattern">oa</span>t</span> is on the <span class="highlight">r<span class="pattern">oa</span>d</span>.',
-          '<span class="highlight">S<span class="pattern">oa</span>p</span> is in my hand.',
-          'We <span class="highlight">r<span class="pattern">ow</span></span> the <span class="highlight">b<span class="pattern">oa</span>t</span> <span class="highlight">n<span class="pattern">ow</span></span>.',
-          '<span class="highlight">Sn<span class="pattern">ow</span></span> is white.',
-          'Plants can <span class="highlight">gr<span class="pattern">ow</span></span>.',
-          'Go <span class="highlight">sl<span class="pattern">ow</span></span> on the <span class="highlight">r<span class="pattern">oa</span>d</span>.',
-          '<span class="highlight">Yell<span class="pattern">ow</span></span> is my color.',
-          '<span class="highlight">R<span class="pattern">ow</span></span> the <span class="highlight">b<span class="pattern">oa</span>t</span>.',
-          '<span class="highlight">S<span class="pattern">oa</span>p</span> and water help me.',
-          'A <span class="highlight">g<span class="pattern">oa</span>t</span> can go.',
-          '<span class="highlight">Sn<span class="pattern">ow</span></span> is cold.',
-          '<span class="highlight">Gr<span class="pattern">ow</span></span>, plant, <span class="highlight">gr<span class="pattern">ow</span></span> today.',
-          'My <span class="highlight">c<span class="pattern">oa</span>t</span> is <span class="highlight">yell<span class="pattern">ow</span></span>.',
-          '<span class="highlight">Sn<span class="pattern">ow</span></span> on the <span class="highlight">r<span class="pattern">oa</span>d</span>.',
-          'We <span class="highlight">r<span class="pattern">ow</span></span> home.',
-          '<span class="highlight">S<span class="pattern">oa</span>p</span> helps my hands <span class="highlight">n<span class="pattern">ow</span></span>.',
-          'I see a <span class="highlight">sl<span class="pattern">ow</span></span> <span class="highlight">b<span class="pattern">oa</span>t</span>.',
+        "id": "unit7",
+        "name": "Unit 7",
+        "patterns": [
+          "oa",
+          "ow"
         ],
-        words: [
-          { word: 'road', highlight: 'oa', emoji: '🛣️' },
-          { word: 'coat', highlight: 'oa', emoji: '🧥' },
-          { word: 'boat', highlight: 'oa', emoji: '⛵' },
-          { word: 'goat', highlight: 'oa', emoji: '🐐' },
-          { word: 'soap', highlight: 'oa', emoji: '🧼' },
-          { word: 'row', highlight: 'ow', emoji: '🚣' },
-          { word: 'snow', highlight: 'ow', emoji: '❄️' },
-          { word: 'grow', highlight: 'ow', emoji: '🌱' },
-          { word: 'slow', highlight: 'ow', emoji: '🐌' },
-          { word: 'yellow', highlight: 'ow', emoji: '💛' },
+        "examples": [
+          "I see the <span class=\"highlight\">r<span class=\"pattern\">oa</span>d</span>.",
+          "My <span class=\"highlight\">c<span class=\"pattern\">oa</span>t</span> is new.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">oa</span>t</span> is in the bay.",
+          "A <span class=\"highlight\">g<span class=\"pattern\">oa</span>t</span> is on the <span class=\"highlight\">r<span class=\"pattern\">oa</span>d</span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">oa</span>p</span> is in my hand.",
+          "We <span class=\"highlight\">r<span class=\"pattern\">ow</span></span> the <span class=\"highlight\">b<span class=\"pattern\">oa</span>t</span> <span class=\"highlight\">n<span class=\"pattern\">ow</span></span>.",
+          "<span class=\"highlight\">Sn<span class=\"pattern\">ow</span></span> is white.",
+          "Plants can <span class=\"highlight\">gr<span class=\"pattern\">ow</span></span>.",
+          "Go <span class=\"highlight\">sl<span class=\"pattern\">ow</span></span> on the <span class=\"highlight\">r<span class=\"pattern\">oa</span>d</span>.",
+          "<span class=\"highlight\">Yell<span class=\"pattern\">ow</span></span> is my color.",
+          "<span class=\"highlight\">R<span class=\"pattern\">ow</span></span> the <span class=\"highlight\">b<span class=\"pattern\">oa</span>t</span>.",
+          "<span class=\"highlight\">S<span class=\"pattern\">oa</span>p</span> and water help me.",
+          "A <span class=\"highlight\">g<span class=\"pattern\">oa</span>t</span> can go.",
+          "<span class=\"highlight\">Sn<span class=\"pattern\">ow</span></span> is cold.",
+          "<span class=\"highlight\">Gr<span class=\"pattern\">ow</span></span>, plant, <span class=\"highlight\">gr<span class=\"pattern\">ow</span></span> today.",
+          "My <span class=\"highlight\">c<span class=\"pattern\">oa</span>t</span> is <span class=\"highlight\">yell<span class=\"pattern\">ow</span></span>.",
+          "<span class=\"highlight\">Sn<span class=\"pattern\">ow</span></span> on the <span class=\"highlight\">r<span class=\"pattern\">oa</span>d</span>.",
+          "We <span class=\"highlight\">r<span class=\"pattern\">ow</span></span> home.",
+          "<span class=\"highlight\">S<span class=\"pattern\">oa</span>p</span> helps my hands <span class=\"highlight\">n<span class=\"pattern\">ow</span></span>.",
+          "I see a <span class=\"highlight\">sl<span class=\"pattern\">ow</span></span> <span class=\"highlight\">b<span class=\"pattern\">oa</span>t</span>."
         ],
-        exploreWords: [
-          { word: 'road', highlight: 'oa' },
-          { word: 'coat', highlight: 'oa' },
-          { word: 'boat', highlight: 'oa' },
-          { word: 'goat', highlight: 'oa' },
-          { word: 'soap', highlight: 'oa' },
-          { word: 'row', highlight: 'ow' },
-          { word: 'snow', highlight: 'ow' },
-          { word: 'grow', highlight: 'ow' },
-          { word: 'slow', highlight: 'ow' },
-          { word: 'yellow', highlight: 'ow' },
+        "words": [
+          {
+            "word": "road",
+            "highlight": "oa",
+            "emoji": "🛣️"
+          },
+          {
+            "word": "coat",
+            "highlight": "oa",
+            "emoji": "🧥"
+          },
+          {
+            "word": "boat",
+            "highlight": "oa",
+            "emoji": "⛵"
+          },
+          {
+            "word": "goat",
+            "highlight": "oa",
+            "emoji": "🐐"
+          },
+          {
+            "word": "soap",
+            "highlight": "oa",
+            "emoji": "🧼"
+          },
+          {
+            "word": "row",
+            "highlight": "ow",
+            "emoji": "🚣"
+          },
+          {
+            "word": "snow",
+            "highlight": "ow",
+            "emoji": "❄️"
+          },
+          {
+            "word": "grow",
+            "highlight": "ow",
+            "emoji": "🌱"
+          },
+          {
+            "word": "slow",
+            "highlight": "ow",
+            "emoji": "🐌"
+          },
+          {
+            "word": "yellow",
+            "highlight": "ow",
+            "emoji": "💛"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "road",
+            "highlight": "oa"
+          },
+          {
+            "word": "coat",
+            "highlight": "oa"
+          },
+          {
+            "word": "boat",
+            "highlight": "oa"
+          },
+          {
+            "word": "goat",
+            "highlight": "oa"
+          },
+          {
+            "word": "soap",
+            "highlight": "oa"
+          },
+          {
+            "word": "row",
+            "highlight": "ow"
+          },
+          {
+            "word": "snow",
+            "highlight": "ow"
+          },
+          {
+            "word": "grow",
+            "highlight": "ow"
+          },
+          {
+            "word": "slow",
+            "highlight": "ow"
+          },
+          {
+            "word": "yellow",
+            "highlight": "ow"
+          }
         ]
       },
       {
-        id: 'unit8',
-        name: 'Unit 8',
-        patterns: ['ue', 'ui', 'ew', 'oo'],
-        examples: [
-          '<span class="highlight">Bl<span class="pattern">ue</span></span> is my color.',
-          'A <span class="highlight">cl<span class="pattern">ue</span></span> is here.',
-          'Yes, this is <span class="highlight">tr<span class="pattern">ue</span></span>.',
-          '<span class="highlight">Gl<span class="pattern">ue</span></span> is on it.',
-          'It is <span class="highlight">d<span class="pattern">ue</span></span>.',
-          'I like <span class="highlight">fr<span class="pattern">ui</span>t</span>.',
-          'A <span class="highlight">s<span class="pattern">ui</span>t</span> is <span class="highlight">n<span class="pattern">ew</span></span>.',
-          'My <span class="highlight">n<span class="pattern">ew</span></span> shoes are <span class="highlight">bl<span class="pattern">ue</span></span>.',
-          '<span class="highlight">F<span class="pattern">ew</span></span> kids are here now.',
-          '<span class="highlight">Ch<span class="pattern">ew</span></span> your <span class="highlight">f<span class="pattern">oo</span>d</span> now.',
-          '<span class="highlight">F<span class="pattern">oo</span>d</span> is <span class="highlight">g<span class="pattern">oo</span>d</span>.',
-          'My <span class="highlight">b<span class="pattern">oo</span>t</span> is on.',
-          'The <span class="highlight">m<span class="pattern">oo</span>n</span> is up.',
-          'A <span class="highlight">sp<span class="pattern">oo</span>n</span> is in my cup.',
-          'This <span class="highlight">r<span class="pattern">oo</span>m</span> is big.',
-          'I have a <span class="highlight">bl<span class="pattern">ue</span></span> <span class="highlight">cl<span class="pattern">ue</span></span>.',
-          'I try <span class="highlight">n<span class="pattern">ew</span></span> <span class="highlight">f<span class="pattern">oo</span>d</span> today.',
-          '<span class="highlight">F<span class="pattern">ew</span></span> <span class="highlight">b<span class="pattern">oo</span>ts</span> fit me now.',
-          '<span class="highlight">Ch<span class="pattern">ew</span></span> <span class="highlight">f<span class="pattern">oo</span>d</span> with your teeth.',
-          'The <span class="highlight">m<span class="pattern">oo</span>n</span> is in my <span class="highlight">r<span class="pattern">oo</span>m</span>.',
+        "id": "unit8",
+        "name": "Unit 8",
+        "patterns": [
+          "ue",
+          "ui",
+          "ew",
+          "oo"
         ],
-        words: [
-          { word: 'blue', highlight: 'ue', emoji: '💙' },
-          { word: 'clue', highlight: 'ue', emoji: '🔍' },
-          { word: 'true', highlight: 'ue', emoji: '✅' },
-          { word: 'glue', highlight: 'ue', emoji: '🖇️' },
-          { word: 'due', highlight: 'ue', emoji: '📅' },
-          { word: 'fruit', highlight: 'ui', emoji: '🍎' },
-          { word: 'suit', highlight: 'ui', emoji: '👔' },
-          { word: 'juice', highlight: 'ui', emoji: '🧃' },
-          { word: 'bruise', highlight: 'ui', emoji: '🩹' },
-          { word: 'cruise', highlight: 'ui', emoji: '🚢' },
-          { word: 'new', highlight: 'ew', emoji: '✨' },
-          { word: 'few', highlight: 'ew', emoji: '👌' },
-          { word: 'chew', highlight: 'ew', emoji: '😋' },
-          { word: 'stew', highlight: 'ew', emoji: '🍲' },
-          { word: 'grew', highlight: 'ew', emoji: '🌱' },
-          { word: 'food', highlight: 'oo', emoji: '🍽️' },
-          { word: 'boot', highlight: 'oo', emoji: '👢' },
-          { word: 'moon', highlight: 'oo', emoji: '🌙' },
-          { word: 'spoon', highlight: 'oo', emoji: '🥄' },
-          { word: 'room', highlight: 'oo', emoji: '🚪' },
+        "examples": [
+          "<span class=\"highlight\">Bl<span class=\"pattern\">ue</span></span> is my color.",
+          "A <span class=\"highlight\">cl<span class=\"pattern\">ue</span></span> is here.",
+          "Yes, this is <span class=\"highlight\">tr<span class=\"pattern\">ue</span></span>.",
+          "<span class=\"highlight\">Gl<span class=\"pattern\">ue</span></span> is on it.",
+          "It is <span class=\"highlight\">d<span class=\"pattern\">ue</span></span>.",
+          "I like <span class=\"highlight\">fr<span class=\"pattern\">ui</span>t</span>.",
+          "A <span class=\"highlight\">s<span class=\"pattern\">ui</span>t</span> is <span class=\"highlight\">n<span class=\"pattern\">ew</span></span>.",
+          "My <span class=\"highlight\">n<span class=\"pattern\">ew</span></span> shoes are <span class=\"highlight\">bl<span class=\"pattern\">ue</span></span>.",
+          "<span class=\"highlight\">F<span class=\"pattern\">ew</span></span> kids are here now.",
+          "<span class=\"highlight\">Ch<span class=\"pattern\">ew</span></span> your <span class=\"highlight\">f<span class=\"pattern\">oo</span>d</span> now.",
+          "<span class=\"highlight\">F<span class=\"pattern\">oo</span>d</span> is <span class=\"highlight\">g<span class=\"pattern\">oo</span>d</span>.",
+          "My <span class=\"highlight\">b<span class=\"pattern\">oo</span>t</span> is on.",
+          "The <span class=\"highlight\">m<span class=\"pattern\">oo</span>n</span> is up.",
+          "A <span class=\"highlight\">sp<span class=\"pattern\">oo</span>n</span> is in my cup.",
+          "This <span class=\"highlight\">r<span class=\"pattern\">oo</span>m</span> is big.",
+          "I have a <span class=\"highlight\">bl<span class=\"pattern\">ue</span></span> <span class=\"highlight\">cl<span class=\"pattern\">ue</span></span>.",
+          "I try <span class=\"highlight\">n<span class=\"pattern\">ew</span></span> <span class=\"highlight\">f<span class=\"pattern\">oo</span>d</span> today.",
+          "<span class=\"highlight\">F<span class=\"pattern\">ew</span></span> <span class=\"highlight\">b<span class=\"pattern\">oo</span>ts</span> fit me now.",
+          "<span class=\"highlight\">Ch<span class=\"pattern\">ew</span></span> <span class=\"highlight\">f<span class=\"pattern\">oo</span>d</span> with your teeth.",
+          "The <span class=\"highlight\">m<span class=\"pattern\">oo</span>n</span> is in my <span class=\"highlight\">r<span class=\"pattern\">oo</span>m</span>."
         ],
-        exploreWords: [
-          { word: 'blue', highlight: 'ue' },
-          { word: 'clue', highlight: 'ue' },
-          { word: 'true', highlight: 'ue' },
-          { word: 'glue', highlight: 'ue' },
-          { word: 'due', highlight: 'ue' },
-          { word: 'fruit', highlight: 'ui' },
-          { word: 'suit', highlight: 'ui' },
-          { word: 'juice', highlight: 'ui' },
-          { word: 'bruise', highlight: 'ui' },
-          { word: 'cruise', highlight: 'ui' },
-          { word: 'new', highlight: 'ew' },
-          { word: 'few', highlight: 'ew' },
-          { word: 'chew', highlight: 'ew' },
-          { word: 'stew', highlight: 'ew' },
-          { word: 'grew', highlight: 'ew' },
-          { word: 'food', highlight: 'oo' },
-          { word: 'boot', highlight: 'oo' },
-          { word: 'moon', highlight: 'oo' },
-          { word: 'spoon', highlight: 'oo' },
-          { word: 'room', highlight: 'oo' },
+        "words": [
+          {
+            "word": "blue",
+            "highlight": "ue",
+            "emoji": "💙"
+          },
+          {
+            "word": "clue",
+            "highlight": "ue",
+            "emoji": "🔍"
+          },
+          {
+            "word": "true",
+            "highlight": "ue",
+            "emoji": "✅"
+          },
+          {
+            "word": "glue",
+            "highlight": "ue",
+            "emoji": "🖇️"
+          },
+          {
+            "word": "due",
+            "highlight": "ue",
+            "emoji": "📅"
+          },
+          {
+            "word": "fruit",
+            "highlight": "ui",
+            "emoji": "🍎"
+          },
+          {
+            "word": "suit",
+            "highlight": "ui",
+            "emoji": "👔"
+          },
+          {
+            "word": "juice",
+            "highlight": "ui",
+            "emoji": "🧃"
+          },
+          {
+            "word": "bruise",
+            "highlight": "ui",
+            "emoji": "🩹"
+          },
+          {
+            "word": "cruise",
+            "highlight": "ui",
+            "emoji": "🚢"
+          },
+          {
+            "word": "new",
+            "highlight": "ew",
+            "emoji": "✨"
+          },
+          {
+            "word": "few",
+            "highlight": "ew",
+            "emoji": "👌"
+          },
+          {
+            "word": "chew",
+            "highlight": "ew",
+            "emoji": "😋"
+          },
+          {
+            "word": "stew",
+            "highlight": "ew",
+            "emoji": "🍲"
+          },
+          {
+            "word": "grew",
+            "highlight": "ew",
+            "emoji": "🌱"
+          },
+          {
+            "word": "food",
+            "highlight": "oo",
+            "emoji": "🍽️"
+          },
+          {
+            "word": "boot",
+            "highlight": "oo",
+            "emoji": "👢"
+          },
+          {
+            "word": "moon",
+            "highlight": "oo",
+            "emoji": "🌙"
+          },
+          {
+            "word": "spoon",
+            "highlight": "oo",
+            "emoji": "🥄"
+          },
+          {
+            "word": "room",
+            "highlight": "oo",
+            "emoji": "🚪"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "blue",
+            "highlight": "ue"
+          },
+          {
+            "word": "clue",
+            "highlight": "ue"
+          },
+          {
+            "word": "true",
+            "highlight": "ue"
+          },
+          {
+            "word": "glue",
+            "highlight": "ue"
+          },
+          {
+            "word": "due",
+            "highlight": "ue"
+          },
+          {
+            "word": "fruit",
+            "highlight": "ui"
+          },
+          {
+            "word": "suit",
+            "highlight": "ui"
+          },
+          {
+            "word": "juice",
+            "highlight": "ui"
+          },
+          {
+            "word": "bruise",
+            "highlight": "ui"
+          },
+          {
+            "word": "cruise",
+            "highlight": "ui"
+          },
+          {
+            "word": "new",
+            "highlight": "ew"
+          },
+          {
+            "word": "few",
+            "highlight": "ew"
+          },
+          {
+            "word": "chew",
+            "highlight": "ew"
+          },
+          {
+            "word": "stew",
+            "highlight": "ew"
+          },
+          {
+            "word": "grew",
+            "highlight": "ew"
+          },
+          {
+            "word": "food",
+            "highlight": "oo"
+          },
+          {
+            "word": "boot",
+            "highlight": "oo"
+          },
+          {
+            "word": "moon",
+            "highlight": "oo"
+          },
+          {
+            "word": "spoon",
+            "highlight": "oo"
+          },
+          {
+            "word": "room",
+            "highlight": "oo"
+          }
         ]
       }
     ]
   },
-  level4: {
-    id: 'level4',
-    name: 'Level 4',
-    title: 'Consonant Blends',
-    subtitle: '辅音连读',
-    color: '#FF9800',
-    emoji: '🟠',
-    units: [
+  "level4": {
+    "id": "level4",
+    "name": "Level 4",
+    "title": "Consonant Blends",
+    "subtitle": "辅音连读",
+    "color": "#FF9800",
+    "emoji": "🟠",
+    "units": [
       {
-        id: 'unit1',
-        name: 'Unit 1',
-        patterns: ['bl', 'cl', 'br', 'cr', 'fl', 'gl'],
-        examples: [
-          'A <span class="highlight"><span class="pattern">bl</span>ack</span> cat can sit.',
-          'The <span class="highlight"><span class="pattern">cl</span>ock</span> is on.',
-          '<span class="highlight"><span class="pattern">Bl</span>ue</span> is my cup.',
-          'This is a <span class="highlight"><span class="pattern">cl</span>ean</span> cup.',
-          'Kids <span class="highlight"><span class="pattern">cl</span>ap</span> and smile now.',
-          'A <span class="highlight"><span class="pattern">br</span>oom</span> is big.',
-          'I see a <span class="highlight"><span class="pattern">cr</span>ab</span>.',
-          'I eat <span class="highlight"><span class="pattern">br</span>own</span> <span class="highlight"><span class="pattern">br</span>ead</span> now.',
-          'A <span class="highlight"><span class="pattern">cr</span>own</span> is on.',
-          'Babies <span class="highlight"><span class="pattern">cr</span>y</span> at night.',
-          'A <span class="highlight"><span class="pattern">fl</span>ag</span> is up.',
-          'I see a <span class="highlight"><span class="pattern">gl</span>obe</span>.',
-          'Birds can <span class="highlight"><span class="pattern">fl</span>ap</span>.',
-          '<span class="highlight"><span class="pattern">Gl</span>ass</span> is on the <span class="highlight">ta<span class="pattern">bl</span>e</span>.',
-          '<span class="highlight"><span class="pattern">Bl</span>ue</span> is my <span class="highlight"><span class="pattern">gl</span>ass</span>.',
-          'This is <span class="highlight"><span class="pattern">cl</span>ean</span> <span class="highlight"><span class="pattern">gl</span>ass</span> now.',
-          '<span class="highlight"><span class="pattern">Cl</span>ap</span> for the cat.',
-          'The <span class="highlight"><span class="pattern">bl</span>ue</span> <span class="highlight"><span class="pattern">cr</span>own</span> is mine.',
-          'The <span class="highlight"><span class="pattern">bl</span>ack</span> <span class="highlight"><span class="pattern">cl</span>ock</span> is on.',
-          'A <span class="highlight"><span class="pattern">br</span>oom</span> can <span class="highlight"><span class="pattern">cl</span>ean</span>.',
+        "id": "unit1",
+        "name": "Unit 1",
+        "patterns": [
+          "bl",
+          "cl",
+          "br",
+          "cr",
+          "fl",
+          "gl"
         ],
-        words: [
-          { word: 'black', highlight: 'bl', emoji: '⚫' },
-          { word: 'blue', highlight: 'bl', emoji: '💙' },
-          { word: 'blow', highlight: 'bl', emoji: '💨' },
-          { word: 'blend', highlight: 'bl', emoji: '🥤' },
-          { word: 'blink', highlight: 'bl', emoji: '😉' },
-          { word: 'clock', highlight: 'cl', emoji: '⏰' },
-          { word: 'clean', highlight: 'cl', emoji: '✨' },
-          { word: 'clap', highlight: 'cl', emoji: '👏' },
-          { word: 'clip', highlight: 'cl', emoji: '📎' },
-          { word: 'cloud', highlight: 'cl', emoji: '☁️' },
-          { word: 'broom', highlight: 'br', emoji: '🧹' },
-          { word: 'brown', highlight: 'br', emoji: '🟤' },
-          { word: 'bread', highlight: 'br', emoji: '🍞' },
-          { word: 'bring', highlight: 'br', emoji: '🤲' },
-          { word: 'brush', highlight: 'br', emoji: '🪥' },
-          { word: 'crab', highlight: 'cr', emoji: '🦀' },
-          { word: 'crown', highlight: 'cr', emoji: '👑' },
-          { word: 'cry', highlight: 'cr', emoji: '😢' },
-          { word: 'crib', highlight: 'cr', emoji: '🛏️' },
-          { word: 'crop', highlight: 'cr', emoji: '🌾' },
-          { word: 'flag', highlight: 'fl', emoji: '🚩' },
-          { word: 'flap', highlight: 'fl', emoji: '👋' },
-          { word: 'flip', highlight: 'fl', emoji: '🔄' },
-          { word: 'flock', highlight: 'fl', emoji: '🐑' },
-          { word: 'flood', highlight: 'fl', emoji: '🌊' },
-          { word: 'globe', highlight: 'gl', emoji: '🌍' },
-          { word: 'glass', highlight: 'gl', emoji: '🥃' },
-          { word: 'glow', highlight: 'gl', emoji: '✨' },
-          { word: 'glove', highlight: 'gl', emoji: '🧤' },
-          { word: 'glad', highlight: 'gl', emoji: '😊' },
+        "examples": [
+          "A <span class=\"highlight\"><span class=\"pattern\">bl</span>ack</span> cat can sit.",
+          "The <span class=\"highlight\"><span class=\"pattern\">cl</span>ock</span> is on.",
+          "<span class=\"highlight\"><span class=\"pattern\">Bl</span>ue</span> is my cup.",
+          "This is a <span class=\"highlight\"><span class=\"pattern\">cl</span>ean</span> cup.",
+          "Kids <span class=\"highlight\"><span class=\"pattern\">cl</span>ap</span> and smile now.",
+          "A <span class=\"highlight\"><span class=\"pattern\">br</span>oom</span> is big.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">cr</span>ab</span>.",
+          "I eat <span class=\"highlight\"><span class=\"pattern\">br</span>own</span> <span class=\"highlight\"><span class=\"pattern\">br</span>ead</span> now.",
+          "A <span class=\"highlight\"><span class=\"pattern\">cr</span>own</span> is on.",
+          "Babies <span class=\"highlight\"><span class=\"pattern\">cr</span>y</span> at night.",
+          "A <span class=\"highlight\"><span class=\"pattern\">fl</span>ag</span> is up.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">gl</span>obe</span>.",
+          "Birds can <span class=\"highlight\"><span class=\"pattern\">fl</span>ap</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Gl</span>ass</span> is on the table.",
+          "My <span class=\"highlight\"><span class=\"pattern\">bl</span>ue</span> <span class=\"highlight\"><span class=\"pattern\">gl</span>ass</span> is here.",
+          "This is <span class=\"highlight\"><span class=\"pattern\">cl</span>ean</span> <span class=\"highlight\"><span class=\"pattern\">gl</span>ass</span> now.",
+          "<span class=\"highlight\"><span class=\"pattern\">Cl</span>ap</span> for the cat.",
+          "The <span class=\"highlight\"><span class=\"pattern\">bl</span>ue</span> <span class=\"highlight\"><span class=\"pattern\">cr</span>own</span> is mine.",
+          "The <span class=\"highlight\"><span class=\"pattern\">bl</span>ack</span> <span class=\"highlight\"><span class=\"pattern\">cl</span>ock</span> is on.",
+          "A <span class=\"highlight\"><span class=\"pattern\">br</span>oom</span> can <span class=\"highlight\"><span class=\"pattern\">cl</span>ean</span>."
         ],
-        exploreWords: [
-          { word: 'black', highlight: 'bl' },
-          { word: 'blue', highlight: 'bl' },
-          { word: 'blow', highlight: 'bl' },
-          { word: 'blend', highlight: 'bl' },
-          { word: 'blink', highlight: 'bl' },
-          { word: 'clock', highlight: 'cl' },
-          { word: 'clean', highlight: 'cl' },
-          { word: 'clap', highlight: 'cl' },
-          { word: 'clip', highlight: 'cl' },
-          { word: 'cloud', highlight: 'cl' },
-          { word: 'broom', highlight: 'br' },
-          { word: 'brown', highlight: 'br' },
-          { word: 'bread', highlight: 'br' },
-          { word: 'bring', highlight: 'br' },
-          { word: 'brush', highlight: 'br' },
-          { word: 'crab', highlight: 'cr' },
-          { word: 'crown', highlight: 'cr' },
-          { word: 'cry', highlight: 'cr' },
-          { word: 'crib', highlight: 'cr' },
-          { word: 'crop', highlight: 'cr' },
-          { word: 'flag', highlight: 'fl' },
-          { word: 'flap', highlight: 'fl' },
-          { word: 'flip', highlight: 'fl' },
-          { word: 'flock', highlight: 'fl' },
-          { word: 'flood', highlight: 'fl' },
-          { word: 'globe', highlight: 'gl' },
-          { word: 'glass', highlight: 'gl' },
-          { word: 'glow', highlight: 'gl' },
-          { word: 'glove', highlight: 'gl' },
-          { word: 'glad', highlight: 'gl' },
+        "words": [
+          {
+            "word": "black",
+            "highlight": "bl",
+            "emoji": "⚫"
+          },
+          {
+            "word": "blue",
+            "highlight": "bl",
+            "emoji": "💙"
+          },
+          {
+            "word": "blow",
+            "highlight": "bl",
+            "emoji": "💨"
+          },
+          {
+            "word": "blend",
+            "highlight": "bl",
+            "emoji": "🥤"
+          },
+          {
+            "word": "blink",
+            "highlight": "bl",
+            "emoji": "😉"
+          },
+          {
+            "word": "clock",
+            "highlight": "cl",
+            "emoji": "⏰"
+          },
+          {
+            "word": "clean",
+            "highlight": "cl",
+            "emoji": "✨"
+          },
+          {
+            "word": "clap",
+            "highlight": "cl",
+            "emoji": "👏"
+          },
+          {
+            "word": "clip",
+            "highlight": "cl",
+            "emoji": "📎"
+          },
+          {
+            "word": "cloud",
+            "highlight": "cl",
+            "emoji": "☁️"
+          },
+          {
+            "word": "broom",
+            "highlight": "br",
+            "emoji": "🧹"
+          },
+          {
+            "word": "brown",
+            "highlight": "br",
+            "emoji": "🟤"
+          },
+          {
+            "word": "bread",
+            "highlight": "br",
+            "emoji": "🍞"
+          },
+          {
+            "word": "bring",
+            "highlight": "br",
+            "emoji": "🤲"
+          },
+          {
+            "word": "brush",
+            "highlight": "br",
+            "emoji": "🪥"
+          },
+          {
+            "word": "crab",
+            "highlight": "cr",
+            "emoji": "🦀"
+          },
+          {
+            "word": "crown",
+            "highlight": "cr",
+            "emoji": "👑"
+          },
+          {
+            "word": "cry",
+            "highlight": "cr",
+            "emoji": "😢"
+          },
+          {
+            "word": "crib",
+            "highlight": "cr",
+            "emoji": "🛏️"
+          },
+          {
+            "word": "crop",
+            "highlight": "cr",
+            "emoji": "🌾"
+          },
+          {
+            "word": "flag",
+            "highlight": "fl",
+            "emoji": "🚩"
+          },
+          {
+            "word": "flap",
+            "highlight": "fl",
+            "emoji": "👋"
+          },
+          {
+            "word": "flip",
+            "highlight": "fl",
+            "emoji": "🔄"
+          },
+          {
+            "word": "flock",
+            "highlight": "fl",
+            "emoji": "🐑"
+          },
+          {
+            "word": "flood",
+            "highlight": "fl",
+            "emoji": "🌊"
+          },
+          {
+            "word": "globe",
+            "highlight": "gl",
+            "emoji": "🌍"
+          },
+          {
+            "word": "glass",
+            "highlight": "gl",
+            "emoji": "🥃"
+          },
+          {
+            "word": "glow",
+            "highlight": "gl",
+            "emoji": "✨"
+          },
+          {
+            "word": "glove",
+            "highlight": "gl",
+            "emoji": "🧤"
+          },
+          {
+            "word": "glad",
+            "highlight": "gl",
+            "emoji": "😊"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "black",
+            "highlight": "bl"
+          },
+          {
+            "word": "blue",
+            "highlight": "bl"
+          },
+          {
+            "word": "blow",
+            "highlight": "bl"
+          },
+          {
+            "word": "blend",
+            "highlight": "bl"
+          },
+          {
+            "word": "blink",
+            "highlight": "bl"
+          },
+          {
+            "word": "clock",
+            "highlight": "cl"
+          },
+          {
+            "word": "clean",
+            "highlight": "cl"
+          },
+          {
+            "word": "clap",
+            "highlight": "cl"
+          },
+          {
+            "word": "clip",
+            "highlight": "cl"
+          },
+          {
+            "word": "cloud",
+            "highlight": "cl"
+          },
+          {
+            "word": "broom",
+            "highlight": "br"
+          },
+          {
+            "word": "brown",
+            "highlight": "br"
+          },
+          {
+            "word": "bread",
+            "highlight": "br"
+          },
+          {
+            "word": "bring",
+            "highlight": "br"
+          },
+          {
+            "word": "brush",
+            "highlight": "br"
+          },
+          {
+            "word": "crab",
+            "highlight": "cr"
+          },
+          {
+            "word": "crown",
+            "highlight": "cr"
+          },
+          {
+            "word": "cry",
+            "highlight": "cr"
+          },
+          {
+            "word": "crib",
+            "highlight": "cr"
+          },
+          {
+            "word": "crop",
+            "highlight": "cr"
+          },
+          {
+            "word": "flag",
+            "highlight": "fl"
+          },
+          {
+            "word": "flap",
+            "highlight": "fl"
+          },
+          {
+            "word": "flip",
+            "highlight": "fl"
+          },
+          {
+            "word": "flock",
+            "highlight": "fl"
+          },
+          {
+            "word": "flood",
+            "highlight": "fl"
+          },
+          {
+            "word": "globe",
+            "highlight": "gl"
+          },
+          {
+            "word": "glass",
+            "highlight": "gl"
+          },
+          {
+            "word": "glow",
+            "highlight": "gl"
+          },
+          {
+            "word": "glove",
+            "highlight": "gl"
+          },
+          {
+            "word": "glad",
+            "highlight": "gl"
+          }
         ]
       },
       {
-        id: 'unit2',
-        name: 'Unit 2',
-        patterns: ['fr', 'gr', 'pl', 'sl', 'dr', 'tr'],
-        examples: [
-          'A <span class="highlight"><span class="pattern">fr</span>og</span> can jump.',
-          'I see <span class="highlight"><span class="pattern">gr</span>een</span> <span class="highlight"><span class="pattern">gr</span>ass</span> now.',
-          'I <span class="highlight"><span class="pattern">fr</span>y</span> an egg.',
-          'I like <span class="highlight"><span class="pattern">gr</span>apes</span>.',
-          'I <span class="highlight"><span class="pattern">gr</span>in</span> at you now.',
-          'The <span class="highlight"><span class="pattern">pl</span>ate</span> is on the table.',
-          'Kids <span class="highlight"><span class="pattern">sl</span>ide</span> down now.',
-          '<span class="highlight"><span class="pattern">Pl</span>ug</span> it in.',
-          'Do not <span class="highlight"><span class="pattern">sl</span>ip</span> on ice.',
-          'Go <span class="highlight"><span class="pattern">sl</span>ow</span>, not fast.',
-          'A <span class="highlight"><span class="pattern">dr</span>um</span> is big.',
-          'A <span class="highlight"><span class="pattern">tr</span>uck</span> is big.',
-          'Do not <span class="highlight"><span class="pattern">dr</span>op</span> the cup.',
-          'A <span class="highlight"><span class="pattern">tr</span>ee</span> is big.',
-          'Food on a <span class="highlight"><span class="pattern">tr</span>ay</span>.',
-          'I like <span class="highlight"><span class="pattern">gr</span>een</span> <span class="highlight"><span class="pattern">gr</span>apes</span> now.',
-          'A <span class="highlight"><span class="pattern">fr</span>og</span> can <span class="highlight"><span class="pattern">gr</span>in</span>.',
-          '<span class="highlight"><span class="pattern">Pl</span>ug</span> the lamp.',
-          'A <span class="highlight"><span class="pattern">sl</span>ow</span> <span class="highlight"><span class="pattern">tr</span>uck</span> can stop.',
-          '<span class="highlight"><span class="pattern">Sl</span>ide</span> to the <span class="highlight"><span class="pattern">tr</span>ee</span>.',
+        "id": "unit2",
+        "name": "Unit 2",
+        "patterns": [
+          "fr",
+          "gr",
+          "pl",
+          "sl",
+          "dr",
+          "tr"
         ],
-        words: [
-          { word: 'frog', highlight: 'fr', emoji: '🐸' },
-          { word: 'fry', highlight: 'fr', emoji: '🍳' },
-          { word: 'from', highlight: 'fr', emoji: '📤' },
-          { word: 'free', highlight: 'fr', emoji: '🆓' },
-          { word: 'fresh', highlight: 'fr', emoji: '🌿' },
-          { word: 'green', highlight: 'gr', emoji: '🟢' },
-          { word: 'grape', highlight: 'gr', emoji: '🍇' },
-          { word: 'grin', highlight: 'gr', emoji: '😁' },
-          { word: 'grow', highlight: 'gr', emoji: '🌱' },
-          { word: 'grab', highlight: 'gr', emoji: '✊' },
-          { word: 'plate', highlight: 'pl', emoji: '🍽️' },
-          { word: 'plug', highlight: 'pl', emoji: '🔌' },
-          { word: 'plan', highlight: 'pl', emoji: '📋' },
-          { word: 'plot', highlight: 'pl', emoji: '📖' },
-          { word: 'plus', highlight: 'pl', emoji: '➕' },
-          { word: 'slide', highlight: 'sl', emoji: '🛝' },
-          { word: 'slip', highlight: 'sl', emoji: '🧊' },
-          { word: 'slow', highlight: 'sl', emoji: '🐌' },
-          { word: 'sled', highlight: 'sl', emoji: '🛷' },
-          { word: 'slam', highlight: 'sl', emoji: '🚪' },
-          { word: 'drum', highlight: 'dr', emoji: '🥁' },
-          { word: 'drop', highlight: 'dr', emoji: '💧' },
-          { word: 'drag', highlight: 'dr', emoji: '🖱️' },
-          { word: 'dress', highlight: 'dr', emoji: '👗' },
-          { word: 'drill', highlight: 'dr', emoji: '🔩' },
-          { word: 'truck', highlight: 'tr', emoji: '🚚' },
-          { word: 'tree', highlight: 'tr', emoji: '🌳' },
-          { word: 'tray', highlight: 'tr', emoji: '🍽️' },
-          { word: 'trip', highlight: 'tr', emoji: '✈️' },
-          { word: 'track', highlight: 'tr', emoji: '🏃' },
+        "examples": [
+          "A <span class=\"highlight\"><span class=\"pattern\">fr</span>og</span> can jump.",
+          "I see <span class=\"highlight\"><span class=\"pattern\">gr</span>een</span> grass now.",
+          "I <span class=\"highlight\"><span class=\"pattern\">fr</span>y</span> an egg.",
+          "I like <span class=\"highlight\"><span class=\"pattern\">gr</span>apes</span>.",
+          "I <span class=\"highlight\"><span class=\"pattern\">gr</span>in</span> at you now.",
+          "The <span class=\"highlight\"><span class=\"pattern\">pl</span>ate</span> is on the table.",
+          "Kids <span class=\"highlight\"><span class=\"pattern\">sl</span>ide</span> down now.",
+          "<span class=\"highlight\"><span class=\"pattern\">Pl</span>ug</span> it in.",
+          "Do not <span class=\"highlight\"><span class=\"pattern\">sl</span>ip</span> on ice.",
+          "Go <span class=\"highlight\"><span class=\"pattern\">sl</span>ow</span>, not fast.",
+          "A <span class=\"highlight\"><span class=\"pattern\">dr</span>um</span> is big.",
+          "A <span class=\"highlight\"><span class=\"pattern\">tr</span>uck</span> is big.",
+          "Do not <span class=\"highlight\"><span class=\"pattern\">dr</span>op</span> the cup.",
+          "A <span class=\"highlight\"><span class=\"pattern\">tr</span>ee</span> is big.",
+          "Food is on the <span class=\"highlight\"><span class=\"pattern\">tr</span>ay</span>.",
+          "I like <span class=\"highlight\"><span class=\"pattern\">gr</span>een</span> <span class=\"highlight\"><span class=\"pattern\">gr</span>apes</span> now.",
+          "A <span class=\"highlight\"><span class=\"pattern\">fr</span>og</span> can <span class=\"highlight\"><span class=\"pattern\">gr</span>in</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Pl</span>ug</span> the lamp.",
+          "A <span class=\"highlight\"><span class=\"pattern\">sl</span>ow</span> <span class=\"highlight\"><span class=\"pattern\">tr</span>uck</span> can stop.",
+          "<span class=\"highlight\"><span class=\"pattern\">Sl</span>ide</span> to the <span class=\"highlight\"><span class=\"pattern\">tr</span>ee</span>."
         ],
-        exploreWords: [
-          { word: 'frog', highlight: 'fr' },
-          { word: 'fry', highlight: 'fr' },
-          { word: 'from', highlight: 'fr' },
-          { word: 'free', highlight: 'fr' },
-          { word: 'fresh', highlight: 'fr' },
-          { word: 'green', highlight: 'gr' },
-          { word: 'grape', highlight: 'gr' },
-          { word: 'grin', highlight: 'gr' },
-          { word: 'grow', highlight: 'gr' },
-          { word: 'grab', highlight: 'gr' },
-          { word: 'plate', highlight: 'pl' },
-          { word: 'plug', highlight: 'pl' },
-          { word: 'plan', highlight: 'pl' },
-          { word: 'plot', highlight: 'pl' },
-          { word: 'plus', highlight: 'pl' },
-          { word: 'slide', highlight: 'sl' },
-          { word: 'slip', highlight: 'sl' },
-          { word: 'slow', highlight: 'sl' },
-          { word: 'sled', highlight: 'sl' },
-          { word: 'slam', highlight: 'sl' },
-          { word: 'drum', highlight: 'dr' },
-          { word: 'drop', highlight: 'dr' },
-          { word: 'drag', highlight: 'dr' },
-          { word: 'dress', highlight: 'dr' },
-          { word: 'drill', highlight: 'dr' },
-          { word: 'truck', highlight: 'tr' },
-          { word: 'tree', highlight: 'tr' },
-          { word: 'tray', highlight: 'tr' },
-          { word: 'trip', highlight: 'tr' },
-          { word: 'track', highlight: 'tr' },
+        "words": [
+          {
+            "word": "frog",
+            "highlight": "fr",
+            "emoji": "🐸"
+          },
+          {
+            "word": "fry",
+            "highlight": "fr",
+            "emoji": "🍳"
+          },
+          {
+            "word": "from",
+            "highlight": "fr",
+            "emoji": "📤"
+          },
+          {
+            "word": "free",
+            "highlight": "fr",
+            "emoji": "🆓"
+          },
+          {
+            "word": "fresh",
+            "highlight": "fr",
+            "emoji": "🌿"
+          },
+          {
+            "word": "green",
+            "highlight": "gr",
+            "emoji": "🟢"
+          },
+          {
+            "word": "grape",
+            "highlight": "gr",
+            "emoji": "🍇"
+          },
+          {
+            "word": "grin",
+            "highlight": "gr",
+            "emoji": "😁"
+          },
+          {
+            "word": "grow",
+            "highlight": "gr",
+            "emoji": "🌱"
+          },
+          {
+            "word": "grab",
+            "highlight": "gr",
+            "emoji": "✊"
+          },
+          {
+            "word": "plate",
+            "highlight": "pl",
+            "emoji": "🍽️"
+          },
+          {
+            "word": "plug",
+            "highlight": "pl",
+            "emoji": "🔌"
+          },
+          {
+            "word": "plan",
+            "highlight": "pl",
+            "emoji": "📋"
+          },
+          {
+            "word": "plot",
+            "highlight": "pl",
+            "emoji": "📖"
+          },
+          {
+            "word": "plus",
+            "highlight": "pl",
+            "emoji": "➕"
+          },
+          {
+            "word": "slide",
+            "highlight": "sl",
+            "emoji": "🛝"
+          },
+          {
+            "word": "slip",
+            "highlight": "sl",
+            "emoji": "🧊"
+          },
+          {
+            "word": "slow",
+            "highlight": "sl",
+            "emoji": "🐌"
+          },
+          {
+            "word": "sled",
+            "highlight": "sl",
+            "emoji": "🛷"
+          },
+          {
+            "word": "slam",
+            "highlight": "sl",
+            "emoji": "🚪"
+          },
+          {
+            "word": "drum",
+            "highlight": "dr",
+            "emoji": "🥁"
+          },
+          {
+            "word": "drop",
+            "highlight": "dr",
+            "emoji": "💧"
+          },
+          {
+            "word": "drag",
+            "highlight": "dr",
+            "emoji": "🖱️"
+          },
+          {
+            "word": "dress",
+            "highlight": "dr",
+            "emoji": "👗"
+          },
+          {
+            "word": "drill",
+            "highlight": "dr",
+            "emoji": "🔩"
+          },
+          {
+            "word": "truck",
+            "highlight": "tr",
+            "emoji": "🚚"
+          },
+          {
+            "word": "tree",
+            "highlight": "tr",
+            "emoji": "🌳"
+          },
+          {
+            "word": "tray",
+            "highlight": "tr",
+            "emoji": "🍽️"
+          },
+          {
+            "word": "trip",
+            "highlight": "tr",
+            "emoji": "✈️"
+          },
+          {
+            "word": "track",
+            "highlight": "tr",
+            "emoji": "🏃"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "frog",
+            "highlight": "fr"
+          },
+          {
+            "word": "fry",
+            "highlight": "fr"
+          },
+          {
+            "word": "from",
+            "highlight": "fr"
+          },
+          {
+            "word": "free",
+            "highlight": "fr"
+          },
+          {
+            "word": "fresh",
+            "highlight": "fr"
+          },
+          {
+            "word": "green",
+            "highlight": "gr"
+          },
+          {
+            "word": "grape",
+            "highlight": "gr"
+          },
+          {
+            "word": "grin",
+            "highlight": "gr"
+          },
+          {
+            "word": "grow",
+            "highlight": "gr"
+          },
+          {
+            "word": "grab",
+            "highlight": "gr"
+          },
+          {
+            "word": "plate",
+            "highlight": "pl"
+          },
+          {
+            "word": "plug",
+            "highlight": "pl"
+          },
+          {
+            "word": "plan",
+            "highlight": "pl"
+          },
+          {
+            "word": "plot",
+            "highlight": "pl"
+          },
+          {
+            "word": "plus",
+            "highlight": "pl"
+          },
+          {
+            "word": "slide",
+            "highlight": "sl"
+          },
+          {
+            "word": "slip",
+            "highlight": "sl"
+          },
+          {
+            "word": "slow",
+            "highlight": "sl"
+          },
+          {
+            "word": "sled",
+            "highlight": "sl"
+          },
+          {
+            "word": "slam",
+            "highlight": "sl"
+          },
+          {
+            "word": "drum",
+            "highlight": "dr"
+          },
+          {
+            "word": "drop",
+            "highlight": "dr"
+          },
+          {
+            "word": "drag",
+            "highlight": "dr"
+          },
+          {
+            "word": "dress",
+            "highlight": "dr"
+          },
+          {
+            "word": "drill",
+            "highlight": "dr"
+          },
+          {
+            "word": "truck",
+            "highlight": "tr"
+          },
+          {
+            "word": "tree",
+            "highlight": "tr"
+          },
+          {
+            "word": "tray",
+            "highlight": "tr"
+          },
+          {
+            "word": "trip",
+            "highlight": "tr"
+          },
+          {
+            "word": "track",
+            "highlight": "tr"
+          }
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
-        patterns: ['sm', 'sn', 'sp', 'sw', 'st'],
-        examples: [
-          'I <span class="highlight"><span class="pattern">sm</span>ile</span> at you.',
-          'I see a <span class="highlight"><span class="pattern">sn</span>ake</span>.',
-          'I see a <span class="highlight"><span class="pattern">sm</span>all</span> cup.',
-          'Dogs can <span class="highlight"><span class="pattern">sn</span>iff</span>.',
-          '<span class="highlight"><span class="pattern">Sm</span>oke</span> is in the sky.',
-          'A <span class="highlight"><span class="pattern">sp</span>oon</span> is on the table.',
-          'Fish can <span class="highlight"><span class="pattern">sw</span>im</span>.',
-          'Kids can <span class="highlight"><span class="pattern">sp</span>in</span>.',
-          'I <span class="highlight"><span class="pattern">sw</span>eep</span> the floor now.',
-          'I see a <span class="highlight"><span class="pattern">sw</span>an</span>.',
-          '<span class="highlight"><span class="pattern">St</span>op</span> now, please, Sam.',
-          '<span class="highlight">Te<span class="pattern">st</span></span> it with a pen.',
-          'A <span class="highlight">fa<span class="pattern">st</span></span> car can go.',
-          '<span class="highlight"><span class="pattern">St</span>ep</span> back now, please.',
-          'A <span class="highlight"><span class="pattern">st</span>ar</span> is up.',
-          'A <span class="highlight"><span class="pattern">st</span>one</span> is in it.',
-          'I see a <span class="highlight"><span class="pattern">sm</span>all</span> <span class="highlight"><span class="pattern">sn</span>ake</span>.',
-          '<span class="highlight"><span class="pattern">Sw</span>eep</span>, then <span class="highlight"><span class="pattern">st</span>op</span>.',
-          '<span class="highlight"><span class="pattern">St</span>op</span> and <span class="highlight"><span class="pattern">sm</span>ile</span>.',
-          '<span class="highlight"><span class="pattern">Sw</span>ans</span> can <span class="highlight"><span class="pattern">sw</span>im</span>.',
+        "id": "unit3",
+        "name": "Unit 3",
+        "patterns": [
+          "sm",
+          "sn",
+          "sp",
+          "sw",
+          "st"
         ],
-        words: [
-          { word: 'smile', highlight: 'sm', emoji: '😊' },
-          { word: 'small', highlight: 'sm', emoji: '🐭' },
-          { word: 'smoke', highlight: 'sm', emoji: '💨' },
-          { word: 'smell', highlight: 'sm', emoji: '👃' },
-          { word: 'smash', highlight: 'sm', emoji: '💥' },
-          { word: 'snake', highlight: 'sn', emoji: '🐍' },
-          { word: 'sniff', highlight: 'sn', emoji: '👃' },
-          { word: 'snap', highlight: 'sn', emoji: '📸' },
-          { word: 'snail', highlight: 'sn', emoji: '🐌' },
-          { word: 'snow', highlight: 'sn', emoji: '❄️' },
-          { word: 'spoon', highlight: 'sp', emoji: '🥄' },
-          { word: 'spin', highlight: 'sp', emoji: '🌪️' },
-          { word: 'spot', highlight: 'sp', emoji: '⭕' },
-          { word: 'spell', highlight: 'sp', emoji: '🔤' },
-          { word: 'spill', highlight: 'sp', emoji: '💧' },
-          { word: 'swim', highlight: 'sw', emoji: '🏊' },
-          { word: 'sweep', highlight: 'sw', emoji: '🧹' },
-          { word: 'swan', highlight: 'sw', emoji: '🦢' },
-          { word: 'swing', highlight: 'sw', emoji: '🎠' },
-          { word: 'sweet', highlight: 'sw', emoji: '🍬' },
-          { word: 'stop', highlight: 'st', emoji: '🛑' },
-          { word: 'test', highlight: 'st', emoji: '📝' },
-          { word: 'fast', highlight: 'st', emoji: '⚡' },
-          { word: 'step', highlight: 'st', emoji: '👣' },
-          { word: 'star', highlight: 'st', emoji: '⭐' },
-          { word: 'stone', highlight: 'st', emoji: '🪨' },
+        "examples": [
+          "I <span class=\"highlight\"><span class=\"pattern\">sm</span>ile</span> at you.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">sn</span>ake</span>.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">sm</span>all</span> cup.",
+          "Dogs can <span class=\"highlight\"><span class=\"pattern\">sn</span>iff</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Sm</span>oke</span> is in the sky.",
+          "A <span class=\"highlight\"><span class=\"pattern\">sp</span>oon</span> is on the table.",
+          "Fish can <span class=\"highlight\"><span class=\"pattern\">sw</span>im</span>.",
+          "Kids can <span class=\"highlight\"><span class=\"pattern\">sp</span>in</span>.",
+          "I <span class=\"highlight\"><span class=\"pattern\">sw</span>eep</span> the floor now.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">sw</span>an</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">St</span>op</span> now, please, Sam.",
+          "<span class=\"highlight\">Te<span class=\"pattern\">st</span></span> it with a pen.",
+          "A <span class=\"highlight\">fa<span class=\"pattern\">st</span></span> car can go.",
+          "<span class=\"highlight\"><span class=\"pattern\">St</span>ep</span> back now, please.",
+          "A <span class=\"highlight\"><span class=\"pattern\">st</span>ar</span> is up.",
+          "A <span class=\"highlight\"><span class=\"pattern\">st</span>one</span> is in it.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">sm</span>all</span> <span class=\"highlight\"><span class=\"pattern\">sn</span>ake</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Sw</span>eep</span>, then <span class=\"highlight\"><span class=\"pattern\">st</span>op</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">St</span>op</span> and <span class=\"highlight\"><span class=\"pattern\">sm</span>ile</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Sw</span>ans</span> can <span class=\"highlight\"><span class=\"pattern\">sw</span>im</span>."
         ],
-        exploreWords: [
-          { word: 'smile', highlight: 'sm' },
-          { word: 'small', highlight: 'sm' },
-          { word: 'smoke', highlight: 'sm' },
-          { word: 'smell', highlight: 'sm' },
-          { word: 'smash', highlight: 'sm' },
-          { word: 'snake', highlight: 'sn' },
-          { word: 'sniff', highlight: 'sn' },
-          { word: 'snap', highlight: 'sn' },
-          { word: 'snail', highlight: 'sn' },
-          { word: 'snow', highlight: 'sn' },
-          { word: 'spoon', highlight: 'sp' },
-          { word: 'spin', highlight: 'sp' },
-          { word: 'spot', highlight: 'sp' },
-          { word: 'spell', highlight: 'sp' },
-          { word: 'spill', highlight: 'sp' },
-          { word: 'swim', highlight: 'sw' },
-          { word: 'sweep', highlight: 'sw' },
-          { word: 'swan', highlight: 'sw' },
-          { word: 'swing', highlight: 'sw' },
-          { word: 'sweet', highlight: 'sw' },
-          { word: 'stop', highlight: 'st' },
-          { word: 'test', highlight: 'st' },
-          { word: 'fast', highlight: 'st' },
-          { word: 'step', highlight: 'st' },
-          { word: 'star', highlight: 'st' },
-          { word: 'stone', highlight: 'st' },
+        "words": [
+          {
+            "word": "smile",
+            "highlight": "sm",
+            "emoji": "😊"
+          },
+          {
+            "word": "small",
+            "highlight": "sm",
+            "emoji": "🐭"
+          },
+          {
+            "word": "smoke",
+            "highlight": "sm",
+            "emoji": "💨"
+          },
+          {
+            "word": "smell",
+            "highlight": "sm",
+            "emoji": "👃"
+          },
+          {
+            "word": "smash",
+            "highlight": "sm",
+            "emoji": "💥"
+          },
+          {
+            "word": "snake",
+            "highlight": "sn",
+            "emoji": "🐍"
+          },
+          {
+            "word": "sniff",
+            "highlight": "sn",
+            "emoji": "👃"
+          },
+          {
+            "word": "snap",
+            "highlight": "sn",
+            "emoji": "📸"
+          },
+          {
+            "word": "snail",
+            "highlight": "sn",
+            "emoji": "🐌"
+          },
+          {
+            "word": "snow",
+            "highlight": "sn",
+            "emoji": "❄️"
+          },
+          {
+            "word": "spoon",
+            "highlight": "sp",
+            "emoji": "🥄"
+          },
+          {
+            "word": "spin",
+            "highlight": "sp",
+            "emoji": "🌪️"
+          },
+          {
+            "word": "spot",
+            "highlight": "sp",
+            "emoji": "⭕"
+          },
+          {
+            "word": "spell",
+            "highlight": "sp",
+            "emoji": "🔤"
+          },
+          {
+            "word": "spill",
+            "highlight": "sp",
+            "emoji": "💧"
+          },
+          {
+            "word": "swim",
+            "highlight": "sw",
+            "emoji": "🏊"
+          },
+          {
+            "word": "sweep",
+            "highlight": "sw",
+            "emoji": "🧹"
+          },
+          {
+            "word": "swan",
+            "highlight": "sw",
+            "emoji": "🦢"
+          },
+          {
+            "word": "swing",
+            "highlight": "sw",
+            "emoji": "🎠"
+          },
+          {
+            "word": "sweet",
+            "highlight": "sw",
+            "emoji": "🍬"
+          },
+          {
+            "word": "stop",
+            "highlight": "st",
+            "emoji": "🛑"
+          },
+          {
+            "word": "test",
+            "highlight": "st",
+            "emoji": "📝"
+          },
+          {
+            "word": "fast",
+            "highlight": "st",
+            "emoji": "⚡"
+          },
+          {
+            "word": "step",
+            "highlight": "st",
+            "emoji": "👣"
+          },
+          {
+            "word": "star",
+            "highlight": "st",
+            "emoji": "⭐"
+          },
+          {
+            "word": "stone",
+            "highlight": "st",
+            "emoji": "🪨"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "smile",
+            "highlight": "sm"
+          },
+          {
+            "word": "small",
+            "highlight": "sm"
+          },
+          {
+            "word": "smoke",
+            "highlight": "sm"
+          },
+          {
+            "word": "smell",
+            "highlight": "sm"
+          },
+          {
+            "word": "smash",
+            "highlight": "sm"
+          },
+          {
+            "word": "snake",
+            "highlight": "sn"
+          },
+          {
+            "word": "sniff",
+            "highlight": "sn"
+          },
+          {
+            "word": "snap",
+            "highlight": "sn"
+          },
+          {
+            "word": "snail",
+            "highlight": "sn"
+          },
+          {
+            "word": "snow",
+            "highlight": "sn"
+          },
+          {
+            "word": "spoon",
+            "highlight": "sp"
+          },
+          {
+            "word": "spin",
+            "highlight": "sp"
+          },
+          {
+            "word": "spot",
+            "highlight": "sp"
+          },
+          {
+            "word": "spell",
+            "highlight": "sp"
+          },
+          {
+            "word": "spill",
+            "highlight": "sp"
+          },
+          {
+            "word": "swim",
+            "highlight": "sw"
+          },
+          {
+            "word": "sweep",
+            "highlight": "sw"
+          },
+          {
+            "word": "swan",
+            "highlight": "sw"
+          },
+          {
+            "word": "swing",
+            "highlight": "sw"
+          },
+          {
+            "word": "sweet",
+            "highlight": "sw"
+          },
+          {
+            "word": "stop",
+            "highlight": "st"
+          },
+          {
+            "word": "test",
+            "highlight": "st"
+          },
+          {
+            "word": "fast",
+            "highlight": "st"
+          },
+          {
+            "word": "step",
+            "highlight": "st"
+          },
+          {
+            "word": "star",
+            "highlight": "st"
+          },
+          {
+            "word": "stone",
+            "highlight": "st"
+          }
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
-        patterns: ['sh', 'ch', 'tch', 'ph', 'wh'],
-        examples: [
-          'I see a <span class="highlight"><span class="pattern">sh</span>ell</span>.',
-          '<span class="highlight">Fi<span class="pattern">sh</span></span> can swim.',
-          'A <span class="highlight"><span class="pattern">sh</span>ip</span> is big.',
-          'A <span class="highlight"><span class="pattern">sh</span>op</span> is here.',
-          'I <span class="highlight">wi<span class="pattern">sh</span></span> for a <span class="highlight"><span class="pattern">sh</span>ip</span>.',
-          'I see a <span class="highlight"><span class="pattern">ch</span>ick</span>.',
-          'We <span class="highlight"><span class="pattern">ch</span>at</span> in the <span class="highlight"><span class="pattern">sh</span>op</span>.',
-          '<span class="highlight"><span class="pattern">Ch</span>op</span> it, then stop now.',
-          'A <span class="highlight">mat<span class="pattern">ch</span></span> is on.',
-          '<span class="highlight">Wat<span class="pattern">ch</span></span> me swim now.',
-          'My <span class="highlight"><span class="pattern">ph</span>one</span> is here.',
-          'I see a <span class="highlight"><span class="pattern">wh</span>ale</span>.',
-          'A <span class="highlight"><span class="pattern">ph</span>oto</span> is on it.',
-          'The <span class="highlight"><span class="pattern">wh</span>eel</span> is big.',
-          '<span class="highlight"><span class="pattern">Wh</span>at</span> is that?',
-          'I <span class="highlight">wi<span class="pattern">sh</span></span> for a <span class="highlight">fi<span class="pattern">sh</span></span>.',
-          '<span class="highlight">Wat<span class="pattern">ch</span></span> the <span class="highlight"><span class="pattern">sh</span>ip</span>.',
-          'The <span class="highlight"><span class="pattern">sh</span>ip</span> has a <span class="highlight"><span class="pattern">wh</span>eel</span>.',
-          '<span class="highlight"><span class="pattern">Ch</span>op</span>, then stop.',
-          'I see a <span class="highlight">fi<span class="pattern">sh</span></span> and a <span class="highlight"><span class="pattern">sh</span>ell</span>.',
+        "id": "unit4",
+        "name": "Unit 4",
+        "patterns": [
+          "sh",
+          "ch",
+          "tch",
+          "ph",
+          "wh"
         ],
-        words: [
-          { word: 'shell', highlight: 'sh', emoji: '🐚' },
-          { word: 'fish', highlight: 'sh', emoji: '🐟' },
-          { word: 'ship', highlight: 'sh', emoji: '🚢' },
-          { word: 'shop', highlight: 'sh', emoji: '🏪' },
-          { word: 'wish', highlight: 'sh', emoji: '⭐' },
-          { word: 'chick', highlight: 'ch', emoji: '🐤' },
-          { word: 'chat', highlight: 'ch', emoji: '💬' },
-          { word: 'chop', highlight: 'ch', emoji: '🔪' },
-          { word: 'chin', highlight: 'ch', emoji: '😊' },
-          { word: 'chip', highlight: 'ch', emoji: '🍟' },
-          { word: 'match', highlight: 'tch', emoji: '🔥' },
-          { word: 'watch', highlight: 'tch', emoji: '⌚' },
-          { word: 'catch', highlight: 'tch', emoji: '🤲' },
-          { word: 'patch', highlight: 'tch', emoji: '🩹' },
-          { word: 'pitch', highlight: 'tch', emoji: '⚾' },
-          { word: 'phone', highlight: 'ph', emoji: '📱' },
-          { word: 'photo', highlight: 'ph', emoji: '📷' },
-          { word: 'graph', highlight: 'ph', emoji: '📊' },
-          { word: 'dolphin', highlight: 'ph', emoji: '🐬' },
-          { word: 'elephant', highlight: 'ph', emoji: '🐘' },
-          { word: 'whale', highlight: 'wh', emoji: '🐋' },
-          { word: 'wheel', highlight: 'wh', emoji: '⚙️' },
-          { word: 'what', highlight: 'wh', emoji: '❓' },
-          { word: 'when', highlight: 'wh', emoji: '⏰' },
-          { word: 'white', highlight: 'wh', emoji: '⬜' },
+        "examples": [
+          "I see a <span class=\"highlight\"><span class=\"pattern\">sh</span>ell</span>.",
+          "<span class=\"highlight\">Fi<span class=\"pattern\">sh</span></span> can swim.",
+          "A <span class=\"highlight\"><span class=\"pattern\">sh</span>ip</span> is big.",
+          "A <span class=\"highlight\"><span class=\"pattern\">sh</span>op</span> is here.",
+          "I <span class=\"highlight\">wi<span class=\"pattern\">sh</span></span> for a <span class=\"highlight\"><span class=\"pattern\">sh</span>ip</span>.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">ch</span>ick</span>.",
+          "We <span class=\"highlight\"><span class=\"pattern\">ch</span>at</span> in the <span class=\"highlight\"><span class=\"pattern\">sh</span>op</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Ch</span>op</span> it, then stop now.",
+          "A <span class=\"highlight\">mat<span class=\"pattern\">ch</span></span> is on.",
+          "<span class=\"highlight\">Wat<span class=\"pattern\">ch</span></span> me swim now.",
+          "My <span class=\"highlight\"><span class=\"pattern\">ph</span>one</span> is here.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">wh</span>ale</span>.",
+          "A <span class=\"highlight\"><span class=\"pattern\">ph</span>oto</span> is on it.",
+          "The <span class=\"highlight\"><span class=\"pattern\">wh</span>eel</span> is big.",
+          "<span class=\"highlight\"><span class=\"pattern\">Wh</span>at</span> is that?",
+          "I <span class=\"highlight\">wi<span class=\"pattern\">sh</span></span> for a <span class=\"highlight\">fi<span class=\"pattern\">sh</span></span>.",
+          "<span class=\"highlight\">Wat<span class=\"pattern\">ch</span></span> the <span class=\"highlight\"><span class=\"pattern\">sh</span>ip</span>.",
+          "The <span class=\"highlight\"><span class=\"pattern\">sh</span>ip</span> has a <span class=\"highlight\"><span class=\"pattern\">wh</span>eel</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Ch</span>op</span>, then stop.",
+          "I see a <span class=\"highlight\">fi<span class=\"pattern\">sh</span></span> and a <span class=\"highlight\"><span class=\"pattern\">sh</span>ell</span>."
         ],
-        exploreWords: [
-          { word: 'shell', highlight: 'sh' },
-          { word: 'fish', highlight: 'sh' },
-          { word: 'ship', highlight: 'sh' },
-          { word: 'shop', highlight: 'sh' },
-          { word: 'wish', highlight: 'sh' },
-          { word: 'chick', highlight: 'ch' },
-          { word: 'chat', highlight: 'ch' },
-          { word: 'chop', highlight: 'ch' },
-          { word: 'chin', highlight: 'ch' },
-          { word: 'chip', highlight: 'ch' },
-          { word: 'match', highlight: 'tch' },
-          { word: 'watch', highlight: 'tch' },
-          { word: 'catch', highlight: 'tch' },
-          { word: 'patch', highlight: 'tch' },
-          { word: 'pitch', highlight: 'tch' },
-          { word: 'phone', highlight: 'ph' },
-          { word: 'photo', highlight: 'ph' },
-          { word: 'graph', highlight: 'ph' },
-          { word: 'dolphin', highlight: 'ph' },
-          { word: 'elephant', highlight: 'ph' },
-          { word: 'whale', highlight: 'wh' },
-          { word: 'wheel', highlight: 'wh' },
-          { word: 'what', highlight: 'wh' },
-          { word: 'when', highlight: 'wh' },
-          { word: 'white', highlight: 'wh' },
+        "words": [
+          {
+            "word": "shell",
+            "highlight": "sh",
+            "emoji": "🐚"
+          },
+          {
+            "word": "fish",
+            "highlight": "sh",
+            "emoji": "🐟"
+          },
+          {
+            "word": "ship",
+            "highlight": "sh",
+            "emoji": "🚢"
+          },
+          {
+            "word": "shop",
+            "highlight": "sh",
+            "emoji": "🏪"
+          },
+          {
+            "word": "wish",
+            "highlight": "sh",
+            "emoji": "⭐"
+          },
+          {
+            "word": "chick",
+            "highlight": "ch",
+            "emoji": "🐤"
+          },
+          {
+            "word": "chat",
+            "highlight": "ch",
+            "emoji": "💬"
+          },
+          {
+            "word": "chop",
+            "highlight": "ch",
+            "emoji": "🔪"
+          },
+          {
+            "word": "chin",
+            "highlight": "ch",
+            "emoji": "😊"
+          },
+          {
+            "word": "chip",
+            "highlight": "ch",
+            "emoji": "🍟"
+          },
+          {
+            "word": "match",
+            "highlight": "tch",
+            "emoji": "🔥"
+          },
+          {
+            "word": "watch",
+            "highlight": "tch",
+            "emoji": "⌚"
+          },
+          {
+            "word": "catch",
+            "highlight": "tch",
+            "emoji": "🤲"
+          },
+          {
+            "word": "patch",
+            "highlight": "tch",
+            "emoji": "🩹"
+          },
+          {
+            "word": "pitch",
+            "highlight": "tch",
+            "emoji": "⚾"
+          },
+          {
+            "word": "phone",
+            "highlight": "ph",
+            "emoji": "📱"
+          },
+          {
+            "word": "photo",
+            "highlight": "ph",
+            "emoji": "📷"
+          },
+          {
+            "word": "graph",
+            "highlight": "ph",
+            "emoji": "📊"
+          },
+          {
+            "word": "dolphin",
+            "highlight": "ph",
+            "emoji": "🐬"
+          },
+          {
+            "word": "elephant",
+            "highlight": "ph",
+            "emoji": "🐘"
+          },
+          {
+            "word": "whale",
+            "highlight": "wh",
+            "emoji": "🐋"
+          },
+          {
+            "word": "wheel",
+            "highlight": "wh",
+            "emoji": "⚙️"
+          },
+          {
+            "word": "what",
+            "highlight": "wh",
+            "emoji": "❓"
+          },
+          {
+            "word": "when",
+            "highlight": "wh",
+            "emoji": "⏰"
+          },
+          {
+            "word": "white",
+            "highlight": "wh",
+            "emoji": "⬜"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "shell",
+            "highlight": "sh"
+          },
+          {
+            "word": "fish",
+            "highlight": "sh"
+          },
+          {
+            "word": "ship",
+            "highlight": "sh"
+          },
+          {
+            "word": "shop",
+            "highlight": "sh"
+          },
+          {
+            "word": "wish",
+            "highlight": "sh"
+          },
+          {
+            "word": "chick",
+            "highlight": "ch"
+          },
+          {
+            "word": "chat",
+            "highlight": "ch"
+          },
+          {
+            "word": "chop",
+            "highlight": "ch"
+          },
+          {
+            "word": "chin",
+            "highlight": "ch"
+          },
+          {
+            "word": "chip",
+            "highlight": "ch"
+          },
+          {
+            "word": "match",
+            "highlight": "tch"
+          },
+          {
+            "word": "watch",
+            "highlight": "tch"
+          },
+          {
+            "word": "catch",
+            "highlight": "tch"
+          },
+          {
+            "word": "patch",
+            "highlight": "tch"
+          },
+          {
+            "word": "pitch",
+            "highlight": "tch"
+          },
+          {
+            "word": "phone",
+            "highlight": "ph"
+          },
+          {
+            "word": "photo",
+            "highlight": "ph"
+          },
+          {
+            "word": "graph",
+            "highlight": "ph"
+          },
+          {
+            "word": "dolphin",
+            "highlight": "ph"
+          },
+          {
+            "word": "elephant",
+            "highlight": "ph"
+          },
+          {
+            "word": "whale",
+            "highlight": "wh"
+          },
+          {
+            "word": "wheel",
+            "highlight": "wh"
+          },
+          {
+            "word": "what",
+            "highlight": "wh"
+          },
+          {
+            "word": "when",
+            "highlight": "wh"
+          },
+          {
+            "word": "white",
+            "highlight": "wh"
+          }
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
-        patterns: ['th', 'th', 'ck', 'qu'],
-        examples: [
-          '<span class="highlight"><span class="pattern">Th</span>is</span> is fun for me.',
-          '<span class="highlight">Mo<span class="pattern">th</span>er</span> can help.',
-          '<span class="highlight"><span class="pattern">Th</span>at</span> dog can run.',
-          'I take a <span class="highlight">ba<span class="pattern">th</span></span>.',
-          '<span class="highlight"><span class="pattern">Th</span>ree</span> cats sit.',
-          'I <span class="highlight"><span class="pattern">th</span>ink</span> so.',
-          '<span class="highlight"><span class="pattern">Th</span>e</span> ice is <span class="highlight"><span class="pattern">th</span>in</span> today.',
-          'My <span class="highlight"><span class="pattern">th</span>umb</span> is OK.',
-          'A <span class="highlight">ro<span class="pattern">ck</span>et</span> is big.',
-          'A <span class="highlight">du<span class="pattern">ck</span></span> can <span class="highlight">qua<span class="pattern">ck</span></span>.',
-          '<span class="highlight">Qui<span class="pattern">ck</span></span>, go take a <span class="highlight">ba<span class="pattern">th</span></span> now.',
-          '<span class="highlight">Du<span class="pattern">ck</span>s</span> can swim.',
-          'My <span class="highlight">so<span class="pattern">ck</span></span> is wet.',
-          'I see a <span class="highlight">qui<span class="pattern">ck</span></span> <span class="highlight">du<span class="pattern">ck</span></span> run.',
-          '<span class="highlight"><span class="pattern">Th</span>is</span> <span class="highlight"><span class="pattern">th</span>in</span> <span class="highlight">so<span class="pattern">ck</span></span> is not warm.',
-          'I see <span class="highlight"><span class="pattern">th</span>ree</span> <span class="highlight">du<span class="pattern">ck</span>s</span> in water.',
-          '<span class="highlight">Mo<span class="pattern">th</span>er</span> is here.',
-          '<span class="highlight"><span class="pattern">Th</span>at</span> <span class="highlight"><span class="pattern">th</span>umb</span> is in <span class="highlight"><span class="pattern">th</span>e</span> <span class="highlight">ba<span class="pattern">th</span></span>.',
-          'A <span class="highlight">du<span class="pattern">ck</span></span> can <span class="highlight">qua<span class="pattern">ck</span></span> <span class="highlight">qui<span class="pattern">ck</span></span> now.',
-          '<span class="highlight"><span class="pattern">Th</span>is</span> <span class="highlight">du<span class="pattern">ck</span></span> has a <span class="highlight">so<span class="pattern">ck</span></span>.',
+        "id": "unit5",
+        "name": "Unit 5",
+        "patterns": [
+          "th",
+          "th",
+          "ck",
+          "qu"
         ],
-        words: [
-          { word: 'this', highlight: 'th', emoji: '👉' },
-          { word: 'mother', highlight: 'th', emoji: '👩' },
-          { word: 'that', highlight: 'th', emoji: '👈' },
-          { word: 'bath', highlight: 'th', emoji: '🛁' },
-          { word: 'three', highlight: 'th', emoji: '3️⃣' },
-          { word: 'think', highlight: 'th', emoji: '🤔' },
-          { word: 'thin', highlight: 'th', emoji: '📏' },
-          { word: 'thumb', highlight: 'th', emoji: '👍' },
-          { word: 'rocket', highlight: 'ck', emoji: '🚀' },
-          { word: 'duck', highlight: 'ck', emoji: '🦆' },
-          { word: 'sock', highlight: 'ck', emoji: '🧦' },
-          { word: 'lock', highlight: 'ck', emoji: '🔒' },
-          { word: 'pack', highlight: 'ck', emoji: '🎒' },
-          { word: 'quick', highlight: 'qu', emoji: '⚡' },
-          { word: 'quack', highlight: 'qu', emoji: '🦆' },
-          { word: 'queen', highlight: 'qu', emoji: '👸' },
-          { word: 'quit', highlight: 'qu', emoji: '🚪' },
-          { word: 'quite', highlight: 'qu', emoji: '👌' },
+        "examples": [
+          "<span class=\"highlight\"><span class=\"pattern\">Th</span>is</span> is fun for me.",
+          "<span class=\"highlight\">Mo<span class=\"pattern\">th</span>er</span> can help.",
+          "<span class=\"highlight\"><span class=\"pattern\">Th</span>at</span> dog can run.",
+          "I take a <span class=\"highlight\">ba<span class=\"pattern\">th</span></span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Th</span>ree</span> cats sit.",
+          "I <span class=\"highlight\"><span class=\"pattern\">th</span>ink</span> so.",
+          "The ice is <span class=\"highlight\"><span class=\"pattern\">th</span>in</span> today.",
+          "My <span class=\"highlight\"><span class=\"pattern\">th</span>umb</span> is OK.",
+          "A <span class=\"highlight\">ro<span class=\"pattern\">ck</span>et</span> is big.",
+          "A <span class=\"highlight\">du<span class=\"pattern\">ck</span></span> can <span class=\"highlight\"><span class=\"pattern\">qu</span>ack</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Qu</span>ick</span>, go take a <span class=\"highlight\">ba<span class=\"pattern\">th</span></span> now.",
+          "The <span class=\"highlight\"><span class=\"pattern\">qu</span>een</span> is <span class=\"highlight\"><span class=\"pattern\">qu</span>ick</span>.",
+          "My <span class=\"highlight\">so<span class=\"pattern\">ck</span></span> is wet.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">qu</span>ick</span> <span class=\"highlight\">du<span class=\"pattern\">ck</span></span> run.",
+          "<span class=\"highlight\"><span class=\"pattern\">Th</span>is</span> <span class=\"highlight\"><span class=\"pattern\">th</span>in</span> <span class=\"highlight\">so<span class=\"pattern\">ck</span></span> is not warm.",
+          "I see <span class=\"highlight\"><span class=\"pattern\">th</span>ree</span> <span class=\"highlight\">du<span class=\"pattern\">ck</span>s</span> in water.",
+          "<span class=\"highlight\">Mo<span class=\"pattern\">th</span>er</span> is here.",
+          "<span class=\"highlight\"><span class=\"pattern\">Th</span>at</span> <span class=\"highlight\"><span class=\"pattern\">th</span>umb</span> is in the <span class=\"highlight\">ba<span class=\"pattern\">th</span></span>.",
+          "A <span class=\"highlight\">du<span class=\"pattern\">ck</span></span> can <span class=\"highlight\"><span class=\"pattern\">qu</span>ack</span> fast now.",
+          "<span class=\"highlight\"><span class=\"pattern\">Th</span>is</span> <span class=\"highlight\">du<span class=\"pattern\">ck</span></span> has a <span class=\"highlight\">so<span class=\"pattern\">ck</span></span>."
         ],
-        exploreWords: [
-          { word: 'this', highlight: 'th' },
-          { word: 'mother', highlight: 'th' },
-          { word: 'that', highlight: 'th' },
-          { word: 'bath', highlight: 'th' },
-          { word: 'three', highlight: 'th' },
-          { word: 'think', highlight: 'th' },
-          { word: 'thin', highlight: 'th' },
-          { word: 'thumb', highlight: 'th' },
-          { word: 'rocket', highlight: 'ck' },
-          { word: 'duck', highlight: 'ck' },
-          { word: 'sock', highlight: 'ck' },
-          { word: 'lock', highlight: 'ck' },
-          { word: 'pack', highlight: 'ck' },
-          { word: 'quick', highlight: 'qu' },
-          { word: 'quack', highlight: 'qu' },
-          { word: 'queen', highlight: 'qu' },
-          { word: 'quit', highlight: 'qu' },
-          { word: 'quite', highlight: 'qu' },
+        "words": [
+          {
+            "word": "this",
+            "highlight": "th",
+            "emoji": "👉"
+          },
+          {
+            "word": "mother",
+            "highlight": "th",
+            "emoji": "👩"
+          },
+          {
+            "word": "that",
+            "highlight": "th",
+            "emoji": "👈"
+          },
+          {
+            "word": "bath",
+            "highlight": "th",
+            "emoji": "🛁"
+          },
+          {
+            "word": "three",
+            "highlight": "th",
+            "emoji": "3️⃣"
+          },
+          {
+            "word": "think",
+            "highlight": "th",
+            "emoji": "🤔"
+          },
+          {
+            "word": "thin",
+            "highlight": "th",
+            "emoji": "📏"
+          },
+          {
+            "word": "thumb",
+            "highlight": "th",
+            "emoji": "👍"
+          },
+          {
+            "word": "rocket",
+            "highlight": "ck",
+            "emoji": "🚀"
+          },
+          {
+            "word": "duck",
+            "highlight": "ck",
+            "emoji": "🦆"
+          },
+          {
+            "word": "sock",
+            "highlight": "ck",
+            "emoji": "🧦"
+          },
+          {
+            "word": "lock",
+            "highlight": "ck",
+            "emoji": "🔒"
+          },
+          {
+            "word": "pack",
+            "highlight": "ck",
+            "emoji": "🎒"
+          },
+          {
+            "word": "quick",
+            "highlight": "qu",
+            "emoji": "⚡"
+          },
+          {
+            "word": "quack",
+            "highlight": "qu",
+            "emoji": "🦆"
+          },
+          {
+            "word": "queen",
+            "highlight": "qu",
+            "emoji": "👸"
+          },
+          {
+            "word": "quit",
+            "highlight": "qu",
+            "emoji": "🚪"
+          },
+          {
+            "word": "quite",
+            "highlight": "qu",
+            "emoji": "👌"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "this",
+            "highlight": "th"
+          },
+          {
+            "word": "mother",
+            "highlight": "th"
+          },
+          {
+            "word": "that",
+            "highlight": "th"
+          },
+          {
+            "word": "bath",
+            "highlight": "th"
+          },
+          {
+            "word": "three",
+            "highlight": "th"
+          },
+          {
+            "word": "think",
+            "highlight": "th"
+          },
+          {
+            "word": "thin",
+            "highlight": "th"
+          },
+          {
+            "word": "thumb",
+            "highlight": "th"
+          },
+          {
+            "word": "rocket",
+            "highlight": "ck"
+          },
+          {
+            "word": "duck",
+            "highlight": "ck"
+          },
+          {
+            "word": "sock",
+            "highlight": "ck"
+          },
+          {
+            "word": "lock",
+            "highlight": "ck"
+          },
+          {
+            "word": "pack",
+            "highlight": "ck"
+          },
+          {
+            "word": "quick",
+            "highlight": "qu"
+          },
+          {
+            "word": "quack",
+            "highlight": "qu"
+          },
+          {
+            "word": "queen",
+            "highlight": "qu"
+          },
+          {
+            "word": "quit",
+            "highlight": "qu"
+          },
+          {
+            "word": "quite",
+            "highlight": "qu"
+          }
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
-        patterns: ['ng', 'nk', 'nd', 'nt', 'lt', 'mp'],
-        examples: [
-          'The <span class="highlight">ki<span class="pattern">ng</span></span> is here.',
-          'The <span class="highlight">ba<span class="pattern">nk</span></span> is big.',
-          'A <span class="highlight">ri<span class="pattern">ng</span></span> is on it.',
-          'Ships can <span class="highlight">si<span class="pattern">nk</span></span>.',
-          '<span class="highlight">Wi<span class="pattern">nd</span></span> is cold.',
-          'A <span class="highlight">te<span class="pattern">nt</span></span> is up.',
-          'My <span class="highlight">ha<span class="pattern">nd</span></span> is up.',
-          '<span class="highlight">Pla<span class="pattern">nt</span></span> a seed.',
-          'An <span class="highlight">adu<span class="pattern">lt</span></span> can help.',
-          'A <span class="highlight">la<span class="pattern">mp</span></span> is on.',
-          'A <span class="highlight">be<span class="pattern">lt</span></span> is on.',
-          'Kids can <span class="highlight">ju<span class="pattern">mp</span></span>.',
-          'The <span class="highlight">wi<span class="pattern">nd</span></span> hits the <span class="highlight">te<span class="pattern">nt</span></span>.',
-          'The <span class="highlight">ki<span class="pattern">ng</span></span> has a <span class="highlight">ri<span class="pattern">ng</span></span>.',
-          '<span class="highlight">Si<span class="pattern">nk</span></span> it in the tub now.',
-          'A <span class="highlight">la<span class="pattern">mp</span></span> is in the <span class="highlight">te<span class="pattern">nt</span></span>.',
-          'The <span class="highlight">ki<span class="pattern">ng</span></span> is at the <span class="highlight">ba<span class="pattern">nk</span></span>.',
-          '<span class="highlight">Ju<span class="pattern">mp</span></span>, then clap your <span class="highlight">ha<span class="pattern">nd</span>s</span>.',
-          '<span class="highlight">Ha<span class="pattern">nd</span></span> me the <span class="highlight">be<span class="pattern">lt</span></span>.',
-          '<span class="highlight">Pla<span class="pattern">nt</span></span> near the <span class="highlight">ba<span class="pattern">nk</span></span>.',
+        "id": "unit6",
+        "name": "Unit 6",
+        "patterns": [
+          "ng",
+          "nk",
+          "nd",
+          "nt",
+          "lt",
+          "mp"
         ],
-        words: [
-          { word: 'king', highlight: 'ng', emoji: '👑' },
-          { word: 'ring', highlight: 'ng', emoji: '💍' },
-          { word: 'wing', highlight: 'ng', emoji: '🪽' },
-          { word: 'song', highlight: 'ng', emoji: '🎵' },
-          { word: 'long', highlight: 'ng', emoji: '📏' },
-          { word: 'bank', highlight: 'nk', emoji: '🏦' },
-          { word: 'sink', highlight: 'nk', emoji: '🚰' },
-          { word: 'tank', highlight: 'nk', emoji: '🪖' },
-          { word: 'pink', highlight: 'nk', emoji: '🩷' },
-          { word: 'think', highlight: 'nk', emoji: '🤔' },
-          { word: 'wind', highlight: 'nd', emoji: '💨' },
-          { word: 'hand', highlight: 'nd', emoji: '✋' },
-          { word: 'sand', highlight: 'nd', emoji: '🏖️' },
-          { word: 'band', highlight: 'nd', emoji: '🎸' },
-          { word: 'pond', highlight: 'nd', emoji: '🐸' },
-          { word: 'tent', highlight: 'nt', emoji: '⛺' },
-          { word: 'plant', highlight: 'nt', emoji: '🌱' },
-          { word: 'ant', highlight: 'nt', emoji: '🐜' },
-          { word: 'hunt', highlight: 'nt', emoji: '🏹' },
-          { word: 'went', highlight: 'nt', emoji: '🚶' },
-          { word: 'adult', highlight: 'lt', emoji: '👨' },
-          { word: 'belt', highlight: 'lt', emoji: '👔' },
-          { word: 'melt', highlight: 'lt', emoji: '🫠' },
-          { word: 'salt', highlight: 'lt', emoji: '🧂' },
-          { word: 'bolt', highlight: 'lt', emoji: '🔩' },
-          { word: 'lamp', highlight: 'mp', emoji: '💡' },
-          { word: 'jump', highlight: 'mp', emoji: '🦘' },
-          { word: 'camp', highlight: 'mp', emoji: '🏕️' },
-          { word: 'pump', highlight: 'mp', emoji: '⛽' },
-          { word: 'dump', highlight: 'mp', emoji: '🗑️' },
+        "examples": [
+          "The <span class=\"highlight\">ki<span class=\"pattern\">ng</span></span> is here.",
+          "The <span class=\"highlight\">ba<span class=\"pattern\">nk</span></span> is big.",
+          "A <span class=\"highlight\">ri<span class=\"pattern\">ng</span></span> is on it.",
+          "Ships can <span class=\"highlight\">si<span class=\"pattern\">nk</span></span>.",
+          "<span class=\"highlight\">Wi<span class=\"pattern\">nd</span></span> is cold.",
+          "A <span class=\"highlight\">te<span class=\"pattern\">nt</span></span> is up.",
+          "My <span class=\"highlight\">ha<span class=\"pattern\">nd</span></span> is up.",
+          "<span class=\"highlight\">Pla<span class=\"pattern\">nt</span></span> a seed.",
+          "An <span class=\"highlight\">adu<span class=\"pattern\">lt</span></span> can help.",
+          "A <span class=\"highlight\">la<span class=\"pattern\">mp</span></span> is on.",
+          "A <span class=\"highlight\">be<span class=\"pattern\">lt</span></span> is on.",
+          "Kids can <span class=\"highlight\">ju<span class=\"pattern\">mp</span></span>.",
+          "The <span class=\"highlight\">wi<span class=\"pattern\">nd</span></span> hits the <span class=\"highlight\">te<span class=\"pattern\">nt</span></span>.",
+          "The <span class=\"highlight\">ki<span class=\"pattern\">ng</span></span> has a <span class=\"highlight\">ri<span class=\"pattern\">ng</span></span>.",
+          "<span class=\"highlight\">Si<span class=\"pattern\">nk</span></span> it in the tub now.",
+          "A <span class=\"highlight\">la<span class=\"pattern\">mp</span></span> is in the <span class=\"highlight\">te<span class=\"pattern\">nt</span></span>.",
+          "The <span class=\"highlight\">ki<span class=\"pattern\">ng</span></span> is at the <span class=\"highlight\">ba<span class=\"pattern\">nk</span></span>.",
+          "<span class=\"highlight\">Ju<span class=\"pattern\">mp</span></span>, then clap your <span class=\"highlight\">ha<span class=\"pattern\">nd</span>s</span>.",
+          "<span class=\"highlight\">Ha<span class=\"pattern\">nd</span></span> me the <span class=\"highlight\">be<span class=\"pattern\">lt</span></span>.",
+          "<span class=\"highlight\">Pla<span class=\"pattern\">nt</span></span> near the <span class=\"highlight\">ba<span class=\"pattern\">nk</span></span>."
         ],
-        exploreWords: [
-          { word: 'king', highlight: 'ng' },
-          { word: 'ring', highlight: 'ng' },
-          { word: 'wing', highlight: 'ng' },
-          { word: 'song', highlight: 'ng' },
-          { word: 'long', highlight: 'ng' },
-          { word: 'bank', highlight: 'nk' },
-          { word: 'sink', highlight: 'nk' },
-          { word: 'tank', highlight: 'nk' },
-          { word: 'pink', highlight: 'nk' },
-          { word: 'think', highlight: 'nk' },
-          { word: 'wind', highlight: 'nd' },
-          { word: 'hand', highlight: 'nd' },
-          { word: 'sand', highlight: 'nd' },
-          { word: 'band', highlight: 'nd' },
-          { word: 'pond', highlight: 'nd' },
-          { word: 'tent', highlight: 'nt' },
-          { word: 'plant', highlight: 'nt' },
-          { word: 'ant', highlight: 'nt' },
-          { word: 'hunt', highlight: 'nt' },
-          { word: 'went', highlight: 'nt' },
-          { word: 'adult', highlight: 'lt' },
-          { word: 'belt', highlight: 'lt' },
-          { word: 'melt', highlight: 'lt' },
-          { word: 'salt', highlight: 'lt' },
-          { word: 'bolt', highlight: 'lt' },
-          { word: 'lamp', highlight: 'mp' },
-          { word: 'jump', highlight: 'mp' },
-          { word: 'camp', highlight: 'mp' },
-          { word: 'pump', highlight: 'mp' },
-          { word: 'dump', highlight: 'mp' },
+        "words": [
+          {
+            "word": "king",
+            "highlight": "ng",
+            "emoji": "👑"
+          },
+          {
+            "word": "ring",
+            "highlight": "ng",
+            "emoji": "💍"
+          },
+          {
+            "word": "wing",
+            "highlight": "ng",
+            "emoji": "🪽"
+          },
+          {
+            "word": "song",
+            "highlight": "ng",
+            "emoji": "🎵"
+          },
+          {
+            "word": "long",
+            "highlight": "ng",
+            "emoji": "📏"
+          },
+          {
+            "word": "bank",
+            "highlight": "nk",
+            "emoji": "🏦"
+          },
+          {
+            "word": "sink",
+            "highlight": "nk",
+            "emoji": "🚰"
+          },
+          {
+            "word": "tank",
+            "highlight": "nk",
+            "emoji": "🪖"
+          },
+          {
+            "word": "pink",
+            "highlight": "nk",
+            "emoji": "🩷"
+          },
+          {
+            "word": "think",
+            "highlight": "nk",
+            "emoji": "🤔"
+          },
+          {
+            "word": "wind",
+            "highlight": "nd",
+            "emoji": "💨"
+          },
+          {
+            "word": "hand",
+            "highlight": "nd",
+            "emoji": "✋"
+          },
+          {
+            "word": "sand",
+            "highlight": "nd",
+            "emoji": "🏖️"
+          },
+          {
+            "word": "band",
+            "highlight": "nd",
+            "emoji": "🎸"
+          },
+          {
+            "word": "pond",
+            "highlight": "nd",
+            "emoji": "🐸"
+          },
+          {
+            "word": "tent",
+            "highlight": "nt",
+            "emoji": "⛺"
+          },
+          {
+            "word": "plant",
+            "highlight": "nt",
+            "emoji": "🌱"
+          },
+          {
+            "word": "ant",
+            "highlight": "nt",
+            "emoji": "🐜"
+          },
+          {
+            "word": "hunt",
+            "highlight": "nt",
+            "emoji": "🏹"
+          },
+          {
+            "word": "went",
+            "highlight": "nt",
+            "emoji": "🚶"
+          },
+          {
+            "word": "adult",
+            "highlight": "lt",
+            "emoji": "👨"
+          },
+          {
+            "word": "belt",
+            "highlight": "lt",
+            "emoji": "👔"
+          },
+          {
+            "word": "melt",
+            "highlight": "lt",
+            "emoji": "🫠"
+          },
+          {
+            "word": "salt",
+            "highlight": "lt",
+            "emoji": "🧂"
+          },
+          {
+            "word": "bolt",
+            "highlight": "lt",
+            "emoji": "🔩"
+          },
+          {
+            "word": "lamp",
+            "highlight": "mp",
+            "emoji": "💡"
+          },
+          {
+            "word": "jump",
+            "highlight": "mp",
+            "emoji": "🦘"
+          },
+          {
+            "word": "camp",
+            "highlight": "mp",
+            "emoji": "🏕️"
+          },
+          {
+            "word": "pump",
+            "highlight": "mp",
+            "emoji": "⛽"
+          },
+          {
+            "word": "dump",
+            "highlight": "mp",
+            "emoji": "🗑️"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "king",
+            "highlight": "ng"
+          },
+          {
+            "word": "ring",
+            "highlight": "ng"
+          },
+          {
+            "word": "wing",
+            "highlight": "ng"
+          },
+          {
+            "word": "song",
+            "highlight": "ng"
+          },
+          {
+            "word": "long",
+            "highlight": "ng"
+          },
+          {
+            "word": "bank",
+            "highlight": "nk"
+          },
+          {
+            "word": "sink",
+            "highlight": "nk"
+          },
+          {
+            "word": "tank",
+            "highlight": "nk"
+          },
+          {
+            "word": "pink",
+            "highlight": "nk"
+          },
+          {
+            "word": "think",
+            "highlight": "nk"
+          },
+          {
+            "word": "wind",
+            "highlight": "nd"
+          },
+          {
+            "word": "hand",
+            "highlight": "nd"
+          },
+          {
+            "word": "sand",
+            "highlight": "nd"
+          },
+          {
+            "word": "band",
+            "highlight": "nd"
+          },
+          {
+            "word": "pond",
+            "highlight": "nd"
+          },
+          {
+            "word": "tent",
+            "highlight": "nt"
+          },
+          {
+            "word": "plant",
+            "highlight": "nt"
+          },
+          {
+            "word": "ant",
+            "highlight": "nt"
+          },
+          {
+            "word": "hunt",
+            "highlight": "nt"
+          },
+          {
+            "word": "went",
+            "highlight": "nt"
+          },
+          {
+            "word": "adult",
+            "highlight": "lt"
+          },
+          {
+            "word": "belt",
+            "highlight": "lt"
+          },
+          {
+            "word": "melt",
+            "highlight": "lt"
+          },
+          {
+            "word": "salt",
+            "highlight": "lt"
+          },
+          {
+            "word": "bolt",
+            "highlight": "lt"
+          },
+          {
+            "word": "lamp",
+            "highlight": "mp"
+          },
+          {
+            "word": "jump",
+            "highlight": "mp"
+          },
+          {
+            "word": "camp",
+            "highlight": "mp"
+          },
+          {
+            "word": "pump",
+            "highlight": "mp"
+          },
+          {
+            "word": "dump",
+            "highlight": "mp"
+          }
         ]
       },
       {
-        id: 'unit7',
-        name: 'Unit 7',
-        patterns: ['sk', 'sc', 'spr', 'str', 'spl', 'squ'],
-        examples: [
-          'A <span class="highlight">de<span class="pattern">sk</span></span> is big.',
-          'A <span class="highlight"><span class="pattern">sc</span>ale</span> is big.',
-          'My <span class="highlight"><span class="pattern">sk</span>in</span> is OK.',
-          '<span class="highlight"><span class="pattern">Sc</span>an</span> it with your eyes now.',
-          'A <span class="highlight"><span class="pattern">str</span>ing</span> is long.',
-          '<span class="highlight"><span class="pattern">Spr</span>ay</span> water on the plant.',
-          'A <span class="highlight"><span class="pattern">str</span>ipe</span> is on it.',
-          '<span class="highlight"><span class="pattern">Str</span>ong</span> hands can lift a box.',
-          'A <span class="highlight"><span class="pattern">spl</span>int</span> can help.',
-          'Kids <span class="highlight"><span class="pattern">spl</span>ash</span> in the pool today.',
-          'I see a <span class="highlight"><span class="pattern">squ</span>id</span>.',
-          '<span class="highlight"><span class="pattern">Squ</span>at</span> down, then stand up.',
-          '<span class="highlight"><span class="pattern">Sc</span>an</span> the <span class="highlight">de<span class="pattern">sk</span></span>.',
-          '<span class="highlight"><span class="pattern">Spr</span>ay</span> the <span class="highlight">de<span class="pattern">sk</span></span>.',
-          'This <span class="highlight"><span class="pattern">str</span>ong</span> <span class="highlight"><span class="pattern">str</span>ing</span> can help you.',
-          'A <span class="highlight"><span class="pattern">str</span>ipe</span> on <span class="highlight"><span class="pattern">sk</span>in</span>.',
-          '<span class="highlight"><span class="pattern">Spl</span>ash</span> in the tub.',
-          '<span class="highlight"><span class="pattern">Squ</span>at</span>, then hop.',
-          'A <span class="highlight"><span class="pattern">str</span>ong</span> <span class="highlight"><span class="pattern">spl</span>int</span>.',
-          'The <span class="highlight">de<span class="pattern">sk</span></span> has a <span class="highlight"><span class="pattern">str</span>ing</span>.',
+        "id": "unit7",
+        "name": "Unit 7",
+        "patterns": [
+          "sk",
+          "sc",
+          "spr",
+          "str",
+          "spl",
+          "squ"
         ],
-        words: [
-          { word: 'desk', highlight: 'sk', emoji: '🪑' },
-          { word: 'skin', highlight: 'sk', emoji: '👋' },
-          { word: 'skate', highlight: 'sk', emoji: '⛸️' },
-          { word: 'skip', highlight: 'sk', emoji: '🤸' },
-          { word: 'sky', highlight: 'sk', emoji: '🌤️' },
-          { word: 'scale', highlight: 'sc', emoji: '⚖️' },
-          { word: 'scan', highlight: 'sc', emoji: '🔍' },
-          { word: 'scar', highlight: 'sc', emoji: '🩹' },
-          { word: 'score', highlight: 'sc', emoji: '🏆' },
-          { word: 'scoop', highlight: 'sc', emoji: '🍨' },
-          { word: 'spray', highlight: 'spr', emoji: '💦' },
-          { word: 'spring', highlight: 'spr', emoji: '🌸' },
-          { word: 'spread', highlight: 'spr', emoji: '🧈' },
-          { word: 'sprint', highlight: 'spr', emoji: '🏃' },
-          { word: 'sprout', highlight: 'spr', emoji: '🌱' },
-          { word: 'string', highlight: 'str', emoji: '🧵' },
-          { word: 'stripe', highlight: 'str', emoji: '🦓' },
-          { word: 'strong', highlight: 'str', emoji: '💪' },
-          { word: 'street', highlight: 'str', emoji: '🛣️' },
-          { word: 'strap', highlight: 'str', emoji: '👜' },
-          { word: 'splint', highlight: 'spl', emoji: '🩹' },
-          { word: 'splash', highlight: 'spl', emoji: '💦' },
-          { word: 'split', highlight: 'spl', emoji: '✂️' },
-          { word: 'splat', highlight: 'spl', emoji: '💥' },
-          { word: 'splurge', highlight: 'spl', emoji: '💰' },
-          { word: 'squid', highlight: 'squ', emoji: '🦑' },
-          { word: 'squat', highlight: 'squ', emoji: '🏋️' },
-          { word: 'square', highlight: 'squ', emoji: '⬜' },
-          { word: 'squeeze', highlight: 'squ', emoji: '🤏' },
-          { word: 'squash', highlight: 'squ', emoji: '🎃' },
+        "examples": [
+          "A <span class=\"highlight\">de<span class=\"pattern\">sk</span></span> is big.",
+          "A <span class=\"highlight\"><span class=\"pattern\">sc</span>ale</span> is big.",
+          "My <span class=\"highlight\"><span class=\"pattern\">sk</span>in</span> is OK.",
+          "<span class=\"highlight\"><span class=\"pattern\">Sc</span>an</span> it with your eyes now.",
+          "A <span class=\"highlight\"><span class=\"pattern\">str</span>ing</span> is long.",
+          "<span class=\"highlight\"><span class=\"pattern\">Spr</span>ay</span> water on the plant.",
+          "A <span class=\"highlight\"><span class=\"pattern\">str</span>ipe</span> is on it.",
+          "<span class=\"highlight\"><span class=\"pattern\">Str</span>ong</span> hands can lift a box.",
+          "A <span class=\"highlight\"><span class=\"pattern\">spl</span>int</span> can help.",
+          "Kids <span class=\"highlight\"><span class=\"pattern\">spl</span>ash</span> in the pool today.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">squ</span>id</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Squ</span>at</span> down, then stand up.",
+          "<span class=\"highlight\"><span class=\"pattern\">Sc</span>an</span> the <span class=\"highlight\">de<span class=\"pattern\">sk</span></span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Spr</span>ay</span> the <span class=\"highlight\">de<span class=\"pattern\">sk</span></span>.",
+          "This <span class=\"highlight\"><span class=\"pattern\">str</span>ong</span> <span class=\"highlight\"><span class=\"pattern\">str</span>ing</span> can help you.",
+          "A <span class=\"highlight\"><span class=\"pattern\">str</span>ipe</span> is on my <span class=\"highlight\"><span class=\"pattern\">sk</span>in</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Spl</span>ash</span> in the tub.",
+          "<span class=\"highlight\"><span class=\"pattern\">Squ</span>at</span>, then hop.",
+          "The <span class=\"highlight\"><span class=\"pattern\">spl</span>int</span> is <span class=\"highlight\"><span class=\"pattern\">str</span>ong</span>.",
+          "The <span class=\"highlight\">de<span class=\"pattern\">sk</span></span> has a <span class=\"highlight\"><span class=\"pattern\">str</span>ing</span>."
         ],
-        exploreWords: [
-          { word: 'desk', highlight: 'sk' },
-          { word: 'skin', highlight: 'sk' },
-          { word: 'skate', highlight: 'sk' },
-          { word: 'skip', highlight: 'sk' },
-          { word: 'sky', highlight: 'sk' },
-          { word: 'scale', highlight: 'sc' },
-          { word: 'scan', highlight: 'sc' },
-          { word: 'scar', highlight: 'sc' },
-          { word: 'score', highlight: 'sc' },
-          { word: 'scoop', highlight: 'sc' },
-          { word: 'spray', highlight: 'spr' },
-          { word: 'spring', highlight: 'spr' },
-          { word: 'spread', highlight: 'spr' },
-          { word: 'sprint', highlight: 'spr' },
-          { word: 'sprout', highlight: 'spr' },
-          { word: 'string', highlight: 'str' },
-          { word: 'stripe', highlight: 'str' },
-          { word: 'strong', highlight: 'str' },
-          { word: 'street', highlight: 'str' },
-          { word: 'strap', highlight: 'str' },
-          { word: 'splint', highlight: 'spl' },
-          { word: 'splash', highlight: 'spl' },
-          { word: 'split', highlight: 'spl' },
-          { word: 'splat', highlight: 'spl' },
-          { word: 'splurge', highlight: 'spl' },
-          { word: 'squid', highlight: 'squ' },
-          { word: 'squat', highlight: 'squ' },
-          { word: 'square', highlight: 'squ' },
-          { word: 'squeeze', highlight: 'squ' },
-          { word: 'squash', highlight: 'squ' },
+        "words": [
+          {
+            "word": "desk",
+            "highlight": "sk",
+            "emoji": "🪑"
+          },
+          {
+            "word": "skin",
+            "highlight": "sk",
+            "emoji": "👋"
+          },
+          {
+            "word": "skate",
+            "highlight": "sk",
+            "emoji": "⛸️"
+          },
+          {
+            "word": "skip",
+            "highlight": "sk",
+            "emoji": "🤸"
+          },
+          {
+            "word": "sky",
+            "highlight": "sk",
+            "emoji": "🌤️"
+          },
+          {
+            "word": "scale",
+            "highlight": "sc",
+            "emoji": "⚖️"
+          },
+          {
+            "word": "scan",
+            "highlight": "sc",
+            "emoji": "🔍"
+          },
+          {
+            "word": "scar",
+            "highlight": "sc",
+            "emoji": "🩹"
+          },
+          {
+            "word": "score",
+            "highlight": "sc",
+            "emoji": "🏆"
+          },
+          {
+            "word": "scoop",
+            "highlight": "sc",
+            "emoji": "🍨"
+          },
+          {
+            "word": "spray",
+            "highlight": "spr",
+            "emoji": "💦"
+          },
+          {
+            "word": "spring",
+            "highlight": "spr",
+            "emoji": "🌸"
+          },
+          {
+            "word": "spread",
+            "highlight": "spr",
+            "emoji": "🧈"
+          },
+          {
+            "word": "sprint",
+            "highlight": "spr",
+            "emoji": "🏃"
+          },
+          {
+            "word": "sprout",
+            "highlight": "spr",
+            "emoji": "🌱"
+          },
+          {
+            "word": "string",
+            "highlight": "str",
+            "emoji": "🧵"
+          },
+          {
+            "word": "stripe",
+            "highlight": "str",
+            "emoji": "🦓"
+          },
+          {
+            "word": "strong",
+            "highlight": "str",
+            "emoji": "💪"
+          },
+          {
+            "word": "street",
+            "highlight": "str",
+            "emoji": "🛣️"
+          },
+          {
+            "word": "strap",
+            "highlight": "str",
+            "emoji": "👜"
+          },
+          {
+            "word": "splint",
+            "highlight": "spl",
+            "emoji": "🩹"
+          },
+          {
+            "word": "splash",
+            "highlight": "spl",
+            "emoji": "💦"
+          },
+          {
+            "word": "split",
+            "highlight": "spl",
+            "emoji": "✂️"
+          },
+          {
+            "word": "splat",
+            "highlight": "spl",
+            "emoji": "💥"
+          },
+          {
+            "word": "splurge",
+            "highlight": "spl",
+            "emoji": "💰"
+          },
+          {
+            "word": "squid",
+            "highlight": "squ",
+            "emoji": "🦑"
+          },
+          {
+            "word": "squat",
+            "highlight": "squ",
+            "emoji": "🏋️"
+          },
+          {
+            "word": "square",
+            "highlight": "squ",
+            "emoji": "⬜"
+          },
+          {
+            "word": "squeeze",
+            "highlight": "squ",
+            "emoji": "🤏"
+          },
+          {
+            "word": "squash",
+            "highlight": "squ",
+            "emoji": "🎃"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "desk",
+            "highlight": "sk"
+          },
+          {
+            "word": "skin",
+            "highlight": "sk"
+          },
+          {
+            "word": "skate",
+            "highlight": "sk"
+          },
+          {
+            "word": "skip",
+            "highlight": "sk"
+          },
+          {
+            "word": "sky",
+            "highlight": "sk"
+          },
+          {
+            "word": "scale",
+            "highlight": "sc"
+          },
+          {
+            "word": "scan",
+            "highlight": "sc"
+          },
+          {
+            "word": "scar",
+            "highlight": "sc"
+          },
+          {
+            "word": "score",
+            "highlight": "sc"
+          },
+          {
+            "word": "scoop",
+            "highlight": "sc"
+          },
+          {
+            "word": "spray",
+            "highlight": "spr"
+          },
+          {
+            "word": "spring",
+            "highlight": "spr"
+          },
+          {
+            "word": "spread",
+            "highlight": "spr"
+          },
+          {
+            "word": "sprint",
+            "highlight": "spr"
+          },
+          {
+            "word": "sprout",
+            "highlight": "spr"
+          },
+          {
+            "word": "string",
+            "highlight": "str"
+          },
+          {
+            "word": "stripe",
+            "highlight": "str"
+          },
+          {
+            "word": "strong",
+            "highlight": "str"
+          },
+          {
+            "word": "street",
+            "highlight": "str"
+          },
+          {
+            "word": "strap",
+            "highlight": "str"
+          },
+          {
+            "word": "splint",
+            "highlight": "spl"
+          },
+          {
+            "word": "splash",
+            "highlight": "spl"
+          },
+          {
+            "word": "split",
+            "highlight": "spl"
+          },
+          {
+            "word": "splat",
+            "highlight": "spl"
+          },
+          {
+            "word": "splurge",
+            "highlight": "spl"
+          },
+          {
+            "word": "squid",
+            "highlight": "squ"
+          },
+          {
+            "word": "squat",
+            "highlight": "squ"
+          },
+          {
+            "word": "square",
+            "highlight": "squ"
+          },
+          {
+            "word": "squeeze",
+            "highlight": "squ"
+          },
+          {
+            "word": "squash",
+            "highlight": "squ"
+          }
         ]
       },
       {
-        id: 'unit8',
-        name: 'Unit 8',
-        patterns: ['c', 'g', 's'],
-        examples: [
-          'I eat <span class="highlight">ri<span class="pattern">c</span>e</span>.',
-          '<span class="highlight">I<span class="pattern">c</span>e</span> <span class="highlight">i<span class="pattern">s</span></span> <span class="highlight"><span class="pattern">c</span>old</span>.',
-          'I <span class="highlight"><span class="pattern">s</span>ee</span> a <span class="highlight"><span class="pattern">c</span>ity</span>.',
-          'My <span class="highlight">pen<span class="pattern">c</span>il</span> <span class="highlight">i<span class="pattern">s</span></span> red.',
-          'I <span class="highlight"><span class="pattern">s</span>ee</span> a <span class="highlight"><span class="pattern">g</span>iraffe</span>.',
-          'I eat an <span class="highlight">oran<span class="pattern">g</span>e</span>.',
-          'A <span class="highlight"><span class="pattern">g</span>iant</span> <span class="highlight">i<span class="pattern">s</span></span> <span class="highlight">bi<span class="pattern">g</span></span>.',
-          'A <span class="highlight"><span class="pattern">g</span>em</span> <span class="highlight">i<span class="pattern">s</span></span> on it.',
-          'I <span class="highlight"><span class="pattern">s</span>ee</span> a <span class="highlight">ro<span class="pattern">s</span>e</span>.',
-          'My <span class="highlight">jean<span class="pattern">s</span></span> are blue.',
-          'My <span class="highlight">le<span class="pattern">g</span>s</span> <span class="highlight"><span class="pattern">c</span>an</span> run.',
-          'My <span class="highlight">no<span class="pattern">s</span>e</span> <span class="highlight">i<span class="pattern">s</span></span> OK.',
-          '<span class="highlight">I<span class="pattern">c</span>e</span> on my <span class="highlight">le<span class="pattern">g</span></span>.',
-          'That is a <span class="highlight">bi<span class="pattern">g</span></span> <span class="highlight"><span class="pattern">c</span>ity</span>.',
-          'I see a <span class="highlight"><span class="pattern">g</span>em</span> and <span class="highlight">ri<span class="pattern">c</span>e</span>.',
-          'A <span class="highlight"><span class="pattern">g</span>iraffe</span> <span class="highlight">i<span class="pattern">s</span></span> <span class="highlight">bi<span class="pattern">g</span></span>.',
-          'A <span class="highlight">ro<span class="pattern">s</span>e</span> <span class="highlight">i<span class="pattern">s</span></span> red.',
-          'A <span class="highlight">pen<span class="pattern">c</span>il</span> is in my <span class="highlight">ba<span class="pattern">g</span></span>.',
-          'My <span class="highlight">no<span class="pattern">s</span>e</span> <span class="highlight">i<span class="pattern">s</span></span> in my <span class="highlight">fa<span class="pattern">c</span>e</span>.',
-          '<span class="highlight">I<span class="pattern">c</span>e</span> <span class="highlight"><span class="pattern">c</span>ream</span> <span class="highlight">i<span class="pattern">s</span></span> <span class="highlight">ni<span class="pattern">c</span>e</span>.',
+        "id": "unit8",
+        "name": "Unit 8",
+        "patterns": [
+          "c",
+          "g",
+          "s"
         ],
-        words: [
-          { word: 'rice', highlight: 'c', emoji: '🍚' },
-          { word: 'ice', highlight: 'c', emoji: '🧊' },
-          { word: 'city', highlight: 'c', emoji: '🏙️' },
-          { word: 'pencil', highlight: 'c', emoji: '✏️' },
-          { word: 'giraffe', highlight: 'g', emoji: '🦒' },
-          { word: 'orange', highlight: 'g', emoji: '🍊' },
-          { word: 'giant', highlight: 'g', emoji: '👹' },
-          { word: 'gem', highlight: 'g', emoji: '💎' },
-          { word: 'rose', highlight: 's', emoji: '🌹' },
-          { word: 'jeans', highlight: 's', emoji: '👖' },
-          { word: 'legs', highlight: 'g', emoji: '🦵' },
-          { word: 'nose', highlight: 's', emoji: '👃' },
+        "examples": [
+          "I eat <span class=\"highlight\">ri<span class=\"pattern\">c</span>e</span>.",
+          "<span class=\"highlight\">I<span class=\"pattern\">c</span>e</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> <span class=\"highlight\"><span class=\"pattern\">c</span>old</span>.",
+          "I <span class=\"highlight\"><span class=\"pattern\">s</span>ee</span> a <span class=\"highlight\"><span class=\"pattern\">c</span>ity</span>.",
+          "My <span class=\"highlight\">pen<span class=\"pattern\">c</span>il</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> red.",
+          "I <span class=\"highlight\"><span class=\"pattern\">s</span>ee</span> a <span class=\"highlight\"><span class=\"pattern\">g</span>iraffe</span>.",
+          "I eat an <span class=\"highlight\">oran<span class=\"pattern\">g</span>e</span>.",
+          "A <span class=\"highlight\"><span class=\"pattern\">g</span>iant</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> <span class=\"highlight\">bi<span class=\"pattern\">g</span></span>.",
+          "A <span class=\"highlight\"><span class=\"pattern\">g</span>em</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> on it.",
+          "I <span class=\"highlight\"><span class=\"pattern\">s</span>ee</span> a <span class=\"highlight\">ro<span class=\"pattern\">s</span>e</span>.",
+          "My <span class=\"highlight\">jean<span class=\"pattern\">s</span></span> are blue.",
+          "My <span class=\"highlight\">le<span class=\"pattern\">g</span>s</span> <span class=\"highlight\"><span class=\"pattern\">c</span>an</span> run.",
+          "My <span class=\"highlight\">no<span class=\"pattern\">s</span>e</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> OK.",
+          "<span class=\"highlight\">I<span class=\"pattern\">c</span>e</span> on my <span class=\"highlight\">le<span class=\"pattern\">g</span></span>.",
+          "That is a <span class=\"highlight\">bi<span class=\"pattern\">g</span></span> <span class=\"highlight\"><span class=\"pattern\">c</span>ity</span>.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">g</span>em</span> and <span class=\"highlight\">ri<span class=\"pattern\">c</span>e</span>.",
+          "A <span class=\"highlight\"><span class=\"pattern\">g</span>iraffe</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> <span class=\"highlight\">bi<span class=\"pattern\">g</span></span>.",
+          "A <span class=\"highlight\">ro<span class=\"pattern\">s</span>e</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> red.",
+          "A <span class=\"highlight\">pen<span class=\"pattern\">c</span>il</span> is in my <span class=\"highlight\">ba<span class=\"pattern\">g</span></span>.",
+          "My <span class=\"highlight\">no<span class=\"pattern\">s</span>e</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> in my <span class=\"highlight\">fa<span class=\"pattern\">c</span>e</span>.",
+          "<span class=\"highlight\">I<span class=\"pattern\">c</span>e</span> <span class=\"highlight\"><span class=\"pattern\">c</span>ream</span> <span class=\"highlight\">i<span class=\"pattern\">s</span></span> <span class=\"highlight\">ni<span class=\"pattern\">c</span>e</span>."
         ],
-        exploreWords: [
-          { word: 'rice', highlight: 'c' },
-          { word: 'ice', highlight: 'c' },
-          { word: 'city', highlight: 'c' },
-          { word: 'pencil', highlight: 'c' },
-          { word: 'giraffe', highlight: 'g' },
-          { word: 'orange', highlight: 'g' },
-          { word: 'giant', highlight: 'g' },
-          { word: 'gem', highlight: 'g' },
-          { word: 'rose', highlight: 's' },
-          { word: 'jeans', highlight: 's' },
-          { word: 'legs', highlight: 'g' },
-          { word: 'nose', highlight: 's' },
+        "words": [
+          {
+            "word": "rice",
+            "highlight": "c",
+            "emoji": "🍚"
+          },
+          {
+            "word": "ice",
+            "highlight": "c",
+            "emoji": "🧊"
+          },
+          {
+            "word": "city",
+            "highlight": "c",
+            "emoji": "🏙️"
+          },
+          {
+            "word": "pencil",
+            "highlight": "c",
+            "emoji": "✏️"
+          },
+          {
+            "word": "giraffe",
+            "highlight": "g",
+            "emoji": "🦒"
+          },
+          {
+            "word": "orange",
+            "highlight": "g",
+            "emoji": "🍊"
+          },
+          {
+            "word": "giant",
+            "highlight": "g",
+            "emoji": "👹"
+          },
+          {
+            "word": "gem",
+            "highlight": "g",
+            "emoji": "💎"
+          },
+          {
+            "word": "rose",
+            "highlight": "s",
+            "emoji": "🌹"
+          },
+          {
+            "word": "jeans",
+            "highlight": "s",
+            "emoji": "👖"
+          },
+          {
+            "word": "legs",
+            "highlight": "g",
+            "emoji": "🦵"
+          },
+          {
+            "word": "nose",
+            "highlight": "s",
+            "emoji": "👃"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "rice",
+            "highlight": "c"
+          },
+          {
+            "word": "ice",
+            "highlight": "c"
+          },
+          {
+            "word": "city",
+            "highlight": "c"
+          },
+          {
+            "word": "pencil",
+            "highlight": "c"
+          },
+          {
+            "word": "giraffe",
+            "highlight": "g"
+          },
+          {
+            "word": "orange",
+            "highlight": "g"
+          },
+          {
+            "word": "giant",
+            "highlight": "g"
+          },
+          {
+            "word": "gem",
+            "highlight": "g"
+          },
+          {
+            "word": "rose",
+            "highlight": "s"
+          },
+          {
+            "word": "jeans",
+            "highlight": "s"
+          },
+          {
+            "word": "legs",
+            "highlight": "g"
+          },
+          {
+            "word": "nose",
+            "highlight": "s"
+          }
         ]
       }
     ]
   },
-  level5: {
-    id: 'level5',
-    name: 'Level 5',
-    title: 'Letter Combinations',
-    subtitle: '字母组合',
-    color: '#F44336',
-    emoji: '🔴',
-    units: [
+  "level5": {
+    "id": "level5",
+    "name": "Level 5",
+    "title": "Letter Combinations",
+    "subtitle": "字母组合",
+    "color": "#F44336",
+    "emoji": "🔴",
+    "units": [
       {
-        id: 'unit1',
-        name: 'Unit 1',
-        patterns: ['ar', 'ir', 'er', 'or'],
-        examples: [
-          'A <span class="highlight">c<span class="pattern">ar</span></span> can go.',
-          'I see a <span class="highlight">st<span class="pattern">ar</span></span>.',
-          'A <span class="highlight">f<span class="pattern">ar</span>m</span> has <span class="highlight">c<span class="pattern">or</span>n</span>.',
-          'We <span class="highlight">p<span class="pattern">ar</span>k</span> the <span class="highlight">c<span class="pattern">ar</span></span>.',
-          '<span class="highlight">H<span class="pattern">ar</span>d</span> <span class="highlight">w<span class="pattern">or</span>k</span> helps me <span class="highlight">le<span class="pattern">ar</span>n</span>.',
-          'A <span class="highlight">g<span class="pattern">ir</span>l</span> can run.',
-          'A <span class="highlight">b<span class="pattern">ir</span>d</span> can fly.',
-          'My <span class="highlight">sh<span class="pattern">ir</span>t</span> is clean.',
-          '<span class="highlight">D<span class="pattern">ir</span>t</span> is on it.',
-          '<span class="highlight">F<span class="pattern">ir</span>st</span>, wash hands.',
-          'The <span class="highlight">teach<span class="pattern">er</span></span> can help.',
-          '<span class="highlight">H<span class="pattern">er</span></span> book is new.',
-          'This <span class="highlight">t<span class="pattern">er</span>m</span> is new.',
-          'I like <span class="highlight">c<span class="pattern">or</span>n</span>.',
-          'A <span class="highlight">f<span class="pattern">or</span>k</span> is on the table.',
-          '<span class="highlight">P<span class="pattern">ar</span>k</span> the <span class="highlight">c<span class="pattern">ar</span></span> <span class="highlight">h<span class="pattern">er</span>e</span>, please.',
-          'The <span class="highlight">b<span class="pattern">ir</span>d</span> is <span class="highlight">f<span class="pattern">ir</span>st</span>.',
-          '<span class="highlight">H<span class="pattern">ar</span>d</span> <span class="highlight">d<span class="pattern">ir</span>t</span> is on my shoe.',
-          '<span class="highlight">H<span class="pattern">er</span></span> <span class="highlight">sh<span class="pattern">ir</span>t</span> has <span class="highlight">d<span class="pattern">ir</span>t</span>.',
-          'The <span class="highlight">teach<span class="pattern">er</span></span> is at the <span class="highlight">f<span class="pattern">ar</span>m</span>.',
+        "id": "unit1",
+        "name": "Unit 1",
+        "patterns": [
+          "ar",
+          "ir",
+          "er",
+          "or"
         ],
-        words: [
-          { word: 'car', highlight: 'ar', emoji: '🚗' },
-          { word: 'star', highlight: 'ar', emoji: '⭐' },
-          { word: 'farm', highlight: 'ar', emoji: '🚜' },
-          { word: 'park', highlight: 'ar', emoji: '🏞️' },
-          { word: 'hard', highlight: 'ar', emoji: '💪' },
-          { word: 'girl', highlight: 'ir', emoji: '👧' },
-          { word: 'bird', highlight: 'ir', emoji: '🐦' },
-          { word: 'shirt', highlight: 'ir', emoji: '👕' },
-          { word: 'dirt', highlight: 'ir', emoji: '💩' },
-          { word: 'first', highlight: 'ir', emoji: '1️⃣' },
-          { word: 'teacher', highlight: 'er', emoji: '👨‍🏫' },
-          { word: 'her', highlight: 'er', emoji: '👩' },
-          { word: 'term', highlight: 'er', emoji: '📅' },
-          { word: 'letter', highlight: 'er', emoji: '✉️' },
-          { word: 'river', highlight: 'er', emoji: '🌊' },
-          { word: 'corn', highlight: 'or', emoji: '🌽' },
-          { word: 'fork', highlight: 'or', emoji: '🍴' },
-          { word: 'horn', highlight: 'or', emoji: '📯' },
-          { word: 'horse', highlight: 'or', emoji: '🐎' },
-          { word: 'born', highlight: 'or', emoji: '👶' },
+        "examples": [
+          "A <span class=\"highlight\">c<span class=\"pattern\">ar</span></span> can go.",
+          "I see a <span class=\"highlight\">st<span class=\"pattern\">ar</span></span>.",
+          "A <span class=\"highlight\">f<span class=\"pattern\">ar</span>m</span> has <span class=\"highlight\">c<span class=\"pattern\">or</span>n</span>.",
+          "We <span class=\"highlight\">p<span class=\"pattern\">ar</span>k</span> the <span class=\"highlight\">c<span class=\"pattern\">ar</span></span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">ar</span>d</span> <span class=\"highlight\">w<span class=\"pattern\">or</span>k</span> helps me <span class=\"highlight\">le<span class=\"pattern\">ar</span>n</span>.",
+          "A <span class=\"highlight\">g<span class=\"pattern\">ir</span>l</span> can run.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">ir</span>d</span> can fly.",
+          "My <span class=\"highlight\">sh<span class=\"pattern\">ir</span>t</span> is clean.",
+          "<span class=\"highlight\">D<span class=\"pattern\">ir</span>t</span> is on it.",
+          "<span class=\"highlight\">F<span class=\"pattern\">ir</span>st</span>, wash hands.",
+          "The <span class=\"highlight\">teach<span class=\"pattern\">er</span></span> can help.",
+          "<span class=\"highlight\">H<span class=\"pattern\">er</span></span> book is new.",
+          "This <span class=\"highlight\">t<span class=\"pattern\">er</span>m</span> is new.",
+          "I like <span class=\"highlight\">c<span class=\"pattern\">or</span>n</span>.",
+          "A <span class=\"highlight\">f<span class=\"pattern\">or</span>k</span> is on the table.",
+          "<span class=\"highlight\">P<span class=\"pattern\">ar</span>k</span> the <span class=\"highlight\">c<span class=\"pattern\">ar</span></span> <span class=\"highlight\">h<span class=\"pattern\">er</span>e</span>, please.",
+          "The <span class=\"highlight\">b<span class=\"pattern\">ir</span>d</span> is <span class=\"highlight\">f<span class=\"pattern\">ir</span>st</span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\">ar</span>d</span> <span class=\"highlight\">d<span class=\"pattern\">ir</span>t</span> is on my shoe.",
+          "<span class=\"highlight\">H<span class=\"pattern\">er</span></span> <span class=\"highlight\">sh<span class=\"pattern\">ir</span>t</span> has <span class=\"highlight\">d<span class=\"pattern\">ir</span>t</span>.",
+          "The <span class=\"highlight\">teach<span class=\"pattern\">er</span></span> is at the <span class=\"highlight\">f<span class=\"pattern\">ar</span>m</span>."
         ],
-        exploreWords: [
-          { word: 'car', highlight: 'ar' },
-          { word: 'star', highlight: 'ar' },
-          { word: 'farm', highlight: 'ar' },
-          { word: 'park', highlight: 'ar' },
-          { word: 'hard', highlight: 'ar' },
-          { word: 'girl', highlight: 'ir' },
-          { word: 'bird', highlight: 'ir' },
-          { word: 'shirt', highlight: 'ir' },
-          { word: 'dirt', highlight: 'ir' },
-          { word: 'first', highlight: 'ir' },
-          { word: 'teacher', highlight: 'er' },
-          { word: 'her', highlight: 'er' },
-          { word: 'term', highlight: 'er' },
-          { word: 'letter', highlight: 'er' },
-          { word: 'river', highlight: 'er' },
-          { word: 'corn', highlight: 'or' },
-          { word: 'fork', highlight: 'or' },
-          { word: 'horn', highlight: 'or' },
-          { word: 'horse', highlight: 'or' },
-          { word: 'born', highlight: 'or' },
+        "words": [
+          {
+            "word": "car",
+            "highlight": "ar",
+            "emoji": "🚗"
+          },
+          {
+            "word": "star",
+            "highlight": "ar",
+            "emoji": "⭐"
+          },
+          {
+            "word": "farm",
+            "highlight": "ar",
+            "emoji": "🚜"
+          },
+          {
+            "word": "park",
+            "highlight": "ar",
+            "emoji": "🏞️"
+          },
+          {
+            "word": "hard",
+            "highlight": "ar",
+            "emoji": "💪"
+          },
+          {
+            "word": "girl",
+            "highlight": "ir",
+            "emoji": "👧"
+          },
+          {
+            "word": "bird",
+            "highlight": "ir",
+            "emoji": "🐦"
+          },
+          {
+            "word": "shirt",
+            "highlight": "ir",
+            "emoji": "👕"
+          },
+          {
+            "word": "dirt",
+            "highlight": "ir",
+            "emoji": "💩"
+          },
+          {
+            "word": "first",
+            "highlight": "ir",
+            "emoji": "1️⃣"
+          },
+          {
+            "word": "teacher",
+            "highlight": "er",
+            "emoji": "👨‍🏫"
+          },
+          {
+            "word": "her",
+            "highlight": "er",
+            "emoji": "👩"
+          },
+          {
+            "word": "term",
+            "highlight": "er",
+            "emoji": "📅"
+          },
+          {
+            "word": "letter",
+            "highlight": "er",
+            "emoji": "✉️"
+          },
+          {
+            "word": "river",
+            "highlight": "er",
+            "emoji": "🌊"
+          },
+          {
+            "word": "corn",
+            "highlight": "or",
+            "emoji": "🌽"
+          },
+          {
+            "word": "fork",
+            "highlight": "or",
+            "emoji": "🍴"
+          },
+          {
+            "word": "horn",
+            "highlight": "or",
+            "emoji": "📯"
+          },
+          {
+            "word": "horse",
+            "highlight": "or",
+            "emoji": "🐎"
+          },
+          {
+            "word": "born",
+            "highlight": "or",
+            "emoji": "👶"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "car",
+            "highlight": "ar"
+          },
+          {
+            "word": "star",
+            "highlight": "ar"
+          },
+          {
+            "word": "farm",
+            "highlight": "ar"
+          },
+          {
+            "word": "park",
+            "highlight": "ar"
+          },
+          {
+            "word": "hard",
+            "highlight": "ar"
+          },
+          {
+            "word": "girl",
+            "highlight": "ir"
+          },
+          {
+            "word": "bird",
+            "highlight": "ir"
+          },
+          {
+            "word": "shirt",
+            "highlight": "ir"
+          },
+          {
+            "word": "dirt",
+            "highlight": "ir"
+          },
+          {
+            "word": "first",
+            "highlight": "ir"
+          },
+          {
+            "word": "teacher",
+            "highlight": "er"
+          },
+          {
+            "word": "her",
+            "highlight": "er"
+          },
+          {
+            "word": "term",
+            "highlight": "er"
+          },
+          {
+            "word": "letter",
+            "highlight": "er"
+          },
+          {
+            "word": "river",
+            "highlight": "er"
+          },
+          {
+            "word": "corn",
+            "highlight": "or"
+          },
+          {
+            "word": "fork",
+            "highlight": "or"
+          },
+          {
+            "word": "horn",
+            "highlight": "or"
+          },
+          {
+            "word": "horse",
+            "highlight": "or"
+          },
+          {
+            "word": "born",
+            "highlight": "or"
+          }
         ]
       },
       {
-        id: 'unit2',
-        name: 'Unit 2',
-        patterns: ['ou', 'ow', 'oi', 'oy', 'oo', 'u'],
-        examples: [
-          'I see a <span class="highlight">m<span class="pattern">ou</span>se</span>.',
-          'This is my <span class="highlight">h<span class="pattern">ou</span>se</span>.',
-          'Go <span class="highlight"><span class="pattern">ou</span>t</span> <span class="highlight">n<span class="pattern">ow</span></span>.',
-          'I see a <span class="highlight">c<span class="pattern">ow</span></span>.',
-          '<span class="highlight">N<span class="pattern">ow</span></span> we go.',
-          'A <span class="highlight">c<span class="pattern">oi</span>n</span> is on it.',
-          'This <span class="highlight">t<span class="pattern">oy</span></span> is new.',
-          '<span class="highlight"><span class="pattern">Oi</span>l</span> is on it.',
-          'A <span class="highlight">b<span class="pattern">oy</span></span> can run.',
-          'I feel <span class="highlight">j<span class="pattern">oy</span></span>.',
-          'A <span class="highlight">b<span class="pattern">oo</span>k</span> is new.',
-          'A <span class="highlight">b<span class="pattern">u</span>sh</span> is big.',
-          'I <span class="highlight">c<span class="pattern">oo</span>k</span> in my <span class="highlight">h<span class="pattern">ou</span>se</span>.',
-          '<span class="highlight">L<span class="pattern">oo</span>k</span> up at the <span class="highlight">m<span class="pattern">oo</span>n</span>.',
-          'Put it <span class="highlight">d<span class="pattern">ow</span>n</span>.',
-          'The <span class="highlight">c<span class="pattern">ow</span></span> is <span class="highlight"><span class="pattern">ou</span>t</span>.',
-          'A <span class="highlight">b<span class="pattern">oy</span></span> has a <span class="highlight">t<span class="pattern">oy</span></span>.',
-          '<span class="highlight"><span class="pattern">Oi</span>l</span> on the <span class="highlight">b<span class="pattern">oo</span>k</span>.',
-          'Put the <span class="highlight">c<span class="pattern">oi</span>n</span> in.',
-          'We have <span class="highlight">j<span class="pattern">oy</span></span> at home.',
+        "id": "unit2",
+        "name": "Unit 2",
+        "patterns": [
+          "ou",
+          "ow",
+          "oi",
+          "oy",
+          "oo",
+          "u"
         ],
-        words: [
-          { word: 'mouse', highlight: 'ou', emoji: '🐭' },
-          { word: 'house', highlight: 'ou', emoji: '🏠' },
-          { word: 'out', highlight: 'ou', emoji: '🚪' },
-          { word: 'cloud', highlight: 'ou', emoji: '☁️' },
-          { word: 'shout', highlight: 'ou', emoji: '📢' },
-          { word: 'cow', highlight: 'ow', emoji: '🐄' },
-          { word: 'now', highlight: 'ow', emoji: '⏰' },
-          { word: 'how', highlight: 'ow', emoji: '❓' },
-          { word: 'down', highlight: 'ow', emoji: '⬇️' },
-          { word: 'town', highlight: 'ow', emoji: '🏘️' },
-          { word: 'coin', highlight: 'oi', emoji: '💰' },
-          { word: 'oil', highlight: 'oi', emoji: '🛢️' },
-          { word: 'boil', highlight: 'oi', emoji: '🌬️' },
-          { word: 'soil', highlight: 'oi', emoji: '🪴' },
-          { word: 'point', highlight: 'oi', emoji: '👉' },
-          { word: 'toy', highlight: 'oy', emoji: '🧸' },
-          { word: 'boy', highlight: 'oy', emoji: '👦' },
-          { word: 'joy', highlight: 'oy', emoji: '😄' },
-          { word: 'enjoy', highlight: 'oy', emoji: '🎉' },
-          { word: 'royal', highlight: 'oy', emoji: '👑' },
-          { word: 'book', highlight: 'oo', emoji: '📚' },
-          { word: 'cook', highlight: 'oo', emoji: '👨‍🍳' },
-          { word: 'look', highlight: 'oo', emoji: '👀' },
-          { word: 'good', highlight: 'oo', emoji: '👍' },
-          { word: 'wood', highlight: 'oo', emoji: '🪵' },
-          { word: 'bush', highlight: 'u', emoji: '🌳' },
-          { word: 'put', highlight: 'u', emoji: '📦' },
-          { word: 'pull', highlight: 'u', emoji: '🧲' },
-          { word: 'full', highlight: 'u', emoji: '🌕' },
-          { word: 'push', highlight: 'u', emoji: '👉' },
+        "examples": [
+          "I see a <span class=\"highlight\">m<span class=\"pattern\">ou</span>se</span>.",
+          "This is my <span class=\"highlight\">h<span class=\"pattern\">ou</span>se</span>.",
+          "Go <span class=\"highlight\"><span class=\"pattern\">ou</span>t</span> <span class=\"highlight\">n<span class=\"pattern\">ow</span></span>.",
+          "I see a <span class=\"highlight\">c<span class=\"pattern\">ow</span></span>.",
+          "<span class=\"highlight\">N<span class=\"pattern\">ow</span></span> we go.",
+          "A <span class=\"highlight\">c<span class=\"pattern\">oi</span>n</span> is on it.",
+          "This <span class=\"highlight\">t<span class=\"pattern\">oy</span></span> is new.",
+          "<span class=\"highlight\"><span class=\"pattern\">Oi</span>l</span> is on the pan.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">oy</span></span> can run.",
+          "I feel <span class=\"highlight\">j<span class=\"pattern\">oy</span></span>.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">oo</span>k</span> is new.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">u</span>sh</span> is big.",
+          "I <span class=\"highlight\">c<span class=\"pattern\">oo</span>k</span> in my <span class=\"highlight\">h<span class=\"pattern\">ou</span>se</span>.",
+          "<span class=\"highlight\">L<span class=\"pattern\">oo</span>k</span> up at the moon.",
+          "<span class=\"highlight\">P<span class=\"pattern\">u</span>t</span> it <span class=\"highlight\">d<span class=\"pattern\">ow</span>n</span>.",
+          "The <span class=\"highlight\">c<span class=\"pattern\">ow</span></span> is <span class=\"highlight\"><span class=\"pattern\">ou</span>t</span>.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">oy</span></span> has a <span class=\"highlight\">t<span class=\"pattern\">oy</span></span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Oi</span>l</span> is on the <span class=\"highlight\">b<span class=\"pattern\">oo</span>k</span>.",
+          "<span class=\"highlight\">P<span class=\"pattern\">u</span>t</span> the <span class=\"highlight\">c<span class=\"pattern\">oi</span>n</span> in.",
+          "We have <span class=\"highlight\">j<span class=\"pattern\">oy</span></span> at home."
         ],
-        exploreWords: [
-          { word: 'mouse', highlight: 'ou' },
-          { word: 'house', highlight: 'ou' },
-          { word: 'out', highlight: 'ou' },
-          { word: 'cloud', highlight: 'ou' },
-          { word: 'shout', highlight: 'ou' },
-          { word: 'cow', highlight: 'ow' },
-          { word: 'now', highlight: 'ow' },
-          { word: 'how', highlight: 'ow' },
-          { word: 'down', highlight: 'ow' },
-          { word: 'town', highlight: 'ow' },
-          { word: 'coin', highlight: 'oi' },
-          { word: 'oil', highlight: 'oi' },
-          { word: 'boil', highlight: 'oi' },
-          { word: 'soil', highlight: 'oi' },
-          { word: 'point', highlight: 'oi' },
-          { word: 'toy', highlight: 'oy' },
-          { word: 'boy', highlight: 'oy' },
-          { word: 'joy', highlight: 'oy' },
-          { word: 'enjoy', highlight: 'oy' },
-          { word: 'royal', highlight: 'oy' },
-          { word: 'book', highlight: 'oo' },
-          { word: 'cook', highlight: 'oo' },
-          { word: 'look', highlight: 'oo' },
-          { word: 'good', highlight: 'oo' },
-          { word: 'wood', highlight: 'oo' },
-          { word: 'bush', highlight: 'u' },
-          { word: 'put', highlight: 'u' },
-          { word: 'pull', highlight: 'u' },
-          { word: 'full', highlight: 'u' },
-          { word: 'push', highlight: 'u' },
+        "words": [
+          {
+            "word": "mouse",
+            "highlight": "ou",
+            "emoji": "🐭"
+          },
+          {
+            "word": "house",
+            "highlight": "ou",
+            "emoji": "🏠"
+          },
+          {
+            "word": "out",
+            "highlight": "ou",
+            "emoji": "🚪"
+          },
+          {
+            "word": "cloud",
+            "highlight": "ou",
+            "emoji": "☁️"
+          },
+          {
+            "word": "shout",
+            "highlight": "ou",
+            "emoji": "📢"
+          },
+          {
+            "word": "cow",
+            "highlight": "ow",
+            "emoji": "🐄"
+          },
+          {
+            "word": "now",
+            "highlight": "ow",
+            "emoji": "⏰"
+          },
+          {
+            "word": "how",
+            "highlight": "ow",
+            "emoji": "❓"
+          },
+          {
+            "word": "down",
+            "highlight": "ow",
+            "emoji": "⬇️"
+          },
+          {
+            "word": "town",
+            "highlight": "ow",
+            "emoji": "🏘️"
+          },
+          {
+            "word": "coin",
+            "highlight": "oi",
+            "emoji": "💰"
+          },
+          {
+            "word": "oil",
+            "highlight": "oi",
+            "emoji": "🛢️"
+          },
+          {
+            "word": "boil",
+            "highlight": "oi",
+            "emoji": "🌬️"
+          },
+          {
+            "word": "soil",
+            "highlight": "oi",
+            "emoji": "🪴"
+          },
+          {
+            "word": "point",
+            "highlight": "oi",
+            "emoji": "👉"
+          },
+          {
+            "word": "toy",
+            "highlight": "oy",
+            "emoji": "🧸"
+          },
+          {
+            "word": "boy",
+            "highlight": "oy",
+            "emoji": "👦"
+          },
+          {
+            "word": "joy",
+            "highlight": "oy",
+            "emoji": "😄"
+          },
+          {
+            "word": "enjoy",
+            "highlight": "oy",
+            "emoji": "🎉"
+          },
+          {
+            "word": "royal",
+            "highlight": "oy",
+            "emoji": "👑"
+          },
+          {
+            "word": "book",
+            "highlight": "oo",
+            "emoji": "📚"
+          },
+          {
+            "word": "cook",
+            "highlight": "oo",
+            "emoji": "👨‍🍳"
+          },
+          {
+            "word": "look",
+            "highlight": "oo",
+            "emoji": "👀"
+          },
+          {
+            "word": "good",
+            "highlight": "oo",
+            "emoji": "👍"
+          },
+          {
+            "word": "wood",
+            "highlight": "oo",
+            "emoji": "🪵"
+          },
+          {
+            "word": "bush",
+            "highlight": "u",
+            "emoji": "🌳"
+          },
+          {
+            "word": "put",
+            "highlight": "u",
+            "emoji": "📦"
+          },
+          {
+            "word": "pull",
+            "highlight": "u",
+            "emoji": "🧲"
+          },
+          {
+            "word": "full",
+            "highlight": "u",
+            "emoji": "🌕"
+          },
+          {
+            "word": "push",
+            "highlight": "u",
+            "emoji": "👉"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "mouse",
+            "highlight": "ou"
+          },
+          {
+            "word": "house",
+            "highlight": "ou"
+          },
+          {
+            "word": "out",
+            "highlight": "ou"
+          },
+          {
+            "word": "cloud",
+            "highlight": "ou"
+          },
+          {
+            "word": "shout",
+            "highlight": "ou"
+          },
+          {
+            "word": "cow",
+            "highlight": "ow"
+          },
+          {
+            "word": "now",
+            "highlight": "ow"
+          },
+          {
+            "word": "how",
+            "highlight": "ow"
+          },
+          {
+            "word": "down",
+            "highlight": "ow"
+          },
+          {
+            "word": "town",
+            "highlight": "ow"
+          },
+          {
+            "word": "coin",
+            "highlight": "oi"
+          },
+          {
+            "word": "oil",
+            "highlight": "oi"
+          },
+          {
+            "word": "boil",
+            "highlight": "oi"
+          },
+          {
+            "word": "soil",
+            "highlight": "oi"
+          },
+          {
+            "word": "point",
+            "highlight": "oi"
+          },
+          {
+            "word": "toy",
+            "highlight": "oy"
+          },
+          {
+            "word": "boy",
+            "highlight": "oy"
+          },
+          {
+            "word": "joy",
+            "highlight": "oy"
+          },
+          {
+            "word": "enjoy",
+            "highlight": "oy"
+          },
+          {
+            "word": "royal",
+            "highlight": "oy"
+          },
+          {
+            "word": "book",
+            "highlight": "oo"
+          },
+          {
+            "word": "cook",
+            "highlight": "oo"
+          },
+          {
+            "word": "look",
+            "highlight": "oo"
+          },
+          {
+            "word": "good",
+            "highlight": "oo"
+          },
+          {
+            "word": "wood",
+            "highlight": "oo"
+          },
+          {
+            "word": "bush",
+            "highlight": "u"
+          },
+          {
+            "word": "put",
+            "highlight": "u"
+          },
+          {
+            "word": "pull",
+            "highlight": "u"
+          },
+          {
+            "word": "full",
+            "highlight": "u"
+          },
+          {
+            "word": "push",
+            "highlight": "u"
+          }
         ]
       },
       {
-        id: 'unit3',
-        name: 'Unit 3',
-        patterns: ['au', 'aw', 'all', 'wa', 'or', 'oar'],
-        examples: [
-          'I like <span class="highlight">s<span class="pattern">au</span>ce</span>.',
-          'I <span class="highlight">s<span class="pattern">aw</span></span> it.',
-          'A <span class="highlight">p<span class="pattern">aw</span></span> is on it.',
-          'I <span class="highlight">dr<span class="pattern">aw</span></span> a cat.',
-          'The <span class="highlight">l<span class="pattern">aw</span>n</span> is green.',
-          'A <span class="highlight">b<span class="pattern">all</span></span> is big.',
-          'The <span class="highlight">w<span class="pattern">all</span></span> is <span class="highlight">t<span class="pattern">all</span></span>.',
-          'That is a <span class="highlight">sm<span class="pattern">all</span></span> dog.',
-          '<span class="highlight"><span class="pattern">Wa</span>ter</span> is cold.',
-          '<span class="highlight"><span class="pattern">Wa</span>sh</span> the cup.',
-          'I see a <span class="highlight">h<span class="pattern">or</span>se</span>.',
-          '<span class="highlight">C<span class="pattern">or</span>n</span> is good.',
-          'A <span class="highlight">f<span class="pattern">or</span>k</span> is on it.',
-          '<span class="highlight">R<span class="pattern">oar</span></span>!',
-          'An <span class="highlight"><span class="pattern">oar</span></span> is in it.',
-          'No, not on the <span class="highlight">w<span class="pattern">all</span></span>.',
-          '<span class="highlight"><span class="pattern">Wa</span>sh</span> <span class="highlight">s<span class="pattern">au</span>ce</span> off.',
-          'That is a <span class="highlight">sm<span class="pattern">all</span></span> <span class="highlight">b<span class="pattern">all</span></span>.',
-          'I see a <span class="highlight">h<span class="pattern">or</span>se</span> and <span class="highlight">c<span class="pattern">or</span>n</span>.',
-          'I <span class="highlight">s<span class="pattern">aw</span></span> a <span class="highlight">h<span class="pattern">or</span>se</span>.',
+        "id": "unit3",
+        "name": "Unit 3",
+        "patterns": [
+          "au",
+          "aw",
+          "all",
+          "wa",
+          "or",
+          "oar"
         ],
-        words: [
-          { word: 'sauce', highlight: 'au', emoji: '🥫' },
-          { word: 'haul', highlight: 'au', emoji: '🚚' },
-          { word: 'cause', highlight: 'au', emoji: '💡' },
-          { word: 'auto', highlight: 'au', emoji: '🚗' },
-          { word: 'fault', highlight: 'au', emoji: '⚠️' },
-          { word: 'saw', highlight: 'aw', emoji: '🪚' },
-          { word: 'paw', highlight: 'aw', emoji: '🐾' },
-          { word: 'draw', highlight: 'aw', emoji: '✏️' },
-          { word: 'lawn', highlight: 'aw', emoji: '🌱' },
-          { word: 'straw', highlight: 'aw', emoji: '🥤' },
-          { word: 'ball', highlight: 'all', emoji: '⚽' },
-          { word: 'wall', highlight: 'all', emoji: '🧱' },
-          { word: 'small', highlight: 'all', emoji: '🐭' },
-          { word: 'fall', highlight: 'all', emoji: '🍂' },
-          { word: 'call', highlight: 'all', emoji: '📞' },
-          { word: 'water', highlight: 'wa', emoji: '💧' },
-          { word: 'wash', highlight: 'wa', emoji: '🧼' },
-          { word: 'want', highlight: 'wa', emoji: '🙏' },
-          { word: 'watch', highlight: 'wa', emoji: '⌚' },
-          { word: 'wasp', highlight: 'wa', emoji: '🐝' },
-          { word: 'horse', highlight: 'or', emoji: '🐴' },
-          { word: 'corn', highlight: 'or', emoji: '🌽' },
-          { word: 'fork', highlight: 'or', emoji: '🍴' },
-          { word: 'born', highlight: 'or', emoji: '👶' },
-          { word: 'sport', highlight: 'or', emoji: '⚽' },
-          { word: 'roar', highlight: 'oar', emoji: '🦁' },
-          { word: 'oar', highlight: 'oar', emoji: '🚣' },
-          { word: 'board', highlight: 'oar', emoji: '📝' },
-          { word: 'soar', highlight: 'oar', emoji: '🦅' },
-          { word: 'roast', highlight: 'oar', emoji: '🍖' },
+        "examples": [
+          "I like <span class=\"highlight\">s<span class=\"pattern\">au</span>ce</span>.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">aw</span></span> it.",
+          "A <span class=\"highlight\">p<span class=\"pattern\">aw</span></span> is on it.",
+          "I <span class=\"highlight\">dr<span class=\"pattern\">aw</span></span> a cat.",
+          "The <span class=\"highlight\">l<span class=\"pattern\">aw</span>n</span> is green.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">all</span></span> is big.",
+          "The <span class=\"highlight\">w<span class=\"pattern\">all</span></span> is tall.",
+          "That is a <span class=\"highlight\">sm<span class=\"pattern\">all</span></span> dog.",
+          "<span class=\"highlight\"><span class=\"pattern\">Wa</span>ter</span> is cold.",
+          "<span class=\"highlight\"><span class=\"pattern\">Wa</span>sh</span> the cup.",
+          "I see a <span class=\"highlight\">h<span class=\"pattern\">or</span>se</span>.",
+          "<span class=\"highlight\">C<span class=\"pattern\">or</span>n</span> is good.",
+          "A <span class=\"highlight\">f<span class=\"pattern\">or</span>k</span> is on it.",
+          "I hear a <span class=\"highlight\">r<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">oar</span></span></span></span>.",
+          "An <span class=\"highlight\"><span class=\"pattern\">oar</span></span> is in it.",
+          "<span class=\"highlight\"><span class=\"pattern\">Wa</span>sh</span> the <span class=\"highlight\">w<span class=\"pattern\">all</span></span> now.",
+          "<span class=\"highlight\"><span class=\"pattern\">Wa</span>sh</span> <span class=\"highlight\">s<span class=\"pattern\">au</span>ce</span> off.",
+          "That is a <span class=\"highlight\">sm<span class=\"pattern\">all</span></span> <span class=\"highlight\">b<span class=\"pattern\">all</span></span>.",
+          "I see a <span class=\"highlight\">h<span class=\"pattern\">or</span>se</span> and <span class=\"highlight\">c<span class=\"pattern\">or</span>n</span>.",
+          "I <span class=\"highlight\">s<span class=\"pattern\">aw</span></span> a <span class=\"highlight\">h<span class=\"pattern\">or</span>se</span>."
         ],
-        exploreWords: [
-          { word: 'sauce', highlight: 'au' },
-          { word: 'haul', highlight: 'au' },
-          { word: 'cause', highlight: 'au' },
-          { word: 'auto', highlight: 'au' },
-          { word: 'fault', highlight: 'au' },
-          { word: 'saw', highlight: 'aw' },
-          { word: 'paw', highlight: 'aw' },
-          { word: 'draw', highlight: 'aw' },
-          { word: 'lawn', highlight: 'aw' },
-          { word: 'straw', highlight: 'aw' },
-          { word: 'ball', highlight: 'all' },
-          { word: 'wall', highlight: 'all' },
-          { word: 'small', highlight: 'all' },
-          { word: 'fall', highlight: 'all' },
-          { word: 'call', highlight: 'all' },
-          { word: 'water', highlight: 'wa' },
-          { word: 'wash', highlight: 'wa' },
-          { word: 'want', highlight: 'wa' },
-          { word: 'watch', highlight: 'wa' },
-          { word: 'wasp', highlight: 'wa' },
-          { word: 'horse', highlight: 'or' },
-          { word: 'corn', highlight: 'or' },
-          { word: 'fork', highlight: 'or' },
-          { word: 'born', highlight: 'or' },
-          { word: 'sport', highlight: 'or' },
-          { word: 'roar', highlight: 'oar' },
-          { word: 'oar', highlight: 'oar' },
-          { word: 'board', highlight: 'oar' },
-          { word: 'soar', highlight: 'oar' },
-          { word: 'roast', highlight: 'oar' },
+        "words": [
+          {
+            "word": "sauce",
+            "highlight": "au",
+            "emoji": "🥫"
+          },
+          {
+            "word": "haul",
+            "highlight": "au",
+            "emoji": "🚚"
+          },
+          {
+            "word": "cause",
+            "highlight": "au",
+            "emoji": "💡"
+          },
+          {
+            "word": "auto",
+            "highlight": "au",
+            "emoji": "🚗"
+          },
+          {
+            "word": "fault",
+            "highlight": "au",
+            "emoji": "⚠️"
+          },
+          {
+            "word": "saw",
+            "highlight": "aw",
+            "emoji": "🪚"
+          },
+          {
+            "word": "paw",
+            "highlight": "aw",
+            "emoji": "🐾"
+          },
+          {
+            "word": "draw",
+            "highlight": "aw",
+            "emoji": "✏️"
+          },
+          {
+            "word": "lawn",
+            "highlight": "aw",
+            "emoji": "🌱"
+          },
+          {
+            "word": "straw",
+            "highlight": "aw",
+            "emoji": "🥤"
+          },
+          {
+            "word": "ball",
+            "highlight": "all",
+            "emoji": "⚽"
+          },
+          {
+            "word": "wall",
+            "highlight": "all",
+            "emoji": "🧱"
+          },
+          {
+            "word": "small",
+            "highlight": "all",
+            "emoji": "🐭"
+          },
+          {
+            "word": "fall",
+            "highlight": "all",
+            "emoji": "🍂"
+          },
+          {
+            "word": "call",
+            "highlight": "all",
+            "emoji": "📞"
+          },
+          {
+            "word": "water",
+            "highlight": "wa",
+            "emoji": "💧"
+          },
+          {
+            "word": "wash",
+            "highlight": "wa",
+            "emoji": "🧼"
+          },
+          {
+            "word": "want",
+            "highlight": "wa",
+            "emoji": "🙏"
+          },
+          {
+            "word": "watch",
+            "highlight": "wa",
+            "emoji": "⌚"
+          },
+          {
+            "word": "wasp",
+            "highlight": "wa",
+            "emoji": "🐝"
+          },
+          {
+            "word": "horse",
+            "highlight": "or",
+            "emoji": "🐴"
+          },
+          {
+            "word": "corn",
+            "highlight": "or",
+            "emoji": "🌽"
+          },
+          {
+            "word": "fork",
+            "highlight": "or",
+            "emoji": "🍴"
+          },
+          {
+            "word": "born",
+            "highlight": "or",
+            "emoji": "👶"
+          },
+          {
+            "word": "sport",
+            "highlight": "or",
+            "emoji": "⚽"
+          },
+          {
+            "word": "roar",
+            "highlight": "oar",
+            "emoji": "🦁"
+          },
+          {
+            "word": "oar",
+            "highlight": "oar",
+            "emoji": "🚣"
+          },
+          {
+            "word": "board",
+            "highlight": "oar",
+            "emoji": "📝"
+          },
+          {
+            "word": "soar",
+            "highlight": "oar",
+            "emoji": "🦅"
+          },
+          {
+            "word": "roast",
+            "highlight": "oar",
+            "emoji": "🍖"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "sauce",
+            "highlight": "au"
+          },
+          {
+            "word": "haul",
+            "highlight": "au"
+          },
+          {
+            "word": "cause",
+            "highlight": "au"
+          },
+          {
+            "word": "auto",
+            "highlight": "au"
+          },
+          {
+            "word": "fault",
+            "highlight": "au"
+          },
+          {
+            "word": "saw",
+            "highlight": "aw"
+          },
+          {
+            "word": "paw",
+            "highlight": "aw"
+          },
+          {
+            "word": "draw",
+            "highlight": "aw"
+          },
+          {
+            "word": "lawn",
+            "highlight": "aw"
+          },
+          {
+            "word": "straw",
+            "highlight": "aw"
+          },
+          {
+            "word": "ball",
+            "highlight": "all"
+          },
+          {
+            "word": "wall",
+            "highlight": "all"
+          },
+          {
+            "word": "small",
+            "highlight": "all"
+          },
+          {
+            "word": "fall",
+            "highlight": "all"
+          },
+          {
+            "word": "call",
+            "highlight": "all"
+          },
+          {
+            "word": "water",
+            "highlight": "wa"
+          },
+          {
+            "word": "wash",
+            "highlight": "wa"
+          },
+          {
+            "word": "want",
+            "highlight": "wa"
+          },
+          {
+            "word": "watch",
+            "highlight": "wa"
+          },
+          {
+            "word": "wasp",
+            "highlight": "wa"
+          },
+          {
+            "word": "horse",
+            "highlight": "or"
+          },
+          {
+            "word": "corn",
+            "highlight": "or"
+          },
+          {
+            "word": "fork",
+            "highlight": "or"
+          },
+          {
+            "word": "born",
+            "highlight": "or"
+          },
+          {
+            "word": "sport",
+            "highlight": "or"
+          },
+          {
+            "word": "roar",
+            "highlight": "oar"
+          },
+          {
+            "word": "oar",
+            "highlight": "oar"
+          },
+          {
+            "word": "board",
+            "highlight": "oar"
+          },
+          {
+            "word": "soar",
+            "highlight": "oar"
+          },
+          {
+            "word": "roast",
+            "highlight": "oar"
+          }
         ]
       },
       {
-        id: 'unit4',
-        name: 'Unit 4',
-        patterns: ['are', 'air', 'ea', 'ear', 'ear', 'eer'],
-        examples: [
-          'I <span class="highlight">c<span class="pattern">are</span></span> for my pet.',
-          'We <span class="highlight">sh<span class="pattern">are</span></span> a toy.',
-          'My <span class="highlight">h<span class="pattern">air</span></span> is soft.',
-          'The <span class="highlight">f<span class="pattern">air</span></span> is fun.',
-          'I see a <span class="highlight">squ<span class="pattern">are</span></span>.',
-          'I see a <span class="highlight">b<span class="pattern">ea</span>r</span>.',
-          'I <span class="highlight"><span class="pattern">ea</span>t</span> a <span class="highlight">p<span class="pattern">ea</span>r</span>.',
-          '<span class="highlight">W<span class="pattern">ea</span>r</span> your hat.',
-          'Do not <span class="highlight">t<span class="pattern">ea</span>r</span> it.',
-          'My <span class="highlight"><span class="pattern">ea</span>r</span> is OK.',
-          'We <span class="highlight">ch<span class="pattern">eer</span></span> for our <span class="highlight">t<span class="pattern">ea</span>m</span>.',
-          'I see a <span class="highlight">d<span class="pattern">eer</span></span>.',
-          '<span class="highlight">P<span class="pattern">eer</span></span> in and look now.',
-          'I <span class="highlight">h<span class="pattern">ea</span>r</span> you.',
-          'Stay <span class="highlight">n<span class="pattern">ea</span>r</span> me.',
-          '<span class="highlight">Sh<span class="pattern">are</span></span> a <span class="highlight">p<span class="pattern">ea</span>r</span>.',
-          'She has <span class="highlight">f<span class="pattern">air</span></span> <span class="highlight">h<span class="pattern">air</span></span>.',
-          '<span class="highlight">H<span class="pattern">ea</span>r</span> the <span class="highlight">ch<span class="pattern">eer</span></span>.',
-          'A <span class="highlight">b<span class="pattern">ea</span>r</span> <span class="highlight">n<span class="pattern">ea</span>r</span> a <span class="highlight">squ<span class="pattern">are</span></span>.',
-          '<span class="highlight">C<span class="pattern">are</span></span> for your <span class="highlight"><span class="pattern">ea</span>r</span>.',
+        "id": "unit4",
+        "name": "Unit 4",
+        "patterns": [
+          "are",
+          "air",
+          "ea",
+          "ear",
+          "ear",
+          "eer"
         ],
-        words: [
-          { word: 'care', highlight: 'are', emoji: '❤️' },
-          { word: 'share', highlight: 'are', emoji: '🤝' },
-          { word: 'bare', highlight: 'are', emoji: '🦶' },
-          { word: 'dare', highlight: 'are', emoji: '😈' },
-          { word: 'stare', highlight: 'are', emoji: '👀' },
-          { word: 'hair', highlight: 'air', emoji: '💇' },
-          { word: 'fair', highlight: 'air', emoji: '🎡' },
-          { word: 'square', highlight: 'air', emoji: '🟦' },
-          { word: 'chair', highlight: 'air', emoji: '🪑' },
-          { word: 'pair', highlight: 'air', emoji: '👟' },
-          { word: 'bear', highlight: 'ea', emoji: '🐻' },
-          { word: 'pear', highlight: 'ea', emoji: '🍐' },
-          { word: 'wear', highlight: 'ea', emoji: '👕' },
-          { word: 'tear', highlight: 'ea', emoji: '😢' },
-          { word: 'swear', highlight: 'ea', emoji: '🤞' },
-          { word: 'ear', highlight: 'ear', emoji: '👂' },
-          { word: 'hear', highlight: 'ear', emoji: '👂' },
-          { word: 'near', highlight: 'ear', emoji: '📍' },
-          { word: 'year', highlight: 'ear', emoji: '📅' },
-          { word: 'clear', highlight: 'ear', emoji: '✨' },
-          { word: 'cheer', highlight: 'eer', emoji: '📣' },
-          { word: 'deer', highlight: 'eer', emoji: '🦌' },
-          { word: 'peer', highlight: 'eer', emoji: '👀' },
-          { word: 'steer', highlight: 'eer', emoji: '🚙' },
-          { word: 'beer', highlight: 'eer', emoji: '🍺' },
+        "examples": [
+          "I <span class=\"highlight\">c<span class=\"pattern\">are</span></span> for my pet.",
+          "We <span class=\"highlight\">sh<span class=\"pattern\">are</span></span> a toy.",
+          "My <span class=\"highlight\">h<span class=\"pattern\">air</span></span> is soft.",
+          "The <span class=\"highlight\">f<span class=\"pattern\">air</span></span> is fun.",
+          "I see a <span class=\"highlight\">square</span>.",
+          "I see a <span class=\"highlight\">b<span class=\"pattern\">ea</span>r</span>.",
+          "I eat a <span class=\"highlight\">p<span class=\"pattern\">ea</span>r</span>.",
+          "<span class=\"highlight\">W<span class=\"pattern\">ea</span>r</span> your hat.",
+          "Do not <span class=\"highlight\">t<span class=\"pattern\">ea</span>r</span> it.",
+          "My <span class=\"highlight\"><span class=\"pattern\">ear</span></span> is OK.",
+          "We <span class=\"highlight\">ch<span class=\"pattern\">eer</span></span> for our team.",
+          "I see a <span class=\"highlight\">d<span class=\"pattern\">eer</span></span>.",
+          "<span class=\"highlight\">P<span class=\"pattern\">eer</span></span> in and look now.",
+          "I <span class=\"highlight\">h<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">ear</span></span></span></span> you.",
+          "Stay <span class=\"highlight\">n<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">ear</span></span></span></span> me.",
+          "<span class=\"highlight\">Sh<span class=\"pattern\">are</span></span> a <span class=\"highlight\">p<span class=\"pattern\">ea</span>r</span>.",
+          "She has <span class=\"highlight\">f<span class=\"pattern\">air</span></span> <span class=\"highlight\">h<span class=\"pattern\">air</span></span>.",
+          "<span class=\"highlight\">H<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">ear</span></span></span></span> the <span class=\"highlight\">ch<span class=\"pattern\">eer</span></span>.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">ea</span>r</span> is <span class=\"highlight\">n<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">ear</span></span></span></span> a <span class=\"highlight\">square</span>.",
+          "<span class=\"highlight\">C<span class=\"pattern\">are</span></span> for your <span class=\"highlight\"><span class=\"pattern\">ear</span></span>."
         ],
-        exploreWords: [
-          { word: 'care', highlight: 'are' },
-          { word: 'share', highlight: 'are' },
-          { word: 'bare', highlight: 'are' },
-          { word: 'dare', highlight: 'are' },
-          { word: 'stare', highlight: 'are' },
-          { word: 'hair', highlight: 'air' },
-          { word: 'fair', highlight: 'air' },
-          { word: 'square', highlight: 'air' },
-          { word: 'chair', highlight: 'air' },
-          { word: 'pair', highlight: 'air' },
-          { word: 'bear', highlight: 'ea' },
-          { word: 'pear', highlight: 'ea' },
-          { word: 'wear', highlight: 'ea' },
-          { word: 'tear', highlight: 'ea' },
-          { word: 'swear', highlight: 'ea' },
-          { word: 'ear', highlight: 'ear' },
-          { word: 'hear', highlight: 'ear' },
-          { word: 'near', highlight: 'ear' },
-          { word: 'year', highlight: 'ear' },
-          { word: 'clear', highlight: 'ear' },
-          { word: 'cheer', highlight: 'eer' },
-          { word: 'deer', highlight: 'eer' },
-          { word: 'peer', highlight: 'eer' },
-          { word: 'steer', highlight: 'eer' },
-          { word: 'beer', highlight: 'eer' },
+        "words": [
+          {
+            "word": "care",
+            "highlight": "are",
+            "emoji": "❤️"
+          },
+          {
+            "word": "share",
+            "highlight": "are",
+            "emoji": "🤝"
+          },
+          {
+            "word": "bare",
+            "highlight": "are",
+            "emoji": "🦶"
+          },
+          {
+            "word": "dare",
+            "highlight": "are",
+            "emoji": "😈"
+          },
+          {
+            "word": "stare",
+            "highlight": "are",
+            "emoji": "👀"
+          },
+          {
+            "word": "hair",
+            "highlight": "air",
+            "emoji": "💇"
+          },
+          {
+            "word": "fair",
+            "highlight": "air",
+            "emoji": "🎡"
+          },
+          {
+            "word": "square",
+            "highlight": "air",
+            "emoji": "🟦"
+          },
+          {
+            "word": "chair",
+            "highlight": "air",
+            "emoji": "🪑"
+          },
+          {
+            "word": "pair",
+            "highlight": "air",
+            "emoji": "👟"
+          },
+          {
+            "word": "bear",
+            "highlight": "ea",
+            "emoji": "🐻"
+          },
+          {
+            "word": "pear",
+            "highlight": "ea",
+            "emoji": "🍐"
+          },
+          {
+            "word": "wear",
+            "highlight": "ea",
+            "emoji": "👕"
+          },
+          {
+            "word": "tear",
+            "highlight": "ea",
+            "emoji": "😢"
+          },
+          {
+            "word": "swear",
+            "highlight": "ea",
+            "emoji": "🤞"
+          },
+          {
+            "word": "ear",
+            "highlight": "ear",
+            "emoji": "👂"
+          },
+          {
+            "word": "hear",
+            "highlight": "ear",
+            "emoji": "👂"
+          },
+          {
+            "word": "near",
+            "highlight": "ear",
+            "emoji": "📍"
+          },
+          {
+            "word": "year",
+            "highlight": "ear",
+            "emoji": "📅"
+          },
+          {
+            "word": "clear",
+            "highlight": "ear",
+            "emoji": "✨"
+          },
+          {
+            "word": "cheer",
+            "highlight": "eer",
+            "emoji": "📣"
+          },
+          {
+            "word": "deer",
+            "highlight": "eer",
+            "emoji": "🦌"
+          },
+          {
+            "word": "peer",
+            "highlight": "eer",
+            "emoji": "👀"
+          },
+          {
+            "word": "steer",
+            "highlight": "eer",
+            "emoji": "🚙"
+          },
+          {
+            "word": "beer",
+            "highlight": "eer",
+            "emoji": "🍺"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "care",
+            "highlight": "are"
+          },
+          {
+            "word": "share",
+            "highlight": "are"
+          },
+          {
+            "word": "bare",
+            "highlight": "are"
+          },
+          {
+            "word": "dare",
+            "highlight": "are"
+          },
+          {
+            "word": "stare",
+            "highlight": "are"
+          },
+          {
+            "word": "hair",
+            "highlight": "air"
+          },
+          {
+            "word": "fair",
+            "highlight": "air"
+          },
+          {
+            "word": "square",
+            "highlight": "air"
+          },
+          {
+            "word": "chair",
+            "highlight": "air"
+          },
+          {
+            "word": "pair",
+            "highlight": "air"
+          },
+          {
+            "word": "bear",
+            "highlight": "ea"
+          },
+          {
+            "word": "pear",
+            "highlight": "ea"
+          },
+          {
+            "word": "wear",
+            "highlight": "ea"
+          },
+          {
+            "word": "tear",
+            "highlight": "ea"
+          },
+          {
+            "word": "swear",
+            "highlight": "ea"
+          },
+          {
+            "word": "ear",
+            "highlight": "ear"
+          },
+          {
+            "word": "hear",
+            "highlight": "ear"
+          },
+          {
+            "word": "near",
+            "highlight": "ear"
+          },
+          {
+            "word": "year",
+            "highlight": "ear"
+          },
+          {
+            "word": "clear",
+            "highlight": "ear"
+          },
+          {
+            "word": "cheer",
+            "highlight": "eer"
+          },
+          {
+            "word": "deer",
+            "highlight": "eer"
+          },
+          {
+            "word": "peer",
+            "highlight": "eer"
+          },
+          {
+            "word": "steer",
+            "highlight": "eer"
+          },
+          {
+            "word": "beer",
+            "highlight": "eer"
+          }
         ]
       },
       {
-        id: 'unit5',
-        name: 'Unit 5',
-        patterns: ['a', 'e', 'i', 'o', 'u'],
-        examples: [
-          'I see an <span class="highlight"><span class="pattern">a</span>corn</span>.',
-          'A <span class="highlight">b<span class="pattern">a</span>b<span class="pattern">y</span></span> can nap.',
-          'My <span class="highlight"><span class="pattern">a</span>pron</span> is blue.',
-          'A <span class="highlight">t<span class="pattern">a</span>ble</span> is big.',
-          '<span class="highlight">P<span class="pattern">a</span>per</span> is on it.',
-          '<span class="highlight">H<span class="pattern">e</span></span> can help.',
-          '<span class="highlight">M<span class="pattern">e</span></span> too, <span class="highlight">I</span> can help.',
-          '<span class="highlight">Sh<span class="pattern">e</span></span> can go.',
-          'I see a <span class="highlight">t<span class="pattern">i</span>ger</span>.',
-          'A <span class="highlight">p<span class="pattern">i</span>lot</span> can go.',
-          '<span class="highlight">G<span class="pattern">o</span></span> now to the <span class="highlight">t<span class="pattern">a</span>ble</span>.',
-          '<span class="highlight">N<span class="pattern">o</span></span>, not now, please.',
-          'This is <span class="highlight">s<span class="pattern">o</span></span> good.',
-          '<span class="highlight">M<span class="pattern">u</span>s<span class="pattern">i</span>c</span> is on.',
-          'This <span class="highlight"><span class="pattern">u</span>n<span class="pattern">i</span>t</span> is new.',
-          '<span class="highlight">B<span class="pattern">a</span>b<span class="pattern">y</span></span> and <span class="highlight">m<span class="pattern">e</span></span> can play.',
-          '<span class="highlight">P<span class="pattern">a</span>per</span> is on the <span class="highlight">t<span class="pattern">a</span>ble</span>.',
-          '<span class="highlight">Sh<span class="pattern">e</span></span> can play.',
-          'I like <span class="highlight">m<span class="pattern">u</span>s<span class="pattern">i</span>c</span>.',
-          'An <span class="highlight"><span class="pattern">a</span>corn</span> is on the <span class="highlight">t<span class="pattern">a</span>ble</span>.',
+        "id": "unit5",
+        "name": "Unit 5",
+        "patterns": [
+          "a",
+          "e",
+          "i",
+          "o",
+          "u"
         ],
-        words: [
-          { word: 'acorn', highlight: 'a', emoji: '🌰' },
-          { word: 'baby', highlight: 'a', emoji: '👶' },
-          { word: 'apron', highlight: 'a', emoji: '👗' },
-          { word: 'table', highlight: 'a', emoji: '🪑' },
-          { word: 'paper', highlight: 'a', emoji: '📄' },
-          { word: 'he', highlight: 'e', emoji: '👨' },
-          { word: 'me', highlight: 'e', emoji: '👆' },
-          { word: 'she', highlight: 'e', emoji: '👩' },
-          { word: 'be', highlight: 'e', emoji: '✨' },
-          { word: 'we', highlight: 'e', emoji: '👫' },
-          { word: 'tiger', highlight: 'i', emoji: '🐅' },
-          { word: 'pilot', highlight: 'i', emoji: '✈️' },
-          { word: 'silent', highlight: 'i', emoji: '🤫' },
-          { word: 'giant', highlight: 'i', emoji: '👹' },
-          { word: 'item', highlight: 'i', emoji: '📦' },
-          { word: 'go', highlight: 'o', emoji: '➡️' },
-          { word: 'no', highlight: 'o', emoji: '🚫' },
-          { word: 'so', highlight: 'o', emoji: '👍' },
-          { word: 'total', highlight: 'o', emoji: '🔢' },
-          { word: 'open', highlight: 'o', emoji: '📂' },
-          { word: 'music', highlight: 'u', emoji: '🎵' },
-          { word: 'unit', highlight: 'u', emoji: '📦' },
-          { word: 'human', highlight: 'u', emoji: '🧑' },
-          { word: 'humor', highlight: 'u', emoji: '😂' },
-          { word: 'pupil', highlight: 'u', emoji: '👨‍🎓' },
+        "examples": [
+          "I see an <span class=\"highlight\"><span class=\"pattern\">a</span>corn</span>.",
+          "A <span class=\"highlight\">b<span class=\"pattern\">a</span>b<span class=\"pattern\">y</span></span> can nap.",
+          "My <span class=\"highlight\"><span class=\"pattern\">a</span>pron</span> is blue.",
+          "A <span class=\"highlight\">t<span class=\"pattern\">a</span>ble</span> is big.",
+          "<span class=\"highlight\">P<span class=\"pattern\">a</span>per</span> is on it.",
+          "<span class=\"highlight\">H<span class=\"pattern\">e</span></span> can help.",
+          "<span class=\"highlight\">M<span class=\"pattern\">e</span></span> too, <span class=\"highlight\">I</span> can help.",
+          "<span class=\"highlight\">Sh<span class=\"pattern\">e</span></span> can go.",
+          "I see a <span class=\"highlight\">t<span class=\"pattern\">i</span>ger</span>.",
+          "A <span class=\"highlight\">p<span class=\"pattern\">i</span>lot</span> can go.",
+          "<span class=\"highlight\">G<span class=\"pattern\">o</span></span> now to the <span class=\"highlight\">t<span class=\"pattern\">a</span>ble</span>.",
+          "<span class=\"highlight\">N<span class=\"pattern\">o</span></span>, not now, please.",
+          "This is <span class=\"highlight\">s<span class=\"pattern\">o</span></span> good.",
+          "<span class=\"highlight\">M<span class=\"pattern\">u</span>s<span class=\"pattern\">i</span>c</span> is on.",
+          "This <span class=\"highlight\"><span class=\"pattern\">u</span>n<span class=\"pattern\">i</span>t</span> is new.",
+          "<span class=\"highlight\">B<span class=\"pattern\">a</span>b<span class=\"pattern\">y</span></span> and <span class=\"highlight\">m<span class=\"pattern\">e</span></span> can play.",
+          "<span class=\"highlight\">P<span class=\"pattern\">a</span>per</span> is on the <span class=\"highlight\">t<span class=\"pattern\">a</span>ble</span>.",
+          "<span class=\"highlight\">Sh<span class=\"pattern\">e</span></span> can play.",
+          "I like <span class=\"highlight\">m<span class=\"pattern\">u</span>s<span class=\"pattern\">i</span>c</span>.",
+          "An <span class=\"highlight\"><span class=\"pattern\">a</span>corn</span> is on the <span class=\"highlight\">t<span class=\"pattern\">a</span>ble</span>."
         ],
-        exploreWords: [
-          { word: 'acorn', highlight: 'a' },
-          { word: 'baby', highlight: 'a' },
-          { word: 'apron', highlight: 'a' },
-          { word: 'table', highlight: 'a' },
-          { word: 'paper', highlight: 'a' },
-          { word: 'he', highlight: 'e' },
-          { word: 'me', highlight: 'e' },
-          { word: 'she', highlight: 'e' },
-          { word: 'be', highlight: 'e' },
-          { word: 'we', highlight: 'e' },
-          { word: 'tiger', highlight: 'i' },
-          { word: 'pilot', highlight: 'i' },
-          { word: 'silent', highlight: 'i' },
-          { word: 'giant', highlight: 'i' },
-          { word: 'item', highlight: 'i' },
-          { word: 'go', highlight: 'o' },
-          { word: 'no', highlight: 'o' },
-          { word: 'so', highlight: 'o' },
-          { word: 'total', highlight: 'o' },
-          { word: 'open', highlight: 'o' },
-          { word: 'music', highlight: 'u' },
-          { word: 'unit', highlight: 'u' },
-          { word: 'human', highlight: 'u' },
-          { word: 'humor', highlight: 'u' },
-          { word: 'pupil', highlight: 'u' },
+        "words": [
+          {
+            "word": "acorn",
+            "highlight": "a",
+            "emoji": "🌰"
+          },
+          {
+            "word": "baby",
+            "highlight": "a",
+            "emoji": "👶"
+          },
+          {
+            "word": "apron",
+            "highlight": "a",
+            "emoji": "👗"
+          },
+          {
+            "word": "table",
+            "highlight": "a",
+            "emoji": "🪑"
+          },
+          {
+            "word": "paper",
+            "highlight": "a",
+            "emoji": "📄"
+          },
+          {
+            "word": "he",
+            "highlight": "e",
+            "emoji": "👨"
+          },
+          {
+            "word": "me",
+            "highlight": "e",
+            "emoji": "👆"
+          },
+          {
+            "word": "she",
+            "highlight": "e",
+            "emoji": "👩"
+          },
+          {
+            "word": "be",
+            "highlight": "e",
+            "emoji": "✨"
+          },
+          {
+            "word": "we",
+            "highlight": "e",
+            "emoji": "👫"
+          },
+          {
+            "word": "tiger",
+            "highlight": "i",
+            "emoji": "🐅"
+          },
+          {
+            "word": "pilot",
+            "highlight": "i",
+            "emoji": "✈️"
+          },
+          {
+            "word": "silent",
+            "highlight": "i",
+            "emoji": "🤫"
+          },
+          {
+            "word": "giant",
+            "highlight": "i",
+            "emoji": "👹"
+          },
+          {
+            "word": "item",
+            "highlight": "i",
+            "emoji": "📦"
+          },
+          {
+            "word": "go",
+            "highlight": "o",
+            "emoji": "➡️"
+          },
+          {
+            "word": "no",
+            "highlight": "o",
+            "emoji": "🚫"
+          },
+          {
+            "word": "so",
+            "highlight": "o",
+            "emoji": "👍"
+          },
+          {
+            "word": "total",
+            "highlight": "o",
+            "emoji": "🔢"
+          },
+          {
+            "word": "open",
+            "highlight": "o",
+            "emoji": "📂"
+          },
+          {
+            "word": "music",
+            "highlight": "u",
+            "emoji": "🎵"
+          },
+          {
+            "word": "unit",
+            "highlight": "u",
+            "emoji": "📦"
+          },
+          {
+            "word": "human",
+            "highlight": "u",
+            "emoji": "🧑"
+          },
+          {
+            "word": "humor",
+            "highlight": "u",
+            "emoji": "😂"
+          },
+          {
+            "word": "pupil",
+            "highlight": "u",
+            "emoji": "👨‍🎓"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "acorn",
+            "highlight": "a"
+          },
+          {
+            "word": "baby",
+            "highlight": "a"
+          },
+          {
+            "word": "apron",
+            "highlight": "a"
+          },
+          {
+            "word": "table",
+            "highlight": "a"
+          },
+          {
+            "word": "paper",
+            "highlight": "a"
+          },
+          {
+            "word": "he",
+            "highlight": "e"
+          },
+          {
+            "word": "me",
+            "highlight": "e"
+          },
+          {
+            "word": "she",
+            "highlight": "e"
+          },
+          {
+            "word": "be",
+            "highlight": "e"
+          },
+          {
+            "word": "we",
+            "highlight": "e"
+          },
+          {
+            "word": "tiger",
+            "highlight": "i"
+          },
+          {
+            "word": "pilot",
+            "highlight": "i"
+          },
+          {
+            "word": "silent",
+            "highlight": "i"
+          },
+          {
+            "word": "giant",
+            "highlight": "i"
+          },
+          {
+            "word": "item",
+            "highlight": "i"
+          },
+          {
+            "word": "go",
+            "highlight": "o"
+          },
+          {
+            "word": "no",
+            "highlight": "o"
+          },
+          {
+            "word": "so",
+            "highlight": "o"
+          },
+          {
+            "word": "total",
+            "highlight": "o"
+          },
+          {
+            "word": "open",
+            "highlight": "o"
+          },
+          {
+            "word": "music",
+            "highlight": "u"
+          },
+          {
+            "word": "unit",
+            "highlight": "u"
+          },
+          {
+            "word": "human",
+            "highlight": "u"
+          },
+          {
+            "word": "humor",
+            "highlight": "u"
+          },
+          {
+            "word": "pupil",
+            "highlight": "u"
+          }
         ]
       },
       {
-        id: 'unit6',
-        name: 'Unit 6',
-        patterns: ['schwa a', 'schwa e', 'schwa i', 'schwa o', 'schwa u'],
-        examples: [
-          'A <span class="highlight">p<span class="pattern">a</span>nd<span class="pattern">a</span></span> can eat.',
-          'This book is <span class="highlight"><span class="pattern">a</span>bout</span> me.',
-          'I like <span class="highlight">b<span class="pattern">a</span>n<span class="pattern">a</span>n<span class="pattern">a</span></span>.',
-          'I see a <span class="highlight">z<span class="pattern">e</span>br<span class="pattern">a</span></span>.',
-          '<span class="highlight"><span class="pattern">A</span>go</span>, I was here.',
-          'This <span class="highlight">probl<span class="pattern">e</span>m</span> is big.',
-          'A <span class="highlight">p<span class="pattern">e</span>nc<span class="pattern">i</span>l</span> is on it.',
-          '<span class="highlight">L<span class="pattern">e</span>m<span class="pattern">o</span>n</span> is good.',
-          'I see a <span class="highlight">c<span class="pattern">i</span>rc<span class="pattern">u</span>s</span>.',
-          'I see a <span class="highlight">ch<span class="pattern">i</span>ck<span class="pattern">e</span>n</span>.',
-          'A <span class="highlight">m<span class="pattern">o</span>n<span class="pattern">e</span>y</span> can run.',
-          'A <span class="highlight">d<span class="pattern">o</span>ct<span class="pattern">o</span>r</span> can help.',
-          '<span class="highlight">C<span class="pattern">o</span>l<span class="pattern">o</span>r</span> it with a red pen.',
-          '<span class="highlight">C<span class="pattern">o</span>tt<span class="pattern">o</span>n</span> is soft.',
-          '<span class="highlight">C<span class="pattern">o</span>m<span class="pattern">e</span></span> with me.',
-          'I see a <span class="highlight">z<span class="pattern">e</span>br<span class="pattern">a</span></span> and a <span class="highlight">p<span class="pattern">a</span>nd<span class="pattern">a</span></span>.',
-          'The <span class="highlight">d<span class="pattern">o</span>ct<span class="pattern">o</span>r</span> is here.',
-          'A <span class="highlight">p<span class="pattern">e</span>nc<span class="pattern">i</span>l</span> is on <span class="highlight">p<span class="pattern">a</span>p<span class="pattern">e</span>r</span>.',
-          'I see <span class="highlight">l<span class="pattern">e</span>m<span class="pattern">o</span>n</span> and <span class="highlight">b<span class="pattern">a</span>n<span class="pattern">a</span>n<span class="pattern">a</span></span>.',
-          'The <span class="highlight">m<span class="pattern">o</span>n<span class="pattern">e</span>y</span> is <span class="highlight">h<span class="pattern">o</span>m<span class="pattern">e</span></span>.',
+        "id": "unit6",
+        "name": "Unit 6",
+        "patterns": [
+          "schwa a",
+          "schwa e",
+          "schwa i",
+          "schwa o",
+          "schwa u"
         ],
-        words: [
-          { word: 'panda', highlight: 'schwa a', emoji: '🐼' },
-          { word: 'about', highlight: 'schwa a', emoji: '🔄' },
-          { word: 'banana', highlight: 'schwa a', emoji: '🍌' },
-          { word: 'zebra', highlight: 'schwa a', emoji: '🦓' },
-          { word: 'ago', highlight: 'schwa a', emoji: '⏮️' },
-          { word: 'problem', highlight: 'schwa e', emoji: '❓' },
-          { word: 'open', highlight: 'schwa e', emoji: '📂' },
-          { word: 'happen', highlight: 'schwa e', emoji: '💫' },
-          { word: 'seven', highlight: 'schwa e', emoji: '7️⃣' },
-          { word: 'even', highlight: 'schwa e', emoji: '⚖️' },
-          { word: 'pencil', highlight: 'schwa i', emoji: '✏️' },
-          { word: 'fossil', highlight: 'schwa i', emoji: '🦴' },
-          { word: 'pupil', highlight: 'schwa i', emoji: '👨‍🎓' },
-          { word: 'stencil', highlight: 'schwa i', emoji: '✂️' },
-          { word: 'April', highlight: 'schwa i', emoji: '🌸' },
-          { word: 'lemon', highlight: 'schwa o', emoji: '🍋' },
-          { word: 'melon', highlight: 'schwa o', emoji: '🍈' },
-          { word: 'wagon', highlight: 'schwa o', emoji: '🛒' },
-          { word: 'dragon', highlight: 'schwa o', emoji: '🐉' },
-          { word: 'button', highlight: 'schwa o', emoji: '🔘' },
-          { word: 'circus', highlight: 'schwa u', emoji: '🎪' },
-          { word: 'focus', highlight: 'schwa u', emoji: '🎯' },
-          { word: 'walrus', highlight: 'schwa u', emoji: '🦭' },
-          { word: 'lettuce', highlight: 'schwa u', emoji: '🥬' },
-          { word: 'campus', highlight: 'schwa u', emoji: '🏫' },
-          { word: 'monkey', highlight: 'schwa o', emoji: '🐵' },
-          { word: 'doctor', highlight: 'schwa o', emoji: '👨‍⚕️' },
-          { word: 'color', highlight: 'schwa o', emoji: '🎨' },
-          { word: 'cotton', highlight: 'schwa o', emoji: '☁️' },
-          { word: 'come', highlight: 'schwa o', emoji: '👋' },
+        "examples": [
+          "A <span class=\"highlight\">p<span class=\"pattern\">a</span>nda</span> can nap.",
+          "We talk <span class=\"highlight\"><span class=\"pattern\">a</span>bout</span> it.",
+          "I like <span class=\"highlight\">b<span class=\"pattern\">a</span>nana</span> bread.",
+          "I see a <span class=\"highlight\">zebr<span class=\"pattern\">a</span></span>.",
+          "The <span class=\"highlight\">probl<span class=\"pattern\">e</span>m</span> is small.",
+          "Please <span class=\"highlight\">op<span class=\"pattern\">e</span>n</span> it.",
+          "It can <span class=\"highlight\">happ<span class=\"pattern\">e</span>n</span> now.",
+          "<span class=\"highlight\"><span class=\"pattern\">E</span>ven</span> Ben can help.",
+          "A <span class=\"highlight\">penc<span class=\"pattern\">i</span>l</span> is on the desk.",
+          "I see a <span class=\"highlight\">foss<span class=\"pattern\">i</span>l</span>.",
+          "A <span class=\"highlight\">pup<span class=\"pattern\">i</span>l</span> can read.",
+          "<span class=\"highlight\">Apr<span class=\"pattern\">i</span>l</span> is here.",
+          "<span class=\"highlight\">Lem<span class=\"pattern\">o</span>n</span> is good.",
+          "The <span class=\"highlight\">wag<span class=\"pattern\">o</span>n</span> is red.",
+          "The <span class=\"highlight\">d<span class=\"pattern\">o</span>ctor</span> is here.",
+          "<span class=\"highlight\">C<span class=\"pattern\">o</span>me</span> with me.",
+          "I see a <span class=\"highlight\">circ<span class=\"pattern\">u</span>s</span>.",
+          "A <span class=\"highlight\">walr<span class=\"pattern\">u</span>s</span> can swim.",
+          "The <span class=\"highlight\">camp<span class=\"pattern\">u</span>s</span> is big.",
+          "I eat <span class=\"highlight\">lett<span class=\"pattern\">u</span>ce</span>."
         ],
-        exploreWords: [
-          { word: 'panda', highlight: 'schwa a' },
-          { word: 'about', highlight: 'schwa a' },
-          { word: 'banana', highlight: 'schwa a' },
-          { word: 'zebra', highlight: 'schwa a' },
-          { word: 'ago', highlight: 'schwa a' },
-          { word: 'problem', highlight: 'schwa e' },
-          { word: 'open', highlight: 'schwa e' },
-          { word: 'happen', highlight: 'schwa e' },
-          { word: 'seven', highlight: 'schwa e' },
-          { word: 'even', highlight: 'schwa e' },
-          { word: 'pencil', highlight: 'schwa i' },
-          { word: 'fossil', highlight: 'schwa i' },
-          { word: 'pupil', highlight: 'schwa i' },
-          { word: 'stencil', highlight: 'schwa i' },
-          { word: 'April', highlight: 'schwa i' },
-          { word: 'lemon', highlight: 'schwa o' },
-          { word: 'melon', highlight: 'schwa o' },
-          { word: 'wagon', highlight: 'schwa o' },
-          { word: 'dragon', highlight: 'schwa o' },
-          { word: 'button', highlight: 'schwa o' },
-          { word: 'circus', highlight: 'schwa u' },
-          { word: 'focus', highlight: 'schwa u' },
-          { word: 'walrus', highlight: 'schwa u' },
-          { word: 'lettuce', highlight: 'schwa u' },
-          { word: 'campus', highlight: 'schwa u' },
-          { word: 'monkey', highlight: 'schwa o' },
-          { word: 'doctor', highlight: 'schwa o' },
-          { word: 'color', highlight: 'schwa o' },
-          { word: 'cotton', highlight: 'schwa o' },
-          { word: 'come', highlight: 'schwa o' },
+        "words": [
+          {
+            "word": "panda",
+            "highlight": "schwa a",
+            "emoji": "🐼"
+          },
+          {
+            "word": "about",
+            "highlight": "schwa a",
+            "emoji": "🔄"
+          },
+          {
+            "word": "banana",
+            "highlight": "schwa a",
+            "emoji": "🍌"
+          },
+          {
+            "word": "zebra",
+            "highlight": "schwa a",
+            "emoji": "🦓"
+          },
+          {
+            "word": "ago",
+            "highlight": "schwa a",
+            "emoji": "⏮️"
+          },
+          {
+            "word": "problem",
+            "highlight": "schwa e",
+            "emoji": "❓"
+          },
+          {
+            "word": "open",
+            "highlight": "schwa e",
+            "emoji": "📂"
+          },
+          {
+            "word": "happen",
+            "highlight": "schwa e",
+            "emoji": "💫"
+          },
+          {
+            "word": "seven",
+            "highlight": "schwa e",
+            "emoji": "7️⃣"
+          },
+          {
+            "word": "even",
+            "highlight": "schwa e",
+            "emoji": "⚖️"
+          },
+          {
+            "word": "pencil",
+            "highlight": "schwa i",
+            "emoji": "✏️"
+          },
+          {
+            "word": "fossil",
+            "highlight": "schwa i",
+            "emoji": "🦴"
+          },
+          {
+            "word": "pupil",
+            "highlight": "schwa i",
+            "emoji": "👨‍🎓"
+          },
+          {
+            "word": "stencil",
+            "highlight": "schwa i",
+            "emoji": "✂️"
+          },
+          {
+            "word": "April",
+            "highlight": "schwa i",
+            "emoji": "🌸"
+          },
+          {
+            "word": "lemon",
+            "highlight": "schwa o",
+            "emoji": "🍋"
+          },
+          {
+            "word": "melon",
+            "highlight": "schwa o",
+            "emoji": "🍈"
+          },
+          {
+            "word": "wagon",
+            "highlight": "schwa o",
+            "emoji": "🛒"
+          },
+          {
+            "word": "dragon",
+            "highlight": "schwa o",
+            "emoji": "🐉"
+          },
+          {
+            "word": "button",
+            "highlight": "schwa o",
+            "emoji": "🔘"
+          },
+          {
+            "word": "circus",
+            "highlight": "schwa u",
+            "emoji": "🎪"
+          },
+          {
+            "word": "focus",
+            "highlight": "schwa u",
+            "emoji": "🎯"
+          },
+          {
+            "word": "walrus",
+            "highlight": "schwa u",
+            "emoji": "🦭"
+          },
+          {
+            "word": "lettuce",
+            "highlight": "schwa u",
+            "emoji": "🥬"
+          },
+          {
+            "word": "campus",
+            "highlight": "schwa u",
+            "emoji": "🏫"
+          },
+          {
+            "word": "monkey",
+            "highlight": "schwa o",
+            "emoji": "🐵"
+          },
+          {
+            "word": "doctor",
+            "highlight": "schwa o",
+            "emoji": "👨‍⚕️"
+          },
+          {
+            "word": "color",
+            "highlight": "schwa o",
+            "emoji": "🎨"
+          },
+          {
+            "word": "cotton",
+            "highlight": "schwa o",
+            "emoji": "☁️"
+          },
+          {
+            "word": "come",
+            "highlight": "schwa o",
+            "emoji": "👋"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "panda",
+            "highlight": "schwa a"
+          },
+          {
+            "word": "about",
+            "highlight": "schwa a"
+          },
+          {
+            "word": "banana",
+            "highlight": "schwa a"
+          },
+          {
+            "word": "zebra",
+            "highlight": "schwa a"
+          },
+          {
+            "word": "ago",
+            "highlight": "schwa a"
+          },
+          {
+            "word": "problem",
+            "highlight": "schwa e"
+          },
+          {
+            "word": "open",
+            "highlight": "schwa e"
+          },
+          {
+            "word": "happen",
+            "highlight": "schwa e"
+          },
+          {
+            "word": "seven",
+            "highlight": "schwa e"
+          },
+          {
+            "word": "even",
+            "highlight": "schwa e"
+          },
+          {
+            "word": "pencil",
+            "highlight": "schwa i"
+          },
+          {
+            "word": "fossil",
+            "highlight": "schwa i"
+          },
+          {
+            "word": "pupil",
+            "highlight": "schwa i"
+          },
+          {
+            "word": "stencil",
+            "highlight": "schwa i"
+          },
+          {
+            "word": "April",
+            "highlight": "schwa i"
+          },
+          {
+            "word": "lemon",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "melon",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "wagon",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "dragon",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "button",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "circus",
+            "highlight": "schwa u"
+          },
+          {
+            "word": "focus",
+            "highlight": "schwa u"
+          },
+          {
+            "word": "walrus",
+            "highlight": "schwa u"
+          },
+          {
+            "word": "lettuce",
+            "highlight": "schwa u"
+          },
+          {
+            "word": "campus",
+            "highlight": "schwa u"
+          },
+          {
+            "word": "monkey",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "doctor",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "color",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "cotton",
+            "highlight": "schwa o"
+          },
+          {
+            "word": "come",
+            "highlight": "schwa o"
+          }
         ]
       },
       {
-        id: 'unit7',
-        name: 'Unit 7',
-        patterns: ['kn', 'wr', 'mb', 'e', 'rh', 'st'],
-        examples: [
-          'My <span class="highlight"><span class="pattern">kn</span>ee</span> is OK.',
-          'A <span class="highlight"><span class="pattern">kn</span>ife</span> is here.',
-          '<span class="highlight"><span class="pattern">Kn</span>ock</span>, <span class="highlight"><span class="pattern">kn</span>ock</span>.',
-          'I can <span class="highlight"><span class="pattern">wr</span>ite</span>.',
-          'That is <span class="highlight"><span class="pattern">wr</span>ong</span>, Ben.',
-          'I see a <span class="highlight">la<span class="pattern">mb</span></span>.',
-          'A <span class="highlight">co<span class="pattern">mb</span></span> is on it.',
-          'My <span class="highlight">thu<span class="pattern">mb</span></span> is up.',
-          'My <span class="highlight">nam<span class="pattern">e</span></span> is Sam.',
-          'I like <span class="highlight">cak<span class="pattern">e</span></span>.',
-          'I see a <span class="highlight"><span class="pattern">rh</span>ino</span>.',
-          'I see a <span class="highlight">gho<span class="pattern">st</span></span>.',
-          '<span class="highlight">Li<span class="pattern">st</span>en</span> to me now, please.',
-          'A <span class="highlight">ca<span class="pattern">st</span>le</span> is big.',
-          '<span class="highlight">Fa<span class="pattern">st</span>en</span> it on your belt.',
-          '<span class="highlight"><span class="pattern">Kn</span>ock</span> at the <span class="highlight">ca<span class="pattern">st</span>le</span>.',
-          '<span class="highlight"><span class="pattern">Wr</span>ite</span> my <span class="highlight">nam<span class="pattern">e</span></span>.',
-          'A <span class="highlight">gho<span class="pattern">st</span></span> is here.',
-          '<span class="highlight">Cak<span class="pattern">e</span></span> is on my plate.',
-          'My <span class="highlight">thu<span class="pattern">mb</span></span> is on my <span class="highlight"><span class="pattern">kn</span>ee</span>.',
+        "id": "unit7",
+        "name": "Unit 7",
+        "patterns": [
+          "kn",
+          "wr",
+          "mb",
+          "e",
+          "rh",
+          "st"
         ],
-        words: [
-          { word: 'knee', highlight: 'kn', emoji: '🦵' },
-          { word: 'knife', highlight: 'kn', emoji: '🔪' },
-          { word: 'knock', highlight: 'kn', emoji: '🚪' },
-          { word: 'know', highlight: 'kn', emoji: '🧠' },
-          { word: 'knot', highlight: 'kn', emoji: '🪢' },
-          { word: 'write', highlight: 'wr', emoji: '✍️' },
-          { word: 'wrong', highlight: 'wr', emoji: '❌' },
-          { word: 'wrap', highlight: 'wr', emoji: '🎁' },
-          { word: 'wrist', highlight: 'wr', emoji: '⌚' },
-          { word: 'wreck', highlight: 'wr', emoji: '💥' },
-          { word: 'lamb', highlight: 'mb', emoji: '🐑' },
-          { word: 'comb', highlight: 'mb', emoji: '💇' },
-          { word: 'thumb', highlight: 'mb', emoji: '👍' },
-          { word: 'climb', highlight: 'mb', emoji: '🧗' },
-          { word: 'bomb', highlight: 'mb', emoji: '💣' },
-          { word: 'name', highlight: 'e', emoji: '📝' },
-          { word: 'cake', highlight: 'e', emoji: '🍰' },
-          { word: 'come', highlight: 'e', emoji: '👋' },
-          { word: 'phone', highlight: 'e', emoji: '📱' },
-          { word: 'have', highlight: 'e', emoji: '🤲' },
-          { word: 'rhino', highlight: 'rh', emoji: '🦏' },
-          { word: 'rhythm', highlight: 'rh', emoji: '🎵' },
-          { word: 'rhyme', highlight: 'rh', emoji: '📝' },
-          { word: 'rhubarb', highlight: 'rh', emoji: '🌿' },
-          { word: 'ghost', highlight: 'st', emoji: '👻' },
-          { word: 'listen', highlight: 'st', emoji: '👂' },
-          { word: 'castle', highlight: 'st', emoji: '🏰' },
-          { word: 'fasten', highlight: 'st', emoji: '🔒' },
-          { word: 'whistle', highlight: 'st', emoji: '🎶' },
+        "examples": [
+          "My <span class=\"highlight\"><span class=\"pattern\">kn</span>ee</span> is OK.",
+          "A <span class=\"highlight\"><span class=\"pattern\">kn</span>ife</span> is here.",
+          "<span class=\"highlight\"><span class=\"pattern\">Kn</span>ock</span>, <span class=\"highlight\"><span class=\"pattern\">kn</span>ock</span>.",
+          "I can <span class=\"highlight\"><span class=\"pattern\">wr</span>ite</span>.",
+          "That is <span class=\"highlight\"><span class=\"pattern\">wr</span>ong</span>, Ben.",
+          "I see a <span class=\"highlight\">la<span class=\"pattern\">mb</span></span>.",
+          "A <span class=\"highlight\">co<span class=\"pattern\">mb</span></span> is on it.",
+          "My <span class=\"highlight\">thu<span class=\"pattern\">mb</span></span> is up.",
+          "My <span class=\"highlight\">nam<span class=\"pattern\">e</span></span> is Sam.",
+          "I like <span class=\"highlight\">cak<span class=\"pattern\">e</span></span>.",
+          "I see a <span class=\"highlight\"><span class=\"pattern\">rh</span>ino</span>.",
+          "I see a <span class=\"highlight\">gho<span class=\"pattern\">st</span></span>.",
+          "<span class=\"highlight\">Li<span class=\"pattern\">st</span>en</span> to me now, please.",
+          "A <span class=\"highlight\">ca<span class=\"pattern\">st</span>le</span> is big.",
+          "<span class=\"highlight\">Fa<span class=\"pattern\">st</span>en</span> it on your belt.",
+          "<span class=\"highlight\"><span class=\"pattern\">Kn</span>ock</span> at the <span class=\"highlight\">ca<span class=\"pattern\">st</span>le</span>.",
+          "<span class=\"highlight\"><span class=\"pattern\">Wr</span>ite</span> my <span class=\"highlight\">nam<span class=\"pattern\">e</span></span>.",
+          "A <span class=\"highlight\">gho<span class=\"pattern\">st</span></span> is here.",
+          "<span class=\"highlight\">Cak<span class=\"pattern\">e</span></span> is on my plate.",
+          "My <span class=\"highlight\">thu<span class=\"pattern\">mb</span></span> is on my <span class=\"highlight\"><span class=\"pattern\">kn</span>ee</span>."
         ],
-        exploreWords: [
-          { word: 'knee', highlight: 'kn' },
-          { word: 'knife', highlight: 'kn' },
-          { word: 'knock', highlight: 'kn' },
-          { word: 'know', highlight: 'kn' },
-          { word: 'knot', highlight: 'kn' },
-          { word: 'write', highlight: 'wr' },
-          { word: 'wrong', highlight: 'wr' },
-          { word: 'wrap', highlight: 'wr' },
-          { word: 'wrist', highlight: 'wr' },
-          { word: 'wreck', highlight: 'wr' },
-          { word: 'lamb', highlight: 'mb' },
-          { word: 'comb', highlight: 'mb' },
-          { word: 'thumb', highlight: 'mb' },
-          { word: 'climb', highlight: 'mb' },
-          { word: 'bomb', highlight: 'mb' },
-          { word: 'name', highlight: 'e' },
-          { word: 'cake', highlight: 'e' },
-          { word: 'come', highlight: 'e' },
-          { word: 'phone', highlight: 'e' },
-          { word: 'have', highlight: 'e' },
-          { word: 'rhino', highlight: 'rh' },
-          { word: 'rhythm', highlight: 'rh' },
-          { word: 'rhyme', highlight: 'rh' },
-          { word: 'rhubarb', highlight: 'rh' },
-          { word: 'ghost', highlight: 'st' },
-          { word: 'listen', highlight: 'st' },
-          { word: 'castle', highlight: 'st' },
-          { word: 'fasten', highlight: 'st' },
-          { word: 'whistle', highlight: 'st' },
+        "words": [
+          {
+            "word": "knee",
+            "highlight": "kn",
+            "emoji": "🦵"
+          },
+          {
+            "word": "knife",
+            "highlight": "kn",
+            "emoji": "🔪"
+          },
+          {
+            "word": "knock",
+            "highlight": "kn",
+            "emoji": "🚪"
+          },
+          {
+            "word": "know",
+            "highlight": "kn",
+            "emoji": "🧠"
+          },
+          {
+            "word": "knot",
+            "highlight": "kn",
+            "emoji": "🪢"
+          },
+          {
+            "word": "write",
+            "highlight": "wr",
+            "emoji": "✍️"
+          },
+          {
+            "word": "wrong",
+            "highlight": "wr",
+            "emoji": "❌"
+          },
+          {
+            "word": "wrap",
+            "highlight": "wr",
+            "emoji": "🎁"
+          },
+          {
+            "word": "wrist",
+            "highlight": "wr",
+            "emoji": "⌚"
+          },
+          {
+            "word": "wreck",
+            "highlight": "wr",
+            "emoji": "💥"
+          },
+          {
+            "word": "lamb",
+            "highlight": "mb",
+            "emoji": "🐑"
+          },
+          {
+            "word": "comb",
+            "highlight": "mb",
+            "emoji": "💇"
+          },
+          {
+            "word": "thumb",
+            "highlight": "mb",
+            "emoji": "👍"
+          },
+          {
+            "word": "climb",
+            "highlight": "mb",
+            "emoji": "🧗"
+          },
+          {
+            "word": "bomb",
+            "highlight": "mb",
+            "emoji": "💣"
+          },
+          {
+            "word": "name",
+            "highlight": "e",
+            "emoji": "📝"
+          },
+          {
+            "word": "cake",
+            "highlight": "e",
+            "emoji": "🍰"
+          },
+          {
+            "word": "come",
+            "highlight": "e",
+            "emoji": "👋"
+          },
+          {
+            "word": "phone",
+            "highlight": "e",
+            "emoji": "📱"
+          },
+          {
+            "word": "have",
+            "highlight": "e",
+            "emoji": "🤲"
+          },
+          {
+            "word": "rhino",
+            "highlight": "rh",
+            "emoji": "🦏"
+          },
+          {
+            "word": "rhythm",
+            "highlight": "rh",
+            "emoji": "🎵"
+          },
+          {
+            "word": "rhyme",
+            "highlight": "rh",
+            "emoji": "📝"
+          },
+          {
+            "word": "rhubarb",
+            "highlight": "rh",
+            "emoji": "🌿"
+          },
+          {
+            "word": "ghost",
+            "highlight": "st",
+            "emoji": "👻"
+          },
+          {
+            "word": "listen",
+            "highlight": "st",
+            "emoji": "👂"
+          },
+          {
+            "word": "castle",
+            "highlight": "st",
+            "emoji": "🏰"
+          },
+          {
+            "word": "fasten",
+            "highlight": "st",
+            "emoji": "🔒"
+          },
+          {
+            "word": "whistle",
+            "highlight": "st",
+            "emoji": "🎶"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "knee",
+            "highlight": "kn"
+          },
+          {
+            "word": "knife",
+            "highlight": "kn"
+          },
+          {
+            "word": "knock",
+            "highlight": "kn"
+          },
+          {
+            "word": "know",
+            "highlight": "kn"
+          },
+          {
+            "word": "knot",
+            "highlight": "kn"
+          },
+          {
+            "word": "write",
+            "highlight": "wr"
+          },
+          {
+            "word": "wrong",
+            "highlight": "wr"
+          },
+          {
+            "word": "wrap",
+            "highlight": "wr"
+          },
+          {
+            "word": "wrist",
+            "highlight": "wr"
+          },
+          {
+            "word": "wreck",
+            "highlight": "wr"
+          },
+          {
+            "word": "lamb",
+            "highlight": "mb"
+          },
+          {
+            "word": "comb",
+            "highlight": "mb"
+          },
+          {
+            "word": "thumb",
+            "highlight": "mb"
+          },
+          {
+            "word": "climb",
+            "highlight": "mb"
+          },
+          {
+            "word": "bomb",
+            "highlight": "mb"
+          },
+          {
+            "word": "name",
+            "highlight": "e"
+          },
+          {
+            "word": "cake",
+            "highlight": "e"
+          },
+          {
+            "word": "come",
+            "highlight": "e"
+          },
+          {
+            "word": "phone",
+            "highlight": "e"
+          },
+          {
+            "word": "have",
+            "highlight": "e"
+          },
+          {
+            "word": "rhino",
+            "highlight": "rh"
+          },
+          {
+            "word": "rhythm",
+            "highlight": "rh"
+          },
+          {
+            "word": "rhyme",
+            "highlight": "rh"
+          },
+          {
+            "word": "rhubarb",
+            "highlight": "rh"
+          },
+          {
+            "word": "ghost",
+            "highlight": "st"
+          },
+          {
+            "word": "listen",
+            "highlight": "st"
+          },
+          {
+            "word": "castle",
+            "highlight": "st"
+          },
+          {
+            "word": "fasten",
+            "highlight": "st"
+          },
+          {
+            "word": "whistle",
+            "highlight": "st"
+          }
         ]
       },
       {
-        id: 'unit8',
-        name: 'Unit 8',
-        patterns: ['ture', 'sure', 'tion', 'sion', 'ous', 'ful'],
-        examples: [
-          'I see a <span class="highlight">pic<span class="pattern">ture</span></span>.',
-          '<span class="highlight">Na<span class="pattern">ture</span></span> is nice.',
-          'I am <span class="highlight"><span class="pattern">sure</span></span>.',
-          '<span class="highlight">Mea<span class="pattern">sure</span></span> it with a ruler.',
-          '<span class="highlight">Trea<span class="pattern">sure</span></span> is here.',
-          '<span class="highlight">Ac<span class="pattern">tion</span></span> now, we can start.',
-          'The <span class="highlight">sta<span class="pattern">tion</span></span> is big.',
-          '<span class="highlight">Mo<span class="pattern">tion</span></span> now, then stop.',
-          '<span class="highlight">Vi<span class="pattern">sion</span></span> is good.',
-          'Our <span class="highlight">mis<span class="pattern">sion</span></span> is big.',
-          'She is <span class="highlight">fam<span class="pattern">ous</span></span>.',
-          'I feel <span class="highlight">nerv<span class="pattern">ous</span></span>.',
-          'You are <span class="highlight">help<span class="pattern">ful</span></span>.',
-          'I am <span class="highlight">thank<span class="pattern">ful</span></span>.',
-          'This is <span class="highlight">use<span class="pattern">ful</span></span>.',
-          'This <span class="highlight">pic<span class="pattern">ture</span></span> shows a <span class="highlight">mea<span class="pattern">sure</span></span>.',
-          '<span class="highlight">Mis<span class="pattern">sion</span></span> at the <span class="highlight">sta<span class="pattern">tion</span></span>.',
-          'I am <span class="highlight"><span class="pattern">sure</span></span>.',
-          '<span class="highlight">Na<span class="pattern">ture</span></span> is <span class="highlight">help<span class="pattern">ful</span></span>.',
-          '<span class="highlight">Ac<span class="pattern">tion</span></span> at the <span class="highlight">sta<span class="pattern">tion</span></span>.',
+        "id": "unit8",
+        "name": "Unit 8",
+        "patterns": [
+          "ture",
+          "sure",
+          "tion",
+          "sion",
+          "ous",
+          "ful"
         ],
-        words: [
-          { word: 'picture', highlight: 'ture', emoji: '🖼️' },
-          { word: 'nature', highlight: 'ture', emoji: '🌿' },
-          { word: 'future', highlight: 'ture', emoji: '🔮' },
-          { word: 'capture', highlight: 'ture', emoji: '📸' },
-          { word: 'creature', highlight: 'ture', emoji: '🐾' },
-          { word: 'sure', highlight: 'sure', emoji: '✅' },
-          { word: 'measure', highlight: 'sure', emoji: '📏' },
-          { word: 'treasure', highlight: 'sure', emoji: '💰' },
-          { word: 'pleasure', highlight: 'sure', emoji: '😊' },
-          { word: 'leisure', highlight: 'sure', emoji: '🏖️' },
-          { word: 'action', highlight: 'tion', emoji: '🎬' },
-          { word: 'station', highlight: 'tion', emoji: '🚉' },
-          { word: 'motion', highlight: 'tion', emoji: '🏃' },
-          { word: 'nation', highlight: 'tion', emoji: '🏳️' },
-          { word: 'vacation', highlight: 'tion', emoji: '🏝️' },
-          { word: 'vision', highlight: 'sion', emoji: '👁️' },
-          { word: 'mission', highlight: 'sion', emoji: '🎯' },
-          { word: 'fusion', highlight: 'sion', emoji: '⚡' },
-          { word: 'tension', highlight: 'sion', emoji: '😬' },
-          { word: 'session', highlight: 'sion', emoji: '📋' },
-          { word: 'famous', highlight: 'ous', emoji: '⭐' },
-          { word: 'nervous', highlight: 'ous', emoji: '😰' },
-          { word: 'curious', highlight: 'ous', emoji: '🤔' },
-          { word: 'dangerous', highlight: 'ous', emoji: '⚠️' },
-          { word: 'joyous', highlight: 'ous', emoji: '🎉' },
-          { word: 'helpful', highlight: 'ful', emoji: '🤝' },
-          { word: 'thankful', highlight: 'ful', emoji: '🙏' },
-          { word: 'useful', highlight: 'ful', emoji: '🔧' },
-          { word: 'beautiful', highlight: 'ful', emoji: '🌸' },
-          { word: 'careful', highlight: 'ful', emoji: '⚠️' },
+        "examples": [
+          "I see a <span class=\"highlight\">pic<span class=\"pattern\">ture</span></span>.",
+          "<span class=\"highlight\">Na<span class=\"pattern\">ture</span></span> is nice.",
+          "I am <span class=\"highlight\"><span class=\"pattern\">sure</span></span>.",
+          "<span class=\"highlight\">Mea<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">sure</span></span></span></span> it with a ruler.",
+          "<span class=\"highlight\">Trea<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">sure</span></span></span></span> is here.",
+          "Take <span class=\"highlight\">ac<span class=\"pattern\">tion</span></span> now.",
+          "The <span class=\"highlight\">sta<span class=\"pattern\">tion</span></span> is big.",
+          "Stop the <span class=\"highlight\">mo<span class=\"pattern\">tion</span></span> now.",
+          "<span class=\"highlight\">Vi<span class=\"pattern\">sion</span></span> is good.",
+          "Our <span class=\"highlight\">mis<span class=\"pattern\">sion</span></span> is big.",
+          "She is <span class=\"highlight\">fam<span class=\"pattern\">ous</span></span>.",
+          "I feel <span class=\"highlight\">nerv<span class=\"pattern\">ous</span></span>.",
+          "You are <span class=\"highlight\">help<span class=\"pattern\">ful</span></span>.",
+          "I am <span class=\"highlight\">thank<span class=\"pattern\">ful</span></span>.",
+          "This is <span class=\"highlight\">use<span class=\"pattern\">ful</span></span>.",
+          "This <span class=\"highlight\">pic<span class=\"pattern\">ture</span></span> shows a <span class=\"highlight\">mea<span class=\"pattern\"><span class=\"highlight\"><span class=\"pattern\">sure</span></span></span></span>.",
+          "The <span class=\"highlight\">mis<span class=\"pattern\">sion</span></span> is at the <span class=\"highlight\">sta<span class=\"pattern\">tion</span></span>.",
+          "I am <span class=\"highlight\"><span class=\"pattern\">sure</span></span>.",
+          "<span class=\"highlight\">Na<span class=\"pattern\">ture</span></span> is <span class=\"highlight\">help<span class=\"pattern\">ful</span></span>.",
+          "<span class=\"highlight\">Ac<span class=\"pattern\">tion</span></span> starts at the <span class=\"highlight\">sta<span class=\"pattern\">tion</span></span>."
         ],
-        exploreWords: [
-          { word: 'picture', highlight: 'ture' },
-          { word: 'nature', highlight: 'ture' },
-          { word: 'future', highlight: 'ture' },
-          { word: 'capture', highlight: 'ture' },
-          { word: 'creature', highlight: 'ture' },
-          { word: 'sure', highlight: 'sure' },
-          { word: 'measure', highlight: 'sure' },
-          { word: 'treasure', highlight: 'sure' },
-          { word: 'pleasure', highlight: 'sure' },
-          { word: 'leisure', highlight: 'sure' },
-          { word: 'action', highlight: 'tion' },
-          { word: 'station', highlight: 'tion' },
-          { word: 'motion', highlight: 'tion' },
-          { word: 'nation', highlight: 'tion' },
-          { word: 'vacation', highlight: 'tion' },
-          { word: 'vision', highlight: 'sion' },
-          { word: 'mission', highlight: 'sion' },
-          { word: 'fusion', highlight: 'sion' },
-          { word: 'tension', highlight: 'sion' },
-          { word: 'session', highlight: 'sion' },
-          { word: 'famous', highlight: 'ous' },
-          { word: 'nervous', highlight: 'ous' },
-          { word: 'curious', highlight: 'ous' },
-          { word: 'dangerous', highlight: 'ous' },
-          { word: 'joyous', highlight: 'ous' },
-          { word: 'helpful', highlight: 'ful' },
-          { word: 'thankful', highlight: 'ful' },
-          { word: 'useful', highlight: 'ful' },
-          { word: 'beautiful', highlight: 'ful' },
-          { word: 'careful', highlight: 'ful' },
+        "words": [
+          {
+            "word": "picture",
+            "highlight": "ture",
+            "emoji": "🖼️"
+          },
+          {
+            "word": "nature",
+            "highlight": "ture",
+            "emoji": "🌿"
+          },
+          {
+            "word": "future",
+            "highlight": "ture",
+            "emoji": "🔮"
+          },
+          {
+            "word": "capture",
+            "highlight": "ture",
+            "emoji": "📸"
+          },
+          {
+            "word": "creature",
+            "highlight": "ture",
+            "emoji": "🐾"
+          },
+          {
+            "word": "sure",
+            "highlight": "sure",
+            "emoji": "✅"
+          },
+          {
+            "word": "measure",
+            "highlight": "sure",
+            "emoji": "📏"
+          },
+          {
+            "word": "treasure",
+            "highlight": "sure",
+            "emoji": "💰"
+          },
+          {
+            "word": "pleasure",
+            "highlight": "sure",
+            "emoji": "😊"
+          },
+          {
+            "word": "leisure",
+            "highlight": "sure",
+            "emoji": "🏖️"
+          },
+          {
+            "word": "action",
+            "highlight": "tion",
+            "emoji": "🎬"
+          },
+          {
+            "word": "station",
+            "highlight": "tion",
+            "emoji": "🚉"
+          },
+          {
+            "word": "motion",
+            "highlight": "tion",
+            "emoji": "🏃"
+          },
+          {
+            "word": "nation",
+            "highlight": "tion",
+            "emoji": "🏳️"
+          },
+          {
+            "word": "vacation",
+            "highlight": "tion",
+            "emoji": "🏝️"
+          },
+          {
+            "word": "vision",
+            "highlight": "sion",
+            "emoji": "👁️"
+          },
+          {
+            "word": "mission",
+            "highlight": "sion",
+            "emoji": "🎯"
+          },
+          {
+            "word": "fusion",
+            "highlight": "sion",
+            "emoji": "⚡"
+          },
+          {
+            "word": "tension",
+            "highlight": "sion",
+            "emoji": "😬"
+          },
+          {
+            "word": "session",
+            "highlight": "sion",
+            "emoji": "📋"
+          },
+          {
+            "word": "famous",
+            "highlight": "ous",
+            "emoji": "⭐"
+          },
+          {
+            "word": "nervous",
+            "highlight": "ous",
+            "emoji": "😰"
+          },
+          {
+            "word": "curious",
+            "highlight": "ous",
+            "emoji": "🤔"
+          },
+          {
+            "word": "dangerous",
+            "highlight": "ous",
+            "emoji": "⚠️"
+          },
+          {
+            "word": "joyous",
+            "highlight": "ous",
+            "emoji": "🎉"
+          },
+          {
+            "word": "helpful",
+            "highlight": "ful",
+            "emoji": "🤝"
+          },
+          {
+            "word": "thankful",
+            "highlight": "ful",
+            "emoji": "🙏"
+          },
+          {
+            "word": "useful",
+            "highlight": "ful",
+            "emoji": "🔧"
+          },
+          {
+            "word": "beautiful",
+            "highlight": "ful",
+            "emoji": "🌸"
+          },
+          {
+            "word": "careful",
+            "highlight": "ful",
+            "emoji": "⚠️"
+          }
+        ],
+        "exploreWords": [
+          {
+            "word": "picture",
+            "highlight": "ture"
+          },
+          {
+            "word": "nature",
+            "highlight": "ture"
+          },
+          {
+            "word": "future",
+            "highlight": "ture"
+          },
+          {
+            "word": "capture",
+            "highlight": "ture"
+          },
+          {
+            "word": "creature",
+            "highlight": "ture"
+          },
+          {
+            "word": "sure",
+            "highlight": "sure"
+          },
+          {
+            "word": "measure",
+            "highlight": "sure"
+          },
+          {
+            "word": "treasure",
+            "highlight": "sure"
+          },
+          {
+            "word": "pleasure",
+            "highlight": "sure"
+          },
+          {
+            "word": "leisure",
+            "highlight": "sure"
+          },
+          {
+            "word": "action",
+            "highlight": "tion"
+          },
+          {
+            "word": "station",
+            "highlight": "tion"
+          },
+          {
+            "word": "motion",
+            "highlight": "tion"
+          },
+          {
+            "word": "nation",
+            "highlight": "tion"
+          },
+          {
+            "word": "vacation",
+            "highlight": "tion"
+          },
+          {
+            "word": "vision",
+            "highlight": "sion"
+          },
+          {
+            "word": "mission",
+            "highlight": "sion"
+          },
+          {
+            "word": "fusion",
+            "highlight": "sion"
+          },
+          {
+            "word": "tension",
+            "highlight": "sion"
+          },
+          {
+            "word": "session",
+            "highlight": "sion"
+          },
+          {
+            "word": "famous",
+            "highlight": "ous"
+          },
+          {
+            "word": "nervous",
+            "highlight": "ous"
+          },
+          {
+            "word": "curious",
+            "highlight": "ous"
+          },
+          {
+            "word": "dangerous",
+            "highlight": "ous"
+          },
+          {
+            "word": "joyous",
+            "highlight": "ous"
+          },
+          {
+            "word": "helpful",
+            "highlight": "ful"
+          },
+          {
+            "word": "thankful",
+            "highlight": "ful"
+          },
+          {
+            "word": "useful",
+            "highlight": "ful"
+          },
+          {
+            "word": "beautiful",
+            "highlight": "ful"
+          },
+          {
+            "word": "careful",
+            "highlight": "ful"
+          }
         ]
       }
     ]

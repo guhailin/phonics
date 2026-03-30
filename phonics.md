@@ -5,7 +5,6 @@ Unit 1: A, B, C
 单词列表：
 Aa: apple, ant, alligator, axe, arrow
 
-
 Bb: bear, bird, bed, boy, banana
 
 Cc: cat, cup, car, cap, cake
@@ -13,7 +12,6 @@ Cc: cat, cup, car, cap, cake
 Unit 2: D, E, F
 单词列表：
 Dd: dog, duck, doll, dad, desk
-
 
 Ee: egg, elbow, elephant, envelope, exit
 
@@ -23,7 +21,6 @@ Unit 3: G, H, I
 单词列表：
 Gg: goat, girl, gift, gorilla, gum
 
-
 Hh: hat, horse, house, hippopotamus, hand
 
 Ii: igloo, iguana, ink, insect, in
@@ -31,7 +28,6 @@ Ii: igloo, iguana, ink, insect, in
 Unit 4: J, K, L
 单词列表：
 Jj: jam, jet, jelly, jacket, jump
-
 
 Kk: king, kite, kangaroo, key, koala
 
@@ -41,7 +37,6 @@ Unit 5: M, N, O
 单词列表：
 Mm: monkey, moon, mouse, map, milk
 
-
 Nn: nose, nest, net, nut, nine
 
 Oo: octopus, ostrich, ox, olive, on
@@ -50,7 +45,6 @@ Unit 6: P, Q, R
 单词列表：
 Pp: pig, pen, panda, pear, piano
 
-
 Qq: queen, quiet, question, quilt, quack
 
 Rr: rabbit, red, ring, rocket, rug
@@ -58,7 +52,6 @@ Rr: rabbit, red, ring, rocket, rug
 Unit 7: S, T, U, V
 单词列表：
 Ss: sun, snake, seal, soap, sock
-
 
 Tt: tiger, ten, tent, turtle, top
 
@@ -70,13 +63,11 @@ Unit 8: W, X, Y, Z
 单词列表：
 Ww: watch, window, water, whale, wolf
 
-
 Xx: box, fox, six, axe, ox (注：X 常出现在词尾)
 
 Yy: yo-yo, yak, yellow, yacht, yard
 
 Zz: zebra, zero, zoo, zipper, zigzag
-
 
 Level 2: Short Vowels (短元音)
 目标： 掌握"辅音+元音+辅音"的拼读（CVC Words）。
@@ -166,7 +157,7 @@ ed: bed, red, fed, led, wed
 10. Set the pen here.
 11. I get a pen.
 12. Ten kids sit.
-13. Red bed? No.
+13. The bed is red.
 14. That is a red hen.
 15. An egg is in a net.
 16. That is a wet web.
@@ -186,10 +177,10 @@ ib: rib, bib, fib, nib, crib
 id: kid, lid, did, hid, rid
 
 20条例句：
-1. My hip is OK.
-2. Ink is on me.
+1. My hip is fine.
+2. I see ink on it.
 3. A kid can sit.
-4. A pig is big.
+4. A pig can dig.
 5. I see a fin.
 6. My lip is wet.
 7. Sip it now, please.
@@ -197,15 +188,15 @@ id: kid, lid, did, hid, rid
 9. Dip the chip.
 10. I rip the tag.
 11. I see a rib.
-12. My bib is big.
-13. The lid is on.
-14. He did it.
-15. The kid can hop.
-16. Ink on the lid.
-17. Sip, then sit.
-18. Tip the lid.
-19. A pig can dig.
-20. The bib is clean.
+12. The bib is big.
+13. The nib is red.
+14. The crib is here.
+15. That fib is bad.
+16. The lid is on.
+17. The kid hid it.
+18. He did it.
+19. The lid is red.
+20. I hid the lid.
 
 Unit 5: Short i
 单词列表：
@@ -216,7 +207,6 @@ ig: fig, wig, pig, dig, big
 it: pit, hit, sit, bit, kit
 
 ix: fix, six, mix, nix
-
 
 20条例句：
 1. Pin it on.
@@ -248,7 +238,6 @@ ot: cot, pot, hot, dot, lot
 
 op: pop, hop, top, mop, cop
 
-
 20条例句：
 1. I see a fox.
 2. I see a log.
@@ -256,20 +245,20 @@ op: pop, hop, top, mop, cop
 4. The pot is hot.
 5. The top is on.
 6. I sit on a cot.
-7. The pot is hot now.
+7. The hot pot is on top.
 8. Dot the top.
-9. A lot of dots.
+9. The dog is on a log.
 10. Pop it on top.
 11. Hop to the top.
-12. Mop the pot? No.
+12. Mop the top now.
 13. A cop can hop.
-14. The pot is hot.
+14. The fox can hop.
 15. The dog is on top.
 16. The fox is on a log.
-17. Dot, then stop.
+17. Dot the pot, then stop.
 18. Mop it up now, please.
 19. Pop the top off now.
-20. A dog can jog.
+20. A dot is on the pot.
 
 Unit 7: Short u
 单词列表：
@@ -280,7 +269,6 @@ ug: rug, mug, bug, hug, tug
 ud: mud, bud, cud, dud, thud
 
 up: pup, cup, up, sup
-
 
 20条例句：
 1. The sun is up.
@@ -314,7 +302,6 @@ um: hum, sum, gum, drum, plum
 
 un: fun, bun, run, sun, gun
 
-
 20条例句：
 1. Cut it, then shut it.
 2. A hut is up.
@@ -337,7 +324,6 @@ un: fun, bun, run, sun, gun
 19. Cut, then shut.
 20. Fun in the sun.
 
-
 Level 3: Long Vowels (长元音)
 目标： 掌握"Magic E"和常见的长元音组合。
 
@@ -352,7 +338,6 @@ ake: cake, lake, make, take, bake
 ate: gate, late, date, mate, rate
 
 ave: save, wave, cave, gave, brave
-
 
 20条例句：
 1. I tape a note.
@@ -388,7 +373,6 @@ ive: five, live, dive, hive, drive
 
 ine: fine, nine, line, mine, pine
 
-
 20条例句：
 1. I see a kite.
 2. I see a pine.
@@ -419,7 +403,6 @@ u_e: cute, cube, mule, rule, tube
 
 u_e: tune, June, use, fuse, rude
 
-
 20条例句：
 1. I go home.
 2. I see a bone.
@@ -447,7 +430,6 @@ Unit 4: Long a
 ai: wait, tail, rain, pain, mail
 
 ay: day, bay, say, play, may
-
 
 20条例句：
 1. Wait for me.
@@ -479,7 +461,6 @@ ea: leaf, sea, meat, team, read
 
 y ey: baby, happy, sunny, key, money
 
-
 20条例句：
 1. I see a bee.
 2. A jeep is here.
@@ -510,7 +491,6 @@ ie: lie, tie, pie, die, vie
 
 y: spy, sky, cry, fly, my
 
-
 20条例句：
 1. Turn on the light.
 2. It is night.
@@ -538,7 +518,6 @@ Unit 7: Long o
 oa: road, coat, boat, goat, soap
 
 ow: row, snow, grow, slow, yellow
-
 
 20条例句：
 1. I see the road.
@@ -572,7 +551,6 @@ ew: new, few, chew, stew, grew
 
 oo: food, boot, moon, spoon, room
 
-
 20条例句：
 1. Blue is my color.
 2. A clue is here.
@@ -595,7 +573,6 @@ oo: food, boot, moon, spoon, room
 19. Chew food with your teeth.
 20. The moon is in my room.
 
-
 Level 4: Consonant Blends (辅音连读)
 目标： 掌握两个或多个辅音在一起的发音。
 
@@ -613,7 +590,6 @@ fl: flag, flap, flip, flock, flood
 
 gl: globe, glass, glow, glove, glad
 
-
 20条例句：
 1. A black cat can sit.
 2. The clock is on.
@@ -629,7 +605,7 @@ gl: globe, glass, glow, glove, glad
 12. I see a globe.
 13. Birds can flap.
 14. Glass is on the table.
-15. Stars in the sky.
+15. My blue glass is here.
 16. This is clean glass now.
 17. Clap for the cat.
 18. The blue crown is mine.
@@ -650,7 +626,6 @@ dr: drum, drop, drag, dress, drill
 
 tr: truck, tree, tray, trip, track
 
-
 20条例句：
 1. A frog can jump.
 2. I see green grass now.
@@ -666,7 +641,7 @@ tr: truck, tree, tray, trip, track
 12. A truck is big.
 13. Do not drop the cup.
 14. A tree is big.
-15. Food on a tray.
+15. Food is on the tray.
 16. I like green grapes now.
 17. A frog can grin.
 18. Plug the lamp.
@@ -684,7 +659,6 @@ sp: spoon, spin, spot, spell, spill
 sw: swim, sweep, swan, swing, sweet
 
 st: stop, test, fast, step, star, stone
-
 
 20条例句：
 1. I smile at you.
@@ -720,7 +694,6 @@ ph: phone, photo, graph, dolphin, elephant
 
 wh: whale, wheel, what, when, white
 
-
 20条例句：
 1. I see a shell.
 2. Fish can swim.
@@ -753,7 +726,6 @@ ck: rocket, duck, sock, lock, pack
 
 qu: quick, quack, queen, quit, quite
 
-
 20条例句：
 1. This is fun for me.
 2. Mother can help.
@@ -766,14 +738,14 @@ qu: quick, quack, queen, quit, quite
 9. A rocket is big.
 10. A duck can quack.
 11. Quick, go take a bath now.
-12. Ducks can swim.
+12. The queen is quick.
 13. My sock is wet.
 14. I see a quick duck run.
 15. This thin sock is not warm.
 16. I see three ducks in water.
 17. Mother is here.
 18. That thumb is in the bath.
-19. A duck can quack quick now.
+19. A duck can quack fast now.
 20. This duck has a sock.
 
 Unit 6: Final Blends
@@ -789,7 +761,6 @@ nt: tent, plant, ant, hunt, went
 lt: adult, belt, melt, salt, bolt
 
 mp: lamp, jump, camp, pump, dump
-
 
 20条例句：
 1. The king is here.
@@ -827,7 +798,6 @@ spl: splint, splash, split, splat, splurge
 
 squ: squid, squat, square, squeeze, squash
 
-
 20条例句：
 1. A desk is big.
 2. A scale is big.
@@ -844,10 +814,10 @@ squ: squid, squat, square, squeeze, squash
 13. Scan the desk.
 14. Spray the desk.
 15. This strong string can help you.
-16. A stripe on skin.
+16. A stripe is on my skin.
 17. Splash in the tub.
 18. Squat, then hop.
-19. A strong splint.
+19. The splint is strong.
 20. The desk has a string.
 
 Unit 8: Soft Sounds
@@ -857,7 +827,6 @@ c: rice, ice, city, pencil
 g: giraffe, orange, giant, gem
 
 s: rose, jeans, legs, nose
-
 
 20条例句：
 1. I eat rice.
@@ -881,7 +850,6 @@ s: rose, jeans, legs, nose
 19. My nose is in my face.
 20. Ice cream is nice.
 
-
 Level 5: Letter Combinations (字母组合)
 目标： 掌握复杂的元音组合和特殊发音。
 
@@ -894,7 +862,6 @@ ir: girl, bird, shirt, dirt, first
 er: teacher, her, term, letter, river
 
 or: corn, fork, horn, horse, born
-
 
 20条例句：
 1. A car can go.
@@ -932,7 +899,6 @@ oo: book, cook, look, good, wood
 
 u: bush, put, pull, full, push
 
-
 20条例句：
 1. I see a mouse.
 2. This is my house.
@@ -941,7 +907,7 @@ u: bush, put, pull, full, push
 5. Now we go.
 6. A coin is on it.
 7. This toy is new.
-8. Oil is on it.
+8. Oil is on the pan.
 9. A boy can run.
 10. I feel joy.
 11. A book is new.
@@ -951,7 +917,7 @@ u: bush, put, pull, full, push
 15. Put it down.
 16. The cow is out.
 17. A boy has a toy.
-18. Oil on the book.
+18. Oil is on the book.
 19. Put the coin in.
 20. We have joy at home.
 
@@ -969,7 +935,6 @@ or: horse, corn, fork, born, sport
 
 oar: roar, oar, board, soar, roast
 
-
 20条例句：
 1. I like sauce.
 2. I saw it.
@@ -984,9 +949,9 @@ oar: roar, oar, board, soar, roast
 11. I see a horse.
 12. Corn is good.
 13. A fork is on it.
-14. Roar!
+14. I hear a roar.
 15. An oar is in it.
-16. No, not on the wall.
+16. Wash the wall now.
 17. Wash sauce off.
 18. That is a small ball.
 19. I see a horse and corn.
@@ -1003,7 +968,6 @@ ea: bear, pear, wear, tear, swear
 ear: ear, hear, near, year, clear
 
 eer: cheer, deer, peer, steer, beer
-
 
 20条例句：
 1. I care for my pet.
@@ -1024,7 +988,7 @@ eer: cheer, deer, peer, steer, beer
 16. Share a pear.
 17. She has fair hair.
 18. Hear the cheer.
-19. A bear near a square.
+19. A bear is near a square.
 20. Care for your ear.
 
 Unit 5: Open Syllables
@@ -1038,7 +1002,6 @@ i: tiger, pilot, silent, giant, item
 o: go, no, so, total, open
 
 u: music, unit, human, humor, pupil
-
 
 20条例句：
 1. I see an acorn.
@@ -1076,28 +1039,27 @@ schwa u: circus, focus, walrus, lettuce, campus
 
 schwa o: monkey, doctor, color, cotton, come
 
-
 20条例句：
-1. A panda can eat.
-2. This book is about me.
-3. I like banana.
+1. A panda can nap.
+2. We talk about it.
+3. I like banana bread.
 4. I see a zebra.
-5. Ago, I was here.
-6. This problem is big.
-7. A pencil is on it.
-8. Lemon is good.
-9. I see a circus.
-10. I see a chicken.
-11. A monkey can run.
-12. A doctor can help.
-13. Color it with a red pen.
-14. Cotton is soft.
-15. Come with me.
-16. I see a zebra and a panda.
-17. The doctor is here.
-18. A pencil is on paper.
-19. I see lemon and banana.
-20. The monkey is home.
+5. The problem is small.
+6. Please open it.
+7. It can happen now.
+8. Even Ben can help.
+9. A pencil is on the desk.
+10. I see a fossil.
+11. A pupil can read.
+12. April is here.
+13. Lemon is good.
+14. The wagon is red.
+15. The doctor is here.
+16. Come with me.
+17. I see a circus.
+18. A walrus can swim.
+19. The campus is big.
+20. I eat lettuce.
 
 Unit 7: Silent Letters
 单词列表：
@@ -1112,7 +1074,6 @@ e: name, cake, come, phone, have
 rh: rhino, rhythm, rhyme, rhubarb
 
 st: ghost, listen, castle, fasten, whistle
-
 
 20条例句：
 1. My knee is OK.
@@ -1150,16 +1111,15 @@ ous: famous, nervous, curious, dangerous, joyous
 
 ful: helpful, thankful, useful, beautiful, careful
 
-
 20条例句：
 1. I see a picture.
 2. Nature is nice.
 3. I am sure.
 4. Measure it with a ruler.
 5. Treasure is here.
-6. Action now, we can start.
+6. Take action now.
 7. The station is big.
-8. Motion now, then stop.
+8. Stop the motion now.
 9. Vision is good.
 10. Our mission is big.
 11. She is famous.
@@ -1168,7 +1128,8 @@ ful: helpful, thankful, useful, beautiful, careful
 14. I am thankful.
 15. This is useful.
 16. This picture shows a measure.
-17. Mission at the station.
+17. The mission is at the station.
 18. I am sure.
 19. Nature is helpful.
-20. Action at the station.
+20. Action starts at the station.
+
